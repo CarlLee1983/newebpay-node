@@ -4,6 +4,53 @@
 
 本專案遵循 [語意化版本](https://semver.org/lang/zh-TW/) 規範。
 
+## [1.1.0] - 2025-11-28
+
+### 新增
+
+#### 框架整合
+- **Express.js 整合** - 完整的 Express 路由與中間件支援
+  - `createNewebPayRouter()` - 自動建立藍新金流路由
+  - `paymentNotifyMiddleware()` - 支付完成通知驗證
+  - `atmNotifyMiddleware()` - ATM 取號通知驗證
+  - `cvsNotifyMiddleware()` - 超商取號通知驗證
+  - `cvscomNotifyMiddleware()` - 超商取貨付款通知驗證
+
+#### 服務層
+- **NewebPayService** - 統一的服務介面（類似 PHP PaymentCoordinator）
+  - 簡化的支付 API
+  - 支援所有支付方式
+  - 查詢與退款功能整合
+
+#### 支付建構器
+- **PaymentBuilder** - 鏈式呼叫 API（類似 PHP PaymentBuilder）
+  - `payment()` - 快速建立支付
+  - `creditCard()` / `creditInstallment()` / `atm()` / `cvs()` 等
+  - `setReturnUrl()` / `setNotifyUrl()` 等 URL 設定
+  - `customize()` - 自訂設定回呼
+  - `getParams()` - 取得支付參數供前端使用
+
+#### CLI 工具
+- `newebpay init` - 初始化環境變數設定檔
+- `newebpay express` - 產生 Express 整合範例專案
+
+#### 子路徑匯出
+- `@carllee1983/newebpay/express` - Express 整合
+- `@carllee1983/newebpay/common` - 共用服務層
+
+#### 環境變數支援
+- `loadConfigFromEnv()` - 從環境變數自動載入設定
+- 支援 `NEWEBPAY_MERCHANT_ID`、`NEWEBPAY_HASH_KEY` 等
+
+### 測試
+- 新增 20 個框架整合測試案例
+- 總計 110 個測試案例全部通過
+
+### 文件
+- 更新 README.md 新增框架整合說明
+- 新增 Express 整合範例
+- 新增 PaymentBuilder 使用範例
+
 ## [1.0.0] - 2025-01-15
 
 ### 新增
