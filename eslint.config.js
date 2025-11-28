@@ -16,6 +16,7 @@ export default tseslint.config(
       '@typescript-eslint/explicit-function-return-type': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-namespace': ['error', { allowDeclarations: true }],
 
       // 一般規則
       'no-console': 'off',

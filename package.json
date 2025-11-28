@@ -6,6 +6,9 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "newebpay": "./dist/cli/index.js"
+  },
   "exports": {
     ".": {
       "import": {
@@ -15,6 +18,26 @@
       "require": {
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
+      }
+    },
+    "./express": {
+      "import": {
+        "types": "./dist/frameworks/express/index.d.ts",
+        "default": "./dist/frameworks/express/index.js"
+      },
+      "require": {
+        "types": "./dist/frameworks/express/index.d.cts",
+        "default": "./dist/frameworks/express/index.cjs"
+      }
+    },
+    "./common": {
+      "import": {
+        "types": "./dist/frameworks/common/index.d.ts",
+        "default": "./dist/frameworks/common/index.js"
+      },
+      "require": {
+        "types": "./dist/frameworks/common/index.d.cts",
+        "default": "./dist/frameworks/common/index.cjs"
       }
     }
   },
@@ -58,6 +81,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@types/express": "^5.0.5",
     "@types/node": "^20.10.0",
     "@typescript-eslint/eslint-plugin": "^8.48.0",
     "@typescript-eslint/parser": "^8.48.0",
@@ -67,5 +91,8 @@
     "typescript": "^5.3.0",
     "typescript-eslint": "^8.48.0",
     "vitest": "^2.0.0"
+  },
+  "dependencies": {
+    "commander": "^13.1.0"
   }
 }

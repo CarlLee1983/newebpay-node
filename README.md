@@ -31,6 +31,13 @@ npm install @carllee1983/newebpay
 yarn add @carllee1983/newebpay
 ```
 
+### Express 整合（需要額外安裝）
+
+```bash
+npm install express
+npm install -D @types/express
+```
+
 ## 快速開始
 
 ### 基本使用
@@ -53,30 +60,21 @@ const form = FormBuilder.create(payment).build();
 console.log(form);
 ```
 
-### 前端整合（Vue/React/Express）
+### 前端整合（Vue/React）
 
 ```typescript
-import { CreditPayment } from '@carllee1983/newebpay';
+import { NewebPayService, loadConfigFromEnv } from '@carllee1983/newebpay/express';
 
 // Express API 範例
 app.post('/api/payment/create', (req, res) => {
-  const payment = new CreditPayment('特店編號', 'HashKey', 'HashIV')
-    .setTestMode(true)
-    .setMerchantOrderNo(req.body.orderId)
-    .setAmt(req.body.amount)
-    .setItemDesc(req.body.itemDesc)
-    .setReturnURL('https://your-site.com/return')
-    .setNotifyURL('https://your-site.com/notify');
+  const newebpay = new NewebPayService(loadConfigFromEnv());
+  
+  const params = newebpay
+    .payment(req.body.orderId, req.body.amount, req.body.itemDesc)
+    .creditCard()
+    .getParams();
 
-  // 回傳表單資料供前端組裝
-  res.json({
-    success: true,
-    data: {
-      action: payment.getApiUrl(),
-      method: 'POST',
-      fields: payment.getContent(),
-    },
-  });
+  res.json({ success: true, data: params });
 });
 ```
 
@@ -439,6 +437,18 @@ newebpay-node/
 └── README.md
 ```
 
+## CLI 工具
+
+套件提供 CLI 工具協助快速設定：
+
+```bash
+# 初始化環境變數設定檔
+npx @carllee1983/newebpay init
+
+# 產生 Express 整合範例專案
+npx @carllee1983/newebpay express
+```
+
 ## 開發
 
 ```bash
@@ -471,6 +481,35 @@ MIT License
 ## 貢獻
 
 歡迎提交 Issue 和 Pull Request。
+
+## 框架整合
+
+### Express.js
+
+完整整合範例請參考 [examples/express-integration.ts](examples/express-integration.ts)
+
+```typescript
+import { createNewebPayRouter, loadConfigFromEnv } from '@carllee1983/newebpay/express';
+
+const app = express();
+app.use('/newebpay', createNewebPayRouter(loadConfigFromEnv()));
+```
+
+### 使用簡化 API
+
+```typescript
+import { NewebPayService, loadConfigFromEnv } from '@carllee1983/newebpay/express';
+
+const newebpay = new NewebPayService(loadConfigFromEnv());
+
+// 鏈式呼叫
+const params = newebpay
+  .payment('ORDER001', 1000, '商品', 'buyer@example.com')
+  .creditCard()        // 或 .atm(), .cvs(), .linePay() 等
+  .setReturnUrl('https://your-site.com/return')
+  .setNotifyUrl('https://your-site.com/notify')
+  .getParams();
+```
 
 ## 相關連結
 
