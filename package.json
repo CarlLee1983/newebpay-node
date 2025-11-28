@@ -1,5 +1,5 @@
 {
-  "name": "newebpay",
+  "name": "@carllee1983/newebpay",
   "version": "1.0.0",
   "description": "藍新金流 SDK - NewebPay Payment Gateway SDK for Node.js",
   "type": "module",

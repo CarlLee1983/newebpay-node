@@ -22,13 +22,13 @@
 ## 安裝
 
 ```bash
-npm install newebpay
+npm install @carllee1983/newebpay
 ```
 
 或使用 yarn：
 
 ```bash
-yarn add newebpay
+yarn add @carllee1983/newebpay
 ```
 
 ## 快速開始
@@ -36,7 +36,7 @@ yarn add newebpay
 ### 基本使用
 
 ```typescript
-import { CreditPayment, FormBuilder } from 'newebpay';
+import { CreditPayment, FormBuilder } from '@carllee1983/newebpay';
 
 // 建立信用卡付款
 const payment = new CreditPayment('特店編號', 'HashKey', 'HashIV')
@@ -56,7 +56,7 @@ console.log(form);
 ### 前端整合（Vue/React/Express）
 
 ```typescript
-import { CreditPayment } from 'newebpay';
+import { CreditPayment } from '@carllee1983/newebpay';
 
 // Express API 範例
 app.post('/api/payment/create', (req, res) => {
@@ -104,7 +104,7 @@ app.post('/api/payment/create', (req, res) => {
 ### 信用卡分期
 
 ```typescript
-import { CreditInstallment } from 'newebpay';
+import { CreditInstallment } from '@carllee1983/newebpay';
 
 const payment = new CreditInstallment('特店編號', 'HashKey', 'HashIV')
   .setTestMode(true)
@@ -119,7 +119,7 @@ const payment = new CreditInstallment('特店編號', 'HashKey', 'HashIV')
 ### ATM 虛擬帳號
 
 ```typescript
-import { AtmPayment, BankType } from 'newebpay';
+import { AtmPayment, BankType } from '@carllee1983/newebpay';
 
 const payment = new AtmPayment('特店編號', 'HashKey', 'HashIV')
   .setTestMode(true)
@@ -136,7 +136,7 @@ const payment = new AtmPayment('特店編號', 'HashKey', 'HashIV')
 ### 全支付方式
 
 ```typescript
-import { AllInOnePayment } from 'newebpay';
+import { AllInOnePayment } from '@carllee1983/newebpay';
 
 const payment = new AllInOnePayment('特店編號', 'HashKey', 'HashIV')
   .setTestMode(true)
@@ -154,7 +154,7 @@ const payment = new AllInOnePayment('特店編號', 'HashKey', 'HashIV')
 ### 超商取貨付款
 
 ```typescript
-import { CvscomPayment, LgsType } from 'newebpay';
+import { CvscomPayment, LgsType } from '@carllee1983/newebpay';
 
 const payment = new CvscomPayment('特店編號', 'HashKey', 'HashIV')
   .setTestMode(true)
@@ -173,7 +173,7 @@ const payment = new CvscomPayment('特店編號', 'HashKey', 'HashIV')
 ### 支付完成通知
 
 ```typescript
-import { PaymentNotify } from 'newebpay';
+import { PaymentNotify } from '@carllee1983/newebpay';
 
 // Express 範例
 app.post('/notify', (req, res) => {
@@ -208,7 +208,7 @@ app.post('/notify', (req, res) => {
 ### ATM 取號通知
 
 ```typescript
-import { AtmNotify } from 'newebpay';
+import { AtmNotify } from '@carllee1983/newebpay';
 
 app.post('/atm-notify', (req, res) => {
   const notify = new AtmNotify('HashKey', 'HashIV');
@@ -228,7 +228,7 @@ app.post('/atm-notify', (req, res) => {
 ### 超商取號通知
 
 ```typescript
-import { CvsNotify } from 'newebpay';
+import { CvsNotify } from '@carllee1983/newebpay';
 
 app.post('/cvs-notify', (req, res) => {
   const notify = new CvsNotify('HashKey', 'HashIV');
@@ -251,7 +251,7 @@ app.post('/cvs-notify', (req, res) => {
 ### 超商取貨付款通知
 
 ```typescript
-import { CvscomNotify } from 'newebpay';
+import { CvscomNotify } from '@carllee1983/newebpay';
 
 app.post('/cvscom-notify', (req, res) => {
   const notify = new CvscomNotify('HashKey', 'HashIV');
@@ -276,7 +276,7 @@ app.post('/cvscom-notify', (req, res) => {
 ### 一般交易查詢
 
 ```typescript
-import { QueryOrder } from 'newebpay';
+import { QueryOrder } from '@carllee1983/newebpay';
 
 const query = QueryOrder.create('特店編號', 'HashKey', 'HashIV')
   .setTestMode(true);
@@ -294,7 +294,7 @@ try {
 ### 信用卡明細查詢
 
 ```typescript
-import { QueryCreditDetail } from 'newebpay';
+import { QueryCreditDetail } from '@carllee1983/newebpay';
 
 const query = QueryCreditDetail.create('特店編號', 'HashKey', 'HashIV')
   .setTestMode(true);
@@ -315,7 +315,7 @@ try {
 ### 信用卡退款
 
 ```typescript
-import { CreditClose } from 'newebpay';
+import { CreditClose } from '@carllee1983/newebpay';
 
 const creditClose = CreditClose.create('特店編號', 'HashKey', 'HashIV')
   .setTestMode(true);
@@ -337,7 +337,7 @@ const cancelResult = await creditClose.cancelClose(
 ### 取消授權
 
 ```typescript
-import { CreditCancel } from 'newebpay';
+import { CreditCancel } from '@carllee1983/newebpay';
 
 const creditCancel = CreditCancel.create('特店編號', 'HashKey', 'HashIV')
   .setTestMode(true);
@@ -348,7 +348,7 @@ const result = await creditCancel.cancel('ORDER123456', 1000);
 ### 電子錢包退款
 
 ```typescript
-import { EWalletRefund } from 'newebpay';
+import { EWalletRefund } from '@carllee1983/newebpay';
 
 const refund = EWalletRefund.create('特店編號', 'HashKey', 'HashIV')
   .setTestMode(true);
@@ -361,7 +361,7 @@ const result = await refund.refund('ORDER123456', 500, 'LINEPAY');
 SDK 提供 `NewebPayError` 類別處理各種錯誤情況：
 
 ```typescript
-import { CreditPayment, NewebPayError } from 'newebpay';
+import { CreditPayment, NewebPayError } from '@carllee1983/newebpay';
 
 try {
   const payment = new CreditPayment('特店編號', 'HashKey', 'HashIV')
