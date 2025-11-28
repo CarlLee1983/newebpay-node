@@ -13,11 +13,11 @@
 - 支援交易查詢、退款、取消授權
 - 完整的 TypeScript 型別定義
 - ESM 和 CommonJS 雙重支援
-- Node.js 18+ 支援
+- Node.js 18/20/22 LTS 支援
 
 ## 系統需求
 
-- Node.js 18.0.0 或更高版本
+- Node.js 18.0.0 或更高版本（支援 18.x、20.x、22.x LTS）
 
 ## 安裝
 

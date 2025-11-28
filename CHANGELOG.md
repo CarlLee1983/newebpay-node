@@ -50,7 +50,7 @@
 - `PaymentType`、`BankType`、`StoreType`、`LgsType` 等列舉
 
 ### 技術規格
-- 支援 Node.js 18.0.0+
+- 支援 Node.js 18.x、20.x、22.x LTS
 - 支援 ESM 和 CommonJS
 - 使用 Node.js 原生 crypto 模組
 - 完整的單元測試（90 個測試案例）
