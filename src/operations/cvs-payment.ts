@@ -1,5 +1,5 @@
-import { Content } from '../content.js';
-import { NewebPayError } from '../errors/newebpay-error.js';
+import { Content } from "../content.js";
+import { NewebPayError } from "../errors/newebpay-error.js";
 
 /**
  * 超商代碼繳費支付。
@@ -23,7 +23,7 @@ export class CvsPayment extends Content {
   protected override initContent(): void {
     super.initContent();
     // 啟用超商代碼付款
-    this.content['CVS'] = 1;
+    this.content["CVS"] = 1;
   }
 
   /**
@@ -32,13 +32,12 @@ export class CvsPayment extends Content {
   protected validation(): void {
     this.validateBaseParams();
 
-    const amt = this.content['Amt'] as number;
+    const amt = this.content["Amt"] as number;
     if (amt < CvsPayment.MIN_AMT || amt > CvsPayment.MAX_AMT) {
       throw NewebPayError.invalid(
-        'Amt',
-        `超商代碼金額必須在 ${CvsPayment.MIN_AMT}~${CvsPayment.MAX_AMT} 元之間`
+        "Amt",
+        `超商代碼金額必須在 ${CvsPayment.MIN_AMT}~${CvsPayment.MAX_AMT} 元之間`,
       );
     }
   }
 }
-

@@ -1,4 +1,4 @@
-import { Content } from '../content.js';
+import { Content } from "../content.js";
 
 /**
  * WebATM 支付。
@@ -12,7 +12,7 @@ export class WebAtmPayment extends Content {
   protected override initContent(): void {
     super.initContent();
     // 啟用 WebATM 付款
-    this.content['WEBATM'] = 1;
+    this.content["WEBATM"] = 1;
   }
 
   /**
@@ -22,4 +22,3 @@ export class WebAtmPayment extends Content {
     this.validateBaseParams();
   }
 }
-

@@ -1,4 +1,4 @@
-import { Content } from '../content.js';
+import { Content } from "../content.js";
 
 /**
  * 付啦支付。
@@ -12,7 +12,7 @@ export class FulaPayment extends Content {
   protected override initContent(): void {
     super.initContent();
     // 啟用付啦付款
-    this.content['FULA'] = 1;
+    this.content["FULA"] = 1;
   }
 
   /**
@@ -22,4 +22,3 @@ export class FulaPayment extends Content {
     this.validateBaseParams();
   }
 }
-

@@ -1,5 +1,5 @@
-import { Content } from '../content.js';
-import { BankType } from '../types/parameters.js';
+import { Content } from "../content.js";
+import { BankType } from "../types/parameters.js";
 
 /**
  * ATM 虛擬帳號支付。
@@ -28,14 +28,14 @@ export class AtmPayment extends Content {
   protected override initContent(): void {
     super.initContent();
     // 啟用 ATM 付款
-    this.content['VACC'] = 1;
+    this.content["VACC"] = 1;
   }
 
   /**
    * 設定指定銀行。
    */
   setBankType(bankType: BankType | string): this {
-    this.content['BankType'] = bankType;
+    this.content["BankType"] = bankType;
     return this;
   }
 
@@ -46,4 +46,3 @@ export class AtmPayment extends Content {
     this.validateBaseParams();
   }
 }
-

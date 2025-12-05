@@ -1,6 +1,6 @@
-import { Aes256Encoder } from '../infrastructure/aes256-encoder.js';
-import { NewebPayError } from '../errors/newebpay-error.js';
-import { CloseType, IndexType } from '../types/parameters.js';
+import { Aes256Encoder } from "../infrastructure/aes256-encoder.js";
+import { NewebPayError } from "../errors/newebpay-error.js";
+import { CloseType, IndexType } from "../types/parameters.js";
 
 /**
  * 請退款結果。
@@ -33,12 +33,12 @@ export class CreditClose {
   /**
    * API 版本。
    */
-  protected version = '1.1';
+  protected version = "1.1";
 
   /**
    * API 請求路徑。
    */
-  protected requestPath = '/API/CreditCard/Close';
+  protected requestPath = "/API/CreditCard/Close";
 
   /**
    * 是否為測試環境。
@@ -56,7 +56,7 @@ export class CreditClose {
   constructor(
     protected merchantId: string,
     protected hashKey: string,
-    protected hashIV: string
+    protected hashIV: string,
   ) {}
 
   /**
@@ -65,7 +65,7 @@ export class CreditClose {
   static create(
     merchantId: string,
     hashKey: string,
-    hashIV: string
+    hashIV: string,
   ): CreditClose {
     return new CreditClose(merchantId, hashKey, hashIV);
   }
@@ -83,8 +83,8 @@ export class CreditClose {
    */
   getBaseUrl(): string {
     return this.isTest
-      ? 'https://ccore.newebpay.com'
-      : 'https://core.newebpay.com';
+      ? "https://ccore.newebpay.com"
+      : "https://core.newebpay.com";
   }
 
   /**
@@ -101,14 +101,14 @@ export class CreditClose {
     merchantOrderNo: string,
     amt: number,
     indexType: IndexType | string = IndexType.MERCHANT_ORDER_NO,
-    tradeNo?: string
+    tradeNo?: string,
   ): Promise<CreditCloseResult> {
     return this.execute(
       merchantOrderNo,
       amt,
       CloseType.PAY,
       indexType,
-      tradeNo
+      tradeNo,
     );
   }
 
@@ -119,14 +119,14 @@ export class CreditClose {
     merchantOrderNo: string,
     amt: number,
     indexType: IndexType | string = IndexType.MERCHANT_ORDER_NO,
-    tradeNo?: string
+    tradeNo?: string,
   ): Promise<CreditCloseResult> {
     return this.execute(
       merchantOrderNo,
       amt,
       CloseType.REFUND,
       indexType,
-      tradeNo
+      tradeNo,
     );
   }
 
@@ -138,7 +138,7 @@ export class CreditClose {
     amt: number,
     closeType: CloseType | number,
     indexType: IndexType | string = IndexType.MERCHANT_ORDER_NO,
-    tradeNo?: string
+    tradeNo?: string,
   ): Promise<CreditCloseResult> {
     return this.execute(
       merchantOrderNo,
@@ -146,7 +146,7 @@ export class CreditClose {
       closeType,
       indexType,
       tradeNo,
-      true
+      true,
     );
   }
 
@@ -159,10 +159,10 @@ export class CreditClose {
     closeType: CloseType | number,
     indexType: IndexType | string = IndexType.MERCHANT_ORDER_NO,
     tradeNo?: string,
-    cancel = false
+    cancel = false,
   ): Promise<CreditCloseResult> {
     const postData: Record<string, unknown> = {
-      RespondType: 'JSON',
+      RespondType: "JSON",
       Version: this.version,
       Amt: amt,
       MerchantOrderNo: merchantOrderNo,
@@ -172,19 +172,19 @@ export class CreditClose {
     };
 
     if (indexType === IndexType.TRADE_NO && tradeNo) {
-      postData['TradeNo'] = tradeNo;
+      postData["TradeNo"] = tradeNo;
     }
 
     if (cancel) {
-      postData['Cancel'] = 1;
+      postData["Cancel"] = 1;
     }
 
     const payload = this.buildPayload(postData);
 
     const response = await fetch(this.getApiUrl(), {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        "Content-Type": "application/x-www-form-urlencoded",
       },
       body: new URLSearchParams(payload).toString(),
     });
@@ -205,7 +205,9 @@ export class CreditClose {
   /**
    * 建立請求 Payload。
    */
-  protected buildPayload(postData: Record<string, unknown>): Record<string, string> {
+  protected buildPayload(
+    postData: Record<string, unknown>,
+  ): Record<string, string> {
     const encoder = this.getAesEncoder();
     const tradeInfo = encoder.encrypt(postData);
 
@@ -223,10 +225,10 @@ export class CreditClose {
     Message?: string;
     Result?: CreditCloseResult;
   }): CreditCloseResult {
-    const status = response.Status ?? '';
-    const message = response.Message ?? '';
+    const status = response.Status ?? "";
+    const message = response.Message ?? "";
 
-    if (status !== 'SUCCESS') {
+    if (status !== "SUCCESS") {
       throw NewebPayError.apiError(message, status);
     }
 
@@ -243,4 +245,3 @@ export class CreditClose {
     return this.aesEncoder;
   }
 }
-

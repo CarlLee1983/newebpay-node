@@ -1,4 +1,4 @@
-import { Content } from '../content.js';
+import { Content } from "../content.js";
 
 /**
  * 玉山 Wallet 支付。
@@ -12,7 +12,7 @@ export class EsunWalletPayment extends Content {
   protected override initContent(): void {
     super.initContent();
     // 啟用玉山 Wallet 付款
-    this.content['ESUNWALLET'] = 1;
+    this.content["ESUNWALLET"] = 1;
   }
 
   /**
@@ -22,4 +22,3 @@ export class EsunWalletPayment extends Content {
     this.validateBaseParams();
   }
 }
-

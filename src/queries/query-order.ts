@@ -1,5 +1,5 @@
-import { createHash } from 'node:crypto';
-import { NewebPayError } from '../errors/newebpay-error.js';
+import { createHash } from "node:crypto";
+import { NewebPayError } from "../errors/newebpay-error.js";
 
 /**
  * 查詢結果。
@@ -28,12 +28,12 @@ export class QueryOrder {
   /**
    * API 版本。
    */
-  protected version = '1.3';
+  protected version = "1.3";
 
   /**
    * API 請求路徑。
    */
-  protected requestPath = '/API/QueryTradeInfo';
+  protected requestPath = "/API/QueryTradeInfo";
 
   /**
    * 是否為測試環境。
@@ -46,7 +46,7 @@ export class QueryOrder {
   constructor(
     protected merchantId: string,
     protected hashKey: string,
-    protected hashIV: string
+    protected hashIV: string,
   ) {}
 
   /**
@@ -55,7 +55,7 @@ export class QueryOrder {
   static create(
     merchantId: string,
     hashKey: string,
-    hashIV: string
+    hashIV: string,
   ): QueryOrder {
     return new QueryOrder(merchantId, hashKey, hashIV);
   }
@@ -73,8 +73,8 @@ export class QueryOrder {
    */
   getBaseUrl(): string {
     return this.isTest
-      ? 'https://ccore.newebpay.com'
-      : 'https://core.newebpay.com';
+      ? "https://ccore.newebpay.com"
+      : "https://core.newebpay.com";
   }
 
   /**
@@ -91,9 +91,9 @@ export class QueryOrder {
     const payload = this.buildPayload(merchantOrderNo, amt);
 
     const response = await fetch(this.getApiUrl(), {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        "Content-Type": "application/x-www-form-urlencoded",
       },
       body: new URLSearchParams(payload).toString(),
     });
@@ -116,7 +116,7 @@ export class QueryOrder {
    */
   protected buildPayload(
     merchantOrderNo: string,
-    amt: number
+    amt: number,
   ): Record<string, string> {
     const timeStamp = String(Math.floor(Date.now() / 1000));
     const checkValue = this.generateCheckValue(merchantOrderNo, amt);
@@ -124,7 +124,7 @@ export class QueryOrder {
     return {
       MerchantID: this.merchantId,
       Version: this.version,
-      RespondType: 'JSON',
+      RespondType: "JSON",
       CheckValue: checkValue,
       TimeStamp: timeStamp,
       MerchantOrderNo: merchantOrderNo,
@@ -140,7 +140,7 @@ export class QueryOrder {
    */
   protected generateCheckValue(merchantOrderNo: string, amt: number): string {
     const raw = `HashIV=${this.hashIV}&Amt=${amt}&MerchantID=${this.merchantId}&MerchantOrderNo=${merchantOrderNo}&HashKey=${this.hashKey}`;
-    return createHash('sha256').update(raw).digest('hex').toUpperCase();
+    return createHash("sha256").update(raw).digest("hex").toUpperCase();
   }
 
   /**
@@ -151,14 +151,13 @@ export class QueryOrder {
     Message?: string;
     Result?: QueryOrderResult;
   }): QueryOrderResult {
-    const status = response.Status ?? '';
-    const message = response.Message ?? '';
+    const status = response.Status ?? "";
+    const message = response.Message ?? "";
 
-    if (status !== 'SUCCESS') {
+    if (status !== "SUCCESS") {
       throw NewebPayError.apiError(message, status);
     }
 
     return response.Result ?? {};
   }
 }
-

@@ -1,5 +1,5 @@
-import { Content } from '../content.js';
-import { NewebPayError } from '../errors/newebpay-error.js';
+import { Content } from "../content.js";
+import { NewebPayError } from "../errors/newebpay-error.js";
 
 /**
  * 超商條碼繳費支付。
@@ -23,7 +23,7 @@ export class BarcodePayment extends Content {
   protected override initContent(): void {
     super.initContent();
     // 啟用超商條碼付款
-    this.content['BARCODE'] = 1;
+    this.content["BARCODE"] = 1;
   }
 
   /**
@@ -32,13 +32,12 @@ export class BarcodePayment extends Content {
   protected validation(): void {
     this.validateBaseParams();
 
-    const amt = this.content['Amt'] as number;
+    const amt = this.content["Amt"] as number;
     if (amt < BarcodePayment.MIN_AMT || amt > BarcodePayment.MAX_AMT) {
       throw NewebPayError.invalid(
-        'Amt',
-        `超商條碼金額必須在 ${BarcodePayment.MIN_AMT}~${BarcodePayment.MAX_AMT} 元之間`
+        "Amt",
+        `超商條碼金額必須在 ${BarcodePayment.MIN_AMT}~${BarcodePayment.MAX_AMT} 元之間`,
       );
     }
   }
 }
-

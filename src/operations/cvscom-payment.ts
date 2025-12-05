@@ -1,6 +1,6 @@
-import { Content } from '../content.js';
-import { LgsType } from '../types/parameters.js';
-import { NewebPayError } from '../errors/newebpay-error.js';
+import { Content } from "../content.js";
+import { LgsType } from "../types/parameters.js";
+import { NewebPayError } from "../errors/newebpay-error.js";
 
 /**
  * 超商取貨付款支付。
@@ -34,14 +34,14 @@ export class CvscomPayment extends Content {
   protected override initContent(): void {
     super.initContent();
     // 啟用超商取貨付款
-    this.content['CVSCOM'] = 1;
+    this.content["CVSCOM"] = 1;
   }
 
   /**
    * 設定物流類型。
    */
   setLgsType(lgsType: LgsType | string): this {
-    this.content['LgsType'] = lgsType;
+    this.content["LgsType"] = lgsType;
     return this;
   }
 
@@ -50,9 +50,9 @@ export class CvscomPayment extends Content {
    */
   setReceiverName(name: string): this {
     if (name.length > 60) {
-      throw NewebPayError.tooLong('ReceiverName', 60);
+      throw NewebPayError.tooLong("ReceiverName", 60);
     }
-    this.content['CVSCOMName'] = name;
+    this.content["CVSCOMName"] = name;
     return this;
   }
 
@@ -61,9 +61,9 @@ export class CvscomPayment extends Content {
    */
   setReceiverPhone(phone: string): this {
     if (phone.length > 20) {
-      throw NewebPayError.tooLong('ReceiverPhone', 20);
+      throw NewebPayError.tooLong("ReceiverPhone", 20);
     }
-    this.content['CVSCOMPhone'] = phone;
+    this.content["CVSCOMPhone"] = phone;
     return this;
   }
 
@@ -74,4 +74,3 @@ export class CvscomPayment extends Content {
     this.validateBaseParams();
   }
 }
-

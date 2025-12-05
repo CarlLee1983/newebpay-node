@@ -1,4 +1,4 @@
-import { Content } from '../content.js';
+import { Content } from "../content.js";
 
 /**
  * TWQR 共通支付。
@@ -12,7 +12,7 @@ export class TwqrPayment extends Content {
   protected override initContent(): void {
     super.initContent();
     // 啟用 TWQR 付款
-    this.content['TWQR'] = 1;
+    this.content["TWQR"] = 1;
   }
 
   /**
@@ -22,4 +22,3 @@ export class TwqrPayment extends Content {
     this.validateBaseParams();
   }
 }
-

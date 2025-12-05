@@ -1,5 +1,5 @@
-import type { NewebPayConfig } from './config.js';
-import type { PaymentInterface } from '../../types/payment.js';
+import type { NewebPayConfig } from "./config.js";
+import type { PaymentInterface } from "../../types/payment.js";
 import {
   CreditPayment,
   CreditInstallment,
@@ -10,7 +10,7 @@ import {
   LinePayPayment,
   TaiwanPayPayment,
   AllInOnePayment,
-} from '../../index.js';
+} from "../../index.js";
 
 /**
  * 支付建構器（類似 PHP 的 PaymentBuilder）
@@ -18,10 +18,10 @@ import {
  * 提供簡化的鏈式 API
  */
 export class PaymentBuilder {
-  private orderNo = '';
+  private orderNo = "";
   private amount = 0;
-  private itemDesc = '';
-  private email = '';
+  private itemDesc = "";
+  private email = "";
   private returnUrl?: string;
   private notifyUrl?: string;
   private customerUrl?: string;
@@ -29,7 +29,7 @@ export class PaymentBuilder {
   private paymentClass: new (
     merchantId: string,
     hashKey: string,
-    hashIV: string
+    hashIV: string,
   ) => PaymentInterface = CreditPayment;
   private installments?: number[];
   private expireDate?: string;
@@ -40,7 +40,12 @@ export class PaymentBuilder {
   /**
    * 設定基本交易資訊
    */
-  setOrder(orderNo: string, amount: number, itemDesc: string, email = ''): this {
+  setOrder(
+    orderNo: string,
+    amount: number,
+    itemDesc: string,
+    email = "",
+  ): this {
     this.orderNo = orderNo;
     this.amount = amount;
     this.itemDesc = itemDesc;
@@ -177,7 +182,7 @@ export class PaymentBuilder {
     const payment = new this.paymentClass(
       this.config.merchantId,
       this.config.hashKey,
-      this.config.hashIV
+      this.config.hashIV,
     ) as PaymentInterface & {
       setTestMode: (test: boolean) => PaymentInterface;
       setEmail: (email: string) => PaymentInterface;
@@ -228,9 +233,9 @@ export class PaymentBuilder {
     }
 
     // 設定繳費期限
-    if (this.expireDate && 'setExpireDate' in payment) {
+    if (this.expireDate && "setExpireDate" in payment) {
       (payment as { setExpireDate: (date: string) => void }).setExpireDate(
-        this.expireDate
+        this.expireDate,
       );
     }
 
@@ -255,11 +260,11 @@ export class PaymentBuilder {
     };
     const content = payment.getContent();
 
-    const apiUrl = payment.getApiUrl ? payment.getApiUrl() : '';
+    const apiUrl = payment.getApiUrl ? payment.getApiUrl() : "";
 
     return {
       action: apiUrl,
-      method: 'POST',
+      method: "POST",
       fields: {
         MerchantID: content.MerchantID,
         TradeInfo: content.TradeInfo,
@@ -269,4 +274,3 @@ export class PaymentBuilder {
     };
   }
 }
-

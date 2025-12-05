@@ -1,4 +1,4 @@
-import type { NewebPayConfig } from './config.js';
+import type { NewebPayConfig } from "./config.js";
 import {
   CreditPayment,
   CreditInstallment,
@@ -20,9 +20,9 @@ import {
   CreditCancel,
   EWalletRefund,
   FormBuilder,
-} from '../../index.js';
-import { PaymentBuilder } from './payment-builder.js';
-import type { PaymentInterface } from '../../types/payment.js';
+} from "../../index.js";
+import { PaymentBuilder } from "./payment-builder.js";
+import type { PaymentInterface } from "../../types/payment.js";
 
 /**
  * 藍新金流服務類別（類似 PHP 的 PaymentCoordinator）
@@ -39,13 +39,13 @@ export class NewebPayService {
     orderNo: string,
     amount: number,
     itemDesc: string,
-    email = ''
+    email = "",
   ): PaymentBuilder {
     return new PaymentBuilder(this.config).setOrder(
       orderNo,
       amount,
       itemDesc,
-      email
+      email,
     );
   }
 
@@ -161,7 +161,7 @@ export class NewebPayService {
     return QueryOrder.create(
       this.config.merchantId,
       this.config.hashKey,
-      this.config.hashIV
+      this.config.hashIV,
     ).setTestMode(this.config.testMode ?? false);
   }
 
@@ -172,7 +172,7 @@ export class NewebPayService {
     return QueryCreditDetail.create(
       this.config.merchantId,
       this.config.hashKey,
-      this.config.hashIV
+      this.config.hashIV,
     ).setTestMode(this.config.testMode ?? false);
   }
 
@@ -183,7 +183,7 @@ export class NewebPayService {
     return CreditCancel.create(
       this.config.merchantId,
       this.config.hashKey,
-      this.config.hashIV
+      this.config.hashIV,
     ).setTestMode(this.config.testMode ?? false);
   }
 
@@ -194,7 +194,7 @@ export class NewebPayService {
     return CreditClose.create(
       this.config.merchantId,
       this.config.hashKey,
-      this.config.hashIV
+      this.config.hashIV,
     ).setTestMode(this.config.testMode ?? false);
   }
 
@@ -205,7 +205,7 @@ export class NewebPayService {
     return EWalletRefund.create(
       this.config.merchantId,
       this.config.hashKey,
-      this.config.hashIV
+      this.config.hashIV,
     ).setTestMode(this.config.testMode ?? false);
   }
 
@@ -216,13 +216,13 @@ export class NewebPayService {
     PaymentClass: new (
       merchantId: string,
       hashKey: string,
-      hashIV: string
-    ) => T
+      hashIV: string,
+    ) => T,
   ): T {
     const payment = new PaymentClass(
       this.config.merchantId,
       this.config.hashKey,
-      this.config.hashIV
+      this.config.hashIV,
     ) as T & {
       setTestMode?: (test: boolean) => T;
       setCustomerURL?: (url: string) => T;
@@ -252,4 +252,3 @@ export class NewebPayService {
     return payment as T;
   }
 }
-

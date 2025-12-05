@@ -163,4 +163,3 @@ export interface CvscomResultData {
   LgsType?: string;
   [key: string]: unknown;
 }
-

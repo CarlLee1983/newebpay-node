@@ -1,5 +1,5 @@
-import { createHash } from 'node:crypto';
-import { NewebPayError } from '../errors/newebpay-error.js';
+import { createHash } from "node:crypto";
+import { NewebPayError } from "../errors/newebpay-error.js";
 
 /**
  * CheckValue (TradeSha) 編碼器。
@@ -16,7 +16,7 @@ export class CheckValueEncoder {
    */
   constructor(
     private readonly hashKey: string,
-    private readonly hashIV: string
+    private readonly hashIV: string,
   ) {}
 
   /**
@@ -39,7 +39,7 @@ export class CheckValueEncoder {
    */
   generate(tradeInfo: string): string {
     const raw = `HashKey=${this.hashKey}&${tradeInfo}&HashIV=${this.hashIV}`;
-    return createHash('sha256').update(raw).digest('hex').toUpperCase();
+    return createHash("sha256").update(raw).digest("hex").toUpperCase();
   }
 
   /**
@@ -66,4 +66,3 @@ export class CheckValueEncoder {
     }
   }
 }
-

@@ -1,11 +1,11 @@
-import type { Request, Response, NextFunction } from 'express';
+import type { Request, Response, NextFunction } from "express";
 import {
   PaymentNotify,
   AtmNotify,
   CvsNotify,
   CvscomNotify,
-} from '../../index.js';
-import type { NewebPayConfig } from '../common/config.js';
+} from "../../index.js";
+import type { NewebPayConfig } from "../common/config.js";
 
 /**
  * 擴充 Express Request 型別
@@ -81,4 +81,3 @@ export function cvscomNotifyMiddleware(config: NewebPayConfig) {
     next();
   };
 }
-

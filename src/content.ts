@@ -1,7 +1,7 @@
-import { Aes256Encoder } from './infrastructure/aes256-encoder.js';
-import { CheckValueEncoder } from './infrastructure/check-value-encoder.js';
-import { NewebPayError } from './errors/newebpay-error.js';
-import type { PaymentInterface, PaymentContent } from './types/payment.js';
+import { Aes256Encoder } from "./infrastructure/aes256-encoder.js";
+import { CheckValueEncoder } from "./infrastructure/check-value-encoder.js";
+import { NewebPayError } from "./errors/newebpay-error.js";
+import type { PaymentInterface, PaymentContent } from "./types/payment.js";
 
 /**
  * 藍新金流 Content 基礎類別。
@@ -27,12 +27,12 @@ export abstract class Content implements PaymentInterface {
   /**
    * MPG API 版本。
    */
-  protected version = '2.0';
+  protected version = "2.0";
 
   /**
    * API 請求路徑。
    */
-  protected requestPath = '/MPG/mpg_gateway';
+  protected requestPath = "/MPG/mpg_gateway";
 
   /**
    * 是否為測試環境。
@@ -62,9 +62,9 @@ export abstract class Content implements PaymentInterface {
    * @param hashIV HashIV
    */
   constructor(
-    protected merchantId: string = '',
-    protected hashKey: string = '',
-    protected hashIV: string = ''
+    protected merchantId: string = "",
+    protected hashKey: string = "",
+    protected hashIV: string = "",
   ) {
     this.initContent();
   }
@@ -75,13 +75,13 @@ export abstract class Content implements PaymentInterface {
   protected initContent(): void {
     this.content = {
       MerchantID: this.merchantId,
-      MerchantOrderNo: '',
+      MerchantOrderNo: "",
       TimeStamp: String(Math.floor(Date.now() / 1000)),
       Version: this.version,
       Amt: 0,
-      ItemDesc: '',
-      RespondType: 'JSON',
-      LangType: 'zh-tw',
+      ItemDesc: "",
+      RespondType: "JSON",
+      LangType: "zh-tw",
     };
   }
 
@@ -90,7 +90,7 @@ export abstract class Content implements PaymentInterface {
    */
   setMerchantID(id: string): this {
     this.merchantId = id;
-    this.content['MerchantID'] = id;
+    this.content["MerchantID"] = id;
     return this;
   }
 
@@ -138,11 +138,11 @@ export abstract class Content implements PaymentInterface {
   setMerchantOrderNo(orderNo: string): this {
     if (orderNo.length > Content.MERCHANT_ORDER_NO_MAX_LENGTH) {
       throw NewebPayError.tooLong(
-        'MerchantOrderNo',
-        Content.MERCHANT_ORDER_NO_MAX_LENGTH
+        "MerchantOrderNo",
+        Content.MERCHANT_ORDER_NO_MAX_LENGTH,
       );
     }
-    this.content['MerchantOrderNo'] = orderNo;
+    this.content["MerchantOrderNo"] = orderNo;
     return this;
   }
 
@@ -150,7 +150,7 @@ export abstract class Content implements PaymentInterface {
    * 設定時間戳記。
    */
   setTimeStamp(timestamp: number | string): this {
-    this.content['TimeStamp'] = String(timestamp);
+    this.content["TimeStamp"] = String(timestamp);
     return this;
   }
 
@@ -159,9 +159,9 @@ export abstract class Content implements PaymentInterface {
    */
   setAmt(amount: number): this {
     if (amount <= 0) {
-      throw NewebPayError.invalid('Amt', '金額必須大於 0');
+      throw NewebPayError.invalid("Amt", "金額必須大於 0");
     }
-    this.content['Amt'] = amount;
+    this.content["Amt"] = amount;
     return this;
   }
 
@@ -170,9 +170,9 @@ export abstract class Content implements PaymentInterface {
    */
   setItemDesc(desc: string): this {
     if (desc.length > Content.ITEM_DESC_MAX_LENGTH) {
-      throw NewebPayError.tooLong('ItemDesc', Content.ITEM_DESC_MAX_LENGTH);
+      throw NewebPayError.tooLong("ItemDesc", Content.ITEM_DESC_MAX_LENGTH);
     }
-    this.content['ItemDesc'] = desc;
+    this.content["ItemDesc"] = desc;
     return this;
   }
 
@@ -181,9 +181,9 @@ export abstract class Content implements PaymentInterface {
    */
   setTradeLimit(seconds: number): this {
     if (seconds < 60 || seconds > 900) {
-      throw NewebPayError.invalid('TradeLimit', '限制秒數必須在 60-900 之間');
+      throw NewebPayError.invalid("TradeLimit", "限制秒數必須在 60-900 之間");
     }
-    this.content['TradeLimit'] = seconds;
+    this.content["TradeLimit"] = seconds;
     return this;
   }
 
@@ -191,7 +191,7 @@ export abstract class Content implements PaymentInterface {
    * 設定繳費有效期限。
    */
   setExpireDate(expireDate: string): this {
-    this.content['ExpireDate'] = expireDate;
+    this.content["ExpireDate"] = expireDate;
     return this;
   }
 
@@ -199,7 +199,7 @@ export abstract class Content implements PaymentInterface {
    * 設定支付完成返回網址。
    */
   setReturnURL(url: string): this {
-    this.content['ReturnURL'] = url;
+    this.content["ReturnURL"] = url;
     return this;
   }
 
@@ -207,7 +207,7 @@ export abstract class Content implements PaymentInterface {
    * 設定支付通知網址。
    */
   setNotifyURL(url: string): this {
-    this.content['NotifyURL'] = url;
+    this.content["NotifyURL"] = url;
     return this;
   }
 
@@ -215,7 +215,7 @@ export abstract class Content implements PaymentInterface {
    * 設定取號完成返回網址。
    */
   setCustomerURL(url: string): this {
-    this.content['CustomerURL'] = url;
+    this.content["CustomerURL"] = url;
     return this;
   }
 
@@ -223,7 +223,7 @@ export abstract class Content implements PaymentInterface {
    * 設定返回商店網址。
    */
   setClientBackURL(url: string): this {
-    this.content['ClientBackURL'] = url;
+    this.content["ClientBackURL"] = url;
     return this;
   }
 
@@ -232,9 +232,9 @@ export abstract class Content implements PaymentInterface {
    */
   setEmail(email: string): this {
     if (email.length > Content.EMAIL_MAX_LENGTH) {
-      throw NewebPayError.tooLong('Email', Content.EMAIL_MAX_LENGTH);
+      throw NewebPayError.tooLong("Email", Content.EMAIL_MAX_LENGTH);
     }
-    this.content['Email'] = email;
+    this.content["Email"] = email;
     return this;
   }
 
@@ -242,7 +242,7 @@ export abstract class Content implements PaymentInterface {
    * 設定是否開啟付款人資料修改。
    */
   setEmailModify(modify: number): this {
-    this.content['EmailModify'] = modify;
+    this.content["EmailModify"] = modify;
     return this;
   }
 
@@ -250,7 +250,7 @@ export abstract class Content implements PaymentInterface {
    * 設定商店備註。
    */
   setOrderComment(orderComment: string): this {
-    this.content['OrderComment'] = orderComment;
+    this.content["OrderComment"] = orderComment;
     return this;
   }
 
@@ -258,7 +258,7 @@ export abstract class Content implements PaymentInterface {
    * 設定語系。
    */
   setLangType(lang: string): this {
-    this.content['LangType'] = lang;
+    this.content["LangType"] = lang;
     return this;
   }
 
@@ -274,8 +274,8 @@ export abstract class Content implements PaymentInterface {
    */
   getBaseUrl(): string {
     return this.isTest
-      ? 'https://ccore.newebpay.com'
-      : 'https://core.newebpay.com';
+      ? "https://ccore.newebpay.com"
+      : "https://core.newebpay.com";
   }
 
   /**
@@ -315,20 +315,20 @@ export abstract class Content implements PaymentInterface {
    */
   protected validateBaseParams(): void {
     if (!this.merchantId) {
-      throw NewebPayError.required('MerchantID');
+      throw NewebPayError.required("MerchantID");
     }
 
-    if (!this.content['MerchantOrderNo']) {
-      throw NewebPayError.required('MerchantOrderNo');
+    if (!this.content["MerchantOrderNo"]) {
+      throw NewebPayError.required("MerchantOrderNo");
     }
 
-    const amt = this.content['Amt'];
-    if (!amt || (typeof amt === 'number' && amt <= 0)) {
-      throw NewebPayError.required('Amt');
+    const amt = this.content["Amt"];
+    if (!amt || (typeof amt === "number" && amt <= 0)) {
+      throw NewebPayError.required("Amt");
     }
 
-    if (!this.content['ItemDesc']) {
-      throw NewebPayError.required('ItemDesc');
+    if (!this.content["ItemDesc"]) {
+      throw NewebPayError.required("ItemDesc");
     }
   }
 
@@ -339,12 +339,12 @@ export abstract class Content implements PaymentInterface {
     this.validation();
 
     // 同步 MerchantID
-    this.content['MerchantID'] = this.merchantId;
+    this.content["MerchantID"] = this.merchantId;
 
     // 過濾空值
     const payload: Record<string, unknown> = {};
     for (const [key, value] of Object.entries(this.content)) {
-      if (value !== '' && value !== null && value !== undefined) {
+      if (value !== "" && value !== null && value !== undefined) {
         payload[key] = value;
       }
     }
@@ -396,4 +396,3 @@ export abstract class Content implements PaymentInterface {
     return (this.content[key] as T) ?? defaultValue;
   }
 }
-

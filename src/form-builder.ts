@@ -1,4 +1,4 @@
-import type { PaymentInterface } from './types/payment.js';
+import type { PaymentInterface } from "./types/payment.js";
 
 /**
  * HTML 表單產生器選項。
@@ -39,8 +39,8 @@ export class FormBuilder {
     this.payment = payment;
     this.options = {
       autoSubmit: options.autoSubmit ?? true,
-      formId: options.formId ?? 'newebpay-form',
-      submitButtonText: options.submitButtonText ?? '前往付款',
+      formId: options.formId ?? "newebpay-form",
+      submitButtonText: options.submitButtonText ?? "前往付款",
     };
   }
 
@@ -52,7 +52,7 @@ export class FormBuilder {
    */
   static create(
     payment: PaymentInterface,
-    options?: FormBuilderOptions
+    options?: FormBuilderOptions,
   ): FormBuilder {
     return new FormBuilder(payment, options);
   }
@@ -91,16 +91,16 @@ export class FormBuilder {
     const hiddenFields = Object.entries(content)
       .map(
         ([name, value]) =>
-          `<input type="hidden" name="${this.escapeHtml(name)}" value="${this.escapeHtml(String(value))}">`
+          `<input type="hidden" name="${this.escapeHtml(name)}" value="${this.escapeHtml(String(value))}">`,
       )
-      .join('\n    ');
+      .join("\n    ");
 
     const autoSubmitScript = this.options.autoSubmit
       ? `<script>document.getElementById('${this.escapeHtml(this.options.formId)}').submit();</script>`
-      : '';
+      : "";
 
     const submitButton = this.options.autoSubmit
-      ? ''
+      ? ""
       : `<button type="submit">${this.escapeHtml(this.options.submitButtonText)}</button>`;
 
     return `<form id="${this.escapeHtml(this.options.formId)}" method="POST" action="${this.escapeHtml(apiUrl)}">
@@ -122,7 +122,7 @@ ${autoSubmitScript}`;
 
     return {
       action: this.getApiUrl(),
-      method: 'POST',
+      method: "POST",
       fields: {
         MerchantID: content.MerchantID,
         TradeInfo: content.TradeInfo,
@@ -137,12 +137,15 @@ ${autoSubmitScript}`;
    */
   private getApiUrl(): string {
     // 假設 payment 有 getApiUrl 方法
-    if ('getApiUrl' in this.payment && typeof this.payment.getApiUrl === 'function') {
+    if (
+      "getApiUrl" in this.payment &&
+      typeof this.payment.getApiUrl === "function"
+    ) {
       return (this.payment as { getApiUrl: () => string }).getApiUrl();
     }
 
     // 預設使用測試環境
-    return 'https://ccore.newebpay.com' + this.payment.getRequestPath();
+    return "https://ccore.newebpay.com" + this.payment.getRequestPath();
   }
 
   /**
@@ -150,14 +153,13 @@ ${autoSubmitScript}`;
    */
   private escapeHtml(str: string): string {
     const htmlEscapes: Record<string, string> = {
-      '&': '&amp;',
-      '<': '&lt;',
-      '>': '&gt;',
-      '"': '&quot;',
-      "'": '&#39;',
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
     };
 
     return str.replace(/[&<>"']/g, (char) => htmlEscapes[char] ?? char);
   }
 }
-

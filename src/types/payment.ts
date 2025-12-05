@@ -87,4 +87,3 @@ export interface PaymentConfig {
   returnUrl?: string;
   notifyUrl?: string;
 }
-

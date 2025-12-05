@@ -1,4 +1,4 @@
-import { Content } from '../content.js';
+import { Content } from "../content.js";
 
 /**
  * LINE Pay 支付。
@@ -12,14 +12,14 @@ export class LinePayPayment extends Content {
   protected override initContent(): void {
     super.initContent();
     // 啟用 LINE Pay 付款
-    this.content['LINEPAY'] = 1;
+    this.content["LINEPAY"] = 1;
   }
 
   /**
    * 設定是否使用 LINE Pay 產品圖片。
    */
   setImageUrl(url: string): this {
-    this.content['LINEPayProductImageUrl'] = url;
+    this.content["LINEPayProductImageUrl"] = url;
     return this;
   }
 
@@ -30,4 +30,3 @@ export class LinePayPayment extends Content {
     this.validateBaseParams();
   }
 }
-

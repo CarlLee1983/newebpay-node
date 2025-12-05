@@ -1,5 +1,5 @@
-import { Aes256Encoder } from '../infrastructure/aes256-encoder.js';
-import { NewebPayError } from '../errors/newebpay-error.js';
+import { Aes256Encoder } from "../infrastructure/aes256-encoder.js";
+import { NewebPayError } from "../errors/newebpay-error.js";
 
 /**
  * 電子錢包退款結果。
@@ -16,7 +16,7 @@ export interface EWalletRefundResult {
 /**
  * 支援的電子錢包類型。
  */
-export type EWalletType = 'LINEPAY' | 'ESUNWALLET' | 'TAIWANPAY';
+export type EWalletType = "LINEPAY" | "ESUNWALLET" | "TAIWANPAY";
 
 /**
  * 電子錢包退款。
@@ -27,12 +27,12 @@ export class EWalletRefund {
   /**
    * API 版本。
    */
-  protected version = '1.0';
+  protected version = "1.0";
 
   /**
    * API 請求路徑。
    */
-  protected requestPath = '/API/EWallet/Refund';
+  protected requestPath = "/API/EWallet/Refund";
 
   /**
    * 是否為測試環境。
@@ -50,7 +50,7 @@ export class EWalletRefund {
   constructor(
     protected merchantId: string,
     protected hashKey: string,
-    protected hashIV: string
+    protected hashIV: string,
   ) {}
 
   /**
@@ -59,7 +59,7 @@ export class EWalletRefund {
   static create(
     merchantId: string,
     hashKey: string,
-    hashIV: string
+    hashIV: string,
   ): EWalletRefund {
     return new EWalletRefund(merchantId, hashKey, hashIV);
   }
@@ -77,8 +77,8 @@ export class EWalletRefund {
    */
   getBaseUrl(): string {
     return this.isTest
-      ? 'https://ccore.newebpay.com'
-      : 'https://core.newebpay.com';
+      ? "https://ccore.newebpay.com"
+      : "https://core.newebpay.com";
   }
 
   /**
@@ -98,10 +98,10 @@ export class EWalletRefund {
   async refund(
     merchantOrderNo: string,
     amt: number,
-    paymentType: EWalletType
+    paymentType: EWalletType,
   ): Promise<EWalletRefundResult> {
     const postData: Record<string, unknown> = {
-      RespondType: 'JSON',
+      RespondType: "JSON",
       Version: this.version,
       TimeStamp: String(Math.floor(Date.now() / 1000)),
       MerchantOrderNo: merchantOrderNo,
@@ -112,9 +112,9 @@ export class EWalletRefund {
     const payload = this.buildPayload(postData);
 
     const response = await fetch(this.getApiUrl(), {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        "Content-Type": "application/x-www-form-urlencoded",
       },
       body: new URLSearchParams(payload).toString(),
     });
@@ -135,7 +135,9 @@ export class EWalletRefund {
   /**
    * 建立請求 Payload。
    */
-  protected buildPayload(postData: Record<string, unknown>): Record<string, string> {
+  protected buildPayload(
+    postData: Record<string, unknown>,
+  ): Record<string, string> {
     const encoder = this.getAesEncoder();
     const tradeInfo = encoder.encrypt(postData);
 
@@ -153,10 +155,10 @@ export class EWalletRefund {
     Message?: string;
     Result?: EWalletRefundResult;
   }): EWalletRefundResult {
-    const status = response.Status ?? '';
-    const message = response.Message ?? '';
+    const status = response.Status ?? "";
+    const message = response.Message ?? "";
 
-    if (status !== 'SUCCESS') {
+    if (status !== "SUCCESS") {
       throw NewebPayError.apiError(message, status);
     }
 
@@ -173,4 +175,3 @@ export class EWalletRefund {
     return this.aesEncoder;
   }
 }
-

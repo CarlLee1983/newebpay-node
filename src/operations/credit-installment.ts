@@ -1,5 +1,5 @@
-import { Content } from '../content.js';
-import { NewebPayError } from '../errors/newebpay-error.js';
+import { Content } from "../content.js";
+import { NewebPayError } from "../errors/newebpay-error.js";
 
 /**
  * 信用卡分期支付。
@@ -18,7 +18,7 @@ export class CreditInstallment extends Content {
   protected override initContent(): void {
     super.initContent();
     // 啟用信用卡分期
-    this.content['InstFlag'] = 1;
+    this.content["InstFlag"] = 1;
   }
 
   /**
@@ -31,13 +31,13 @@ export class CreditInstallment extends Content {
     for (const inst of installments) {
       if (!CreditInstallment.ALLOWED_INSTALLMENTS.includes(inst)) {
         throw NewebPayError.invalid(
-          'Installment',
-          `不支援 ${inst} 期，允許的期數：${CreditInstallment.ALLOWED_INSTALLMENTS.join(', ')}`
+          "Installment",
+          `不支援 ${inst} 期，允許的期數：${CreditInstallment.ALLOWED_INSTALLMENTS.join(", ")}`,
         );
       }
     }
 
-    this.content['InstFlag'] = installments.join(',');
+    this.content["InstFlag"] = installments.join(",");
     return this;
   }
 
@@ -48,4 +48,3 @@ export class CreditInstallment extends Content {
     this.validateBaseParams();
   }
 }
-

@@ -1,11 +1,11 @@
-import { Aes256Encoder } from '../infrastructure/aes256-encoder.js';
-import { CheckValueEncoder } from '../infrastructure/check-value-encoder.js';
-import { NewebPayError } from '../errors/newebpay-error.js';
+import { Aes256Encoder } from "../infrastructure/aes256-encoder.js";
+import { CheckValueEncoder } from "../infrastructure/check-value-encoder.js";
+import { NewebPayError } from "../errors/newebpay-error.js";
 import type {
   NotifyHandlerInterface,
   NotifyRawData,
   CvscomResultData,
-} from '../types/notification.js';
+} from "../types/notification.js";
 
 /**
  * 超商取貨付款通知處理器。
@@ -59,7 +59,7 @@ export class CvscomNotify implements NotifyHandlerInterface {
     if (
       !this.checkValueEncoder.verify(
         String(data.TradeInfo),
-        String(data.TradeSha)
+        String(data.TradeSha),
       )
     ) {
       return false;
@@ -89,12 +89,12 @@ export class CvscomNotify implements NotifyHandlerInterface {
    * 解析解密後的資料。
    */
   private parseDecryptedData(
-    decrypted: Record<string, string>
+    decrypted: Record<string, string>,
   ): Record<string, unknown> {
     const result: Record<string, unknown> = {};
 
     for (const [key, value] of Object.entries(decrypted)) {
-      if (key === 'Result' && typeof value === 'string') {
+      if (key === "Result" && typeof value === "string") {
         try {
           result[key] = JSON.parse(value);
         } catch {
@@ -126,21 +126,21 @@ export class CvscomNotify implements NotifyHandlerInterface {
    * 是否成功。
    */
   isSuccess(): boolean {
-    return this.getStatus() === 'SUCCESS';
+    return this.getStatus() === "SUCCESS";
   }
 
   /**
    * 取得狀態。
    */
   getStatus(): string {
-    return String(this.data['Status'] ?? '');
+    return String(this.data["Status"] ?? "");
   }
 
   /**
    * 取得訊息。
    */
   getMessage(): string {
-    return String(this.data['Message'] ?? '');
+    return String(this.data["Message"] ?? "");
   }
 
   /**
@@ -148,7 +148,7 @@ export class CvscomNotify implements NotifyHandlerInterface {
    */
   getMerchantOrderNo(): string {
     const result = this.getResult();
-    return String(result.MerchantOrderNo ?? '');
+    return String(result.MerchantOrderNo ?? "");
   }
 
   /**
@@ -156,7 +156,7 @@ export class CvscomNotify implements NotifyHandlerInterface {
    */
   getTradeNo(): string {
     const result = this.getResult();
-    return String(result.TradeNo ?? '');
+    return String(result.TradeNo ?? "");
   }
 
   /**
@@ -172,7 +172,7 @@ export class CvscomNotify implements NotifyHandlerInterface {
    */
   getPaymentType(): string {
     const result = this.getResult();
-    return String(result.PaymentType ?? '');
+    return String(result.PaymentType ?? "");
   }
 
   /**
@@ -180,7 +180,7 @@ export class CvscomNotify implements NotifyHandlerInterface {
    */
   getStoreType(): string {
     const result = this.getResult();
-    return String(result.StoreType ?? '');
+    return String(result.StoreType ?? "");
   }
 
   /**
@@ -188,7 +188,7 @@ export class CvscomNotify implements NotifyHandlerInterface {
    */
   getStoreCode(): string {
     const result = this.getResult();
-    return String(result.StoreCode ?? '');
+    return String(result.StoreCode ?? "");
   }
 
   /**
@@ -196,7 +196,7 @@ export class CvscomNotify implements NotifyHandlerInterface {
    */
   getStoreName(): string {
     const result = this.getResult();
-    return String(result.StoreName ?? '');
+    return String(result.StoreName ?? "");
   }
 
   /**
@@ -204,7 +204,7 @@ export class CvscomNotify implements NotifyHandlerInterface {
    */
   getStoreAddr(): string {
     const result = this.getResult();
-    return String(result.StoreAddr ?? '');
+    return String(result.StoreAddr ?? "");
   }
 
   /**
@@ -212,7 +212,7 @@ export class CvscomNotify implements NotifyHandlerInterface {
    */
   getCVSCOMName(): string {
     const result = this.getResult();
-    return String(result.CVSCOMName ?? '');
+    return String(result.CVSCOMName ?? "");
   }
 
   /**
@@ -220,7 +220,7 @@ export class CvscomNotify implements NotifyHandlerInterface {
    */
   getCVSCOMPhone(): string {
     const result = this.getResult();
-    return String(result.CVSCOMPhone ?? '');
+    return String(result.CVSCOMPhone ?? "");
   }
 
   /**
@@ -228,7 +228,7 @@ export class CvscomNotify implements NotifyHandlerInterface {
    */
   getLgsNo(): string {
     const result = this.getResult();
-    return String(result.LgsNo ?? '');
+    return String(result.LgsNo ?? "");
   }
 
   /**
@@ -236,14 +236,14 @@ export class CvscomNotify implements NotifyHandlerInterface {
    */
   getLgsType(): string {
     const result = this.getResult();
-    return String(result.LgsType ?? '');
+    return String(result.LgsType ?? "");
   }
 
   /**
    * 取得交易結果物件。
    */
   getResult(): CvscomResultData {
-    return (this.data['Result'] as CvscomResultData) ?? {};
+    return (this.data["Result"] as CvscomResultData) ?? {};
   }
 
   /**
@@ -253,4 +253,3 @@ export class CvscomNotify implements NotifyHandlerInterface {
     return this.verified;
   }
 }
-

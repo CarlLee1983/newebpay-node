@@ -29,18 +29,16 @@ export interface NewebPayEnvConfig {
 /**
  * 從環境變數載入設定
  */
-export function loadConfigFromEnv(
-  env?: NewebPayEnvConfig
-): NewebPayConfig {
+export function loadConfigFromEnv(env?: NewebPayEnvConfig): NewebPayConfig {
   const processEnv = env ?? (process.env as NewebPayEnvConfig);
 
   const config: NewebPayConfig = {
-    merchantId: processEnv.NEWEBPAY_MERCHANT_ID ?? '',
-    hashKey: processEnv.NEWEBPAY_HASH_KEY ?? '',
-    hashIV: processEnv.NEWEBPAY_HASH_IV ?? '',
+    merchantId: processEnv.NEWEBPAY_MERCHANT_ID ?? "",
+    hashKey: processEnv.NEWEBPAY_HASH_KEY ?? "",
+    hashIV: processEnv.NEWEBPAY_HASH_IV ?? "",
     testMode:
-      processEnv.NEWEBPAY_TEST_MODE === 'true' ||
-      processEnv.NEWEBPAY_TEST_MODE === '1',
+      processEnv.NEWEBPAY_TEST_MODE === "true" ||
+      processEnv.NEWEBPAY_TEST_MODE === "1",
   };
 
   if (processEnv.NEWEBPAY_RETURN_URL) {
@@ -61,4 +59,3 @@ export function loadConfigFromEnv(
 
   return config;
 }
-

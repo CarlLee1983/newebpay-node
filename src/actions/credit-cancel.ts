@@ -1,6 +1,6 @@
-import { Aes256Encoder } from '../infrastructure/aes256-encoder.js';
-import { NewebPayError } from '../errors/newebpay-error.js';
-import { IndexType } from '../types/parameters.js';
+import { Aes256Encoder } from "../infrastructure/aes256-encoder.js";
+import { NewebPayError } from "../errors/newebpay-error.js";
+import { IndexType } from "../types/parameters.js";
 
 /**
  * 取消授權結果。
@@ -22,12 +22,12 @@ export class CreditCancel {
   /**
    * API 版本。
    */
-  protected version = '1.0';
+  protected version = "1.0";
 
   /**
    * API 請求路徑。
    */
-  protected requestPath = '/API/CreditCard/Cancel';
+  protected requestPath = "/API/CreditCard/Cancel";
 
   /**
    * 是否為測試環境。
@@ -45,7 +45,7 @@ export class CreditCancel {
   constructor(
     protected merchantId: string,
     protected hashKey: string,
-    protected hashIV: string
+    protected hashIV: string,
   ) {}
 
   /**
@@ -54,7 +54,7 @@ export class CreditCancel {
   static create(
     merchantId: string,
     hashKey: string,
-    hashIV: string
+    hashIV: string,
   ): CreditCancel {
     return new CreditCancel(merchantId, hashKey, hashIV);
   }
@@ -72,8 +72,8 @@ export class CreditCancel {
    */
   getBaseUrl(): string {
     return this.isTest
-      ? 'https://ccore.newebpay.com'
-      : 'https://core.newebpay.com';
+      ? "https://ccore.newebpay.com"
+      : "https://core.newebpay.com";
   }
 
   /**
@@ -90,10 +90,10 @@ export class CreditCancel {
     merchantOrderNo: string,
     amt: number,
     indexType: IndexType | string = IndexType.MERCHANT_ORDER_NO,
-    tradeNo?: string
+    tradeNo?: string,
   ): Promise<CreditCancelResult> {
     const postData: Record<string, unknown> = {
-      RespondType: 'JSON',
+      RespondType: "JSON",
       Version: this.version,
       Amt: amt,
       MerchantOrderNo: merchantOrderNo,
@@ -102,15 +102,15 @@ export class CreditCancel {
     };
 
     if (indexType === IndexType.TRADE_NO && tradeNo) {
-      postData['TradeNo'] = tradeNo;
+      postData["TradeNo"] = tradeNo;
     }
 
     const payload = this.buildPayload(postData);
 
     const response = await fetch(this.getApiUrl(), {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        "Content-Type": "application/x-www-form-urlencoded",
       },
       body: new URLSearchParams(payload).toString(),
     });
@@ -131,7 +131,9 @@ export class CreditCancel {
   /**
    * 建立請求 Payload。
    */
-  protected buildPayload(postData: Record<string, unknown>): Record<string, string> {
+  protected buildPayload(
+    postData: Record<string, unknown>,
+  ): Record<string, string> {
     const encoder = this.getAesEncoder();
     const tradeInfo = encoder.encrypt(postData);
 
@@ -149,10 +151,10 @@ export class CreditCancel {
     Message?: string;
     Result?: CreditCancelResult;
   }): CreditCancelResult {
-    const status = response.Status ?? '';
-    const message = response.Message ?? '';
+    const status = response.Status ?? "";
+    const message = response.Message ?? "";
 
-    if (status !== 'SUCCESS') {
+    if (status !== "SUCCESS") {
       throw NewebPayError.apiError(message, status);
     }
 
@@ -169,4 +171,3 @@ export class CreditCancel {
     return this.aesEncoder;
   }
 }
-

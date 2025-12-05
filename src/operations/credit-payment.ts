@@ -1,4 +1,4 @@
-import { Content } from '../content.js';
+import { Content } from "../content.js";
 
 /**
  * 信用卡一次付清支付。
@@ -12,14 +12,14 @@ export class CreditPayment extends Content {
   protected override initContent(): void {
     super.initContent();
     // 啟用信用卡付款
-    this.content['CREDIT'] = 1;
+    this.content["CREDIT"] = 1;
   }
 
   /**
    * 設定是否啟用紅利折抵。
    */
   setRedeem(enable: number): this {
-    this.content['CreditRed'] = enable;
+    this.content["CreditRed"] = enable;
     return this;
   }
 
@@ -27,7 +27,7 @@ export class CreditPayment extends Content {
    * 設定是否啟用銀聯卡。
    */
   setUnionPay(enable: number): this {
-    this.content['UNIONPAY'] = enable;
+    this.content["UNIONPAY"] = enable;
     return this;
   }
 
@@ -35,7 +35,7 @@ export class CreditPayment extends Content {
    * 設定是否啟用 Google Pay。
    */
   setGooglePay(enable: number): this {
-    this.content['ANDROIDPAY'] = enable;
+    this.content["ANDROIDPAY"] = enable;
     return this;
   }
 
@@ -43,7 +43,7 @@ export class CreditPayment extends Content {
    * 設定是否啟用 Samsung Pay。
    */
   setSamsungPay(enable: number): this {
-    this.content['SAMSUNGPAY'] = enable;
+    this.content["SAMSUNGPAY"] = enable;
     return this;
   }
 
@@ -51,7 +51,7 @@ export class CreditPayment extends Content {
    * 設定信用卡快速結帳。
    */
   setTokenTerm(enable: number): this {
-    this.content['TokenTerm'] = enable;
+    this.content["TokenTerm"] = enable;
     return this;
   }
 
@@ -59,7 +59,7 @@ export class CreditPayment extends Content {
    * 設定信用卡快速結帳使用者識別碼。
    */
   setTokenTermDemand(tokenTermId: string): this {
-    this.content['TokenTermDemand'] = tokenTermId;
+    this.content["TokenTermDemand"] = tokenTermId;
     return this;
   }
 
@@ -70,4 +70,3 @@ export class CreditPayment extends Content {
     this.validateBaseParams();
   }
 }
-

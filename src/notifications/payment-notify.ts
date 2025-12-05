@@ -1,11 +1,11 @@
-import { Aes256Encoder } from '../infrastructure/aes256-encoder.js';
-import { CheckValueEncoder } from '../infrastructure/check-value-encoder.js';
-import { NewebPayError } from '../errors/newebpay-error.js';
+import { Aes256Encoder } from "../infrastructure/aes256-encoder.js";
+import { CheckValueEncoder } from "../infrastructure/check-value-encoder.js";
+import { NewebPayError } from "../errors/newebpay-error.js";
 import type {
   NotifyHandlerInterface,
   NotifyRawData,
   PaymentResultData,
-} from '../types/notification.js';
+} from "../types/notification.js";
 
 /**
  * 支付完成通知處理器。
@@ -64,7 +64,7 @@ export class PaymentNotify implements NotifyHandlerInterface {
     if (
       !this.checkValueEncoder.verify(
         String(data.TradeInfo),
-        String(data.TradeSha)
+        String(data.TradeSha),
       )
     ) {
       return false;
@@ -98,13 +98,13 @@ export class PaymentNotify implements NotifyHandlerInterface {
    * 解析解密後的資料。
    */
   private parseDecryptedData(
-    decrypted: Record<string, string>
+    decrypted: Record<string, string>,
   ): Record<string, unknown> {
     const result: Record<string, unknown> = {};
 
     for (const [key, value] of Object.entries(decrypted)) {
       // 嘗試解析 JSON
-      if (key === 'Result' && typeof value === 'string') {
+      if (key === "Result" && typeof value === "string") {
         try {
           result[key] = JSON.parse(value);
         } catch {
@@ -136,28 +136,28 @@ export class PaymentNotify implements NotifyHandlerInterface {
    * 是否成功。
    */
   isSuccess(): boolean {
-    return this.getStatus() === 'SUCCESS';
+    return this.getStatus() === "SUCCESS";
   }
 
   /**
    * 取得狀態。
    */
   getStatus(): string {
-    return String(this.data['Status'] ?? '');
+    return String(this.data["Status"] ?? "");
   }
 
   /**
    * 取得訊息。
    */
   getMessage(): string {
-    return String(this.data['Message'] ?? '');
+    return String(this.data["Message"] ?? "");
   }
 
   /**
    * 取得特店編號。
    */
   getMerchantID(): string {
-    return String(this.data['MerchantID'] ?? '');
+    return String(this.data["MerchantID"] ?? "");
   }
 
   /**
@@ -165,7 +165,7 @@ export class PaymentNotify implements NotifyHandlerInterface {
    */
   getMerchantOrderNo(): string {
     const result = this.getResult();
-    return String(result.MerchantOrderNo ?? '');
+    return String(result.MerchantOrderNo ?? "");
   }
 
   /**
@@ -173,7 +173,7 @@ export class PaymentNotify implements NotifyHandlerInterface {
    */
   getTradeNo(): string {
     const result = this.getResult();
-    return String(result.TradeNo ?? '');
+    return String(result.TradeNo ?? "");
   }
 
   /**
@@ -189,7 +189,7 @@ export class PaymentNotify implements NotifyHandlerInterface {
    */
   getPaymentType(): string {
     const result = this.getResult();
-    return String(result.PaymentType ?? '');
+    return String(result.PaymentType ?? "");
   }
 
   /**
@@ -197,7 +197,7 @@ export class PaymentNotify implements NotifyHandlerInterface {
    */
   getPayTime(): string {
     const result = this.getResult();
-    return String(result.PayTime ?? '');
+    return String(result.PayTime ?? "");
   }
 
   /**
@@ -205,7 +205,7 @@ export class PaymentNotify implements NotifyHandlerInterface {
    */
   getIP(): string {
     const result = this.getResult();
-    return String(result.IP ?? '');
+    return String(result.IP ?? "");
   }
 
   /**
@@ -213,7 +213,7 @@ export class PaymentNotify implements NotifyHandlerInterface {
    */
   getPayBankCode(): string {
     const result = this.getResult();
-    return String(result.PayBankCode ?? '');
+    return String(result.PayBankCode ?? "");
   }
 
   /**
@@ -221,7 +221,7 @@ export class PaymentNotify implements NotifyHandlerInterface {
    */
   getAuthCode(): string {
     const result = this.getResult();
-    return String(result.Auth ?? '');
+    return String(result.Auth ?? "");
   }
 
   /**
@@ -229,7 +229,7 @@ export class PaymentNotify implements NotifyHandlerInterface {
    */
   getCard4No(): string {
     const result = this.getResult();
-    return String(result.Card4No ?? '');
+    return String(result.Card4No ?? "");
   }
 
   /**
@@ -237,7 +237,7 @@ export class PaymentNotify implements NotifyHandlerInterface {
    */
   getCard6No(): string {
     const result = this.getResult();
-    return String(result.Card6No ?? '');
+    return String(result.Card6No ?? "");
   }
 
   /**
@@ -245,7 +245,7 @@ export class PaymentNotify implements NotifyHandlerInterface {
    */
   getECI(): string {
     const result = this.getResult();
-    return String(result.ECI ?? '');
+    return String(result.ECI ?? "");
   }
 
   /**
@@ -276,7 +276,7 @@ export class PaymentNotify implements NotifyHandlerInterface {
    * 取得交易結果物件。
    */
   getResult(): PaymentResultData {
-    return (this.data['Result'] as PaymentResultData) ?? {};
+    return (this.data["Result"] as PaymentResultData) ?? {};
   }
 
   /**
@@ -286,4 +286,3 @@ export class PaymentNotify implements NotifyHandlerInterface {
     return this.verified;
   }
 }
-

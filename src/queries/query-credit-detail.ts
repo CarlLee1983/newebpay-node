@@ -1,5 +1,5 @@
-import { Aes256Encoder } from '../infrastructure/aes256-encoder.js';
-import { NewebPayError } from '../errors/newebpay-error.js';
+import { Aes256Encoder } from "../infrastructure/aes256-encoder.js";
+import { NewebPayError } from "../errors/newebpay-error.js";
 
 /**
  * 信用卡交易明細查詢結果。
@@ -30,12 +30,12 @@ export class QueryCreditDetail {
   /**
    * API 版本。
    */
-  protected version = '1.1';
+  protected version = "1.1";
 
   /**
    * API 請求路徑。
    */
-  protected requestPath = '/API/CreditCard/QueryTradeInfo';
+  protected requestPath = "/API/CreditCard/QueryTradeInfo";
 
   /**
    * 是否為測試環境。
@@ -53,7 +53,7 @@ export class QueryCreditDetail {
   constructor(
     protected merchantId: string,
     protected hashKey: string,
-    protected hashIV: string
+    protected hashIV: string,
   ) {}
 
   /**
@@ -62,7 +62,7 @@ export class QueryCreditDetail {
   static create(
     merchantId: string,
     hashKey: string,
-    hashIV: string
+    hashIV: string,
   ): QueryCreditDetail {
     return new QueryCreditDetail(merchantId, hashKey, hashIV);
   }
@@ -80,8 +80,8 @@ export class QueryCreditDetail {
    */
   getBaseUrl(): string {
     return this.isTest
-      ? 'https://ccore.newebpay.com'
-      : 'https://core.newebpay.com';
+      ? "https://ccore.newebpay.com"
+      : "https://core.newebpay.com";
   }
 
   /**
@@ -96,14 +96,14 @@ export class QueryCreditDetail {
    */
   async query(
     merchantOrderNo: string,
-    amt: number
+    amt: number,
   ): Promise<QueryCreditDetailResult> {
     const payload = this.buildPayload(merchantOrderNo, amt);
 
     const response = await fetch(this.getApiUrl(), {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        "Content-Type": "application/x-www-form-urlencoded",
       },
       body: new URLSearchParams(payload).toString(),
     });
@@ -126,12 +126,12 @@ export class QueryCreditDetail {
    */
   protected buildPayload(
     merchantOrderNo: string,
-    amt: number
+    amt: number,
   ): Record<string, string> {
     const postData = {
       MerchantID: this.merchantId,
       Version: this.version,
-      RespondType: 'JSON',
+      RespondType: "JSON",
       TimeStamp: String(Math.floor(Date.now() / 1000)),
       MerchantOrderNo: merchantOrderNo,
       Amt: amt,
@@ -154,10 +154,10 @@ export class QueryCreditDetail {
     Message?: string;
     Result?: QueryCreditDetailResult;
   }): QueryCreditDetailResult {
-    const status = response.Status ?? '';
-    const message = response.Message ?? '';
+    const status = response.Status ?? "";
+    const message = response.Message ?? "";
 
-    if (status !== 'SUCCESS') {
+    if (status !== "SUCCESS") {
       throw NewebPayError.apiError(message, status);
     }
 
@@ -174,4 +174,3 @@ export class QueryCreditDetail {
     return this.aesEncoder;
   }
 }
-
