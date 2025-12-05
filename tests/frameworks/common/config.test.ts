@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { loadConfigFromEnv } from "../../../src/frameworks/common/config.js";
+import { loadConfigFromEnv } from "../../../src/frameworks/common/index.js";
 import type { NewebPayEnvConfig } from "../../../src/frameworks/common/config.js";
 
 describe("loadConfigFromEnv", () => {

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { NewebPayService } from "../../../src/frameworks/common/newebpay-service.js";
+import { NewebPayService } from "../../../src/frameworks/common/index.js";
 import type { NewebPayConfig } from "../../../src/frameworks/common/config.js";
 
 describe("NewebPayService", () => {
@@ -26,27 +26,50 @@ describe("NewebPayService", () => {
     });
   });
 
-  describe("支付方式方法", () => {
-    it("credit 應該返回 CreditPayment", () => {
+  describe("Payment Methods", () => {
+    it("credit should return CreditPayment", () => {
       const service = new NewebPayService(config);
-      const payment = service.credit();
+      const payment = service.credit() as any;
 
       expect(payment.get("CREDIT")).toBe(1);
       expect(payment.isTestMode()).toBe(true);
     });
 
-    it("atm 應該返回 AtmPayment", () => {
+    it("atm should return AtmPayment", () => {
       const service = new NewebPayService(config);
-      const payment = service.atm();
+      const payment = service.atm() as any;
 
       expect(payment.get("VACC")).toBe(1);
     });
 
-    it("cvs 應該返回 CvsPayment", () => {
+    it("cvs should return CvsPayment", () => {
       const service = new NewebPayService(config);
-      const payment = service.cvs();
-
+      const payment = service.cvs() as any;
       expect(payment.get("CVS")).toBe(1);
+    });
+
+    it("barcode should return BarcodePayment", () => {
+      const service = new NewebPayService(config);
+      const payment = service.barcode() as any;
+      expect(payment.get("BARCODE")).toBe(1);
+    });
+
+    it("linePay should return LinePayPayment", () => {
+      const service = new NewebPayService(config);
+      const payment = service.linePay() as any;
+      expect(payment.get("LINEPAY")).toBe(1);
+    });
+
+    it("webAtm should return WebAtmPayment", () => {
+      const service = new NewebPayService(config);
+      const payment = service.webAtm() as any;
+      expect(payment.get("WEBATM")).toBe(1);
+    });
+
+    it("taiwanPay should return TaiwanPayPayment", () => {
+      const service = new NewebPayService(config);
+      const payment = service.taiwanPay() as any;
+      expect(payment.get("TAIWANPAY")).toBe(1);
     });
   });
 

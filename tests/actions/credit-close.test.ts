@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
 import { CreditClose } from "../../src/actions/credit-close.js";
 import { CloseType, IndexType } from "../../src/types/parameters.js";
 
@@ -60,6 +60,97 @@ describe("CreditClose", () => {
     it("應該正確使用 IndexType 列舉", () => {
       expect(IndexType.TRADE_NO).toBe("1");
       expect(IndexType.MERCHANT_ORDER_NO).toBe("2");
+    });
+  });
+
+  describe("API 操作", () => {
+    beforeEach(() => {
+      global.fetch = vi.fn();
+    });
+
+    afterEach(() => {
+      vi.resetAllMocks();
+    });
+
+    const mockSuccessResult = {
+      Status: "SUCCESS",
+      Message: "Operation Successful",
+      Result: {
+        MerchantID: merchantId,
+        MerchantOrderNo: "ORDER001",
+        TradeNo: "TRADE001",
+        Amt: 1000,
+        CloseType: 1
+      }
+    };
+
+    it("pay (請款) 應正確執行", async () => {
+      (global.fetch as any).mockResolvedValue({
+        ok: true,
+        json: async () => mockSuccessResult
+      });
+
+      const result = await creditClose.pay("ORDER001", 1000);
+
+      expect(result.MerchantOrderNo).toBe("ORDER001");
+      expect(result.CloseType).toBe(1);
+
+      expect(global.fetch).toHaveBeenCalledWith(
+        expect.stringContaining("/API/CreditCard/Close"),
+        expect.objectContaining({
+          method: "POST",
+          body: expect.stringMatching(/MerchantID_=.+&PostData_=.+/)
+        })
+      );
+    });
+
+    it("refund (退款) 應正確執行", async () => {
+      (global.fetch as any).mockResolvedValue({
+        ok: true,
+        json: async () => mockSuccessResult
+      });
+
+      const result = await creditClose.refund("ORDER001", 1000);
+      expect(result).toBeDefined();
+    });
+
+    it("cancelClose (取消) 應正確執行", async () => {
+      (global.fetch as any).mockResolvedValue({
+        ok: true,
+        json: async () => mockSuccessResult
+      });
+
+      const result = await creditClose.cancelClose("ORDER001", 1000, CloseType.PAY);
+      expect(result).toBeDefined();
+    });
+
+    it("應支援使用 TradeNo 進行操作", async () => {
+      (global.fetch as any).mockResolvedValue({
+        ok: true,
+        json: async () => mockSuccessResult
+      });
+
+      await creditClose.pay("ORDER001", 1000, IndexType.TRADE_NO, "TRADE001");
+
+      // Assertions on the underlying call could verify TradeNo validation if needed
+    });
+
+    it("API 錯誤應拋出異常", async () => {
+      (global.fetch as any).mockResolvedValue({
+        ok: true,
+        json: async () => ({ Status: "FAIL", Message: "Error" })
+      });
+
+      await expect(creditClose.pay("ORDER001", 1000)).rejects.toThrow();
+    });
+
+    it("HTTP 錯誤應拋出異常", async () => {
+      (global.fetch as any).mockResolvedValue({
+        ok: false,
+        status: 500
+      });
+
+      await expect(creditClose.pay("ORDER001", 1000)).rejects.toThrow();
     });
   });
 });
