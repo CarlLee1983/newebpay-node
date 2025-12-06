@@ -1,3 +1,14 @@
+## [1.3.0](https://github.com/CarlLee1983/newebpay-node/compare/v1.2.0...v1.3.0) (2025-12-06)
+
+### Features
+
+* Add GitHub Actions workflows for automatic pull request labeling and stale issue/PR management. ([e38b88b](https://github.com/CarlLee1983/newebpay-node/commit/e38b88b6361b9f7adb9b44b730822356bdbc3faf))
+* Add Koa and Fastify framework integrations, introduce HTTP client abstraction, and setup project governance files ([fd779ce](https://github.com/CarlLee1983/newebpay-node/commit/fd779ce88acefa95c668ad917c9f3f6cb28be6d3))
+
+### Documentation
+
+* Add security reporting template, code of conduct, and security policy ([bb250f1](https://github.com/CarlLee1983/newebpay-node/commit/bb250f106bea5a58ad48d796c6f3ca5cf362812b))
+
 ## [1.2.0](https://github.com/CarlLee1983/newebpay-node/compare/v1.1.0...v1.2.0) (2025-12-06)
 
 ### Features
