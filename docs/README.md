@@ -1,3 +1,7 @@
+**@carllee1983/newebpay**
+
+***
+
 # 藍新金流 Node.js SDK
 
 [![Node.js Version](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-green)](https://nodejs.org)
@@ -427,7 +431,7 @@ MIT License
 
 ### Express.js
 
-完整整合範例請參考 [examples/express-integration.ts](examples/express-integration.ts)
+完整整合範例請參考 [examples/express-integration.ts](_media/express-integration.ts)
 
 ```typescript
 import { createNewebPayRouter, loadConfigFromEnv } from '@carllee1983/newebpay/express';
@@ -457,4 +461,3 @@ const params = newebpay
 - [藍新金流官網](https://www.newebpay.com/)
 - [藍新金流商店後台](https://www.newebpay.com/main/index)
 - [PHP 版本 SDK](https://github.com/CarlLee1983/newebpay)
-
