@@ -125,6 +125,48 @@ describe("createNewebPayRouter", () => {
             expect(mockBuilder.creditInstallment).toHaveBeenCalledWith(3);
         });
 
+        it("應支援 webatm 支付方式", () => {
+            const req = { body: { orderId: "1", amount: 100, itemDesc: "I", paymentType: "webatm" } };
+            const res = { json: vi.fn() }; createHandler(req, res);
+            expect(mockBuilder.webAtm).toHaveBeenCalled();
+        });
+
+        it("應支援 atm 支付方式", () => {
+            const req = { body: { orderId: "1", amount: 100, itemDesc: "I", paymentType: "atm", expireDate: "20231231" } };
+            const res = { json: vi.fn() }; createHandler(req, res);
+            expect(mockBuilder.atm).toHaveBeenCalledWith("20231231");
+        });
+
+        it("應支援 cvs 支付方式", () => {
+            const req = { body: { orderId: "1", amount: 100, itemDesc: "I", paymentType: "cvs", expireDate: "20231231" } };
+            const res = { json: vi.fn() }; createHandler(req, res);
+            expect(mockBuilder.cvs).toHaveBeenCalledWith("20231231");
+        });
+
+        it("應支援 barcode 支付方式", () => {
+            const req = { body: { orderId: "1", amount: 100, itemDesc: "I", paymentType: "barcode", expireDate: "20231231" } };
+            const res = { json: vi.fn() }; createHandler(req, res);
+            expect(mockBuilder.barcode).toHaveBeenCalledWith("20231231");
+        });
+
+        it("應支援 linepay 支付方式", () => {
+            const req = { body: { orderId: "1", amount: 100, itemDesc: "I", paymentType: "linepay" } };
+            const res = { json: vi.fn() }; createHandler(req, res);
+            expect(mockBuilder.linePay).toHaveBeenCalled();
+        });
+
+        it("應支援 taiwanpay 支付方式", () => {
+            const req = { body: { orderId: "1", amount: 100, itemDesc: "I", paymentType: "taiwanpay" } };
+            const res = { json: vi.fn() }; createHandler(req, res);
+            expect(mockBuilder.taiwanPay).toHaveBeenCalled();
+        });
+
+        it("應支援 allinone 支付方式", () => {
+            const req = { body: { orderId: "1", amount: 100, itemDesc: "I", paymentType: "allinone" } };
+            const res = { json: vi.fn() }; createHandler(req, res);
+            expect(mockBuilder.allInOne).toHaveBeenCalled();
+        });
+
         it("應處理自訂設定", () => {
             const customizeFn = vi.fn();
             const req = {
@@ -158,6 +200,14 @@ describe("createNewebPayRouter", () => {
             createHandler(req, res);
             expect(res.status).toHaveBeenCalledWith(500);
             expect(res.json).toHaveBeenCalledWith({ error: "Test Error" });
+        });
+
+        it("應處理非 Error 物件的錯誤", () => {
+            mockServiceInstance.payment.mockImplementationOnce(() => { throw "String Error"; });
+            const req = { body: { orderId: "1", amount: 1, itemDesc: "I" } };
+            const res = { status: vi.fn().mockReturnThis(), json: vi.fn() };
+            createHandler(req, res);
+            expect(res.json).toHaveBeenCalledWith({ error: "Unknown error" });
         });
     });
 
@@ -198,15 +248,55 @@ describe("createNewebPayRouter", () => {
         it("POST /atm/notify 驗證成功應回傳 OK", () => {
             const call = mockRouter.post.mock.calls.find(c => c[0] === "/atm/notify")!;
             const handler = call[3];
-
-            const req = {
-                newebpayNotify: {
-                    isVerified: () => true,
-                }
-            };
+            const req = { newebpayNotify: { isVerified: () => true } };
             const res = { send: vi.fn() };
             handler(req, res);
             expect(res.send).toHaveBeenCalledWith("OK");
+        });
+
+        it("POST /atm/notify 驗證失敗應回傳 400", () => {
+            const call = mockRouter.post.mock.calls.find(c => c[0] === "/atm/notify")!;
+            const handler = call[3];
+            const req = { newebpayNotify: null };
+            const res = { status: vi.fn().mockReturnThis(), send: vi.fn() };
+            handler(req, res);
+            expect(res.status).toHaveBeenCalledWith(400);
+        });
+
+        it("POST /cvs/notify 驗證成功應回傳 OK", () => {
+            const call = mockRouter.post.mock.calls.find(c => c[0] === "/cvs/notify")!;
+            const handler = call[3];
+            const req = { newebpayNotify: { isVerified: () => true } };
+            const res = { send: vi.fn() };
+            handler(req, res);
+            expect(res.send).toHaveBeenCalledWith("OK");
+        });
+
+        it("POST /cvs/notify 驗證失敗應回傳 400", () => {
+            const call = mockRouter.post.mock.calls.find(c => c[0] === "/cvs/notify")!;
+            const handler = call[3];
+            const req = { newebpayNotify: null };
+            const res = { status: vi.fn().mockReturnThis(), send: vi.fn() };
+            handler(req, res);
+            expect(res.status).toHaveBeenCalledWith(400);
+        });
+
+        it("POST /cvscom/notify 驗證成功應回傳 OK", () => {
+            const call = mockRouter.post.mock.calls.find(c => c[0] === "/cvscom/notify")!;
+            const handler = call[3];
+            const req = { newebpayNotify: { isVerified: () => true } };
+            const res = { send: vi.fn() };
+            handler(req, res);
+            expect(res.send).toHaveBeenCalledWith("OK");
+        });
+
+        it("POST /cvscom/notify 驗證失敗應回傳 400", () => {
+            const call = mockRouter.post.mock.calls.find(c => c[0] === "/cvscom/notify")!;
+            const handler = call[3];
+            const req = { newebpayNotify: null };
+            const res = { status: vi.fn().mockReturnThis(), send: vi.fn() };
+            handler(req, res);
+            expect(res.status).toHaveBeenCalledWith(400);
         });
     });
 });

@@ -65,6 +65,26 @@ describe("AllInOnePayment", () => {
       payment.enableUnionPay(true);
       expect(payment.get("UNIONPAY")).toBe(1);
     });
+
+    it("enableEsunWallet 應該正確設定玉山 Wallet", () => {
+      payment.enableEsunWallet(true);
+      expect(payment.get("ESUNWALLET")).toBe(1);
+    });
+
+    it("enableBitoPay 應該正確設定 BitoPay", () => {
+      payment.enableBitoPay(true);
+      expect(payment.get("BITOPAY")).toBe(1);
+    });
+
+    it("enableTwqr 應該正確設定 TWQR", () => {
+      payment.enableTwqr(true);
+      expect(payment.get("TWQR")).toBe(1);
+    });
+
+    it("enableFula 應該正確設定付啦", () => {
+      payment.enableFula(true);
+      expect(payment.get("FULA")).toBe(1);
+    });
   });
 
   describe("多重支付方式組合", () => {

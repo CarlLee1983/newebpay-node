@@ -71,6 +71,76 @@ describe("NewebPayService", () => {
       const payment = service.taiwanPay() as any;
       expect(payment.get("TAIWANPAY")).toBe(1);
     });
+    it("creditInstallment 應該返回 CreditInstallment", () => {
+      const service = new NewebPayService(config);
+      const payment = service.creditInstallment() as any;
+      expect(payment.get("InstFlag")).toBeDefined();
+    });
+
+    it("esunWallet 應該返回 EsunWalletPayment", () => {
+      const service = new NewebPayService(config);
+      const payment = service.esunWallet() as any;
+      expect(payment.get("ESUNWALLET")).toBe(1);
+    });
+
+    it("bitoPay 應該返回 BitoPayPayment", () => {
+      const service = new NewebPayService(config);
+      const payment = service.bitoPay() as any;
+      expect(payment.get("BITOPAY")).toBe(1);
+    });
+
+    it("twqr 應該返回 TwqrPayment", () => {
+      const service = new NewebPayService(config);
+      const payment = service.twqr() as any;
+      expect(payment.get("TWQR")).toBe(1);
+    });
+
+    it("fula 應該返回 FulaPayment", () => {
+      const service = new NewebPayService(config);
+      const payment = service.fula() as any;
+      expect(payment.get("FULA")).toBe(1);
+    });
+
+    it("cvscom 應該返回 CvscomPayment", () => {
+      const service = new NewebPayService(config);
+      const payment = service.cvscom() as any;
+      expect(payment.get("CVSCOM")).toBe(1);
+    });
+
+    it("allInOne 應該返回 AllInOnePayment", () => {
+      const service = new NewebPayService(config);
+      const payment = service.allInOne();
+      expect(payment).toBeDefined();
+    });
+  });
+
+  describe("Form Builder", () => {
+    it("form 應該返回 FormBuilder", () => {
+      const service = new NewebPayService(config);
+      const payment = service.credit();
+      const form = service.form(payment);
+      expect(form).toBeDefined();
+    });
+  });
+
+  describe("Configuration Application", () => {
+    it("應該將 URL 設定應用到支付物件", () => {
+      const fullConfig: NewebPayConfig = {
+        ...config,
+        returnUrl: "https://example.com/return",
+        notifyUrl: "https://example.com/notify",
+        customerUrl: "https://example.com/customer",
+        clientBackUrl: "https://example.com/back",
+      };
+
+      const service = new NewebPayService(fullConfig);
+      const payment = service.credit() as any;
+
+      expect(payment.get("ReturnURL")).toBe("https://example.com/return");
+      expect(payment.get("NotifyURL")).toBe("https://example.com/notify");
+      expect(payment.get("CustomerURL")).toBe("https://example.com/customer");
+      expect(payment.get("ClientBackURL")).toBe("https://example.com/back");
+    });
   });
 
   describe("查詢方法", () => {
@@ -104,6 +174,13 @@ describe("NewebPayService", () => {
       const creditCancel = service.creditCancel();
 
       expect(creditCancel.getApiUrl()).toContain("Cancel");
+    });
+
+    it("eWalletRefund 應該返回 EWalletRefund", () => {
+      const service = new NewebPayService(config);
+      const refund = service.eWalletRefund();
+
+      expect(refund.getApiUrl()).toContain("Refund");
     });
   });
 });
