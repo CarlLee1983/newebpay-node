@@ -1,3 +1,13 @@
+## [1.2.0](https://github.com/CarlLee1983/newebpay-node/compare/v1.1.0...v1.2.0) (2025-12-06)
+
+### Features
+
+* Add automated release workflow using semantic-release and GitHub Actions. ([b1c7b77](https://github.com/CarlLee1983/newebpay-node/commit/b1c7b77c35473876dd12e6d2e471e4cf1c17a66c))
+* add comprehensive test suite for various NewebPay operations, notifications, errors, actions, queries, and CLI, and enhance existing payment notification tests. ([126e714](https://github.com/CarlLee1983/newebpay-node/commit/126e7140a29ea4faad222e12b08b14c1832a82a6))
+* Add E2E tests for the Express framework and integrate them into the CI pipeline. ([d8e55b9](https://github.com/CarlLee1983/newebpay-node/commit/d8e55b9e8bd24262d946550a460a91116911fa5b))
+* Add support and tests for new payment methods, notification types, and improved error handling. ([b31b77d](https://github.com/CarlLee1983/newebpay-node/commit/b31b77d5ed6ec69b58b77a391fe0396c9c1971bf))
+* Generate API documentation, add a Fastify example, and document Express framework integration. ([5521070](https://github.com/CarlLee1983/newebpay-node/commit/55210706904374cd30cdaa5e9503389826616bae))
+
 # 變更日誌
 
 所有重要的變更都會記錄在此檔案中。
@@ -101,4 +111,3 @@
 - 支援 ESM 和 CommonJS
 - 使用 Node.js 原生 crypto 模組
 - 完整的單元測試（90 個測試案例）
-
