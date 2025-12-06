@@ -16,15 +16,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
+          cache: 'npm'
       - name: Install
-        run: yarn install --frozen-lockfile
+        run: npm ci
       - name: Lint
-        run: yarn lint
+        run: npm run lint
       - name: Typecheck
-        run: yarn build --noEmit
+        run: npm run build --noEmit
       - name: Test
-        run: yarn test --ci
+        run: npm test -- --ci
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
@@ -40,8 +40,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'yarn'
+          cache: 'npm'
       - name: Install
-        run: yarn install --frozen-lockfile
+        run: npm ci
       - name: Run E2E Tests
-        run: yarn test:e2e
+        run: npm run test:e2e
