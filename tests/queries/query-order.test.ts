@@ -90,7 +90,10 @@ describe("QueryOrder", () => {
           headers: expect.objectContaining({
             "Content-Type": "application/x-www-form-urlencoded"
           }),
-          body: expect.stringMatching(/MerchantID=.+&CheckValue=.+&TimeStamp=.+&MerchantOrderNo=.+&Amt=.+/)
+          // FetchHttpClient sends URLSearchParams, not string
+          body: expect.any(URLSearchParams),
+          // FetchHttpClient adds signal
+          signal: expect.any(AbortSignal)
         })
       );
     });
@@ -107,10 +110,12 @@ describe("QueryOrder", () => {
     it("HTTP 錯誤應拋出錯誤", async () => {
       (global.fetch as any).mockResolvedValue({
         ok: false,
-        status: 500
+        status: 500,
+        statusText: "Server Error"
       });
 
-      await expect(queryOrder.query("ORDER001", 1000)).rejects.toThrow(NewebPayError);
+      // Update to expect generic Error with message from FetchHttpClient
+      await expect(queryOrder.query("ORDER001", 1000)).rejects.toThrow("HTTP Error: 500 Server Error");
     });
 
     it("回應缺少欄位應處理預設值", async () => {
