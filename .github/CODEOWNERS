@@ -1,0 +1,15 @@
+# 此檔案定義了代碼所有者 (Code Owners)
+# 這些所有者將在對應的檔案被修改時自動被請求審核 (Review)
+
+# 所有檔案預設擁有者
+* @CarlLee1983
+
+# GitHub Actions workflow 檔案
+.github/workflows/ @CarlLee1983
+
+# 核心邏輯
+src/ @CarlLee1983
+
+# 文件
+README.md @CarlLee1983
+docs/ @CarlLee1983

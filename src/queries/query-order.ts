@@ -1,5 +1,7 @@
 import { createHash } from "node:crypto";
 import { NewebPayError } from "../errors/newebpay-error.js";
+import type { HttpClientInterface } from "../infrastructure/http/http-client.interface.js";
+import { FetchHttpClient } from "../infrastructure/http/fetch-http-client.js";
 
 /**
  * 查詢結果。
@@ -40,6 +42,8 @@ export class QueryOrder {
    */
   protected isTest = false;
 
+  protected httpClient: HttpClientInterface;
+
   /**
    * 建立查詢物件。
    */
@@ -47,7 +51,10 @@ export class QueryOrder {
     protected merchantId: string,
     protected hashKey: string,
     protected hashIV: string,
-  ) {}
+    httpClient?: HttpClientInterface,
+  ) {
+    this.httpClient = httpClient ?? new FetchHttpClient();
+  }
 
   /**
    * 從設定建立查詢物件。
@@ -56,8 +63,9 @@ export class QueryOrder {
     merchantId: string,
     hashKey: string,
     hashIV: string,
+    httpClient?: HttpClientInterface,
   ): QueryOrder {
-    return new QueryOrder(merchantId, hashKey, hashIV);
+    return new QueryOrder(merchantId, hashKey, hashIV, httpClient);
   }
 
   /**
@@ -90,23 +98,8 @@ export class QueryOrder {
   async query(merchantOrderNo: string, amt: number): Promise<QueryOrderResult> {
     const payload = this.buildPayload(merchantOrderNo, amt);
 
-    const response = await fetch(this.getApiUrl(), {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: new URLSearchParams(payload).toString(),
-    });
-
-    if (!response.ok) {
-      throw NewebPayError.apiError(`HTTP 錯誤：${response.status}`);
-    }
-
-    const result = (await response.json()) as {
-      Status?: string;
-      Message?: string;
-      Result?: QueryOrderResult;
-    };
+    // Use HttpClient
+    const result = await this.httpClient.post(this.getApiUrl(), payload);
 
     return this.parseResponse(result);
   }

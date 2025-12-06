@@ -25,6 +25,30 @@ export default defineConfig([
     outDir: 'dist/frameworks/express',
     external: ['express'],
   },
+  // Fastify 整合
+  {
+    entry: ['src/frameworks/fastify/index.ts'],
+    format: ['esm'],
+    dts: true,
+    splitting: false,
+    sourcemap: true,
+    minify: false,
+    target: 'node18',
+    outDir: 'dist/frameworks/fastify',
+    external: ['fastify'],
+  },
+  // Koa 整合
+  {
+    entry: ['src/frameworks/koa/index.ts'],
+    format: ['esm'],
+    dts: true,
+    splitting: false,
+    sourcemap: true,
+    minify: false,
+    target: 'node18',
+    outDir: 'dist/frameworks/koa',
+    external: ['koa'],
+  },
   // 共用服務層
   {
     entry: ['src/frameworks/common/index.ts'],

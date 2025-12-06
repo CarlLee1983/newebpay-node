@@ -29,8 +29,22 @@ import type { PaymentInterface } from "../../types/payment.js";
  *
  * 提供統一的服務介面，簡化框架整合
  */
+import type { HttpClientInterface } from "../../infrastructure/http/http-client.interface.js";
+import { FetchHttpClient } from "../../infrastructure/http/fetch-http-client.js";
+
 export class NewebPayService {
-  constructor(private readonly config: NewebPayConfig) {}
+  private readonly httpClient: HttpClientInterface;
+
+  constructor(
+    private readonly config: NewebPayConfig,
+    httpClient?: HttpClientInterface
+  ) {
+    this.httpClient = httpClient ?? new FetchHttpClient();
+  }
+  // ... (rest is same, but pass this.httpClient to operations if they support it)
+  // Currently operation classes (QueryOrder, etc.) are only Builders. They have "submit()" which returns form URL? No, Query API is Direct POST.
+  // Let's check QueryOrder source first.
+
 
   /**
    * 建立快速支付（簡化 API）
@@ -162,6 +176,7 @@ export class NewebPayService {
       this.config.merchantId,
       this.config.hashKey,
       this.config.hashIV,
+      this.httpClient
     ).setTestMode(this.config.testMode ?? false);
   }
 
