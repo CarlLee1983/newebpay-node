@@ -1,3 +1,5 @@
+## [1.3.1](https://github.com/CarlLee1983/newebpay-node/compare/v1.3.0...v1.3.1) (2025-12-07)
+
 ## [1.3.0](https://github.com/CarlLee1983/newebpay-node/compare/v1.2.0...v1.3.0) (2025-12-06)
 
 ### Features
