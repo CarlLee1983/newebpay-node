@@ -1,3 +1,9 @@
+## [1.3.3](https://github.com/CarlLee1983/newebpay-node/compare/v1.3.2...v1.3.3) (2025-12-07)
+
+### Documentation
+
+* **README:** complete AllInOnePayment documentation with all available methods ([af9a582](https://github.com/CarlLee1983/newebpay-node/commit/af9a58266b5860760e537ab33dc4d4da80820fc6))
+
 ## [1.3.2](https://github.com/CarlLee1983/newebpay-node/compare/v1.3.1...v1.3.2) (2025-12-07)
 
 ### Documentation
