@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CreditCancel
 
@@ -48,7 +48,7 @@ Defined in: [src/actions/credit-cancel.ts:45](https://github.com/CarlLee1983/new
 
 Defined in: [src/actions/credit-cancel.ts:48](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L48)
 
-***
+---
 
 ### hashKey
 
@@ -56,7 +56,7 @@ Defined in: [src/actions/credit-cancel.ts:48](https://github.com/CarlLee1983/new
 
 Defined in: [src/actions/credit-cancel.ts:47](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L47)
 
-***
+---
 
 ### isTest
 
@@ -66,7 +66,7 @@ Defined in: [src/actions/credit-cancel.ts:35](https://github.com/CarlLee1983/new
 
 是否為測試環境。
 
-***
+---
 
 ### merchantId
 
@@ -74,7 +74,7 @@ Defined in: [src/actions/credit-cancel.ts:35](https://github.com/CarlLee1983/new
 
 Defined in: [src/actions/credit-cancel.ts:46](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L46)
 
-***
+---
 
 ### requestPath
 
@@ -84,7 +84,7 @@ Defined in: [src/actions/credit-cancel.ts:30](https://github.com/CarlLee1983/new
 
 API 請求路徑。
 
-***
+---
 
 ### version
 
@@ -114,7 +114,7 @@ Defined in: [src/actions/credit-cancel.ts:134](https://github.com/CarlLee1983/ne
 
 `Record`\<`string`, `string`\>
 
-***
+---
 
 ### cancel()
 
@@ -146,7 +146,7 @@ Defined in: [src/actions/credit-cancel.ts:89](https://github.com/CarlLee1983/new
 
 `Promise`\<[`CreditCancelResult`](../interfaces/CreditCancelResult.md)\>
 
-***
+---
 
 ### getApiUrl()
 
@@ -160,7 +160,7 @@ Defined in: [src/actions/credit-cancel.ts:82](https://github.com/CarlLee1983/new
 
 `string`
 
-***
+---
 
 ### getBaseUrl()
 
@@ -174,7 +174,7 @@ Defined in: [src/actions/credit-cancel.ts:73](https://github.com/CarlLee1983/new
 
 `string`
 
-***
+---
 
 ### parseResponse()
 
@@ -204,7 +204,7 @@ Defined in: [src/actions/credit-cancel.ts:149](https://github.com/CarlLee1983/ne
 
 [`CreditCancelResult`](../interfaces/CreditCancelResult.md)
 
-***
+---
 
 ### setTestMode()
 
@@ -224,7 +224,7 @@ Defined in: [src/actions/credit-cancel.ts:65](https://github.com/CarlLee1983/new
 
 `this`
 
-***
+---
 
 ### create()
 

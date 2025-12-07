@@ -13,33 +13,31 @@ import {
   CreditClose,
   CreditCancel,
   EWalletRefund,
-} from '../src/index.js';
+} from '../src/index.js'
 
 // 設定（請替換為您的實際設定）
 const config = {
   merchantId: 'MS12345678',
   hashKey: '12345678901234567890123456789012',
   hashIV: '1234567890123456',
-};
+}
 
 // 範例訂單資料（請替換為實際的訂單資料）
 const orderData = {
   merchantOrderNo: 'ORDER123456',
   amt: 1000,
-};
+}
 
 // === 交易查詢 ===
-console.log('=== 交易查詢範例 ===\n');
+console.log('=== 交易查詢範例 ===\n')
 
-const queryOrder = QueryOrder.create(
-  config.merchantId,
-  config.hashKey,
-  config.hashIV
-).setTestMode(true);
+const queryOrder = QueryOrder.create(config.merchantId, config.hashKey, config.hashIV).setTestMode(
+  true,
+)
 
-console.log('查詢 API 網址:', queryOrder.getApiUrl());
-console.log('訂單編號:', orderData.merchantOrderNo);
-console.log('金額:', orderData.amt);
+console.log('查詢 API 網址:', queryOrder.getApiUrl())
+console.log('訂單編號:', orderData.merchantOrderNo)
+console.log('金額:', orderData.amt)
 
 // 注意：實際查詢需要有效的訂單
 // try {
@@ -50,15 +48,15 @@ console.log('金額:', orderData.amt);
 // }
 
 // === 信用卡明細查詢 ===
-console.log('\n=== 信用卡明細查詢範例 ===\n');
+console.log('\n=== 信用卡明細查詢範例 ===\n')
 
 const queryCreditDetail = QueryCreditDetail.create(
   config.merchantId,
   config.hashKey,
-  config.hashIV
-).setTestMode(true);
+  config.hashIV,
+).setTestMode(true)
 
-console.log('查詢 API 網址:', queryCreditDetail.getApiUrl());
+console.log('查詢 API 網址:', queryCreditDetail.getApiUrl())
 
 // 注意：實際查詢需要有效的訂單
 // try {
@@ -69,17 +67,17 @@ console.log('查詢 API 網址:', queryCreditDetail.getApiUrl());
 // }
 
 // === 信用卡退款 ===
-console.log('\n=== 信用卡退款範例 ===\n');
+console.log('\n=== 信用卡退款範例 ===\n')
 
 const creditClose = CreditClose.create(
   config.merchantId,
   config.hashKey,
-  config.hashIV
-).setTestMode(true);
+  config.hashIV,
+).setTestMode(true)
 
-console.log('退款 API 網址:', creditClose.getApiUrl());
-console.log('CLOSE_TYPE_PAY:', CreditClose.CLOSE_TYPE_PAY);
-console.log('CLOSE_TYPE_REFUND:', CreditClose.CLOSE_TYPE_REFUND);
+console.log('退款 API 網址:', creditClose.getApiUrl())
+console.log('CLOSE_TYPE_PAY:', CreditClose.CLOSE_TYPE_PAY)
+console.log('CLOSE_TYPE_REFUND:', CreditClose.CLOSE_TYPE_REFUND)
 
 // 退款範例（需要有效的已付款訂單）
 // try {
@@ -98,15 +96,15 @@ console.log('CLOSE_TYPE_REFUND:', CreditClose.CLOSE_TYPE_REFUND);
 // }
 
 // === 取消授權 ===
-console.log('\n=== 取消授權範例 ===\n');
+console.log('\n=== 取消授權範例 ===\n')
 
 const creditCancel = CreditCancel.create(
   config.merchantId,
   config.hashKey,
-  config.hashIV
-).setTestMode(true);
+  config.hashIV,
+).setTestMode(true)
 
-console.log('取消授權 API 網址:', creditCancel.getApiUrl());
+console.log('取消授權 API 網址:', creditCancel.getApiUrl())
 
 // 取消授權範例（需要有效的已授權但未請款訂單）
 // try {
@@ -117,15 +115,15 @@ console.log('取消授權 API 網址:', creditCancel.getApiUrl());
 // }
 
 // === 電子錢包退款 ===
-console.log('\n=== 電子錢包退款範例 ===\n');
+console.log('\n=== 電子錢包退款範例 ===\n')
 
 const ewalletRefund = EWalletRefund.create(
   config.merchantId,
   config.hashKey,
-  config.hashIV
-).setTestMode(true);
+  config.hashIV,
+).setTestMode(true)
 
-console.log('電子錢包退款 API 網址:', ewalletRefund.getApiUrl());
+console.log('電子錢包退款 API 網址:', ewalletRefund.getApiUrl())
 
 // 電子錢包退款範例（需要有效的已付款訂單）
 // try {
@@ -135,6 +133,5 @@ console.log('電子錢包退款 API 網址:', ewalletRefund.getApiUrl());
 //   console.error('退款失敗:', error.message);
 // }
 
-console.log('\n注意：上述 API 呼叫已註解，因為需要實際的訂單資料才能正常運作。');
-console.log('請在實際使用時取消註解並替換為您的訂單資料。');
-
+console.log('\n注意：上述 API 呼叫已註解，因為需要實際的訂單資料才能正常運作。')
+console.log('請在實際使用時取消註解並替換為您的訂單資料。')

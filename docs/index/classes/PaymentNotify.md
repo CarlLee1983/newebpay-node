@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / PaymentNotify
 
@@ -58,7 +58,7 @@ Defined in: [src/notifications/payment-notify.ts:182](https://github.com/CarlLee
 
 `number`
 
-***
+---
 
 ### getAuthCode()
 
@@ -72,7 +72,7 @@ Defined in: [src/notifications/payment-notify.ts:222](https://github.com/CarlLee
 
 `string`
 
-***
+---
 
 ### getCard4No()
 
@@ -86,7 +86,7 @@ Defined in: [src/notifications/payment-notify.ts:230](https://github.com/CarlLee
 
 `string`
 
-***
+---
 
 ### getCard6No()
 
@@ -100,7 +100,7 @@ Defined in: [src/notifications/payment-notify.ts:238](https://github.com/CarlLee
 
 `string`
 
-***
+---
 
 ### getData()
 
@@ -118,7 +118,7 @@ Defined in: [src/notifications/payment-notify.ts:124](https://github.com/CarlLee
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getData`](../interfaces/NotifyHandlerInterface.md#getdata)
 
-***
+---
 
 ### getECI()
 
@@ -132,7 +132,7 @@ Defined in: [src/notifications/payment-notify.ts:246](https://github.com/CarlLee
 
 `string`
 
-***
+---
 
 ### getInst()
 
@@ -146,7 +146,7 @@ Defined in: [src/notifications/payment-notify.ts:254](https://github.com/CarlLee
 
 `number`
 
-***
+---
 
 ### getInstEach()
 
@@ -160,7 +160,7 @@ Defined in: [src/notifications/payment-notify.ts:270](https://github.com/CarlLee
 
 `number`
 
-***
+---
 
 ### getInstFirst()
 
@@ -174,7 +174,7 @@ Defined in: [src/notifications/payment-notify.ts:262](https://github.com/CarlLee
 
 `number`
 
-***
+---
 
 ### getIP()
 
@@ -188,7 +188,7 @@ Defined in: [src/notifications/payment-notify.ts:206](https://github.com/CarlLee
 
 `string`
 
-***
+---
 
 ### getMerchantID()
 
@@ -202,7 +202,7 @@ Defined in: [src/notifications/payment-notify.ts:159](https://github.com/CarlLee
 
 `string`
 
-***
+---
 
 ### getMerchantOrderNo()
 
@@ -216,7 +216,7 @@ Defined in: [src/notifications/payment-notify.ts:166](https://github.com/CarlLee
 
 `string`
 
-***
+---
 
 ### getMessage()
 
@@ -234,7 +234,7 @@ Defined in: [src/notifications/payment-notify.ts:152](https://github.com/CarlLee
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getMessage`](../interfaces/NotifyHandlerInterface.md#getmessage)
 
-***
+---
 
 ### getPayBankCode()
 
@@ -248,7 +248,7 @@ Defined in: [src/notifications/payment-notify.ts:214](https://github.com/CarlLee
 
 `string`
 
-***
+---
 
 ### getPaymentType()
 
@@ -262,7 +262,7 @@ Defined in: [src/notifications/payment-notify.ts:190](https://github.com/CarlLee
 
 `string`
 
-***
+---
 
 ### getPayTime()
 
@@ -276,7 +276,7 @@ Defined in: [src/notifications/payment-notify.ts:198](https://github.com/CarlLee
 
 `string`
 
-***
+---
 
 ### getRawData()
 
@@ -290,7 +290,7 @@ Defined in: [src/notifications/payment-notify.ts:131](https://github.com/CarlLee
 
 [`NotifyRawData`](../interfaces/NotifyRawData.md)
 
-***
+---
 
 ### getResult()
 
@@ -304,7 +304,7 @@ Defined in: [src/notifications/payment-notify.ts:278](https://github.com/CarlLee
 
 [`PaymentResultData`](../interfaces/PaymentResultData.md)
 
-***
+---
 
 ### getStatus()
 
@@ -322,7 +322,7 @@ Defined in: [src/notifications/payment-notify.ts:145](https://github.com/CarlLee
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getStatus`](../interfaces/NotifyHandlerInterface.md#getstatus)
 
-***
+---
 
 ### getTradeNo()
 
@@ -336,7 +336,7 @@ Defined in: [src/notifications/payment-notify.ts:174](https://github.com/CarlLee
 
 `string`
 
-***
+---
 
 ### isSuccess()
 
@@ -354,7 +354,7 @@ Defined in: [src/notifications/payment-notify.ts:138](https://github.com/CarlLee
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`isSuccess`](../interfaces/NotifyHandlerInterface.md#issuccess)
 
-***
+---
 
 ### isVerified()
 
@@ -368,7 +368,7 @@ Defined in: [src/notifications/payment-notify.ts:285](https://github.com/CarlLee
 
 `boolean`
 
-***
+---
 
 ### verify()
 
@@ -392,7 +392,7 @@ Defined in: [src/notifications/payment-notify.ts:55](https://github.com/CarlLee1
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`verify`](../interfaces/NotifyHandlerInterface.md#verify)
 
-***
+---
 
 ### verifyOrFail()
 
@@ -412,7 +412,7 @@ Defined in: [src/notifications/payment-notify.ts:90](https://github.com/CarlLee1
 
 `this`
 
-***
+---
 
 ### create()
 

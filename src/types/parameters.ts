@@ -3,29 +3,29 @@
  */
 export enum PaymentType {
   /** 信用卡 */
-  CREDIT = "CREDIT",
+  CREDIT = 'CREDIT',
   /** WebATM */
-  WEBATM = "WEBATM",
+  WEBATM = 'WEBATM',
   /** ATM 轉帳 */
-  VACC = "VACC",
+  VACC = 'VACC',
   /** 超商代碼 */
-  CVS = "CVS",
+  CVS = 'CVS',
   /** 超商條碼 */
-  BARCODE = "BARCODE",
+  BARCODE = 'BARCODE',
   /** LINE Pay */
-  LINEPAY = "LINEPAY",
+  LINEPAY = 'LINEPAY',
   /** 台灣 Pay */
-  TAIWANPAY = "TAIWANPAY",
+  TAIWANPAY = 'TAIWANPAY',
   /** 玉山 Wallet */
-  ESUNWALLET = "ESUNWALLET",
+  ESUNWALLET = 'ESUNWALLET',
   /** BitoPay */
-  BITOPAY = "BITOPAY",
+  BITOPAY = 'BITOPAY',
   /** TWQR */
-  TWQR = "TWQR",
+  TWQR = 'TWQR',
   /** 付啦 */
-  FULA = "FULA",
+  FULA = 'FULA',
   /** 超商取貨付款 */
-  CVSCOM = "CVSCOM",
+  CVSCOM = 'CVSCOM',
 }
 
 /**
@@ -33,11 +33,11 @@ export enum PaymentType {
  */
 export enum BankType {
   /** 台灣銀行 */
-  BOT = "BOT",
+  BOT = 'BOT',
   /** 華南銀行 */
-  HNCB = "HNCB",
+  HNCB = 'HNCB',
   /** 第一銀行 */
-  FCB = "FCB",
+  FCB = 'FCB',
 }
 
 /**
@@ -45,13 +45,13 @@ export enum BankType {
  */
 export enum StoreType {
   /** 全家 */
-  FAMI = "FAMI",
+  FAMI = 'FAMI',
   /** 7-ELEVEN */
-  SEVEN = "SEVEN",
+  SEVEN = 'SEVEN',
   /** OK */
-  OK = "OK",
+  OK = 'OK',
   /** 萊爾富 */
-  HILIFE = "HILIFE",
+  HILIFE = 'HILIFE',
 }
 
 /**
@@ -59,13 +59,13 @@ export enum StoreType {
  */
 export enum LgsType {
   /** 全家 */
-  FAMIC2C = "FAMIC2C",
+  FAMIC2C = 'FAMIC2C',
   /** 萊爾富 */
-  HILIFEC2C = "HILIFEC2C",
+  HILIFEC2C = 'HILIFEC2C',
   /** OK */
-  OKMARTC2C = "OKMARTC2C",
+  OKMARTC2C = 'OKMARTC2C',
   /** 統一 */
-  UNIMARTC2C = "UNIMARTC2C",
+  UNIMARTC2C = 'UNIMARTC2C',
 }
 
 /**
@@ -73,11 +73,11 @@ export enum LgsType {
  */
 export enum TradeStatus {
   /** 交易成功 */
-  SUCCESS = "SUCCESS",
+  SUCCESS = 'SUCCESS',
   /** 交易失敗 */
-  FAILED = "FAILED",
+  FAILED = 'FAILED',
   /** 待付款 */
-  PENDING = "PENDING",
+  PENDING = 'PENDING',
 }
 
 /**
@@ -95,7 +95,7 @@ export enum CloseType {
  */
 export enum IndexType {
   /** 藍新交易序號 */
-  TRADE_NO = "1",
+  TRADE_NO = '1',
   /** 特店訂單編號 */
-  MERCHANT_ORDER_NO = "2",
+  MERCHANT_ORDER_NO = '2',
 }

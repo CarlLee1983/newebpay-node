@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../../modules.md) / [frameworks/express](../README.md) / NewebPayConfig
 
@@ -18,7 +18,7 @@ Defined in: [src/frameworks/common/config.ts:4](https://github.com/CarlLee1983/n
 
 Defined in: [src/frameworks/common/config.ts:12](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/config.ts#L12)
 
-***
+---
 
 ### customerUrl?
 
@@ -26,7 +26,7 @@ Defined in: [src/frameworks/common/config.ts:12](https://github.com/CarlLee1983/
 
 Defined in: [src/frameworks/common/config.ts:11](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/config.ts#L11)
 
-***
+---
 
 ### hashIV
 
@@ -34,7 +34,7 @@ Defined in: [src/frameworks/common/config.ts:11](https://github.com/CarlLee1983/
 
 Defined in: [src/frameworks/common/config.ts:7](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/config.ts#L7)
 
-***
+---
 
 ### hashKey
 
@@ -42,7 +42,7 @@ Defined in: [src/frameworks/common/config.ts:7](https://github.com/CarlLee1983/n
 
 Defined in: [src/frameworks/common/config.ts:6](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/config.ts#L6)
 
-***
+---
 
 ### merchantId
 
@@ -50,7 +50,7 @@ Defined in: [src/frameworks/common/config.ts:6](https://github.com/CarlLee1983/n
 
 Defined in: [src/frameworks/common/config.ts:5](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/config.ts#L5)
 
-***
+---
 
 ### notifyUrl?
 
@@ -58,7 +58,7 @@ Defined in: [src/frameworks/common/config.ts:5](https://github.com/CarlLee1983/n
 
 Defined in: [src/frameworks/common/config.ts:10](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/config.ts#L10)
 
-***
+---
 
 ### returnUrl?
 
@@ -66,7 +66,7 @@ Defined in: [src/frameworks/common/config.ts:10](https://github.com/CarlLee1983/
 
 Defined in: [src/frameworks/common/config.ts:9](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/config.ts#L9)
 
-***
+---
 
 ### testMode?
 

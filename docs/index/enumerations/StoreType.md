@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / StoreType
 
@@ -20,7 +20,7 @@ Defined in: [src/types/parameters.ts:48](https://github.com/CarlLee1983/newebpay
 
 全家
 
-***
+---
 
 ### HILIFE
 
@@ -30,7 +30,7 @@ Defined in: [src/types/parameters.ts:54](https://github.com/CarlLee1983/newebpay
 
 萊爾富
 
-***
+---
 
 ### OK
 
@@ -40,7 +40,7 @@ Defined in: [src/types/parameters.ts:52](https://github.com/CarlLee1983/newebpay
 
 OK
 
-***
+---
 
 ### SEVEN
 

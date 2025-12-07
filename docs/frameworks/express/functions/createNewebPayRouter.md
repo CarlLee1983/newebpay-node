@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../../modules.md) / [frameworks/express](../README.md) / createNewebPayRouter
 

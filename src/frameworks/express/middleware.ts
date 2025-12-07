@@ -1,11 +1,6 @@
-import type { Request, Response, NextFunction } from "express";
-import {
-  PaymentNotify,
-  AtmNotify,
-  CvsNotify,
-  CvscomNotify,
-} from "../../index.js";
-import type { NewebPayConfig } from "../common/config.js";
+import type { Request, Response, NextFunction } from 'express'
+import { PaymentNotify, AtmNotify, CvsNotify, CvscomNotify } from '../../index.js'
+import type { NewebPayConfig } from '../common/config.js'
 
 /**
  * 擴充 Express Request 型別
@@ -13,7 +8,7 @@ import type { NewebPayConfig } from "../common/config.js";
 declare global {
   namespace Express {
     interface Request {
-      newebpayNotify?: PaymentNotify | AtmNotify | CvsNotify | CvscomNotify;
+      newebpayNotify?: PaymentNotify | AtmNotify | CvsNotify | CvscomNotify
     }
   }
 }
@@ -23,15 +18,15 @@ declare global {
  */
 export function paymentNotifyMiddleware(config: NewebPayConfig) {
   return (req: Request, _res: Response, next: NextFunction): void => {
-    const notify = new PaymentNotify(config.hashKey, config.hashIV);
+    const notify = new PaymentNotify(config.hashKey, config.hashIV)
 
     if (req.body?.TradeInfo && req.body?.TradeSha) {
-      notify.verify(req.body);
+      notify.verify(req.body)
     }
 
-    req.newebpayNotify = notify;
-    next();
-  };
+    req.newebpayNotify = notify
+    next()
+  }
 }
 
 /**
@@ -39,15 +34,15 @@ export function paymentNotifyMiddleware(config: NewebPayConfig) {
  */
 export function atmNotifyMiddleware(config: NewebPayConfig) {
   return (req: Request, _res: Response, next: NextFunction): void => {
-    const notify = new AtmNotify(config.hashKey, config.hashIV);
+    const notify = new AtmNotify(config.hashKey, config.hashIV)
 
     if (req.body?.TradeInfo && req.body?.TradeSha) {
-      notify.verify(req.body);
+      notify.verify(req.body)
     }
 
-    req.newebpayNotify = notify;
-    next();
-  };
+    req.newebpayNotify = notify
+    next()
+  }
 }
 
 /**
@@ -55,15 +50,15 @@ export function atmNotifyMiddleware(config: NewebPayConfig) {
  */
 export function cvsNotifyMiddleware(config: NewebPayConfig) {
   return (req: Request, _res: Response, next: NextFunction): void => {
-    const notify = new CvsNotify(config.hashKey, config.hashIV);
+    const notify = new CvsNotify(config.hashKey, config.hashIV)
 
     if (req.body?.TradeInfo && req.body?.TradeSha) {
-      notify.verify(req.body);
+      notify.verify(req.body)
     }
 
-    req.newebpayNotify = notify;
-    next();
-  };
+    req.newebpayNotify = notify
+    next()
+  }
 }
 
 /**
@@ -71,13 +66,13 @@ export function cvsNotifyMiddleware(config: NewebPayConfig) {
  */
 export function cvscomNotifyMiddleware(config: NewebPayConfig) {
   return (req: Request, _res: Response, next: NextFunction): void => {
-    const notify = new CvscomNotify(config.hashKey, config.hashIV);
+    const notify = new CvscomNotify(config.hashKey, config.hashIV)
 
     if (req.body?.TradeInfo && req.body?.TradeSha) {
-      notify.verify(req.body);
+      notify.verify(req.body)
     }
 
-    req.newebpayNotify = notify;
-    next();
-  };
+    req.newebpayNotify = notify
+    next()
+  }
 }

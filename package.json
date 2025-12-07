@@ -73,6 +73,8 @@
     "docs": "typedoc",
     "lint": "eslint src/",
     "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -116,6 +118,7 @@
     "conventional-changelog-conventionalcommits": "^9.1.0",
     "eslint": "^9.39.1",
     "express": "^5.2.1",
+    "prettier": "^3.7.4",
     "semantic-release": "^24.2.9",
     "supertest": "^7.1.4",
     "tsup": "^8.0.0",

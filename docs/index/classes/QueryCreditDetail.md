@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / QueryCreditDetail
 
@@ -48,7 +48,7 @@ Defined in: [src/queries/query-credit-detail.ts:53](https://github.com/CarlLee19
 
 Defined in: [src/queries/query-credit-detail.ts:56](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-credit-detail.ts#L56)
 
-***
+---
 
 ### hashKey
 
@@ -56,7 +56,7 @@ Defined in: [src/queries/query-credit-detail.ts:56](https://github.com/CarlLee19
 
 Defined in: [src/queries/query-credit-detail.ts:55](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-credit-detail.ts#L55)
 
-***
+---
 
 ### isTest
 
@@ -66,7 +66,7 @@ Defined in: [src/queries/query-credit-detail.ts:43](https://github.com/CarlLee19
 
 是否為測試環境。
 
-***
+---
 
 ### merchantId
 
@@ -74,7 +74,7 @@ Defined in: [src/queries/query-credit-detail.ts:43](https://github.com/CarlLee19
 
 Defined in: [src/queries/query-credit-detail.ts:54](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-credit-detail.ts#L54)
 
-***
+---
 
 ### requestPath
 
@@ -84,7 +84,7 @@ Defined in: [src/queries/query-credit-detail.ts:38](https://github.com/CarlLee19
 
 API 請求路徑。
 
-***
+---
 
 ### version
 
@@ -118,7 +118,7 @@ Defined in: [src/queries/query-credit-detail.ts:127](https://github.com/CarlLee1
 
 `Record`\<`string`, `string`\>
 
-***
+---
 
 ### getApiUrl()
 
@@ -132,7 +132,7 @@ Defined in: [src/queries/query-credit-detail.ts:90](https://github.com/CarlLee19
 
 `string`
 
-***
+---
 
 ### getBaseUrl()
 
@@ -146,7 +146,7 @@ Defined in: [src/queries/query-credit-detail.ts:81](https://github.com/CarlLee19
 
 `string`
 
-***
+---
 
 ### parseResponse()
 
@@ -176,7 +176,7 @@ Defined in: [src/queries/query-credit-detail.ts:152](https://github.com/CarlLee1
 
 [`QueryCreditDetailResult`](../interfaces/QueryCreditDetailResult.md)
 
-***
+---
 
 ### query()
 
@@ -200,7 +200,7 @@ Defined in: [src/queries/query-credit-detail.ts:97](https://github.com/CarlLee19
 
 `Promise`\<[`QueryCreditDetailResult`](../interfaces/QueryCreditDetailResult.md)\>
 
-***
+---
 
 ### setTestMode()
 
@@ -220,7 +220,7 @@ Defined in: [src/queries/query-credit-detail.ts:73](https://github.com/CarlLee19
 
 `this`
 
-***
+---
 
 ### create()
 

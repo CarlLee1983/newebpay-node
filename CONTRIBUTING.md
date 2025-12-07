@@ -7,7 +7,7 @@
 1. **Fork 本專案**：將專案 Fork 到您的 GitHub 帳號。
 2. **Clone 專案**：將 Fork 後的專案 Clone 到您的本地端。
 3. **建立分支 (Branch)**：請基於 `master` 分支建立新的功能分支。
-    - 格式建議：`feat/feature-name` 或 `fix/bug-id-issue-name`。
+   - 格式建議：`feat/feature-name` 或 `fix/bug-id-issue-name`。
 4. **開發與提交**：進行修改並提交 Commit (請遵守 [Commit Message 規範](#-commit-message-規範))。
 5. **推送 (Push)**：將分支 Push 到您的 Fork 儲存庫。
 6. **建立 Pull Request (PR)**：回到本專案頁面建立 PR，並填寫 PR Template。
@@ -15,9 +15,9 @@
 ## 🌿 分支策略 (Branch Policy)
 
 - **master**：主分支，永遠保持可部署/發布的穩定狀態。
-- **feat/***：新功能開發分支。
-- **fix/***：錯誤修復分支。
-- **docs/***：文件修改分支。
+- **feat/\***：新功能開發分支。
+- **fix/\***：錯誤修復分支。
+- **docs/\***：文件修改分支。
 
 我們使用 [Semantic Release](https://github.com/semantic-release/semantic-release) 自動發布版本，因此 **master** 分支上的 Commits 必須符合 Conventional Commits 規範，且 CI/CD 通過後會自動發布新版本。
 
@@ -26,11 +26,13 @@
 本專案嚴格遵循 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) 規範，這對於自動化版本控制與 Changelog 生成至關重要。
 
 格式如下：
+
 ```
 <type>(<scope>): <subject>
 ```
 
 ### 常用的 Type：
+
 - `feat`: 新增功能 (Minor version bump)
 - `fix`: 修復錯誤 (Patch version bump)
 - `docs`: 僅修改文件
@@ -41,6 +43,7 @@
 - `chore`: 建置過程或輔助工具的變動 (例如更新依賴)
 
 **範例**：
+
 - `feat(payment): add line pay support`
 - `fix(core): resolve parsing error in notify handler`
 - `docs: update readme with quick start guide`

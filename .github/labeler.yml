@@ -1,38 +1,38 @@
 documentation:
   - changed-files:
-    - any-glob-to-any-file:
-      - "docs/**/*"
-      - "README.md"
-      - "CONTRIBUTING.md"
+      - any-glob-to-any-file:
+          - 'docs/**/*'
+          - 'README.md'
+          - 'CONTRIBUTING.md'
 
 test:
   - changed-files:
-    - any-glob-to-any-file:
-      - "tests/**/*"
+      - any-glob-to-any-file:
+          - 'tests/**/*'
 
 ci:
   - changed-files:
-    - any-glob-to-any-file:
-      - ".github/**/*"
+      - any-glob-to-any-file:
+          - '.github/**/*'
 
 core:
   - changed-files:
-    - any-glob-to-any-file:
-      - "src/frameworks/common/**/*"
-      - "src/operations/**/*"
-      - "src/index.ts"
+      - any-glob-to-any-file:
+          - 'src/frameworks/common/**/*'
+          - 'src/operations/**/*'
+          - 'src/index.ts'
 
 express:
   - changed-files:
-    - any-glob-to-any-file:
-      - "src/frameworks/express/**/*"
+      - any-glob-to-any-file:
+          - 'src/frameworks/express/**/*'
 
 fastify:
   - changed-files:
-    - any-glob-to-any-file:
-      - "src/frameworks/fastify/**/*"
+      - any-glob-to-any-file:
+          - 'src/frameworks/fastify/**/*'
 
 koa:
   - changed-files:
-    - any-glob-to-any-file:
-      - "src/frameworks/koa/**/*"
+      - any-glob-to-any-file:
+          - 'src/frameworks/koa/**/*'

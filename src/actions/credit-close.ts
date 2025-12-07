@@ -1,17 +1,17 @@
-import { Aes256Encoder } from "../infrastructure/aes256-encoder.js";
-import { NewebPayError } from "../errors/newebpay-error.js";
-import { CloseType, IndexType } from "../types/parameters.js";
+import { Aes256Encoder } from '../infrastructure/aes256-encoder.js'
+import { NewebPayError } from '../errors/newebpay-error.js'
+import { CloseType, IndexType } from '../types/parameters.js'
 
 /**
  * 請退款結果。
  */
 export interface CreditCloseResult {
-  MerchantID?: string;
-  MerchantOrderNo?: string;
-  TradeNo?: string;
-  Amt?: number;
-  CloseType?: number;
-  [key: string]: unknown;
+  MerchantID?: string
+  MerchantOrderNo?: string
+  TradeNo?: string
+  Amt?: number
+  CloseType?: number
+  [key: string]: unknown
 }
 
 /**
@@ -23,32 +23,32 @@ export class CreditClose {
   /**
    * 請款類型：請款。
    */
-  static readonly CLOSE_TYPE_PAY = CloseType.PAY;
+  static readonly CLOSE_TYPE_PAY = CloseType.PAY
 
   /**
    * 請款類型：退款。
    */
-  static readonly CLOSE_TYPE_REFUND = CloseType.REFUND;
+  static readonly CLOSE_TYPE_REFUND = CloseType.REFUND
 
   /**
    * API 版本。
    */
-  protected version = "1.1";
+  protected version = '1.1'
 
   /**
    * API 請求路徑。
    */
-  protected requestPath = "/API/CreditCard/Close";
+  protected requestPath = '/API/CreditCard/Close'
 
   /**
    * 是否為測試環境。
    */
-  protected isTest = false;
+  protected isTest = false
 
   /**
    * AES256 編碼器。
    */
-  private aesEncoder?: Aes256Encoder;
+  private aesEncoder?: Aes256Encoder
 
   /**
    * 建立請退款物件。
@@ -62,36 +62,30 @@ export class CreditClose {
   /**
    * 從設定建立請退款物件。
    */
-  static create(
-    merchantId: string,
-    hashKey: string,
-    hashIV: string,
-  ): CreditClose {
-    return new CreditClose(merchantId, hashKey, hashIV);
+  static create(merchantId: string, hashKey: string, hashIV: string): CreditClose {
+    return new CreditClose(merchantId, hashKey, hashIV)
   }
 
   /**
    * 設定是否為測試環境。
    */
   setTestMode(isTest: boolean): this {
-    this.isTest = isTest;
-    return this;
+    this.isTest = isTest
+    return this
   }
 
   /**
    * 取得 API 基礎網址。
    */
   getBaseUrl(): string {
-    return this.isTest
-      ? "https://ccore.newebpay.com"
-      : "https://core.newebpay.com";
+    return this.isTest ? 'https://ccore.newebpay.com' : 'https://core.newebpay.com'
   }
 
   /**
    * 取得完整 API 網址。
    */
   getApiUrl(): string {
-    return this.getBaseUrl() + this.requestPath;
+    return this.getBaseUrl() + this.requestPath
   }
 
   /**
@@ -103,13 +97,7 @@ export class CreditClose {
     indexType: IndexType | string = IndexType.MERCHANT_ORDER_NO,
     tradeNo?: string,
   ): Promise<CreditCloseResult> {
-    return this.execute(
-      merchantOrderNo,
-      amt,
-      CloseType.PAY,
-      indexType,
-      tradeNo,
-    );
+    return this.execute(merchantOrderNo, amt, CloseType.PAY, indexType, tradeNo)
   }
 
   /**
@@ -121,13 +109,7 @@ export class CreditClose {
     indexType: IndexType | string = IndexType.MERCHANT_ORDER_NO,
     tradeNo?: string,
   ): Promise<CreditCloseResult> {
-    return this.execute(
-      merchantOrderNo,
-      amt,
-      CloseType.REFUND,
-      indexType,
-      tradeNo,
-    );
+    return this.execute(merchantOrderNo, amt, CloseType.REFUND, indexType, tradeNo)
   }
 
   /**
@@ -140,14 +122,7 @@ export class CreditClose {
     indexType: IndexType | string = IndexType.MERCHANT_ORDER_NO,
     tradeNo?: string,
   ): Promise<CreditCloseResult> {
-    return this.execute(
-      merchantOrderNo,
-      amt,
-      closeType,
-      indexType,
-      tradeNo,
-      true,
-    );
+    return this.execute(merchantOrderNo, amt, closeType, indexType, tradeNo, true)
   }
 
   /**
@@ -162,77 +137,75 @@ export class CreditClose {
     cancel = false,
   ): Promise<CreditCloseResult> {
     const postData: Record<string, unknown> = {
-      RespondType: "JSON",
+      RespondType: 'JSON',
       Version: this.version,
       Amt: amt,
       MerchantOrderNo: merchantOrderNo,
       IndexType: indexType,
       TimeStamp: String(Math.floor(Date.now() / 1000)),
       CloseType: closeType,
-    };
+    }
 
     if (indexType === IndexType.TRADE_NO && tradeNo) {
-      postData["TradeNo"] = tradeNo;
+      postData['TradeNo'] = tradeNo
     }
 
     if (cancel) {
-      postData["Cancel"] = 1;
+      postData['Cancel'] = 1
     }
 
-    const payload = this.buildPayload(postData);
+    const payload = this.buildPayload(postData)
 
     const response = await fetch(this.getApiUrl(), {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
+        'Content-Type': 'application/x-www-form-urlencoded',
       },
       body: new URLSearchParams(payload).toString(),
-    });
+    })
 
     if (!response.ok) {
-      throw NewebPayError.apiError(`HTTP 錯誤：${response.status}`);
+      throw NewebPayError.apiError(`HTTP 錯誤：${response.status}`)
     }
 
     const result = (await response.json()) as {
-      Status?: string;
-      Message?: string;
-      Result?: CreditCloseResult;
-    };
+      Status?: string
+      Message?: string
+      Result?: CreditCloseResult
+    }
 
-    return this.parseResponse(result);
+    return this.parseResponse(result)
   }
 
   /**
    * 建立請求 Payload。
    */
-  protected buildPayload(
-    postData: Record<string, unknown>,
-  ): Record<string, string> {
-    const encoder = this.getAesEncoder();
-    const tradeInfo = encoder.encrypt(postData);
+  protected buildPayload(postData: Record<string, unknown>): Record<string, string> {
+    const encoder = this.getAesEncoder()
+    const tradeInfo = encoder.encrypt(postData)
 
     return {
       MerchantID_: this.merchantId,
       PostData_: tradeInfo,
-    };
+    }
   }
 
   /**
    * 解析回應。
    */
   protected parseResponse(response: {
-    Status?: string;
-    Message?: string;
-    Result?: CreditCloseResult;
+    Status?: string
+    Message?: string
+    Result?: CreditCloseResult
   }): CreditCloseResult {
-    const status = response.Status ?? "";
-    const message = response.Message ?? "";
+    const status = response.Status ?? ''
+    const message = response.Message ?? ''
 
-    if (status !== "SUCCESS") {
-      throw NewebPayError.apiError(message, status);
+    if (status !== 'SUCCESS') {
+      throw NewebPayError.apiError(message, status)
     }
 
-    return response.Result ?? {};
+    return response.Result ?? {}
   }
 
   /**
@@ -240,8 +213,8 @@ export class CreditClose {
    */
   private getAesEncoder(): Aes256Encoder {
     if (!this.aesEncoder) {
-      this.aesEncoder = new Aes256Encoder(this.hashKey, this.hashIV);
+      this.aesEncoder = new Aes256Encoder(this.hashKey, this.hashIV)
     }
-    return this.aesEncoder;
+    return this.aesEncoder
   }
 }

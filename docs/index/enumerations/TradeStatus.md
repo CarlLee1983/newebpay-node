@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / TradeStatus
 
@@ -20,7 +20,7 @@ Defined in: [src/types/parameters.ts:78](https://github.com/CarlLee1983/newebpay
 
 交易失敗
 
-***
+---
 
 ### PENDING
 
@@ -30,7 +30,7 @@ Defined in: [src/types/parameters.ts:80](https://github.com/CarlLee1983/newebpay
 
 待付款
 
-***
+---
 
 ### SUCCESS
 

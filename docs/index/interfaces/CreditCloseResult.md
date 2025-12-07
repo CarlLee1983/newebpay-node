@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CreditCloseResult
 
@@ -22,7 +22,7 @@ Defined in: [src/actions/credit-close.ts:8](https://github.com/CarlLee1983/neweb
 
 Defined in: [src/actions/credit-close.ts:12](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L12)
 
-***
+---
 
 ### CloseType?
 
@@ -30,7 +30,7 @@ Defined in: [src/actions/credit-close.ts:12](https://github.com/CarlLee1983/newe
 
 Defined in: [src/actions/credit-close.ts:13](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L13)
 
-***
+---
 
 ### MerchantID?
 
@@ -38,7 +38,7 @@ Defined in: [src/actions/credit-close.ts:13](https://github.com/CarlLee1983/newe
 
 Defined in: [src/actions/credit-close.ts:9](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L9)
 
-***
+---
 
 ### MerchantOrderNo?
 
@@ -46,7 +46,7 @@ Defined in: [src/actions/credit-close.ts:9](https://github.com/CarlLee1983/neweb
 
 Defined in: [src/actions/credit-close.ts:10](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L10)
 
-***
+---
 
 ### TradeNo?
 

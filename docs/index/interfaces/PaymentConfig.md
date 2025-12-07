@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / PaymentConfig
 
@@ -18,7 +18,7 @@ Defined in: [src/types/payment.ts:82](https://github.com/CarlLee1983/newebpay-no
 
 Defined in: [src/types/payment.ts:85](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/types/payment.ts#L85)
 
-***
+---
 
 ### hashKey
 
@@ -26,7 +26,7 @@ Defined in: [src/types/payment.ts:85](https://github.com/CarlLee1983/newebpay-no
 
 Defined in: [src/types/payment.ts:84](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/types/payment.ts#L84)
 
-***
+---
 
 ### merchantId
 
@@ -34,7 +34,7 @@ Defined in: [src/types/payment.ts:84](https://github.com/CarlLee1983/newebpay-no
 
 Defined in: [src/types/payment.ts:83](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/types/payment.ts#L83)
 
-***
+---
 
 ### notifyUrl?
 
@@ -42,7 +42,7 @@ Defined in: [src/types/payment.ts:83](https://github.com/CarlLee1983/newebpay-no
 
 Defined in: [src/types/payment.ts:88](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/types/payment.ts#L88)
 
-***
+---
 
 ### returnUrl?
 
@@ -50,7 +50,7 @@ Defined in: [src/types/payment.ts:88](https://github.com/CarlLee1983/newebpay-no
 
 Defined in: [src/types/payment.ts:87](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/types/payment.ts#L87)
 
-***
+---
 
 ### testMode?
 

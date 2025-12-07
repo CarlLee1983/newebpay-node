@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / FormBuilder
 
@@ -54,7 +54,7 @@ Defined in: [src/form-builder.ts:87](https://github.com/CarlLee1983/newebpay-nod
 
 `string`
 
-***
+---
 
 ### getFormData()
 
@@ -80,7 +80,7 @@ Defined in: [src/form-builder.ts:116](https://github.com/CarlLee1983/newebpay-no
 
 > **method**: `string`
 
-***
+---
 
 ### setAutoSubmit()
 
@@ -100,7 +100,7 @@ Defined in: [src/form-builder.ts:63](https://github.com/CarlLee1983/newebpay-nod
 
 `this`
 
-***
+---
 
 ### setFormId()
 
@@ -120,7 +120,7 @@ Defined in: [src/form-builder.ts:71](https://github.com/CarlLee1983/newebpay-nod
 
 `this`
 
-***
+---
 
 ### setSubmitButtonText()
 
@@ -140,7 +140,7 @@ Defined in: [src/form-builder.ts:79](https://github.com/CarlLee1983/newebpay-nod
 
 `this`
 
-***
+---
 
 ### create()
 

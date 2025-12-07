@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CvsNotify
 
@@ -54,7 +54,7 @@ Defined in: [src/notifications/cvs-notify.ts:165](https://github.com/CarlLee1983
 
 `number`
 
-***
+---
 
 ### getBarcode1()
 
@@ -68,7 +68,7 @@ Defined in: [src/notifications/cvs-notify.ts:213](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### getBarcode2()
 
@@ -82,7 +82,7 @@ Defined in: [src/notifications/cvs-notify.ts:221](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### getBarcode3()
 
@@ -96,7 +96,7 @@ Defined in: [src/notifications/cvs-notify.ts:229](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### getCodeNo()
 
@@ -110,7 +110,7 @@ Defined in: [src/notifications/cvs-notify.ts:181](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### getData()
 
@@ -128,7 +128,7 @@ Defined in: [src/notifications/cvs-notify.ts:114](https://github.com/CarlLee1983
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getData`](../interfaces/NotifyHandlerInterface.md#getdata)
 
-***
+---
 
 ### getExpireDate()
 
@@ -142,7 +142,7 @@ Defined in: [src/notifications/cvs-notify.ts:197](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### getExpireTime()
 
@@ -156,7 +156,7 @@ Defined in: [src/notifications/cvs-notify.ts:205](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### getMerchantOrderNo()
 
@@ -170,7 +170,7 @@ Defined in: [src/notifications/cvs-notify.ts:149](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### getMessage()
 
@@ -188,7 +188,7 @@ Defined in: [src/notifications/cvs-notify.ts:142](https://github.com/CarlLee1983
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getMessage`](../interfaces/NotifyHandlerInterface.md#getmessage)
 
-***
+---
 
 ### getPaymentType()
 
@@ -202,7 +202,7 @@ Defined in: [src/notifications/cvs-notify.ts:173](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### getRawData()
 
@@ -216,7 +216,7 @@ Defined in: [src/notifications/cvs-notify.ts:121](https://github.com/CarlLee1983
 
 [`NotifyRawData`](../interfaces/NotifyRawData.md)
 
-***
+---
 
 ### getResult()
 
@@ -230,7 +230,7 @@ Defined in: [src/notifications/cvs-notify.ts:237](https://github.com/CarlLee1983
 
 [`CvsResultData`](../interfaces/CvsResultData.md)
 
-***
+---
 
 ### getStatus()
 
@@ -248,7 +248,7 @@ Defined in: [src/notifications/cvs-notify.ts:135](https://github.com/CarlLee1983
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getStatus`](../interfaces/NotifyHandlerInterface.md#getstatus)
 
-***
+---
 
 ### getStoreType()
 
@@ -262,7 +262,7 @@ Defined in: [src/notifications/cvs-notify.ts:189](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### getTradeNo()
 
@@ -276,7 +276,7 @@ Defined in: [src/notifications/cvs-notify.ts:157](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### isSuccess()
 
@@ -294,7 +294,7 @@ Defined in: [src/notifications/cvs-notify.ts:128](https://github.com/CarlLee1983
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`isSuccess`](../interfaces/NotifyHandlerInterface.md#issuccess)
 
-***
+---
 
 ### isVerified()
 
@@ -308,7 +308,7 @@ Defined in: [src/notifications/cvs-notify.ts:244](https://github.com/CarlLee1983
 
 `boolean`
 
-***
+---
 
 ### verify()
 
@@ -332,7 +332,7 @@ Defined in: [src/notifications/cvs-notify.ts:52](https://github.com/CarlLee1983/
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`verify`](../interfaces/NotifyHandlerInterface.md#verify)
 
-***
+---
 
 ### verifyOrFail()
 
@@ -352,7 +352,7 @@ Defined in: [src/notifications/cvs-notify.ts:81](https://github.com/CarlLee1983/
 
 `this`
 
-***
+---
 
 ### create()
 

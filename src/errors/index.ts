@@ -1,1 +1,1 @@
-export { NewebPayError } from "./newebpay-error.js";
+export { NewebPayError } from './newebpay-error.js'

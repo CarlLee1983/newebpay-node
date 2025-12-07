@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../../modules.md) / [frameworks/express](../README.md) / PaymentBuilder
 
@@ -44,7 +44,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:133](https://github.com/Ca
 
 `this`
 
-***
+---
 
 ### atm()
 
@@ -64,7 +64,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:84](https://github.com/Car
 
 `this`
 
-***
+---
 
 ### barcode()
 
@@ -84,7 +84,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:106](https://github.com/Ca
 
 `this`
 
-***
+---
 
 ### build()
 
@@ -98,7 +98,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:181](https://github.com/Ca
 
 [`PaymentInterface`](../../../index/interfaces/PaymentInterface.md)
 
-***
+---
 
 ### creditCard()
 
@@ -112,7 +112,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:59](https://github.com/Car
 
 `this`
 
-***
+---
 
 ### creditInstallment()
 
@@ -132,7 +132,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:67](https://github.com/Car
 
 `this`
 
-***
+---
 
 ### customize()
 
@@ -152,7 +152,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:173](https://github.com/Ca
 
 `this`
 
-***
+---
 
 ### cvs()
 
@@ -172,7 +172,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:95](https://github.com/Car
 
 `this`
 
-***
+---
 
 ### getParams()
 
@@ -198,7 +198,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:253](https://github.com/Ca
 
 > **method**: `string`
 
-***
+---
 
 ### linePay()
 
@@ -212,7 +212,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:117](https://github.com/Ca
 
 `this`
 
-***
+---
 
 ### setClientBackUrl()
 
@@ -232,7 +232,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:165](https://github.com/Ca
 
 `this`
 
-***
+---
 
 ### setCustomerUrl()
 
@@ -252,7 +252,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:157](https://github.com/Ca
 
 `this`
 
-***
+---
 
 ### setNotifyUrl()
 
@@ -272,7 +272,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:149](https://github.com/Ca
 
 `this`
 
-***
+---
 
 ### setOrder()
 
@@ -304,7 +304,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:43](https://github.com/Car
 
 `this`
 
-***
+---
 
 ### setReturnUrl()
 
@@ -324,7 +324,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:141](https://github.com/Ca
 
 `this`
 
-***
+---
 
 ### taiwanPay()
 
@@ -338,7 +338,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:125](https://github.com/Ca
 
 `this`
 
-***
+---
 
 ### webAtm()
 

@@ -2,22 +2,22 @@
 
 ### Features
 
-* Add GitHub Actions workflows for automatic pull request labeling and stale issue/PR management. ([e38b88b](https://github.com/CarlLee1983/newebpay-node/commit/e38b88b6361b9f7adb9b44b730822356bdbc3faf))
-* Add Koa and Fastify framework integrations, introduce HTTP client abstraction, and setup project governance files ([fd779ce](https://github.com/CarlLee1983/newebpay-node/commit/fd779ce88acefa95c668ad917c9f3f6cb28be6d3))
+- Add GitHub Actions workflows for automatic pull request labeling and stale issue/PR management. ([e38b88b](https://github.com/CarlLee1983/newebpay-node/commit/e38b88b6361b9f7adb9b44b730822356bdbc3faf))
+- Add Koa and Fastify framework integrations, introduce HTTP client abstraction, and setup project governance files ([fd779ce](https://github.com/CarlLee1983/newebpay-node/commit/fd779ce88acefa95c668ad917c9f3f6cb28be6d3))
 
 ### Documentation
 
-* Add security reporting template, code of conduct, and security policy ([bb250f1](https://github.com/CarlLee1983/newebpay-node/commit/bb250f106bea5a58ad48d796c6f3ca5cf362812b))
+- Add security reporting template, code of conduct, and security policy ([bb250f1](https://github.com/CarlLee1983/newebpay-node/commit/bb250f106bea5a58ad48d796c6f3ca5cf362812b))
 
 ## [1.2.0](https://github.com/CarlLee1983/newebpay-node/compare/v1.1.0...v1.2.0) (2025-12-06)
 
 ### Features
 
-* Add automated release workflow using semantic-release and GitHub Actions. ([b1c7b77](https://github.com/CarlLee1983/newebpay-node/commit/b1c7b77c35473876dd12e6d2e471e4cf1c17a66c))
-* add comprehensive test suite for various NewebPay operations, notifications, errors, actions, queries, and CLI, and enhance existing payment notification tests. ([126e714](https://github.com/CarlLee1983/newebpay-node/commit/126e7140a29ea4faad222e12b08b14c1832a82a6))
-* Add E2E tests for the Express framework and integrate them into the CI pipeline. ([d8e55b9](https://github.com/CarlLee1983/newebpay-node/commit/d8e55b9e8bd24262d946550a460a91116911fa5b))
-* Add support and tests for new payment methods, notification types, and improved error handling. ([b31b77d](https://github.com/CarlLee1983/newebpay-node/commit/b31b77d5ed6ec69b58b77a391fe0396c9c1971bf))
-* Generate API documentation, add a Fastify example, and document Express framework integration. ([5521070](https://github.com/CarlLee1983/newebpay-node/commit/55210706904374cd30cdaa5e9503389826616bae))
+- Add automated release workflow using semantic-release and GitHub Actions. ([b1c7b77](https://github.com/CarlLee1983/newebpay-node/commit/b1c7b77c35473876dd12e6d2e471e4cf1c17a66c))
+- add comprehensive test suite for various NewebPay operations, notifications, errors, actions, queries, and CLI, and enhance existing payment notification tests. ([126e714](https://github.com/CarlLee1983/newebpay-node/commit/126e7140a29ea4faad222e12b08b14c1832a82a6))
+- Add E2E tests for the Express framework and integrate them into the CI pipeline. ([d8e55b9](https://github.com/CarlLee1983/newebpay-node/commit/d8e55b9e8bd24262d946550a460a91116911fa5b))
+- Add support and tests for new payment methods, notification types, and improved error handling. ([b31b77d](https://github.com/CarlLee1983/newebpay-node/commit/b31b77d5ed6ec69b58b77a391fe0396c9c1971bf))
+- Generate API documentation, add a Fastify example, and document Express framework integration. ([5521070](https://github.com/CarlLee1983/newebpay-node/commit/55210706904374cd30cdaa5e9503389826616bae))
 
 # 變更日誌
 
@@ -30,6 +30,7 @@
 ### 新增
 
 #### 框架整合
+
 - **Express.js 整合** - 完整的 Express 路由與中間件支援
   - `createNewebPayRouter()` - 自動建立藍新金流路由
   - `paymentNotifyMiddleware()` - 支付完成通知驗證
@@ -38,12 +39,14 @@
   - `cvscomNotifyMiddleware()` - 超商取貨付款通知驗證
 
 #### 服務層
+
 - **NewebPayService** - 統一的服務介面（類似 PHP PaymentCoordinator）
   - 簡化的支付 API
   - 支援所有支付方式
   - 查詢與退款功能整合
 
 #### 支付建構器
+
 - **PaymentBuilder** - 鏈式呼叫 API（類似 PHP PaymentBuilder）
   - `payment()` - 快速建立支付
   - `creditCard()` / `creditInstallment()` / `atm()` / `cvs()` 等
@@ -52,22 +55,27 @@
   - `getParams()` - 取得支付參數供前端使用
 
 #### CLI 工具
+
 - `newebpay init` - 初始化環境變數設定檔
 - `newebpay express` - 產生 Express 整合範例專案
 
 #### 子路徑匯出
+
 - `@carllee1983/newebpay/express` - Express 整合
 - `@carllee1983/newebpay/common` - 共用服務層
 
 #### 環境變數支援
+
 - `loadConfigFromEnv()` - 從環境變數自動載入設定
 - 支援 `NEWEBPAY_MERCHANT_ID`、`NEWEBPAY_HASH_KEY` 等
 
 ### 測試
+
 - 新增 20 個框架整合測試案例
 - 總計 110 個測試案例全部通過
 
 ### 文件
+
 - 更新 README.md 新增框架整合說明
 - 新增 Express 整合範例
 - 新增 PaymentBuilder 使用範例
@@ -77,6 +85,7 @@
 ### 新增
 
 #### 支付操作
+
 - `CreditPayment` - 信用卡一次付清
 - `CreditInstallment` - 信用卡分期（3/6/12/18/24/30 期）
 - `AtmPayment` - ATM 虛擬帳號
@@ -93,31 +102,37 @@
 - `AllInOnePayment` - 全支付方式
 
 #### 通知處理
+
 - `PaymentNotify` - 支付完成通知
 - `AtmNotify` - ATM 取號通知
 - `CvsNotify` - 超商取號通知
 - `CvscomNotify` - 超商取貨通知
 
 #### 查詢功能
+
 - `QueryOrder` - 交易查詢
 - `QueryCreditDetail` - 信用卡明細查詢
 
 #### 退款/取消
+
 - `CreditClose` - 信用卡請款/退款
 - `CreditCancel` - 取消授權
 - `EWalletRefund` - 電子錢包退款
 
 #### 基礎設施
+
 - `Aes256Encoder` - AES-256-CBC 加解密
 - `CheckValueEncoder` - TradeSha 驗證
 - `FormBuilder` - HTML 表單產生器
 - `NewebPayError` - 自訂例外類別
 
 #### 型別定義
+
 - 完整的 TypeScript 型別定義
 - `PaymentType`、`BankType`、`StoreType`、`LgsType` 等列舉
 
 ### 技術規格
+
 - 支援 Node.js 18.x、20.x、22.x LTS
 - 支援 ESM 和 CommonJS
 - 使用 Node.js 原生 crypto 模組

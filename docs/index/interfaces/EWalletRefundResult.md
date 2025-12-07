@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / EWalletRefundResult
 
@@ -22,7 +22,7 @@ Defined in: [src/actions/ewallet-refund.ts:7](https://github.com/CarlLee1983/new
 
 Defined in: [src/actions/ewallet-refund.ts:11](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L11)
 
-***
+---
 
 ### MerchantID?
 
@@ -30,7 +30,7 @@ Defined in: [src/actions/ewallet-refund.ts:11](https://github.com/CarlLee1983/ne
 
 Defined in: [src/actions/ewallet-refund.ts:8](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L8)
 
-***
+---
 
 ### MerchantOrderNo?
 
@@ -38,7 +38,7 @@ Defined in: [src/actions/ewallet-refund.ts:8](https://github.com/CarlLee1983/new
 
 Defined in: [src/actions/ewallet-refund.ts:9](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L9)
 
-***
+---
 
 ### RefundAmt?
 
@@ -46,7 +46,7 @@ Defined in: [src/actions/ewallet-refund.ts:9](https://github.com/CarlLee1983/new
 
 Defined in: [src/actions/ewallet-refund.ts:12](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L12)
 
-***
+---
 
 ### TradeNo?
 

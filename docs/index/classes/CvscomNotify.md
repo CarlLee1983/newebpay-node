@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CvscomNotify
 
@@ -54,7 +54,7 @@ Defined in: [src/notifications/cvscom-notify.ts:165](https://github.com/CarlLee1
 
 `number`
 
-***
+---
 
 ### getCVSCOMName()
 
@@ -68,7 +68,7 @@ Defined in: [src/notifications/cvscom-notify.ts:213](https://github.com/CarlLee1
 
 `string`
 
-***
+---
 
 ### getCVSCOMPhone()
 
@@ -82,7 +82,7 @@ Defined in: [src/notifications/cvscom-notify.ts:221](https://github.com/CarlLee1
 
 `string`
 
-***
+---
 
 ### getData()
 
@@ -100,7 +100,7 @@ Defined in: [src/notifications/cvscom-notify.ts:114](https://github.com/CarlLee1
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getData`](../interfaces/NotifyHandlerInterface.md#getdata)
 
-***
+---
 
 ### getLgsNo()
 
@@ -114,7 +114,7 @@ Defined in: [src/notifications/cvscom-notify.ts:229](https://github.com/CarlLee1
 
 `string`
 
-***
+---
 
 ### getLgsType()
 
@@ -128,7 +128,7 @@ Defined in: [src/notifications/cvscom-notify.ts:237](https://github.com/CarlLee1
 
 `string`
 
-***
+---
 
 ### getMerchantOrderNo()
 
@@ -142,7 +142,7 @@ Defined in: [src/notifications/cvscom-notify.ts:149](https://github.com/CarlLee1
 
 `string`
 
-***
+---
 
 ### getMessage()
 
@@ -160,7 +160,7 @@ Defined in: [src/notifications/cvscom-notify.ts:142](https://github.com/CarlLee1
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getMessage`](../interfaces/NotifyHandlerInterface.md#getmessage)
 
-***
+---
 
 ### getPaymentType()
 
@@ -174,7 +174,7 @@ Defined in: [src/notifications/cvscom-notify.ts:173](https://github.com/CarlLee1
 
 `string`
 
-***
+---
 
 ### getRawData()
 
@@ -188,7 +188,7 @@ Defined in: [src/notifications/cvscom-notify.ts:121](https://github.com/CarlLee1
 
 [`NotifyRawData`](../interfaces/NotifyRawData.md)
 
-***
+---
 
 ### getResult()
 
@@ -202,7 +202,7 @@ Defined in: [src/notifications/cvscom-notify.ts:245](https://github.com/CarlLee1
 
 [`CvscomResultData`](../interfaces/CvscomResultData.md)
 
-***
+---
 
 ### getStatus()
 
@@ -220,7 +220,7 @@ Defined in: [src/notifications/cvscom-notify.ts:135](https://github.com/CarlLee1
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getStatus`](../interfaces/NotifyHandlerInterface.md#getstatus)
 
-***
+---
 
 ### getStoreAddr()
 
@@ -234,7 +234,7 @@ Defined in: [src/notifications/cvscom-notify.ts:205](https://github.com/CarlLee1
 
 `string`
 
-***
+---
 
 ### getStoreCode()
 
@@ -248,7 +248,7 @@ Defined in: [src/notifications/cvscom-notify.ts:189](https://github.com/CarlLee1
 
 `string`
 
-***
+---
 
 ### getStoreName()
 
@@ -262,7 +262,7 @@ Defined in: [src/notifications/cvscom-notify.ts:197](https://github.com/CarlLee1
 
 `string`
 
-***
+---
 
 ### getStoreType()
 
@@ -276,7 +276,7 @@ Defined in: [src/notifications/cvscom-notify.ts:181](https://github.com/CarlLee1
 
 `string`
 
-***
+---
 
 ### getTradeNo()
 
@@ -290,7 +290,7 @@ Defined in: [src/notifications/cvscom-notify.ts:157](https://github.com/CarlLee1
 
 `string`
 
-***
+---
 
 ### isSuccess()
 
@@ -308,7 +308,7 @@ Defined in: [src/notifications/cvscom-notify.ts:128](https://github.com/CarlLee1
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`isSuccess`](../interfaces/NotifyHandlerInterface.md#issuccess)
 
-***
+---
 
 ### isVerified()
 
@@ -322,7 +322,7 @@ Defined in: [src/notifications/cvscom-notify.ts:252](https://github.com/CarlLee1
 
 `boolean`
 
-***
+---
 
 ### verify()
 
@@ -346,7 +346,7 @@ Defined in: [src/notifications/cvscom-notify.ts:52](https://github.com/CarlLee19
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`verify`](../interfaces/NotifyHandlerInterface.md#verify)
 
-***
+---
 
 ### verifyOrFail()
 
@@ -366,7 +366,7 @@ Defined in: [src/notifications/cvscom-notify.ts:81](https://github.com/CarlLee19
 
 `this`
 
-***
+---
 
 ### create()
 

@@ -1,4 +1,4 @@
-import { Content } from "../content.js";
+import { Content } from '../content.js'
 
 /**
  * BitoPay 支付。
@@ -10,15 +10,15 @@ export class BitoPayPayment extends Content {
    * 初始化內容。
    */
   protected override initContent(): void {
-    super.initContent();
+    super.initContent()
     // 啟用 BitoPay 付款
-    this.content["BITOPAY"] = 1;
+    this.content['BITOPAY'] = 1
   }
 
   /**
    * 驗證內容資料。
    */
   protected validation(): void {
-    this.validateBaseParams();
+    this.validateBaseParams()
   }
 }

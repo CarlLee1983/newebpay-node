@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CloseType
 
@@ -20,7 +20,7 @@ Defined in: [src/types/parameters.ts:88](https://github.com/CarlLee1983/newebpay
 
 請款
 
-***
+---
 
 ### REFUND
 

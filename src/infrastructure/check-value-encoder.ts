@@ -1,5 +1,5 @@
-import { createHash } from "node:crypto";
-import { NewebPayError } from "../errors/newebpay-error.js";
+import { createHash } from 'node:crypto'
+import { NewebPayError } from '../errors/newebpay-error.js'
 
 /**
  * CheckValue (TradeSha) 編碼器。
@@ -26,7 +26,7 @@ export class CheckValueEncoder {
    * @param hashIV HashIV
    */
   static create(hashKey: string, hashIV: string): CheckValueEncoder {
-    return new CheckValueEncoder(hashKey, hashIV);
+    return new CheckValueEncoder(hashKey, hashIV)
   }
 
   /**
@@ -38,8 +38,8 @@ export class CheckValueEncoder {
    * @returns 大寫的 SHA256 雜湊值
    */
   generate(tradeInfo: string): string {
-    const raw = `HashKey=${this.hashKey}&${tradeInfo}&HashIV=${this.hashIV}`;
-    return createHash("sha256").update(raw).digest("hex").toUpperCase();
+    const raw = `HashKey=${this.hashKey}&${tradeInfo}&HashIV=${this.hashIV}`
+    return createHash('sha256').update(raw).digest('hex').toUpperCase()
   }
 
   /**
@@ -49,8 +49,8 @@ export class CheckValueEncoder {
    * @param tradeSha 收到的 TradeSha 值
    */
   verify(tradeInfo: string, tradeSha: string): boolean {
-    const calculated = this.generate(tradeInfo);
-    return tradeSha.toUpperCase() === calculated;
+    const calculated = this.generate(tradeInfo)
+    return tradeSha.toUpperCase() === calculated
   }
 
   /**
@@ -62,7 +62,7 @@ export class CheckValueEncoder {
    */
   verifyOrFail(tradeInfo: string, tradeSha: string): void {
     if (!this.verify(tradeInfo, tradeSha)) {
-      throw NewebPayError.checkValueFailed();
+      throw NewebPayError.checkValueFailed()
     }
   }
 }

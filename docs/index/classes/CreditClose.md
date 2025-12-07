@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CreditClose
 
@@ -48,7 +48,7 @@ Defined in: [src/actions/credit-close.ts:56](https://github.com/CarlLee1983/newe
 
 Defined in: [src/actions/credit-close.ts:59](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L59)
 
-***
+---
 
 ### hashKey
 
@@ -56,7 +56,7 @@ Defined in: [src/actions/credit-close.ts:59](https://github.com/CarlLee1983/newe
 
 Defined in: [src/actions/credit-close.ts:58](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L58)
 
-***
+---
 
 ### isTest
 
@@ -66,7 +66,7 @@ Defined in: [src/actions/credit-close.ts:46](https://github.com/CarlLee1983/newe
 
 是否為測試環境。
 
-***
+---
 
 ### merchantId
 
@@ -74,7 +74,7 @@ Defined in: [src/actions/credit-close.ts:46](https://github.com/CarlLee1983/newe
 
 Defined in: [src/actions/credit-close.ts:57](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L57)
 
-***
+---
 
 ### requestPath
 
@@ -84,7 +84,7 @@ Defined in: [src/actions/credit-close.ts:41](https://github.com/CarlLee1983/newe
 
 API 請求路徑。
 
-***
+---
 
 ### version
 
@@ -94,21 +94,21 @@ Defined in: [src/actions/credit-close.ts:36](https://github.com/CarlLee1983/newe
 
 API 版本。
 
-***
+---
 
-### CLOSE\_TYPE\_PAY
+### CLOSE_TYPE_PAY
 
-> `readonly` `static` **CLOSE\_TYPE\_PAY**: [`PAY`](../enumerations/CloseType.md#pay) = `CloseType.PAY`
+> `readonly` `static` **CLOSE_TYPE_PAY**: [`PAY`](../enumerations/CloseType.md#pay) = `CloseType.PAY`
 
 Defined in: [src/actions/credit-close.ts:26](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L26)
 
 請款類型：請款。
 
-***
+---
 
-### CLOSE\_TYPE\_REFUND
+### CLOSE_TYPE_REFUND
 
-> `readonly` `static` **CLOSE\_TYPE\_REFUND**: [`REFUND`](../enumerations/CloseType.md#refund) = `CloseType.REFUND`
+> `readonly` `static` **CLOSE_TYPE_REFUND**: [`REFUND`](../enumerations/CloseType.md#refund) = `CloseType.REFUND`
 
 Defined in: [src/actions/credit-close.ts:31](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L31)
 
@@ -134,7 +134,7 @@ Defined in: [src/actions/credit-close.ts:208](https://github.com/CarlLee1983/new
 
 `Record`\<`string`, `string`\>
 
-***
+---
 
 ### cancelClose()
 
@@ -170,7 +170,7 @@ Defined in: [src/actions/credit-close.ts:136](https://github.com/CarlLee1983/new
 
 `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
-***
+---
 
 ### execute()
 
@@ -210,7 +210,7 @@ Defined in: [src/actions/credit-close.ts:156](https://github.com/CarlLee1983/new
 
 `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
-***
+---
 
 ### getApiUrl()
 
@@ -224,7 +224,7 @@ Defined in: [src/actions/credit-close.ts:93](https://github.com/CarlLee1983/newe
 
 `string`
 
-***
+---
 
 ### getBaseUrl()
 
@@ -238,7 +238,7 @@ Defined in: [src/actions/credit-close.ts:84](https://github.com/CarlLee1983/newe
 
 `string`
 
-***
+---
 
 ### parseResponse()
 
@@ -268,7 +268,7 @@ Defined in: [src/actions/credit-close.ts:223](https://github.com/CarlLee1983/new
 
 [`CreditCloseResult`](../interfaces/CreditCloseResult.md)
 
-***
+---
 
 ### pay()
 
@@ -300,7 +300,7 @@ Defined in: [src/actions/credit-close.ts:100](https://github.com/CarlLee1983/new
 
 `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
-***
+---
 
 ### refund()
 
@@ -332,7 +332,7 @@ Defined in: [src/actions/credit-close.ts:118](https://github.com/CarlLee1983/new
 
 `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
-***
+---
 
 ### setTestMode()
 
@@ -352,7 +352,7 @@ Defined in: [src/actions/credit-close.ts:76](https://github.com/CarlLee1983/newe
 
 `this`
 
-***
+---
 
 ### create()
 

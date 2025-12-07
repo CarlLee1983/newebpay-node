@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / BankType
 
@@ -20,7 +20,7 @@ Defined in: [src/types/parameters.ts:36](https://github.com/CarlLee1983/newebpay
 
 台灣銀行
 
-***
+---
 
 ### FCB
 
@@ -30,7 +30,7 @@ Defined in: [src/types/parameters.ts:40](https://github.com/CarlLee1983/newebpay
 
 第一銀行
 
-***
+---
 
 ### HNCB
 

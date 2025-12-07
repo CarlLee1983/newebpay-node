@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / EWalletRefund
 
@@ -48,7 +48,7 @@ Defined in: [src/actions/ewallet-refund.ts:50](https://github.com/CarlLee1983/ne
 
 Defined in: [src/actions/ewallet-refund.ts:53](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L53)
 
-***
+---
 
 ### hashKey
 
@@ -56,7 +56,7 @@ Defined in: [src/actions/ewallet-refund.ts:53](https://github.com/CarlLee1983/ne
 
 Defined in: [src/actions/ewallet-refund.ts:52](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L52)
 
-***
+---
 
 ### isTest
 
@@ -66,7 +66,7 @@ Defined in: [src/actions/ewallet-refund.ts:40](https://github.com/CarlLee1983/ne
 
 是否為測試環境。
 
-***
+---
 
 ### merchantId
 
@@ -74,7 +74,7 @@ Defined in: [src/actions/ewallet-refund.ts:40](https://github.com/CarlLee1983/ne
 
 Defined in: [src/actions/ewallet-refund.ts:51](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L51)
 
-***
+---
 
 ### requestPath
 
@@ -84,7 +84,7 @@ Defined in: [src/actions/ewallet-refund.ts:35](https://github.com/CarlLee1983/ne
 
 API 請求路徑。
 
-***
+---
 
 ### version
 
@@ -114,7 +114,7 @@ Defined in: [src/actions/ewallet-refund.ts:138](https://github.com/CarlLee1983/n
 
 `Record`\<`string`, `string`\>
 
-***
+---
 
 ### getApiUrl()
 
@@ -128,7 +128,7 @@ Defined in: [src/actions/ewallet-refund.ts:87](https://github.com/CarlLee1983/ne
 
 `string`
 
-***
+---
 
 ### getBaseUrl()
 
@@ -142,7 +142,7 @@ Defined in: [src/actions/ewallet-refund.ts:78](https://github.com/CarlLee1983/ne
 
 `string`
 
-***
+---
 
 ### parseResponse()
 
@@ -172,7 +172,7 @@ Defined in: [src/actions/ewallet-refund.ts:153](https://github.com/CarlLee1983/n
 
 [`EWalletRefundResult`](../interfaces/EWalletRefundResult.md)
 
-***
+---
 
 ### refund()
 
@@ -206,7 +206,7 @@ Defined in: [src/actions/ewallet-refund.ts:98](https://github.com/CarlLee1983/ne
 
 `Promise`\<[`EWalletRefundResult`](../interfaces/EWalletRefundResult.md)\>
 
-***
+---
 
 ### setTestMode()
 
@@ -226,7 +226,7 @@ Defined in: [src/actions/ewallet-refund.ts:70](https://github.com/CarlLee1983/ne
 
 `this`
 
-***
+---
 
 ### create()
 

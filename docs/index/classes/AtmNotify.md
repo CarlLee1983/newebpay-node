@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / AtmNotify
 
@@ -54,7 +54,7 @@ Defined in: [src/notifications/atm-notify.ts:165](https://github.com/CarlLee1983
 
 `number`
 
-***
+---
 
 ### getBankCode()
 
@@ -68,7 +68,7 @@ Defined in: [src/notifications/atm-notify.ts:173](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### getCodeNo()
 
@@ -82,7 +82,7 @@ Defined in: [src/notifications/atm-notify.ts:181](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### getData()
 
@@ -100,7 +100,7 @@ Defined in: [src/notifications/atm-notify.ts:114](https://github.com/CarlLee1983
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getData`](../interfaces/NotifyHandlerInterface.md#getdata)
 
-***
+---
 
 ### getExpireDate()
 
@@ -114,7 +114,7 @@ Defined in: [src/notifications/atm-notify.ts:189](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### getExpireTime()
 
@@ -128,7 +128,7 @@ Defined in: [src/notifications/atm-notify.ts:197](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### getMerchantOrderNo()
 
@@ -142,7 +142,7 @@ Defined in: [src/notifications/atm-notify.ts:149](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### getMessage()
 
@@ -160,7 +160,7 @@ Defined in: [src/notifications/atm-notify.ts:142](https://github.com/CarlLee1983
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getMessage`](../interfaces/NotifyHandlerInterface.md#getmessage)
 
-***
+---
 
 ### getRawData()
 
@@ -174,7 +174,7 @@ Defined in: [src/notifications/atm-notify.ts:121](https://github.com/CarlLee1983
 
 [`NotifyRawData`](../interfaces/NotifyRawData.md)
 
-***
+---
 
 ### getResult()
 
@@ -188,7 +188,7 @@ Defined in: [src/notifications/atm-notify.ts:205](https://github.com/CarlLee1983
 
 [`AtmResultData`](../interfaces/AtmResultData.md)
 
-***
+---
 
 ### getStatus()
 
@@ -206,7 +206,7 @@ Defined in: [src/notifications/atm-notify.ts:135](https://github.com/CarlLee1983
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getStatus`](../interfaces/NotifyHandlerInterface.md#getstatus)
 
-***
+---
 
 ### getTradeNo()
 
@@ -220,7 +220,7 @@ Defined in: [src/notifications/atm-notify.ts:157](https://github.com/CarlLee1983
 
 `string`
 
-***
+---
 
 ### isSuccess()
 
@@ -238,7 +238,7 @@ Defined in: [src/notifications/atm-notify.ts:128](https://github.com/CarlLee1983
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`isSuccess`](../interfaces/NotifyHandlerInterface.md#issuccess)
 
-***
+---
 
 ### isVerified()
 
@@ -252,7 +252,7 @@ Defined in: [src/notifications/atm-notify.ts:212](https://github.com/CarlLee1983
 
 `boolean`
 
-***
+---
 
 ### verify()
 
@@ -276,7 +276,7 @@ Defined in: [src/notifications/atm-notify.ts:52](https://github.com/CarlLee1983/
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`verify`](../interfaces/NotifyHandlerInterface.md#verify)
 
-***
+---
 
 ### verifyOrFail()
 
@@ -296,7 +296,7 @@ Defined in: [src/notifications/atm-notify.ts:81](https://github.com/CarlLee1983/
 
 `this`
 
-***
+---
 
 ### create()
 

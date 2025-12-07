@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsup'
 
 export default defineConfig([
   // 核心 SDK
@@ -74,5 +74,4 @@ export default defineConfig([
       js: '#!/usr/bin/env node',
     },
   },
-]);
-
+])

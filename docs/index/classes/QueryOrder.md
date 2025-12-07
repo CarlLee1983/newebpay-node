@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / QueryOrder
 
@@ -48,7 +48,7 @@ Defined in: [src/queries/query-order.ts:46](https://github.com/CarlLee1983/neweb
 
 Defined in: [src/queries/query-order.ts:49](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L49)
 
-***
+---
 
 ### hashKey
 
@@ -56,7 +56,7 @@ Defined in: [src/queries/query-order.ts:49](https://github.com/CarlLee1983/neweb
 
 Defined in: [src/queries/query-order.ts:48](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L48)
 
-***
+---
 
 ### isTest
 
@@ -66,7 +66,7 @@ Defined in: [src/queries/query-order.ts:41](https://github.com/CarlLee1983/neweb
 
 是否為測試環境。
 
-***
+---
 
 ### merchantId
 
@@ -74,7 +74,7 @@ Defined in: [src/queries/query-order.ts:41](https://github.com/CarlLee1983/neweb
 
 Defined in: [src/queries/query-order.ts:47](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L47)
 
-***
+---
 
 ### requestPath
 
@@ -84,7 +84,7 @@ Defined in: [src/queries/query-order.ts:36](https://github.com/CarlLee1983/neweb
 
 API 請求路徑。
 
-***
+---
 
 ### version
 
@@ -118,7 +118,7 @@ Defined in: [src/queries/query-order.ts:117](https://github.com/CarlLee1983/newe
 
 `Record`\<`string`, `string`\>
 
-***
+---
 
 ### generateCheckValue()
 
@@ -145,7 +145,7 @@ SHA256(HashIV={HashIV}&Amt={Amt}&MerchantID={MerchantID}&MerchantOrderNo={Mercha
 
 `string`
 
-***
+---
 
 ### getApiUrl()
 
@@ -159,7 +159,7 @@ Defined in: [src/queries/query-order.ts:83](https://github.com/CarlLee1983/neweb
 
 `string`
 
-***
+---
 
 ### getBaseUrl()
 
@@ -173,7 +173,7 @@ Defined in: [src/queries/query-order.ts:74](https://github.com/CarlLee1983/neweb
 
 `string`
 
-***
+---
 
 ### parseResponse()
 
@@ -203,7 +203,7 @@ Defined in: [src/queries/query-order.ts:149](https://github.com/CarlLee1983/newe
 
 [`QueryOrderResult`](../interfaces/QueryOrderResult.md)
 
-***
+---
 
 ### query()
 
@@ -227,7 +227,7 @@ Defined in: [src/queries/query-order.ts:90](https://github.com/CarlLee1983/neweb
 
 `Promise`\<[`QueryOrderResult`](../interfaces/QueryOrderResult.md)\>
 
-***
+---
 
 ### setTestMode()
 
@@ -247,7 +247,7 @@ Defined in: [src/queries/query-order.ts:66](https://github.com/CarlLee1983/neweb
 
 `this`
 
-***
+---
 
 ### create()
 
