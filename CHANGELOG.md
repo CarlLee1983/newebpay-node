@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/CarlLee1983/newebpay-node/compare/v1.3.1...v1.3.2) (2025-12-07)
+
+### Documentation
+
+* complete README documentation with English version and fix broken examples ([988c930](https://github.com/CarlLee1983/newebpay-node/commit/988c930480a42450f97aedcb5f68cb8d334b3abe))
+* **README:** add bilingual documentation with complete examples ([d62cfbb](https://github.com/CarlLee1983/newebpay-node/commit/d62cfbb4362d75578f553d8469a46e81701f5b56))
+
 ## [1.3.1](https://github.com/CarlLee1983/newebpay-node/compare/v1.3.0...v1.3.1) (2025-12-07)
 
 ## [1.3.0](https://github.com/CarlLee1983/newebpay-node/compare/v1.2.0...v1.3.0) (2025-12-06)
