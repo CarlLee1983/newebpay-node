@@ -186,18 +186,45 @@ const payment = new AllInOnePayment('MerchantID', 'HashKey', 'HashIV')
   .setEmail('buyer@example.com')
   .setReturnURL('https://your-site.com/return')
   .setNotifyURL('https://your-site.com/notify')
-  // Enable multiple payment methods
-  .enableCredit() // Credit card
+  // Enable multiple payment methods (choose as needed)
+  .enableCredit() // Credit card one-time payment
+  .enableWebAtm() // WebATM real-time transfer
   .enableAtm() // ATM virtual account
-  .enableCvs() // CVS code
-  .enableBarcode() // CVS barcode
+  .enableCvs() // CVS code payment
+  .enableBarcode() // CVS barcode payment
   .enableLinePay() // LINE Pay
   .enableTaiwanPay() // Taiwan Pay
-  .enableInstallment([3, 6, 12]) // Credit installment
-  .enableRedeem() // Bonus redemption
+  .enableEsunWallet() // E.SUN Wallet
+  .enableBitoPay() // BitoPay cryptocurrency
+  .enableTwqr() // TWQR unified payment
+  .enableFula() // FulaPay (buy now pay later)
+  .enableInstallment([3, 6, 12]) // Credit installment (3/6/12 periods)
+  .enableRedeem() // Credit card bonus redemption
+  .enableUnionPay() // UnionPay
 
 const form = FormBuilder.create(payment).build()
 ```
+
+#### AllInOnePayment Available Methods
+
+| Method                      | Description                                 |
+| --------------------------- | ------------------------------------------- |
+| `.enableCredit()`           | Enable credit card one-time payment         |
+| `.enableWebAtm()`           | Enable WebATM real-time transfer            |
+| `.enableAtm()`              | Enable ATM virtual account transfer         |
+| `.enableCvs()`              | Enable CVS code payment                     |
+| `.enableBarcode()`          | Enable CVS barcode payment                  |
+| `.enableLinePay()`          | Enable LINE Pay                             |
+| `.enableTaiwanPay()`        | Enable Taiwan Pay                           |
+| `.enableEsunWallet()`       | Enable E.SUN Wallet                         |
+| `.enableBitoPay()`          | Enable BitoPay cryptocurrency               |
+| `.enableTwqr()`             | Enable TWQR unified payment                 |
+| `.enableFula()`             | Enable FulaPay (buy now pay later)          |
+| `.enableInstallment([3,6])` | Enable credit installment (specify periods) |
+| `.enableRedeem()`           | Enable credit card bonus redemption         |
+| `.enableUnionPay()`         | Enable UnionPay                             |
+
+> All `enable*()` methods accept `false` to disable the payment method, e.g., `.enableCredit(false)`
 
 ### CVS Pickup Payment
 

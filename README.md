@@ -186,18 +186,45 @@ const payment = new AllInOnePayment('特店編號', 'HashKey', 'HashIV')
   .setEmail('buyer@example.com')
   .setReturnURL('https://your-site.com/return')
   .setNotifyURL('https://your-site.com/notify')
-  // 啟用多種支付方式
-  .enableCredit() // 信用卡
+  // 啟用多種支付方式（依需求選擇）
+  .enableCredit() // 信用卡一次付清
+  .enableWebAtm() // WebATM 即時轉帳
   .enableAtm() // ATM 虛擬帳號
-  .enableCvs() // 超商代碼
-  .enableBarcode() // 超商條碼
+  .enableCvs() // 超商代碼繳費
+  .enableBarcode() // 超商條碼繳費
   .enableLinePay() // LINE Pay
   .enableTaiwanPay() // 台灣 Pay
-  .enableInstallment([3, 6, 12]) // 信用卡分期
-  .enableRedeem() // 紅利折抵
+  .enableEsunWallet() // 玉山 Wallet
+  .enableBitoPay() // BitoPay 加密貨幣
+  .enableTwqr() // TWQR 共通支付
+  .enableFula() // 付啦（先買後付）
+  .enableInstallment([3, 6, 12]) // 信用卡分期（3/6/12 期）
+  .enableRedeem() // 信用卡紅利折抵
+  .enableUnionPay() // 銀聯卡
 
 const form = FormBuilder.create(payment).build()
 ```
+
+#### AllInOnePayment 可用方法
+
+| 方法                        | 說明                           |
+| --------------------------- | ------------------------------ |
+| `.enableCredit()`           | 啟用信用卡一次付清             |
+| `.enableWebAtm()`           | 啟用 WebATM 即時轉帳           |
+| `.enableAtm()`              | 啟用 ATM 虛擬帳號轉帳          |
+| `.enableCvs()`              | 啟用超商代碼繳費               |
+| `.enableBarcode()`          | 啟用超商條碼繳費               |
+| `.enableLinePay()`          | 啟用 LINE Pay                  |
+| `.enableTaiwanPay()`        | 啟用台灣 Pay                   |
+| `.enableEsunWallet()`       | 啟用玉山 Wallet                |
+| `.enableBitoPay()`          | 啟用 BitoPay 加密貨幣支付      |
+| `.enableTwqr()`             | 啟用 TWQR 共通支付             |
+| `.enableFula()`             | 啟用付啦（先買後付）           |
+| `.enableInstallment([3,6])` | 啟用信用卡分期（指定可選期數） |
+| `.enableRedeem()`           | 啟用信用卡紅利折抵             |
+| `.enableUnionPay()`         | 啟用銀聯卡                     |
+
+> 所有 `enable*()` 方法都可傳入 `false` 來停用該支付方式，例如：`.enableCredit(false)`
 
 ### 超商取貨付款
 
