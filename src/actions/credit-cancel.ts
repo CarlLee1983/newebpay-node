@@ -1,6 +1,9 @@
 import { Aes256Encoder } from '../infrastructure/aes256-encoder.js'
 import { NewebPayError } from '../errors/newebpay-error.js'
+import { getTimestamp } from '../utils/timestamp.js'
 import { IndexType } from '../types/parameters.js'
+import type { HttpClientInterface } from '../infrastructure/http/http-client.interface.js'
+import { FetchHttpClient } from '../infrastructure/http/fetch-http-client.js'
 
 /**
  * 取消授權結果。
@@ -40,19 +43,32 @@ export class CreditCancel {
   private aesEncoder?: Aes256Encoder
 
   /**
+   * HTTP 客戶端。
+   */
+  protected httpClient: HttpClientInterface
+
+  /**
    * 建立取消授權物件。
    */
   constructor(
     protected merchantId: string,
     protected hashKey: string,
     protected hashIV: string,
-  ) {}
+    httpClient?: HttpClientInterface,
+  ) {
+    this.httpClient = httpClient ?? new FetchHttpClient()
+  }
 
   /**
    * 從設定建立取消授權物件。
    */
-  static create(merchantId: string, hashKey: string, hashIV: string): CreditCancel {
-    return new CreditCancel(merchantId, hashKey, hashIV)
+  static create(
+    merchantId: string,
+    hashKey: string,
+    hashIV: string,
+    httpClient?: HttpClientInterface,
+  ): CreditCancel {
+    return new CreditCancel(merchantId, hashKey, hashIV, httpClient)
   }
 
   /**
@@ -92,7 +108,7 @@ export class CreditCancel {
       Amt: amt,
       MerchantOrderNo: merchantOrderNo,
       IndexType: indexType,
-      TimeStamp: String(Math.floor(Date.now() / 1000)),
+      TimeStamp: getTimestamp(),
     }
 
     if (indexType === IndexType.TRADE_NO && tradeNo) {
@@ -101,23 +117,11 @@ export class CreditCancel {
 
     const payload = this.buildPayload(postData)
 
-    const response = await fetch(this.getApiUrl(), {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: new URLSearchParams(payload).toString(),
-    })
-
-    if (!response.ok) {
-      throw NewebPayError.apiError(`HTTP 錯誤：${response.status}`)
-    }
-
-    const result = (await response.json()) as {
+    const result = await this.httpClient.post<{
       Status?: string
       Message?: string
       Result?: CreditCancelResult
-    }
+    }>(this.getApiUrl(), payload)
 
     return this.parseResponse(result)
   }

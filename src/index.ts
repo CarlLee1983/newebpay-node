@@ -43,5 +43,8 @@ export type {
 // 錯誤
 export { NewebPayError } from './errors/index.js'
 
+// 工具
+export { getTimestamp, getTimestampNumber } from './utils/index.js'
+
 // 型別
 export * from './types/index.js'

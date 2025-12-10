@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto'
 import { NewebPayError } from '../errors/newebpay-error.js'
+import { getTimestamp } from '../utils/timestamp.js'
 import type { HttpClientInterface } from '../infrastructure/http/http-client.interface.js'
 import { FetchHttpClient } from '../infrastructure/http/fetch-http-client.js'
 
@@ -106,7 +107,6 @@ export class QueryOrder {
    * 建立請求 Payload。
    */
   protected buildPayload(merchantOrderNo: string, amt: number): Record<string, string> {
-    const timeStamp = String(Math.floor(Date.now() / 1000))
     const checkValue = this.generateCheckValue(merchantOrderNo, amt)
 
     return {
@@ -114,7 +114,7 @@ export class QueryOrder {
       Version: this.version,
       RespondType: 'JSON',
       CheckValue: checkValue,
-      TimeStamp: timeStamp,
+      TimeStamp: getTimestamp(),
       MerchantOrderNo: merchantOrderNo,
       Amt: String(amt),
     }

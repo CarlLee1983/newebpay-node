@@ -1,6 +1,9 @@
 import { Aes256Encoder } from '../infrastructure/aes256-encoder.js'
 import { NewebPayError } from '../errors/newebpay-error.js'
+import { getTimestamp } from '../utils/timestamp.js'
 import { CloseType, IndexType } from '../types/parameters.js'
+import type { HttpClientInterface } from '../infrastructure/http/http-client.interface.js'
+import { FetchHttpClient } from '../infrastructure/http/fetch-http-client.js'
 
 /**
  * 請退款結果。
@@ -51,19 +54,32 @@ export class CreditClose {
   private aesEncoder?: Aes256Encoder
 
   /**
+   * HTTP 客戶端。
+   */
+  protected httpClient: HttpClientInterface
+
+  /**
    * 建立請退款物件。
    */
   constructor(
     protected merchantId: string,
     protected hashKey: string,
     protected hashIV: string,
-  ) {}
+    httpClient?: HttpClientInterface,
+  ) {
+    this.httpClient = httpClient ?? new FetchHttpClient()
+  }
 
   /**
    * 從設定建立請退款物件。
    */
-  static create(merchantId: string, hashKey: string, hashIV: string): CreditClose {
-    return new CreditClose(merchantId, hashKey, hashIV)
+  static create(
+    merchantId: string,
+    hashKey: string,
+    hashIV: string,
+    httpClient?: HttpClientInterface,
+  ): CreditClose {
+    return new CreditClose(merchantId, hashKey, hashIV, httpClient)
   }
 
   /**
@@ -142,7 +158,7 @@ export class CreditClose {
       Amt: amt,
       MerchantOrderNo: merchantOrderNo,
       IndexType: indexType,
-      TimeStamp: String(Math.floor(Date.now() / 1000)),
+      TimeStamp: getTimestamp(),
       CloseType: closeType,
     }
 
@@ -156,23 +172,11 @@ export class CreditClose {
 
     const payload = this.buildPayload(postData)
 
-    const response = await fetch(this.getApiUrl(), {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: new URLSearchParams(payload).toString(),
-    })
-
-    if (!response.ok) {
-      throw NewebPayError.apiError(`HTTP 錯誤：${response.status}`)
-    }
-
-    const result = (await response.json()) as {
+    const result = await this.httpClient.post<{
       Status?: string
       Message?: string
       Result?: CreditCloseResult
-    }
+    }>(this.getApiUrl(), payload)
 
     return this.parseResponse(result)
   }

@@ -7,10 +7,32 @@ export class NewebPayError extends Error {
    */
   public readonly code: string | undefined
 
-  constructor(message: string, code?: string) {
+  /**
+   * HTTP 狀態碼（僅適用於 HTTP 錯誤）。
+   */
+  public readonly httpStatus?: number
+
+  /**
+   * 請求 URL（僅適用於網路相關錯誤）。
+   */
+  public readonly url?: string
+
+  /**
+   * 欄位名稱（僅適用於驗證錯誤）。
+   */
+  public readonly field?: string
+
+  constructor(
+    message: string,
+    code?: string,
+    options?: { httpStatus?: number; url?: string; field?: string },
+  ) {
     super(message)
     this.name = 'NewebPayError'
     this.code = code
+    this.httpStatus = options?.httpStatus
+    this.url = options?.url
+    this.field = options?.field
     Object.setPrototypeOf(this, NewebPayError.prototype)
   }
 
@@ -18,21 +40,21 @@ export class NewebPayError extends Error {
    * 必要欄位未填寫。
    */
   static required(field: string): NewebPayError {
-    return new NewebPayError(`${field} 為必填欄位`, 'REQUIRED_FIELD')
+    return new NewebPayError(`${field} 為必填欄位`, 'REQUIRED_FIELD', { field })
   }
 
   /**
    * 欄位值過長。
    */
   static tooLong(field: string, maxLength: number): NewebPayError {
-    return new NewebPayError(`${field} 超過最大長度 ${maxLength}`, 'FIELD_TOO_LONG')
+    return new NewebPayError(`${field} 超過最大長度 ${maxLength}`, 'FIELD_TOO_LONG', { field })
   }
 
   /**
    * 欄位值無效。
    */
   static invalid(field: string, reason: string): NewebPayError {
-    return new NewebPayError(`${field} 無效：${reason}`, 'INVALID_FIELD')
+    return new NewebPayError(`${field} 無效：${reason}`, 'INVALID_FIELD', { field })
   }
 
   /**
@@ -54,5 +76,43 @@ export class NewebPayError extends Error {
    */
   static apiError(message: string, code?: string): NewebPayError {
     return new NewebPayError(message, code ?? 'API_ERROR')
+  }
+
+  /**
+   * HTTP 錯誤。
+   */
+  static httpError(status: number, statusText: string, url?: string): NewebPayError {
+    return new NewebPayError(`HTTP 錯誤：${status} ${statusText}`, 'HTTP_ERROR', {
+      httpStatus: status,
+      url,
+    })
+  }
+
+  /**
+   * 請求超時。
+   */
+  static timeout(timeoutMs: number, url?: string): NewebPayError {
+    return new NewebPayError(`請求超時（${timeoutMs}ms）`, 'REQUEST_TIMEOUT', { url })
+  }
+
+  /**
+   * 網路錯誤。
+   */
+  static networkError(message: string, url?: string): NewebPayError {
+    return new NewebPayError(`網路錯誤：${message}`, 'NETWORK_ERROR', { url })
+  }
+
+  /**
+   * 轉換為 JSON 物件。
+   */
+  toJSON(): Record<string, unknown> {
+    return {
+      name: this.name,
+      message: this.message,
+      code: this.code,
+      httpStatus: this.httpStatus,
+      url: this.url,
+      field: this.field,
+    }
   }
 }

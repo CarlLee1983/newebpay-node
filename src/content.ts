@@ -1,6 +1,7 @@
 import { Aes256Encoder } from './infrastructure/aes256-encoder.js'
 import { CheckValueEncoder } from './infrastructure/check-value-encoder.js'
 import { NewebPayError } from './errors/newebpay-error.js'
+import { getTimestamp } from './utils/timestamp.js'
 import type { PaymentInterface, PaymentContent } from './types/payment.js'
 
 /**
@@ -76,7 +77,7 @@ export abstract class Content implements PaymentInterface {
     this.content = {
       MerchantID: this.merchantId,
       MerchantOrderNo: '',
-      TimeStamp: String(Math.floor(Date.now() / 1000)),
+      TimeStamp: getTimestamp(),
       Version: this.version,
       Amt: 0,
       ItemDesc: '',

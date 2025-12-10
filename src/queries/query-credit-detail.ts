@@ -1,5 +1,8 @@
 import { Aes256Encoder } from '../infrastructure/aes256-encoder.js'
 import { NewebPayError } from '../errors/newebpay-error.js'
+import { getTimestamp } from '../utils/timestamp.js'
+import type { HttpClientInterface } from '../infrastructure/http/http-client.interface.js'
+import { FetchHttpClient } from '../infrastructure/http/fetch-http-client.js'
 
 /**
  * 信用卡交易明細查詢結果。
@@ -48,19 +51,32 @@ export class QueryCreditDetail {
   private aesEncoder?: Aes256Encoder
 
   /**
+   * HTTP 客戶端。
+   */
+  protected httpClient: HttpClientInterface
+
+  /**
    * 建立查詢物件。
    */
   constructor(
     protected merchantId: string,
     protected hashKey: string,
     protected hashIV: string,
-  ) {}
+    httpClient?: HttpClientInterface,
+  ) {
+    this.httpClient = httpClient ?? new FetchHttpClient()
+  }
 
   /**
    * 從設定建立查詢物件。
    */
-  static create(merchantId: string, hashKey: string, hashIV: string): QueryCreditDetail {
-    return new QueryCreditDetail(merchantId, hashKey, hashIV)
+  static create(
+    merchantId: string,
+    hashKey: string,
+    hashIV: string,
+    httpClient?: HttpClientInterface,
+  ): QueryCreditDetail {
+    return new QueryCreditDetail(merchantId, hashKey, hashIV, httpClient)
   }
 
   /**
@@ -91,23 +107,11 @@ export class QueryCreditDetail {
   async query(merchantOrderNo: string, amt: number): Promise<QueryCreditDetailResult> {
     const payload = this.buildPayload(merchantOrderNo, amt)
 
-    const response = await fetch(this.getApiUrl(), {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: new URLSearchParams(payload).toString(),
-    })
-
-    if (!response.ok) {
-      throw NewebPayError.apiError(`HTTP 錯誤：${response.status}`)
-    }
-
-    const result = (await response.json()) as {
+    const result = await this.httpClient.post<{
       Status?: string
       Message?: string
       Result?: QueryCreditDetailResult
-    }
+    }>(this.getApiUrl(), payload)
 
     return this.parseResponse(result)
   }
@@ -120,7 +124,7 @@ export class QueryCreditDetail {
       MerchantID: this.merchantId,
       Version: this.version,
       RespondType: 'JSON',
-      TimeStamp: String(Math.floor(Date.now() / 1000)),
+      TimeStamp: getTimestamp(),
       MerchantOrderNo: merchantOrderNo,
       Amt: amt,
     }
