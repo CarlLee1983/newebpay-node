@@ -1,3 +1,19 @@
+## [1.4.0](https://github.com/CarlLee1983/newebpay-node/compare/v1.3.3...v1.4.0) (2025-12-10)
+
+### Features
+
+* implement HTTP client abstraction and timestamp utility ([6bfedd3](https://github.com/CarlLee1983/newebpay-node/commit/6bfedd355d40e6c7980ff3ead0a02eaa2a8eb56e))
+
+### Bug Fixes
+
+* **errors:** update error messages to English for consistency ([493032b](https://github.com/CarlLee1983/newebpay-node/commit/493032b54952e398781ad6f7d289c062c0abfb58))
+* **QueryOrder:** enhance HTTP post response type definition for better type safety ([9495796](https://github.com/CarlLee1983/newebpay-node/commit/949579636fbc94f1db95a41c2624db9afa9fc330))
+
+### Code Refactoring
+
+* **NewebPayError:** improve handling of optional properties in error constructor ([68321b3](https://github.com/CarlLee1983/newebpay-node/commit/68321b3da4e7b6793c5ac624e9e54db0365196a9))
+* **tests:** replace global fetch with HttpClientInterface mock in tests ([d3f35b5](https://github.com/CarlLee1983/newebpay-node/commit/d3f35b5d2ddbdf4cdcb6f649c188d5824be13122))
+
 ## [1.3.3](https://github.com/CarlLee1983/newebpay-node/compare/v1.3.2...v1.3.3) (2025-12-07)
 
 ### Documentation
