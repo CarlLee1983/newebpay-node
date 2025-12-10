@@ -25,14 +25,20 @@ export class NewebPayError extends Error {
   constructor(
     message: string,
     code?: string,
-    options?: { httpStatus?: number; url?: string; field?: string },
+    options?: { httpStatus?: number | undefined; url?: string | undefined; field?: string | undefined },
   ) {
     super(message)
     this.name = 'NewebPayError'
     this.code = code
-    this.httpStatus = options?.httpStatus
-    this.url = options?.url
-    this.field = options?.field
+    if (options?.httpStatus !== undefined) {
+      this.httpStatus = options.httpStatus
+    }
+    if (options?.url !== undefined) {
+      this.url = options.url
+    }
+    if (options?.field !== undefined) {
+      this.field = options.field
+    }
     Object.setPrototypeOf(this, NewebPayError.prototype)
   }
 
@@ -82,24 +88,33 @@ export class NewebPayError extends Error {
    * HTTP 錯誤。
    */
   static httpError(status: number, statusText: string, url?: string): NewebPayError {
-    return new NewebPayError(`HTTP 錯誤：${status} ${statusText}`, 'HTTP_ERROR', {
-      httpStatus: status,
-      url,
-    })
+    return new NewebPayError(
+      `HTTP 錯誤：${status} ${statusText}`,
+      'HTTP_ERROR',
+      url !== undefined ? { httpStatus: status, url } : { httpStatus: status },
+    )
   }
 
   /**
    * 請求超時。
    */
   static timeout(timeoutMs: number, url?: string): NewebPayError {
-    return new NewebPayError(`請求超時（${timeoutMs}ms）`, 'REQUEST_TIMEOUT', { url })
+    return new NewebPayError(
+      `請求超時（${timeoutMs}ms）`,
+      'REQUEST_TIMEOUT',
+      url !== undefined ? { url } : undefined,
+    )
   }
 
   /**
    * 網路錯誤。
    */
   static networkError(message: string, url?: string): NewebPayError {
-    return new NewebPayError(`網路錯誤：${message}`, 'NETWORK_ERROR', { url })
+    return new NewebPayError(
+      `網路錯誤：${message}`,
+      'NETWORK_ERROR',
+      url !== undefined ? { url } : undefined,
+    )
   }
 
   /**
