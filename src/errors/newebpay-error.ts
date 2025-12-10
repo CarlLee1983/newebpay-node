@@ -89,7 +89,7 @@ export class NewebPayError extends Error {
    */
   static httpError(status: number, statusText: string, url?: string): NewebPayError {
     return new NewebPayError(
-      `HTTP 錯誤：${status} ${statusText}`,
+      `HTTP Error: ${status} ${statusText}`,
       'HTTP_ERROR',
       url !== undefined ? { httpStatus: status, url } : { httpStatus: status },
     )
@@ -100,7 +100,7 @@ export class NewebPayError extends Error {
    */
   static timeout(timeoutMs: number, url?: string): NewebPayError {
     return new NewebPayError(
-      `請求超時（${timeoutMs}ms）`,
+      `Request timeout after ${timeoutMs}ms`,
       'REQUEST_TIMEOUT',
       url !== undefined ? { url } : undefined,
     )
@@ -111,7 +111,7 @@ export class NewebPayError extends Error {
    */
   static networkError(message: string, url?: string): NewebPayError {
     return new NewebPayError(
-      `網路錯誤：${message}`,
+      `Network error: ${message}`,
       'NETWORK_ERROR',
       url !== undefined ? { url } : undefined,
     )

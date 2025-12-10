@@ -67,7 +67,7 @@ export class FetchHttpClient implements HttpClientInterface {
         // 其他網路錯誤
         else {
           lastError = NewebPayError.networkError(
-            error instanceof Error ? error.message : '未知錯誤',
+            error instanceof Error ? error.message : 'Unknown error',
             url,
           )
         }
@@ -80,6 +80,6 @@ export class FetchHttpClient implements HttpClientInterface {
       }
     }
 
-    throw lastError ?? NewebPayError.networkError('請求失敗', url)
+    throw lastError ?? NewebPayError.networkError('Request failed', url)
   }
 }
