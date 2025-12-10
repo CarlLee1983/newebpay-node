@@ -1,6 +1,8 @@
 import { describe, it, expect, beforeEach, vi, afterEach } from 'vitest'
 import { CreditClose } from '../../src/actions/credit-close.js'
 import { CloseType, IndexType } from '../../src/types/parameters.js'
+import { NewebPayError } from '../../src/errors/newebpay-error.js'
+import type { HttpClientInterface } from '../../src/infrastructure/http/http-client.interface.js'
 
 describe('CreditClose', () => {
   const merchantId = 'MS12345678'
@@ -8,9 +10,13 @@ describe('CreditClose', () => {
   const hashIV = '1234567890123456'
 
   let creditClose: CreditClose
+  let mockHttpClient: HttpClientInterface
 
   beforeEach(() => {
-    creditClose = new CreditClose(merchantId, hashKey, hashIV)
+    mockHttpClient = {
+      post: vi.fn(),
+    }
+    creditClose = new CreditClose(merchantId, hashKey, hashIV, mockHttpClient)
   })
 
   describe('建構函式', () => {
@@ -60,10 +66,6 @@ describe('CreditClose', () => {
   })
 
   describe('API 操作', () => {
-    beforeEach(() => {
-      global.fetch = vi.fn()
-    })
-
     afterEach(() => {
       vi.resetAllMocks()
     })
@@ -81,50 +83,38 @@ describe('CreditClose', () => {
     }
 
     it('pay (請款) 應正確執行', async () => {
-      ;(global.fetch as any).mockResolvedValue({
-        ok: true,
-        json: async () => mockSuccessResult,
-      })
+      ;(mockHttpClient.post as any).mockResolvedValue(mockSuccessResult)
 
       const result = await creditClose.pay('ORDER001', 1000)
 
       expect(result.MerchantOrderNo).toBe('ORDER001')
       expect(result.CloseType).toBe(1)
 
-      expect(global.fetch).toHaveBeenCalledWith(
+      expect(mockHttpClient.post).toHaveBeenCalledWith(
         expect.stringContaining('/API/CreditCard/Close'),
         expect.objectContaining({
-          method: 'POST',
-          body: expect.stringMatching(/MerchantID_=.+&PostData_=.+/),
+          MerchantID_: merchantId,
+          PostData_: expect.any(String),
         }),
       )
     })
 
     it('refund (退款) 應正確執行', async () => {
-      ;(global.fetch as any).mockResolvedValue({
-        ok: true,
-        json: async () => mockSuccessResult,
-      })
+      ;(mockHttpClient.post as any).mockResolvedValue(mockSuccessResult)
 
       const result = await creditClose.refund('ORDER001', 1000)
       expect(result).toBeDefined()
     })
 
     it('cancelClose (取消) 應正確執行', async () => {
-      ;(global.fetch as any).mockResolvedValue({
-        ok: true,
-        json: async () => mockSuccessResult,
-      })
+      ;(mockHttpClient.post as any).mockResolvedValue(mockSuccessResult)
 
       const result = await creditClose.cancelClose('ORDER001', 1000, CloseType.PAY)
       expect(result).toBeDefined()
     })
 
     it('應支援使用 TradeNo 進行操作', async () => {
-      ;(global.fetch as any).mockResolvedValue({
-        ok: true,
-        json: async () => mockSuccessResult,
-      })
+      ;(mockHttpClient.post as any).mockResolvedValue(mockSuccessResult)
 
       await creditClose.pay('ORDER001', 1000, IndexType.TRADE_NO, 'TRADE001')
 
@@ -132,19 +122,18 @@ describe('CreditClose', () => {
     })
 
     it('API 錯誤應拋出異常', async () => {
-      ;(global.fetch as any).mockResolvedValue({
-        ok: true,
-        json: async () => ({ Status: 'FAIL', Message: 'Error' }),
+      ;(mockHttpClient.post as any).mockResolvedValue({
+        Status: 'FAIL',
+        Message: 'Error',
       })
 
       await expect(creditClose.pay('ORDER001', 1000)).rejects.toThrow()
     })
 
     it('HTTP 錯誤應拋出異常', async () => {
-      ;(global.fetch as any).mockResolvedValue({
-        ok: false,
-        status: 500,
-      })
+      ;(mockHttpClient.post as any).mockRejectedValue(
+        new NewebPayError('HTTP Error: 500 Server Error', 'HTTP_ERROR'),
+      )
 
       await expect(creditClose.pay('ORDER001', 1000)).rejects.toThrow()
     })

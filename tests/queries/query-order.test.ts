@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, vi, afterEach } from 'vitest'
 import { QueryOrder } from '../../src/queries/query-order.js'
 import { NewebPayError } from '../../src/errors/newebpay-error.js'
+import type { HttpClientInterface } from '../../src/infrastructure/http/http-client.interface.js'
 
 describe('QueryOrder', () => {
   const merchantId = 'MS12345678'
@@ -8,10 +9,13 @@ describe('QueryOrder', () => {
   const hashIV = '1234567890123456'
 
   let queryOrder: QueryOrder
+  let mockHttpClient: HttpClientInterface
 
   beforeEach(() => {
-    queryOrder = new QueryOrder(merchantId, hashKey, hashIV)
-    global.fetch = vi.fn()
+    mockHttpClient = {
+      post: vi.fn(),
+    }
+    queryOrder = new QueryOrder(merchantId, hashKey, hashIV, mockHttpClient)
   })
 
   describe('建構函式', () => {
@@ -68,10 +72,7 @@ describe('QueryOrder', () => {
         },
       }
 
-      ;(global.fetch as any).mockResolvedValue({
-        ok: true,
-        json: async () => mockResult,
-      })
+      ;(mockHttpClient.post as any).mockResolvedValue(mockResult)
 
       const result = await queryOrder.query('ORDER001', 1000)
 
@@ -79,38 +80,31 @@ describe('QueryOrder', () => {
       expect(result.Amt).toBe(1000)
       expect(result.TradeStatus).toBe('1')
 
-      expect(global.fetch).toHaveBeenCalledWith(
+      expect(mockHttpClient.post).toHaveBeenCalledWith(
         expect.stringContaining('/API/QueryTradeInfo'),
         expect.objectContaining({
-          method: 'POST',
-          headers: expect.objectContaining({
-            'Content-Type': 'application/x-www-form-urlencoded',
-          }),
-          // FetchHttpClient sends URLSearchParams, not string
-          body: expect.any(URLSearchParams),
-          // FetchHttpClient adds signal
-          signal: expect.any(AbortSignal),
+          MerchantID: merchantId,
+          MerchantOrderNo: 'ORDER001',
+          Amt: '1000',
+          CheckValue: expect.any(String),
         }),
       )
     })
 
     it('API 回傳失敗應拋出錯誤', async () => {
-      ;(global.fetch as any).mockResolvedValue({
-        ok: true,
-        json: async () => ({ Status: 'FAIL', Message: 'Query failed' }),
+      ;(mockHttpClient.post as any).mockResolvedValue({
+        Status: 'FAIL',
+        Message: 'Query failed',
       })
 
       await expect(queryOrder.query('ORDER001', 1000)).rejects.toThrow(NewebPayError)
     })
 
     it('HTTP 錯誤應拋出錯誤', async () => {
-      ;(global.fetch as any).mockResolvedValue({
-        ok: false,
-        status: 500,
-        statusText: 'Server Error',
-      })
+      ;(mockHttpClient.post as any).mockRejectedValue(
+        new NewebPayError('HTTP Error: 500 Server Error', 'HTTP_ERROR'),
+      )
 
-      // Update to expect generic Error with message from FetchHttpClient
       await expect(queryOrder.query('ORDER001', 1000)).rejects.toThrow(
         'HTTP Error: 500 Server Error',
       )
@@ -118,17 +112,11 @@ describe('QueryOrder', () => {
 
     it('回應缺少欄位應處理預設值', async () => {
       // Case 1: Empty response (Status undefined -> "", throws)
-      ;(global.fetch as any).mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({}),
-      })
+      ;(mockHttpClient.post as any).mockResolvedValueOnce({})
       await expect(queryOrder.query('ORDER001', 1000)).rejects.toThrow()
 
       // Case 2: Success but no result (Result undefined -> {})
-      ;(global.fetch as any).mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ Status: 'SUCCESS' }),
-      })
+      ;(mockHttpClient.post as any).mockResolvedValueOnce({ Status: 'SUCCESS' })
       const result = await queryOrder.query('ORDER001', 1000)
       expect(result).toEqual({})
     })

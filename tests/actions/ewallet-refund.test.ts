@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, vi, afterEach } from 'vitest'
 import { EWalletRefund } from '../../src/actions/ewallet-refund.js'
 import { NewebPayError } from '../../src/errors/newebpay-error.js'
+import type { HttpClientInterface } from '../../src/infrastructure/http/http-client.interface.js'
 
 describe('EWalletRefund', () => {
   const merchantId = 'MS12345678'
@@ -8,10 +9,13 @@ describe('EWalletRefund', () => {
   const hashIV = '1234567890123456'
 
   let action: EWalletRefund
+  let mockHttpClient: HttpClientInterface
 
   beforeEach(() => {
-    action = new EWalletRefund(merchantId, hashKey, hashIV)
-    global.fetch = vi.fn()
+    mockHttpClient = {
+      post: vi.fn(),
+    }
+    action = new EWalletRefund(merchantId, hashKey, hashIV, mockHttpClient)
   })
 
   afterEach(() => {
@@ -38,25 +42,25 @@ describe('EWalletRefund', () => {
         },
       }
 
-      ;(global.fetch as any).mockResolvedValue({
-        ok: true,
-        json: async () => mockResult,
-      })
+      ;(mockHttpClient.post as any).mockResolvedValue(mockResult)
 
       const result = await action.refund('ORDER001', 1000, 'LINEPAY')
 
       expect(result.MerchantOrderNo).toBe('ORDER001')
       expect(result.RefundAmt).toBe(1000)
-      expect(global.fetch).toHaveBeenCalledWith(
+      expect(mockHttpClient.post).toHaveBeenCalledWith(
         expect.stringContaining('/API/EWallet/Refund'),
-        expect.anything(),
+        expect.objectContaining({
+          MerchantID_: merchantId,
+          PostData_: expect.any(String),
+        }),
       )
     })
 
     it('API 回傳失敗應拋出錯誤', async () => {
-      ;(global.fetch as any).mockResolvedValue({
-        ok: true,
-        json: async () => ({ Status: 'FAIL', Message: 'Refund error' }),
+      ;(mockHttpClient.post as any).mockResolvedValue({
+        Status: 'FAIL',
+        Message: 'Refund error',
       })
 
       await expect(action.refund('ORDER001', 1000, 'LINEPAY')).rejects.toThrow(NewebPayError)

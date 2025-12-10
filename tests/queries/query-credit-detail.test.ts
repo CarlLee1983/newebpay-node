@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach, vi, afterEach } from 'vitest'
 import { QueryCreditDetail } from '../../src/queries/query-credit-detail.js'
 import { NewebPayError } from '../../src/errors/newebpay-error.js'
+import type { HttpClientInterface } from '../../src/infrastructure/http/http-client.interface.js'
 
 describe('QueryCreditDetail', () => {
   const merchantId = 'MS12345678'
@@ -8,10 +9,13 @@ describe('QueryCreditDetail', () => {
   const hashIV = '1234567890123456'
 
   let query: QueryCreditDetail
+  let mockHttpClient: HttpClientInterface
 
   beforeEach(() => {
-    query = new QueryCreditDetail(merchantId, hashKey, hashIV)
-    global.fetch = vi.fn()
+    mockHttpClient = {
+      post: vi.fn(),
+    }
+    query = new QueryCreditDetail(merchantId, hashKey, hashIV, mockHttpClient)
   })
 
   afterEach(() => {
@@ -54,10 +58,7 @@ describe('QueryCreditDetail', () => {
         },
       }
 
-      ;(global.fetch as any).mockResolvedValue({
-        ok: true,
-        json: async () => mockResult,
-      })
+      ;(mockHttpClient.post as any).mockResolvedValue(mockResult)
 
       const result = await query.query('ORDER001', 1000)
 
@@ -65,49 +66,39 @@ describe('QueryCreditDetail', () => {
       expect(result.Amt).toBe(1000)
       expect(result.CloseStatus).toBe('0')
 
-      expect(global.fetch).toHaveBeenCalledWith(
+      expect(mockHttpClient.post).toHaveBeenCalledWith(
         expect.stringContaining('/API/CreditCard/QueryTradeInfo'),
         expect.objectContaining({
-          method: 'POST',
-          headers: expect.objectContaining({
-            'Content-Type': 'application/x-www-form-urlencoded',
-          }),
-          body: expect.stringMatching(/MerchantID_=.+&PostData_=.+/),
+          MerchantID_: merchantId,
+          PostData_: expect.any(String),
         }),
       )
     })
 
     it('API 回傳失敗應拋出錯誤', async () => {
-      ;(global.fetch as any).mockResolvedValue({
-        ok: true,
-        json: async () => ({ Status: 'FAIL', Message: 'Query failed' }),
+      ;(mockHttpClient.post as any).mockResolvedValue({
+        Status: 'FAIL',
+        Message: 'Query failed',
       })
 
       await expect(query.query('ORDER001', 1000)).rejects.toThrow(NewebPayError)
     })
 
     it('HTTP 錯誤應拋出錯誤', async () => {
-      ;(global.fetch as any).mockResolvedValue({
-        ok: false,
-        status: 500,
-      })
+      ;(mockHttpClient.post as any).mockRejectedValue(
+        new NewebPayError('HTTP Error: 500 Server Error', 'HTTP_ERROR'),
+      )
 
       await expect(query.query('ORDER001', 1000)).rejects.toThrow(NewebPayError)
     })
 
     it('回應缺少欄位應處理預設值', async () => {
       // Case 1: Empty response (Status undefined -> "", throws)
-      ;(global.fetch as any).mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({}),
-      })
+      ;(mockHttpClient.post as any).mockResolvedValueOnce({})
       await expect(query.query('ORDER001', 1000)).rejects.toThrow()
 
       // Case 2: Success but no result (Result undefined -> {})
-      ;(global.fetch as any).mockResolvedValueOnce({
-        ok: true,
-        json: async () => ({ Status: 'SUCCESS' }),
-      })
+      ;(mockHttpClient.post as any).mockResolvedValueOnce({ Status: 'SUCCESS' })
       const result = await query.query('ORDER001', 1000)
       expect(result).toEqual({})
     })
