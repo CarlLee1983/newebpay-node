@@ -98,7 +98,11 @@ export class QueryOrder {
     const payload = this.buildPayload(merchantOrderNo, amt)
 
     // Use HttpClient
-    const result = await this.httpClient.post(this.getApiUrl(), payload)
+    const result = await this.httpClient.post<{
+      Status?: string
+      Message?: string
+      Result?: QueryOrderResult
+    }>(this.getApiUrl(), payload)
 
     return this.parseResponse(result)
   }
