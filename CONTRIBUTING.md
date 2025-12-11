@@ -61,9 +61,6 @@ npm install
 # 執行所有測試
 npm test
 
-# 執行 E2E 測試
-npm run test:e2e
-
 # 檢查程式碼風格
 npm run lint
 ```
