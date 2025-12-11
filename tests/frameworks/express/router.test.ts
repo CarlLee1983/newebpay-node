@@ -205,20 +205,21 @@ describe('createNewebPayRouter', () => {
       expect(mockBuilder.allInOne).toHaveBeenCalled()
     })
 
-    it('應處理自訂設定', () => {
-      const customizeFn = vi.fn()
+    it('應忽略 JSON body 中的 customize 欄位（因為 JSON 無法包含 function）', () => {
       const req = {
         body: {
           orderId: 'ORDER1',
           amount: 100,
           itemDesc: 'Item',
-          customize: customizeFn,
+          customize: 'some-value', // JSON body 中的值，不是 function
         },
       }
       const res = { json: vi.fn() }
 
       createHandler(req, res)
-      expect(mockBuilder.customize).toHaveBeenCalledWith(customizeFn)
+      // customize 方法不應該被調用，因為 JSON body 無法包含 function
+      expect(mockBuilder.customize).not.toHaveBeenCalled()
+      expect(res.json).toHaveBeenCalled()
     })
 
     it('應處理未知的錯誤', () => {

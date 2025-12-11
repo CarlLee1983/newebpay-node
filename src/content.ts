@@ -67,7 +67,21 @@ export abstract class Content implements PaymentInterface {
     protected hashKey: string = '',
     protected hashIV: string = '',
   ) {
+    this.validateCredentials()
     this.initContent()
+  }
+
+  /**
+   * 驗證憑證參數。
+   */
+  private validateCredentials(): void {
+    if (!this.hashKey || this.hashKey.trim() === '') {
+      throw NewebPayError.required('HashKey')
+    }
+
+    if (!this.hashIV || this.hashIV.trim() === '') {
+      throw NewebPayError.required('HashIV')
+    }
   }
 
   /**
@@ -389,6 +403,9 @@ export abstract class Content implements PaymentInterface {
    * 取得內容值。
    */
   get<T = unknown>(key: string, defaultValue?: T): T | undefined {
-    return (this.content[key] as T) ?? defaultValue
+    if (key in this.content) {
+      return this.content[key] as T
+    }
+    return defaultValue
   }
 }

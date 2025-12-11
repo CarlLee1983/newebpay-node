@@ -52,7 +52,16 @@ export class FetchHttpClient implements HttpClientInterface {
           throw NewebPayError.httpError(response.status, response.statusText, url)
         }
 
-        return (await response.json()) as T
+        try {
+          return (await response.json()) as T
+        } catch (parseError) {
+          throw NewebPayError.networkError(
+            `Failed to parse JSON response: ${
+              parseError instanceof Error ? parseError.message : 'Unknown error'
+            }`,
+            url,
+          )
+        }
       } catch (error) {
         clearTimeout(timeoutId)
 

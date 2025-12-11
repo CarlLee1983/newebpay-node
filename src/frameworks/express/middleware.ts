@@ -17,11 +17,18 @@ declare global {
  * 支付完成通知 Middleware
  */
 export function paymentNotifyMiddleware(config: NewebPayConfig) {
-  return (req: Request, _res: Response, next: NextFunction): void => {
+  return (req: Request, res: Response, next: NextFunction): void => {
     const notify = new PaymentNotify(config.hashKey, config.hashIV)
 
     if (req.body?.TradeInfo && req.body?.TradeSha) {
-      notify.verify(req.body)
+      const isValid = notify.verify(req.body)
+      if (!isValid) {
+        res.status(400).json({
+          error: 'TradeSha verification failed',
+          code: 'CHECK_VALUE_FAILED',
+        })
+        return
+      }
     }
 
     req.newebpayNotify = notify
@@ -33,11 +40,18 @@ export function paymentNotifyMiddleware(config: NewebPayConfig) {
  * ATM 取號通知 Middleware
  */
 export function atmNotifyMiddleware(config: NewebPayConfig) {
-  return (req: Request, _res: Response, next: NextFunction): void => {
+  return (req: Request, res: Response, next: NextFunction): void => {
     const notify = new AtmNotify(config.hashKey, config.hashIV)
 
     if (req.body?.TradeInfo && req.body?.TradeSha) {
-      notify.verify(req.body)
+      const isValid = notify.verify(req.body)
+      if (!isValid) {
+        res.status(400).json({
+          error: 'TradeSha verification failed',
+          code: 'CHECK_VALUE_FAILED',
+        })
+        return
+      }
     }
 
     req.newebpayNotify = notify
@@ -49,11 +63,18 @@ export function atmNotifyMiddleware(config: NewebPayConfig) {
  * 超商取號通知 Middleware
  */
 export function cvsNotifyMiddleware(config: NewebPayConfig) {
-  return (req: Request, _res: Response, next: NextFunction): void => {
+  return (req: Request, res: Response, next: NextFunction): void => {
     const notify = new CvsNotify(config.hashKey, config.hashIV)
 
     if (req.body?.TradeInfo && req.body?.TradeSha) {
-      notify.verify(req.body)
+      const isValid = notify.verify(req.body)
+      if (!isValid) {
+        res.status(400).json({
+          error: 'TradeSha verification failed',
+          code: 'CHECK_VALUE_FAILED',
+        })
+        return
+      }
     }
 
     req.newebpayNotify = notify
@@ -65,11 +86,18 @@ export function cvsNotifyMiddleware(config: NewebPayConfig) {
  * 超商取貨付款通知 Middleware
  */
 export function cvscomNotifyMiddleware(config: NewebPayConfig) {
-  return (req: Request, _res: Response, next: NextFunction): void => {
+  return (req: Request, res: Response, next: NextFunction): void => {
     const notify = new CvscomNotify(config.hashKey, config.hashIV)
 
     if (req.body?.TradeInfo && req.body?.TradeSha) {
-      notify.verify(req.body)
+      const isValid = notify.verify(req.body)
+      if (!isValid) {
+        res.status(400).json({
+          error: 'TradeSha verification failed',
+          code: 'CHECK_VALUE_FAILED',
+        })
+        return
+      }
     }
 
     req.newebpayNotify = notify

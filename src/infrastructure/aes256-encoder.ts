@@ -77,8 +77,13 @@ export class Aes256Encoder {
 
       // 解析 URL 編碼查詢字串
       return this.parseQueryString(decrypted)
-    } catch {
-      throw NewebPayError.decryptFailed()
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : 'Unknown decryption error'
+      throw new NewebPayError(
+        `解密失敗: ${errorMessage}`,
+        'DECRYPT_FAILED',
+      )
     }
   }
 

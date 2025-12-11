@@ -75,7 +75,10 @@ describe('Express Router Integration', () => {
         .send(payload)
 
       expect(response.status).toBe(400)
-      expect(response.text).toBe('Verification failed')
+      expect(response.body).toEqual({
+        error: 'TradeSha verification failed',
+        code: 'CHECK_VALUE_FAILED',
+      })
     })
 
     it('should return 400 for invalid/tampered TradeInfo', async () => {

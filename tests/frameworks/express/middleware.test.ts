@@ -33,7 +33,10 @@ describe('Express Middleware', () => {
       TradeSha: 'hash',
     },
   }
-  const res: any = {}
+  const res: any = {
+    status: vi.fn().mockReturnThis(),
+    json: vi.fn().mockReturnThis(),
+  }
   const next = vi.fn()
 
   beforeEach(() => {
@@ -41,8 +44,8 @@ describe('Express Middleware', () => {
   })
 
   describe('paymentNotifyMiddleware', () => {
-    it('should create PaymentNotify and verify', () => {
-      const mockVerify = vi.fn()
+    it('should create PaymentNotify and verify successfully', () => {
+      const mockVerify = vi.fn().mockReturnValue(true)
       ;(PaymentNotify as any).mockImplementation(() => ({
         verify: mockVerify,
       }))
@@ -54,6 +57,25 @@ describe('Express Middleware', () => {
       expect(mockVerify).toHaveBeenCalledWith(req.body)
       expect(req.newebpayNotify).toBeDefined()
       expect(next).toHaveBeenCalled()
+      expect(res.status).not.toHaveBeenCalled()
+    })
+
+    it('should return 400 if verification fails', () => {
+      const mockVerify = vi.fn().mockReturnValue(false)
+      ;(PaymentNotify as any).mockImplementation(() => ({
+        verify: mockVerify,
+      }))
+
+      const middleware = paymentNotifyMiddleware(config)
+      middleware(req, res, next)
+
+      expect(mockVerify).toHaveBeenCalledWith(req.body)
+      expect(res.status).toHaveBeenCalledWith(400)
+      expect(res.json).toHaveBeenCalledWith({
+        error: 'TradeSha verification failed',
+        code: 'CHECK_VALUE_FAILED',
+      })
+      expect(next).not.toHaveBeenCalled()
     })
 
     it('should skip verify if body is missing', () => {
@@ -67,14 +89,15 @@ describe('Express Middleware', () => {
       middleware(emptyReq, res, next)
 
       expect(mockVerify).not.toHaveBeenCalled()
-      expect(req.newebpayNotify).toBeDefined()
+      expect(emptyReq.newebpayNotify).toBeDefined()
       expect(next).toHaveBeenCalled()
+      expect(res.status).not.toHaveBeenCalled()
     })
   })
 
   describe('atmNotifyMiddleware', () => {
-    it('should create AtmNotify and verify', () => {
-      const mockVerify = vi.fn()
+    it('should create AtmNotify and verify successfully', () => {
+      const mockVerify = vi.fn().mockReturnValue(true)
       ;(AtmNotify as any).mockImplementation(() => ({
         verify: mockVerify,
       }))
@@ -86,12 +109,30 @@ describe('Express Middleware', () => {
       expect(mockVerify).toHaveBeenCalledWith(req.body)
       expect(req.newebpayNotify).toBeDefined()
       expect(next).toHaveBeenCalled()
+      expect(res.status).not.toHaveBeenCalled()
+    })
+
+    it('should return 400 if verification fails', () => {
+      const mockVerify = vi.fn().mockReturnValue(false)
+      ;(AtmNotify as any).mockImplementation(() => ({
+        verify: mockVerify,
+      }))
+
+      const middleware = atmNotifyMiddleware(config)
+      middleware(req, res, next)
+
+      expect(res.status).toHaveBeenCalledWith(400)
+      expect(res.json).toHaveBeenCalledWith({
+        error: 'TradeSha verification failed',
+        code: 'CHECK_VALUE_FAILED',
+      })
+      expect(next).not.toHaveBeenCalled()
     })
   })
 
   describe('cvsNotifyMiddleware', () => {
-    it('should create CvsNotify and verify', () => {
-      const mockVerify = vi.fn()
+    it('should create CvsNotify and verify successfully', () => {
+      const mockVerify = vi.fn().mockReturnValue(true)
       ;(CvsNotify as any).mockImplementation(() => ({
         verify: mockVerify,
       }))
@@ -103,12 +144,30 @@ describe('Express Middleware', () => {
       expect(mockVerify).toHaveBeenCalledWith(req.body)
       expect(req.newebpayNotify).toBeDefined()
       expect(next).toHaveBeenCalled()
+      expect(res.status).not.toHaveBeenCalled()
+    })
+
+    it('should return 400 if verification fails', () => {
+      const mockVerify = vi.fn().mockReturnValue(false)
+      ;(CvsNotify as any).mockImplementation(() => ({
+        verify: mockVerify,
+      }))
+
+      const middleware = cvsNotifyMiddleware(config)
+      middleware(req, res, next)
+
+      expect(res.status).toHaveBeenCalledWith(400)
+      expect(res.json).toHaveBeenCalledWith({
+        error: 'TradeSha verification failed',
+        code: 'CHECK_VALUE_FAILED',
+      })
+      expect(next).not.toHaveBeenCalled()
     })
   })
 
   describe('cvscomNotifyMiddleware', () => {
-    it('should create CvscomNotify and verify', () => {
-      const mockVerify = vi.fn()
+    it('should create CvscomNotify and verify successfully', () => {
+      const mockVerify = vi.fn().mockReturnValue(true)
       ;(CvscomNotify as any).mockImplementation(() => ({
         verify: mockVerify,
       }))
@@ -120,6 +179,24 @@ describe('Express Middleware', () => {
       expect(mockVerify).toHaveBeenCalledWith(req.body)
       expect(req.newebpayNotify).toBeDefined()
       expect(next).toHaveBeenCalled()
+      expect(res.status).not.toHaveBeenCalled()
+    })
+
+    it('should return 400 if verification fails', () => {
+      const mockVerify = vi.fn().mockReturnValue(false)
+      ;(CvscomNotify as any).mockImplementation(() => ({
+        verify: mockVerify,
+      }))
+
+      const middleware = cvscomNotifyMiddleware(config)
+      middleware(req, res, next)
+
+      expect(res.status).toHaveBeenCalledWith(400)
+      expect(res.json).toHaveBeenCalledWith({
+        error: 'TradeSha verification failed',
+        code: 'CHECK_VALUE_FAILED',
+      })
+      expect(next).not.toHaveBeenCalled()
     })
   })
 })

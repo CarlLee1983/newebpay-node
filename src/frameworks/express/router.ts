@@ -63,10 +63,8 @@ export function createNewebPayRouter(config: NewebPayConfig): Router {
           builder.creditCard()
       }
 
-      // 自訂設定
-      if (req.body.customize && typeof req.body.customize === 'function') {
-        builder.customize(req.body.customize)
-      }
+      // 自訂設定（透過設定物件，而非 function）
+      // 注意：JSON body 無法包含 function，此處保留供未來擴展使用
 
       const params = builder.getParams()
 

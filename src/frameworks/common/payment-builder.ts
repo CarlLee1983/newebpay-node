@@ -248,12 +248,26 @@ export class PaymentBuilder {
     method: string
     fields: Record<string, string>
   } {
-    const payment = this.build() as PaymentInterface & {
-      getApiUrl: () => string
-    }
+    const payment = this.build()
     const content = payment.getContent()
 
-    const apiUrl = payment.getApiUrl ? payment.getApiUrl() : ''
+    // 統一取得 API URL 的邏輯
+    let apiUrl = ''
+    if ('getApiUrl' in payment && typeof payment.getApiUrl === 'function') {
+      apiUrl = (payment as { getApiUrl: () => string }).getApiUrl()
+    } else if ('getBaseUrl' in payment && typeof payment.getBaseUrl === 'function') {
+      const baseUrl = (payment as { getBaseUrl: () => string }).getBaseUrl()
+      apiUrl = baseUrl + payment.getRequestPath()
+    } else {
+      // 檢查是否為測試模式
+      const isTest =
+        'isTestMode' in payment && typeof payment.isTestMode === 'function'
+          ? (payment as { isTestMode: () => boolean }).isTestMode()
+          : this.config.testMode ?? false
+
+      const baseUrl = isTest ? 'https://ccore.newebpay.com' : 'https://core.newebpay.com'
+      apiUrl = baseUrl + payment.getRequestPath()
+    }
 
     return {
       action: apiUrl,

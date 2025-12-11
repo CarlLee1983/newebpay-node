@@ -133,13 +133,25 @@ ${autoSubmitScript}`
    * 取得 API 網址。
    */
   private getApiUrl(): string {
-    // 假設 payment 有 getApiUrl 方法
+    // 檢查 payment 是否有 getApiUrl 方法
     if ('getApiUrl' in this.payment && typeof this.payment.getApiUrl === 'function') {
       return (this.payment as { getApiUrl: () => string }).getApiUrl()
     }
 
-    // 預設使用測試環境
-    return 'https://ccore.newebpay.com' + this.payment.getRequestPath()
+    // 檢查 payment 是否有 getBaseUrl 和 getRequestPath 方法
+    if ('getBaseUrl' in this.payment && typeof this.payment.getBaseUrl === 'function') {
+      const baseUrl = (this.payment as { getBaseUrl: () => string }).getBaseUrl()
+      return baseUrl + this.payment.getRequestPath()
+    }
+
+    // 檢查是否為測試模式
+    const isTest =
+      'isTestMode' in this.payment && typeof this.payment.isTestMode === 'function'
+        ? (this.payment as { isTestMode: () => boolean }).isTestMode()
+        : false
+
+    const baseUrl = isTest ? 'https://ccore.newebpay.com' : 'https://core.newebpay.com'
+    return baseUrl + this.payment.getRequestPath()
   }
 
   /**
