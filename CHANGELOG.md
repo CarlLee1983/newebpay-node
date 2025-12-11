@@ -1,3 +1,9 @@
+## [1.5.0](https://github.com/CarlLee1983/newebpay-node/compare/v1.4.0...v1.5.0) (2025-12-11)
+
+### Features
+
+* enhance payment middleware and validation ([d39220f](https://github.com/CarlLee1983/newebpay-node/commit/d39220fc0a7fc584a6f4d3ff97844a32d96e5850))
+
 ## [1.4.0](https://github.com/CarlLee1983/newebpay-node/compare/v1.3.3...v1.4.0) (2025-12-10)
 
 ### Features
