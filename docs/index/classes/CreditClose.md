@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CreditClose
 
@@ -52,7 +52,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:64](https://github.com/Ca
 
 Defined in: [newebpay-node/src/actions/credit-close.ts:67](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L67)
 
-***
+---
 
 ### hashKey
 
@@ -60,7 +60,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:67](https://github.com/Ca
 
 Defined in: [newebpay-node/src/actions/credit-close.ts:66](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L66)
 
-***
+---
 
 ### httpClient
 
@@ -70,7 +70,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:59](https://github.com/Ca
 
 HTTP 客戶端。
 
-***
+---
 
 ### isTest
 
@@ -80,7 +80,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:49](https://github.com/Ca
 
 是否為測試環境。
 
-***
+---
 
 ### merchantId
 
@@ -88,7 +88,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:49](https://github.com/Ca
 
 Defined in: [newebpay-node/src/actions/credit-close.ts:65](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L65)
 
-***
+---
 
 ### requestPath
 
@@ -98,7 +98,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:44](https://github.com/Ca
 
 API 請求路徑。
 
-***
+---
 
 ### version
 
@@ -108,21 +108,21 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:39](https://github.com/Ca
 
 API 版本。
 
-***
+---
 
-### CLOSE\_TYPE\_PAY
+### CLOSE_TYPE_PAY
 
-> `readonly` `static` **CLOSE\_TYPE\_PAY**: [`PAY`](../enumerations/CloseType.md#pay) = `CloseType.PAY`
+> `readonly` `static` **CLOSE_TYPE_PAY**: [`PAY`](../enumerations/CloseType.md#pay) = `CloseType.PAY`
 
 Defined in: [newebpay-node/src/actions/credit-close.ts:29](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L29)
 
 請款類型：請款。
 
-***
+---
 
-### CLOSE\_TYPE\_REFUND
+### CLOSE_TYPE_REFUND
 
-> `readonly` `static` **CLOSE\_TYPE\_REFUND**: [`REFUND`](../enumerations/CloseType.md#refund) = `CloseType.REFUND`
+> `readonly` `static` **CLOSE_TYPE_REFUND**: [`REFUND`](../enumerations/CloseType.md#refund) = `CloseType.REFUND`
 
 Defined in: [newebpay-node/src/actions/credit-close.ts:34](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L34)
 
@@ -148,7 +148,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:187](https://github.com/C
 
 `Record`\<`string`, `string`\>
 
-***
+---
 
 ### cancelClose()
 
@@ -184,7 +184,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:134](https://github.com/C
 
 `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
-***
+---
 
 ### execute()
 
@@ -224,7 +224,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:147](https://github.com/C
 
 `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
-***
+---
 
 ### getApiUrl()
 
@@ -238,7 +238,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:103](https://github.com/C
 
 `string`
 
-***
+---
 
 ### getBaseUrl()
 
@@ -252,7 +252,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:96](https://github.com/Ca
 
 `string`
 
-***
+---
 
 ### parseResponse()
 
@@ -282,7 +282,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:200](https://github.com/C
 
 [`CreditCloseResult`](../interfaces/CreditCloseResult.md)
 
-***
+---
 
 ### pay()
 
@@ -314,7 +314,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:110](https://github.com/C
 
 `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
-***
+---
 
 ### refund()
 
@@ -346,7 +346,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:122](https://github.com/C
 
 `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
-***
+---
 
 ### setTestMode()
 
@@ -366,7 +366,7 @@ Defined in: [newebpay-node/src/actions/credit-close.ts:88](https://github.com/Ca
 
 `this`
 
-***
+---
 
 ### create()
 

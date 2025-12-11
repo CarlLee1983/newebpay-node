@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../../modules.md) / [frameworks/express](../README.md) / PaymentBuilder
 
@@ -44,7 +44,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:128](https:/
 
 `this`
 
-***
+---
 
 ### atm()
 
@@ -64,7 +64,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:79](https://
 
 `this`
 
-***
+---
 
 ### barcode()
 
@@ -84,7 +84,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:101](https:/
 
 `this`
 
-***
+---
 
 ### build()
 
@@ -98,7 +98,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:176](https:/
 
 [`PaymentInterface`](../../../index/interfaces/PaymentInterface.md)
 
-***
+---
 
 ### creditCard()
 
@@ -112,7 +112,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:54](https://
 
 `this`
 
-***
+---
 
 ### creditInstallment()
 
@@ -132,7 +132,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:62](https://
 
 `this`
 
-***
+---
 
 ### customize()
 
@@ -152,7 +152,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:168](https:/
 
 `this`
 
-***
+---
 
 ### cvs()
 
@@ -172,7 +172,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:90](https://
 
 `this`
 
-***
+---
 
 ### getParams()
 
@@ -198,7 +198,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:246](https:/
 
 > **method**: `string`
 
-***
+---
 
 ### linePay()
 
@@ -212,7 +212,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:112](https:/
 
 `this`
 
-***
+---
 
 ### setClientBackUrl()
 
@@ -232,7 +232,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:160](https:/
 
 `this`
 
-***
+---
 
 ### setCustomerUrl()
 
@@ -252,7 +252,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:152](https:/
 
 `this`
 
-***
+---
 
 ### setNotifyUrl()
 
@@ -272,7 +272,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:144](https:/
 
 `this`
 
-***
+---
 
 ### setOrder()
 
@@ -304,7 +304,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:43](https://
 
 `this`
 
-***
+---
 
 ### setReturnUrl()
 
@@ -324,7 +324,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:136](https:/
 
 `this`
 
-***
+---
 
 ### taiwanPay()
 
@@ -338,7 +338,7 @@ Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:120](https:/
 
 `this`
 
-***
+---
 
 ### webAtm()
 

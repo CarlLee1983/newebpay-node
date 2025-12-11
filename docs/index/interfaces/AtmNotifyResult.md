@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / AtmNotifyResult
 
@@ -18,7 +18,7 @@ ATM 取號通知結果。
 
 Defined in: [newebpay-node/src/types/notification.ts:87](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L87)
 
-***
+---
 
 ### Result?
 
@@ -26,7 +26,7 @@ Defined in: [newebpay-node/src/types/notification.ts:87](https://github.com/Carl
 
 Defined in: [newebpay-node/src/types/notification.ts:88](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L88)
 
-***
+---
 
 ### Status
 

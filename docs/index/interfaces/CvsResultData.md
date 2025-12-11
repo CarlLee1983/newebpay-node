@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CvsResultData
 
@@ -22,37 +22,37 @@ Defined in: [newebpay-node/src/types/notification.ts:118](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:122](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L122)
 
-***
+---
 
-### Barcode\_1?
+### Barcode_1?
 
-> `optional` **Barcode\_1**: `string`
+> `optional` **Barcode_1**: `string`
 
 Defined in: [newebpay-node/src/types/notification.ts:129](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L129)
 
 條碼第一段
 
-***
+---
 
-### Barcode\_2?
+### Barcode_2?
 
-> `optional` **Barcode\_2**: `string`
+> `optional` **Barcode_2**: `string`
 
 Defined in: [newebpay-node/src/types/notification.ts:131](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L131)
 
 條碼第二段
 
-***
+---
 
-### Barcode\_3?
+### Barcode_3?
 
-> `optional` **Barcode\_3**: `string`
+> `optional` **Barcode_3**: `string`
 
 Defined in: [newebpay-node/src/types/notification.ts:133](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L133)
 
 條碼第三段
 
-***
+---
 
 ### CodeNo?
 
@@ -60,7 +60,7 @@ Defined in: [newebpay-node/src/types/notification.ts:133](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:124](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L124)
 
-***
+---
 
 ### ExpireDate?
 
@@ -68,7 +68,7 @@ Defined in: [newebpay-node/src/types/notification.ts:124](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:126](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L126)
 
-***
+---
 
 ### ExpireTime?
 
@@ -76,7 +76,7 @@ Defined in: [newebpay-node/src/types/notification.ts:126](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:127](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L127)
 
-***
+---
 
 ### MerchantID?
 
@@ -84,7 +84,7 @@ Defined in: [newebpay-node/src/types/notification.ts:127](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:119](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L119)
 
-***
+---
 
 ### MerchantOrderNo?
 
@@ -92,7 +92,7 @@ Defined in: [newebpay-node/src/types/notification.ts:119](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:120](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L120)
 
-***
+---
 
 ### PaymentType?
 
@@ -100,7 +100,7 @@ Defined in: [newebpay-node/src/types/notification.ts:120](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:123](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L123)
 
-***
+---
 
 ### StoreType?
 
@@ -108,7 +108,7 @@ Defined in: [newebpay-node/src/types/notification.ts:123](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:125](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L125)
 
-***
+---
 
 ### TradeNo?
 

@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../../modules.md) / [frameworks/express](../README.md) / NewebPayService
 
@@ -44,7 +44,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:149](https:
 
 [`AllInOnePayment`](../../../index/classes/AllInOnePayment.md)
 
-***
+---
 
 ### atm()
 
@@ -58,7 +58,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:79](https:/
 
 [`AtmPayment`](../../../index/classes/AtmPayment.md)
 
-***
+---
 
 ### barcode()
 
@@ -72,7 +72,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:93](https:/
 
 [`BarcodePayment`](../../../index/classes/BarcodePayment.md)
 
-***
+---
 
 ### bitoPay()
 
@@ -86,7 +86,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:121](https:
 
 [`BitoPayPayment`](../../../index/classes/BitoPayPayment.md)
 
-***
+---
 
 ### credit()
 
@@ -100,7 +100,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:58](https:/
 
 [`CreditPayment`](../../../index/classes/CreditPayment.md)
 
-***
+---
 
 ### creditCancel()
 
@@ -114,7 +114,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:186](https:
 
 [`CreditCancel`](../../../index/classes/CreditCancel.md)
 
-***
+---
 
 ### creditClose()
 
@@ -128,7 +128,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:197](https:
 
 [`CreditClose`](../../../index/classes/CreditClose.md)
 
-***
+---
 
 ### creditInstallment()
 
@@ -142,7 +142,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:65](https:/
 
 [`CreditInstallment`](../../../index/classes/CreditInstallment.md)
 
-***
+---
 
 ### cvs()
 
@@ -156,7 +156,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:86](https:/
 
 [`CvsPayment`](../../../index/classes/CvsPayment.md)
 
-***
+---
 
 ### cvscom()
 
@@ -170,7 +170,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:142](https:
 
 [`CvscomPayment`](../../../index/classes/CvscomPayment.md)
 
-***
+---
 
 ### esunWallet()
 
@@ -184,7 +184,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:114](https:
 
 [`EsunWalletPayment`](../../../index/classes/EsunWalletPayment.md)
 
-***
+---
 
 ### eWalletRefund()
 
@@ -198,7 +198,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:208](https:
 
 [`EWalletRefund`](../../../index/classes/EWalletRefund.md)
 
-***
+---
 
 ### form()
 
@@ -218,7 +218,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:156](https:
 
 [`FormBuilder`](../../../index/classes/FormBuilder.md)
 
-***
+---
 
 ### fula()
 
@@ -232,7 +232,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:135](https:
 
 [`FulaPayment`](../../../index/classes/FulaPayment.md)
 
-***
+---
 
 ### linePay()
 
@@ -246,7 +246,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:100](https:
 
 [`LinePayPayment`](../../../index/classes/LinePayPayment.md)
 
-***
+---
 
 ### payment()
 
@@ -278,7 +278,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:51](https:/
 
 [`PaymentBuilder`](PaymentBuilder.md)
 
-***
+---
 
 ### queryCreditDetail()
 
@@ -292,7 +292,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:175](https:
 
 [`QueryCreditDetail`](../../../index/classes/QueryCreditDetail.md)
 
-***
+---
 
 ### queryOrder()
 
@@ -306,7 +306,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:163](https:
 
 [`QueryOrder`](../../../index/classes/QueryOrder.md)
 
-***
+---
 
 ### taiwanPay()
 
@@ -320,7 +320,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:107](https:
 
 [`TaiwanPayPayment`](../../../index/classes/TaiwanPayPayment.md)
 
-***
+---
 
 ### twqr()
 
@@ -334,7 +334,7 @@ Defined in: [newebpay-node/src/frameworks/common/newebpay-service.ts:128](https:
 
 [`TwqrPayment`](../../../index/classes/TwqrPayment.md)
 
-***
+---
 
 ### webAtm()
 

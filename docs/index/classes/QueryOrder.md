@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / QueryOrder
 
@@ -52,7 +52,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:51](https://github.com/Car
 
 Defined in: [newebpay-node/src/queries/query-order.ts:54](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L54)
 
-***
+---
 
 ### hashKey
 
@@ -60,7 +60,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:54](https://github.com/Car
 
 Defined in: [newebpay-node/src/queries/query-order.ts:53](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L53)
 
-***
+---
 
 ### httpClient
 
@@ -68,7 +68,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:53](https://github.com/Car
 
 Defined in: [newebpay-node/src/queries/query-order.ts:46](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L46)
 
-***
+---
 
 ### isTest
 
@@ -78,7 +78,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:44](https://github.com/Car
 
 是否為測試環境。
 
-***
+---
 
 ### merchantId
 
@@ -86,7 +86,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:44](https://github.com/Car
 
 Defined in: [newebpay-node/src/queries/query-order.ts:52](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L52)
 
-***
+---
 
 ### requestPath
 
@@ -96,7 +96,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:39](https://github.com/Car
 
 API 請求路徑。
 
-***
+---
 
 ### version
 
@@ -130,7 +130,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:113](https://github.com/Ca
 
 `Record`\<`string`, `string`\>
 
-***
+---
 
 ### generateCheckValue()
 
@@ -157,7 +157,7 @@ SHA256(HashIV={HashIV}&Amt={Amt}&MerchantID={MerchantID}&MerchantOrderNo={Mercha
 
 `string`
 
-***
+---
 
 ### getApiUrl()
 
@@ -171,7 +171,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:90](https://github.com/Car
 
 `string`
 
-***
+---
 
 ### getBaseUrl()
 
@@ -185,7 +185,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:83](https://github.com/Car
 
 `string`
 
-***
+---
 
 ### parseResponse()
 
@@ -215,7 +215,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:141](https://github.com/Ca
 
 [`QueryOrderResult`](../interfaces/QueryOrderResult.md)
 
-***
+---
 
 ### query()
 
@@ -239,7 +239,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:97](https://github.com/Car
 
 `Promise`\<[`QueryOrderResult`](../interfaces/QueryOrderResult.md)\>
 
-***
+---
 
 ### setTestMode()
 
@@ -259,7 +259,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:75](https://github.com/Car
 
 `this`
 
-***
+---
 
 ### create()
 

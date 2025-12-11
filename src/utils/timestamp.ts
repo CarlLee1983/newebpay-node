@@ -15,4 +15,3 @@ export function getTimestamp(): string {
 export function getTimestampNumber(): number {
   return Math.floor(Date.now() / 1000)
 }
-

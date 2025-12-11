@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / EWalletRefund
 
@@ -52,7 +52,7 @@ Defined in: [newebpay-node/src/actions/ewallet-refund.ts:58](https://github.com/
 
 Defined in: [newebpay-node/src/actions/ewallet-refund.ts:61](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L61)
 
-***
+---
 
 ### hashKey
 
@@ -60,7 +60,7 @@ Defined in: [newebpay-node/src/actions/ewallet-refund.ts:61](https://github.com/
 
 Defined in: [newebpay-node/src/actions/ewallet-refund.ts:60](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L60)
 
-***
+---
 
 ### httpClient
 
@@ -70,7 +70,7 @@ Defined in: [newebpay-node/src/actions/ewallet-refund.ts:53](https://github.com/
 
 HTTP 客戶端。
 
-***
+---
 
 ### isTest
 
@@ -80,7 +80,7 @@ Defined in: [newebpay-node/src/actions/ewallet-refund.ts:43](https://github.com/
 
 是否為測試環境。
 
-***
+---
 
 ### merchantId
 
@@ -88,7 +88,7 @@ Defined in: [newebpay-node/src/actions/ewallet-refund.ts:43](https://github.com/
 
 Defined in: [newebpay-node/src/actions/ewallet-refund.ts:59](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L59)
 
-***
+---
 
 ### requestPath
 
@@ -98,7 +98,7 @@ Defined in: [newebpay-node/src/actions/ewallet-refund.ts:38](https://github.com/
 
 API 請求路徑。
 
-***
+---
 
 ### version
 
@@ -128,7 +128,7 @@ Defined in: [newebpay-node/src/actions/ewallet-refund.ts:136](https://github.com
 
 `Record`\<`string`, `string`\>
 
-***
+---
 
 ### getApiUrl()
 
@@ -142,7 +142,7 @@ Defined in: [newebpay-node/src/actions/ewallet-refund.ts:97](https://github.com/
 
 `string`
 
-***
+---
 
 ### getBaseUrl()
 
@@ -156,7 +156,7 @@ Defined in: [newebpay-node/src/actions/ewallet-refund.ts:90](https://github.com/
 
 `string`
 
-***
+---
 
 ### parseResponse()
 
@@ -186,7 +186,7 @@ Defined in: [newebpay-node/src/actions/ewallet-refund.ts:149](https://github.com
 
 [`EWalletRefundResult`](../interfaces/EWalletRefundResult.md)
 
-***
+---
 
 ### refund()
 
@@ -220,7 +220,7 @@ Defined in: [newebpay-node/src/actions/ewallet-refund.ts:108](https://github.com
 
 `Promise`\<[`EWalletRefundResult`](../interfaces/EWalletRefundResult.md)\>
 
-***
+---
 
 ### setTestMode()
 
@@ -240,7 +240,7 @@ Defined in: [newebpay-node/src/actions/ewallet-refund.ts:82](https://github.com/
 
 `this`
 
-***
+---
 
 ### create()
 

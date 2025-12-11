@@ -263,7 +263,7 @@ export class PaymentBuilder {
       const isTest =
         'isTestMode' in payment && typeof payment.isTestMode === 'function'
           ? (payment as { isTestMode: () => boolean }).isTestMode()
-          : this.config.testMode ?? false
+          : (this.config.testMode ?? false)
 
       const baseUrl = isTest ? 'https://ccore.newebpay.com' : 'https://core.newebpay.com'
       apiUrl = baseUrl + payment.getRequestPath()

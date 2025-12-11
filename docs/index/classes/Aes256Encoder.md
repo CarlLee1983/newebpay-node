@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / Aes256Encoder
 
@@ -70,7 +70,7 @@ Defined in: [newebpay-node/src/infrastructure/aes256-encoder.ts:66](https://gith
 
 NewebPayError 當解密失敗時
 
-***
+---
 
 ### encrypt()
 
@@ -96,7 +96,7 @@ Defined in: [newebpay-node/src/infrastructure/aes256-encoder.ts:44](https://gith
 
 加密後的十六進位字串
 
-***
+---
 
 ### create()
 

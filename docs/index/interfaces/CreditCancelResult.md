@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CreditCancelResult
 
@@ -22,7 +22,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:11](https://github.com/C
 
 Defined in: [newebpay-node/src/actions/credit-cancel.ts:15](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L15)
 
-***
+---
 
 ### MerchantID?
 
@@ -30,7 +30,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:15](https://github.com/C
 
 Defined in: [newebpay-node/src/actions/credit-cancel.ts:12](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L12)
 
-***
+---
 
 ### MerchantOrderNo?
 
@@ -38,7 +38,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:12](https://github.com/C
 
 Defined in: [newebpay-node/src/actions/credit-cancel.ts:13](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L13)
 
-***
+---
 
 ### TradeNo?
 

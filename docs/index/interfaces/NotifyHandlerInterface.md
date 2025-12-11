@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / NotifyHandlerInterface
 
@@ -24,7 +24,7 @@ Defined in: [newebpay-node/src/types/notification.ts:13](https://github.com/Carl
 
 `Record`\<`string`, `unknown`\>
 
-***
+---
 
 ### getMessage()
 
@@ -38,7 +38,7 @@ Defined in: [newebpay-node/src/types/notification.ts:28](https://github.com/Carl
 
 `string`
 
-***
+---
 
 ### getStatus()
 
@@ -52,7 +52,7 @@ Defined in: [newebpay-node/src/types/notification.ts:23](https://github.com/Carl
 
 `string`
 
-***
+---
 
 ### isSuccess()
 
@@ -66,7 +66,7 @@ Defined in: [newebpay-node/src/types/notification.ts:18](https://github.com/Carl
 
 `boolean`
 
-***
+---
 
 ### verify()
 

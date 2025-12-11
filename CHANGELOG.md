@@ -2,30 +2,30 @@
 
 ### Features
 
-* implement HTTP client abstraction and timestamp utility ([6bfedd3](https://github.com/CarlLee1983/newebpay-node/commit/6bfedd355d40e6c7980ff3ead0a02eaa2a8eb56e))
+- implement HTTP client abstraction and timestamp utility ([6bfedd3](https://github.com/CarlLee1983/newebpay-node/commit/6bfedd355d40e6c7980ff3ead0a02eaa2a8eb56e))
 
 ### Bug Fixes
 
-* **errors:** update error messages to English for consistency ([493032b](https://github.com/CarlLee1983/newebpay-node/commit/493032b54952e398781ad6f7d289c062c0abfb58))
-* **QueryOrder:** enhance HTTP post response type definition for better type safety ([9495796](https://github.com/CarlLee1983/newebpay-node/commit/949579636fbc94f1db95a41c2624db9afa9fc330))
+- **errors:** update error messages to English for consistency ([493032b](https://github.com/CarlLee1983/newebpay-node/commit/493032b54952e398781ad6f7d289c062c0abfb58))
+- **QueryOrder:** enhance HTTP post response type definition for better type safety ([9495796](https://github.com/CarlLee1983/newebpay-node/commit/949579636fbc94f1db95a41c2624db9afa9fc330))
 
 ### Code Refactoring
 
-* **NewebPayError:** improve handling of optional properties in error constructor ([68321b3](https://github.com/CarlLee1983/newebpay-node/commit/68321b3da4e7b6793c5ac624e9e54db0365196a9))
-* **tests:** replace global fetch with HttpClientInterface mock in tests ([d3f35b5](https://github.com/CarlLee1983/newebpay-node/commit/d3f35b5d2ddbdf4cdcb6f649c188d5824be13122))
+- **NewebPayError:** improve handling of optional properties in error constructor ([68321b3](https://github.com/CarlLee1983/newebpay-node/commit/68321b3da4e7b6793c5ac624e9e54db0365196a9))
+- **tests:** replace global fetch with HttpClientInterface mock in tests ([d3f35b5](https://github.com/CarlLee1983/newebpay-node/commit/d3f35b5d2ddbdf4cdcb6f649c188d5824be13122))
 
 ## [1.3.3](https://github.com/CarlLee1983/newebpay-node/compare/v1.3.2...v1.3.3) (2025-12-07)
 
 ### Documentation
 
-* **README:** complete AllInOnePayment documentation with all available methods ([af9a582](https://github.com/CarlLee1983/newebpay-node/commit/af9a58266b5860760e537ab33dc4d4da80820fc6))
+- **README:** complete AllInOnePayment documentation with all available methods ([af9a582](https://github.com/CarlLee1983/newebpay-node/commit/af9a58266b5860760e537ab33dc4d4da80820fc6))
 
 ## [1.3.2](https://github.com/CarlLee1983/newebpay-node/compare/v1.3.1...v1.3.2) (2025-12-07)
 
 ### Documentation
 
-* complete README documentation with English version and fix broken examples ([988c930](https://github.com/CarlLee1983/newebpay-node/commit/988c930480a42450f97aedcb5f68cb8d334b3abe))
-* **README:** add bilingual documentation with complete examples ([d62cfbb](https://github.com/CarlLee1983/newebpay-node/commit/d62cfbb4362d75578f553d8469a46e81701f5b56))
+- complete README documentation with English version and fix broken examples ([988c930](https://github.com/CarlLee1983/newebpay-node/commit/988c930480a42450f97aedcb5f68cb8d334b3abe))
+- **README:** add bilingual documentation with complete examples ([d62cfbb](https://github.com/CarlLee1983/newebpay-node/commit/d62cfbb4362d75578f553d8469a46e81701f5b56))
 
 ## [1.3.1](https://github.com/CarlLee1983/newebpay-node/compare/v1.3.0...v1.3.1) (2025-12-07)
 

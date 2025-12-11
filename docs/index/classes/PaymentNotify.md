@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / PaymentNotify
 
@@ -58,7 +58,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:175](https://gith
 
 `number`
 
-***
+---
 
 ### getAuthCode()
 
@@ -72,7 +72,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:215](https://gith
 
 `string`
 
-***
+---
 
 ### getCard4No()
 
@@ -86,7 +86,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:223](https://gith
 
 `string`
 
-***
+---
 
 ### getCard6No()
 
@@ -100,7 +100,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:231](https://gith
 
 `string`
 
-***
+---
 
 ### getData()
 
@@ -118,7 +118,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:117](https://gith
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getData`](../interfaces/NotifyHandlerInterface.md#getdata)
 
-***
+---
 
 ### getECI()
 
@@ -132,7 +132,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:239](https://gith
 
 `string`
 
-***
+---
 
 ### getInst()
 
@@ -146,7 +146,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:247](https://gith
 
 `number`
 
-***
+---
 
 ### getInstEach()
 
@@ -160,7 +160,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:263](https://gith
 
 `number`
 
-***
+---
 
 ### getInstFirst()
 
@@ -174,7 +174,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:255](https://gith
 
 `number`
 
-***
+---
 
 ### getIP()
 
@@ -188,7 +188,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:199](https://gith
 
 `string`
 
-***
+---
 
 ### getMerchantID()
 
@@ -202,7 +202,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:152](https://gith
 
 `string`
 
-***
+---
 
 ### getMerchantOrderNo()
 
@@ -216,7 +216,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:159](https://gith
 
 `string`
 
-***
+---
 
 ### getMessage()
 
@@ -234,7 +234,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:145](https://gith
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getMessage`](../interfaces/NotifyHandlerInterface.md#getmessage)
 
-***
+---
 
 ### getPayBankCode()
 
@@ -248,7 +248,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:207](https://gith
 
 `string`
 
-***
+---
 
 ### getPaymentType()
 
@@ -262,7 +262,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:183](https://gith
 
 `string`
 
-***
+---
 
 ### getPayTime()
 
@@ -276,7 +276,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:191](https://gith
 
 `string`
 
-***
+---
 
 ### getRawData()
 
@@ -290,7 +290,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:124](https://gith
 
 [`NotifyRawData`](../interfaces/NotifyRawData.md)
 
-***
+---
 
 ### getResult()
 
@@ -304,7 +304,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:271](https://gith
 
 [`PaymentResultData`](../interfaces/PaymentResultData.md)
 
-***
+---
 
 ### getStatus()
 
@@ -322,7 +322,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:138](https://gith
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getStatus`](../interfaces/NotifyHandlerInterface.md#getstatus)
 
-***
+---
 
 ### getTradeNo()
 
@@ -336,7 +336,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:167](https://gith
 
 `string`
 
-***
+---
 
 ### isSuccess()
 
@@ -354,7 +354,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:131](https://gith
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`isSuccess`](../interfaces/NotifyHandlerInterface.md#issuccess)
 
-***
+---
 
 ### isVerified()
 
@@ -368,7 +368,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:278](https://gith
 
 `boolean`
 
-***
+---
 
 ### verify()
 
@@ -392,7 +392,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:55](https://githu
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`verify`](../interfaces/NotifyHandlerInterface.md#verify)
 
-***
+---
 
 ### verifyOrFail()
 
@@ -412,7 +412,7 @@ Defined in: [newebpay-node/src/notifications/payment-notify.ts:85](https://githu
 
 `this`
 
-***
+---
 
 ### create()
 

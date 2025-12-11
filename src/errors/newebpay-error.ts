@@ -25,7 +25,11 @@ export class NewebPayError extends Error {
   constructor(
     message: string,
     code?: string,
-    options?: { httpStatus?: number | undefined; url?: string | undefined; field?: string | undefined },
+    options?: {
+      httpStatus?: number | undefined
+      url?: string | undefined
+      field?: string | undefined
+    },
   ) {
     super(message)
     this.name = 'NewebPayError'

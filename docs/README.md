@@ -1,6 +1,6 @@
 **@carllee1983/newebpay**
 
-***
+---
 
 # 藍新金流 Node.js SDK
 

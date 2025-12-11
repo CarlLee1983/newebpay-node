@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / QueryCreditDetail
 
@@ -52,7 +52,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:61](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:64](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L64)
 
-***
+---
 
 ### hashKey
 
@@ -60,7 +60,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:64](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:63](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L63)
 
-***
+---
 
 ### httpClient
 
@@ -70,7 +70,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:56](https://github
 
 HTTP 客戶端。
 
-***
+---
 
 ### isTest
 
@@ -80,7 +80,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:46](https://github
 
 是否為測試環境。
 
-***
+---
 
 ### merchantId
 
@@ -88,7 +88,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:46](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:62](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L62)
 
-***
+---
 
 ### requestPath
 
@@ -98,7 +98,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:41](https://github
 
 API 請求路徑。
 
-***
+---
 
 ### version
 
@@ -132,7 +132,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:122](https://githu
 
 `Record`\<`string`, `string`\>
 
-***
+---
 
 ### getApiUrl()
 
@@ -146,7 +146,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:100](https://githu
 
 `string`
 
-***
+---
 
 ### getBaseUrl()
 
@@ -160,7 +160,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:93](https://github
 
 `string`
 
-***
+---
 
 ### parseResponse()
 
@@ -190,7 +190,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:144](https://githu
 
 [`QueryCreditDetailResult`](../interfaces/QueryCreditDetailResult.md)
 
-***
+---
 
 ### query()
 
@@ -214,7 +214,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:107](https://githu
 
 `Promise`\<[`QueryCreditDetailResult`](../interfaces/QueryCreditDetailResult.md)\>
 
-***
+---
 
 ### setTestMode()
 
@@ -234,7 +234,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:85](https://github
 
 `this`
 
-***
+---
 
 ### create()
 

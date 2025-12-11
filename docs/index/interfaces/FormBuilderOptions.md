@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / FormBuilderOptions
 
@@ -20,7 +20,7 @@ Defined in: [newebpay-node/src/form-builder.ts:10](https://github.com/CarlLee198
 
 是否自動送出表單。
 
-***
+---
 
 ### formId?
 
@@ -30,7 +30,7 @@ Defined in: [newebpay-node/src/form-builder.ts:15](https://github.com/CarlLee198
 
 表單 ID。
 
-***
+---
 
 ### submitButtonText?
 

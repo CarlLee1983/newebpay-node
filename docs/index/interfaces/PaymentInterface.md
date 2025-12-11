@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / PaymentInterface
 
@@ -24,7 +24,7 @@ Defined in: [newebpay-node/src/types/payment.ts:43](https://github.com/CarlLee19
 
 [`PaymentContent`](PaymentContent.md)
 
-***
+---
 
 ### getPayload()
 
@@ -38,7 +38,7 @@ Defined in: [newebpay-node/src/types/payment.ts:38](https://github.com/CarlLee19
 
 `Record`\<`string`, `unknown`\>
 
-***
+---
 
 ### getRequestPath()
 
@@ -52,7 +52,7 @@ Defined in: [newebpay-node/src/types/payment.ts:33](https://github.com/CarlLee19
 
 `string`
 
-***
+---
 
 ### setAmt()
 
@@ -72,7 +72,7 @@ Defined in: [newebpay-node/src/types/payment.ts:13](https://github.com/CarlLee19
 
 `this`
 
-***
+---
 
 ### setItemDesc()
 
@@ -92,7 +92,7 @@ Defined in: [newebpay-node/src/types/payment.ts:18](https://github.com/CarlLee19
 
 `this`
 
-***
+---
 
 ### setMerchantOrderNo()
 
@@ -112,7 +112,7 @@ Defined in: [newebpay-node/src/types/payment.ts:8](https://github.com/CarlLee198
 
 `this`
 
-***
+---
 
 ### setNotifyURL()
 
@@ -132,7 +132,7 @@ Defined in: [newebpay-node/src/types/payment.ts:28](https://github.com/CarlLee19
 
 `this`
 
-***
+---
 
 ### setReturnURL()
 

@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CvscomResultData
 
@@ -22,7 +22,7 @@ Defined in: [newebpay-node/src/types/notification.ts:149](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:153](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L153)
 
-***
+---
 
 ### CVSCOMName?
 
@@ -30,7 +30,7 @@ Defined in: [newebpay-node/src/types/notification.ts:153](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:160](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L160)
 
-***
+---
 
 ### CVSCOMPhone?
 
@@ -38,7 +38,7 @@ Defined in: [newebpay-node/src/types/notification.ts:160](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:161](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L161)
 
-***
+---
 
 ### LgsNo?
 
@@ -46,7 +46,7 @@ Defined in: [newebpay-node/src/types/notification.ts:161](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:162](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L162)
 
-***
+---
 
 ### LgsType?
 
@@ -54,7 +54,7 @@ Defined in: [newebpay-node/src/types/notification.ts:162](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:163](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L163)
 
-***
+---
 
 ### MerchantID?
 
@@ -62,7 +62,7 @@ Defined in: [newebpay-node/src/types/notification.ts:163](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:150](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L150)
 
-***
+---
 
 ### MerchantOrderNo?
 
@@ -70,7 +70,7 @@ Defined in: [newebpay-node/src/types/notification.ts:150](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:151](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L151)
 
-***
+---
 
 ### PaymentType?
 
@@ -78,7 +78,7 @@ Defined in: [newebpay-node/src/types/notification.ts:151](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:154](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L154)
 
-***
+---
 
 ### StoreAddr?
 
@@ -86,7 +86,7 @@ Defined in: [newebpay-node/src/types/notification.ts:154](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:158](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L158)
 
-***
+---
 
 ### StoreCode?
 
@@ -94,7 +94,7 @@ Defined in: [newebpay-node/src/types/notification.ts:158](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:156](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L156)
 
-***
+---
 
 ### StoreName?
 
@@ -102,7 +102,7 @@ Defined in: [newebpay-node/src/types/notification.ts:156](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:157](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L157)
 
-***
+---
 
 ### StoreType?
 
@@ -110,7 +110,7 @@ Defined in: [newebpay-node/src/types/notification.ts:157](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:155](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L155)
 
-***
+---
 
 ### TradeNo?
 
@@ -118,7 +118,7 @@ Defined in: [newebpay-node/src/types/notification.ts:155](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:152](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L152)
 
-***
+---
 
 ### TradeType?
 

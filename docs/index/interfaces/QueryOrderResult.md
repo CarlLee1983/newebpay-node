@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / QueryOrderResult
 
@@ -22,7 +22,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:10](https://github.com/Car
 
 Defined in: [newebpay-node/src/queries/query-order.ts:14](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L14)
 
-***
+---
 
 ### CheckCode?
 
@@ -30,7 +30,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:14](https://github.com/Car
 
 Defined in: [newebpay-node/src/queries/query-order.ts:19](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L19)
 
-***
+---
 
 ### CreateTime?
 
@@ -38,7 +38,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:19](https://github.com/Car
 
 Defined in: [newebpay-node/src/queries/query-order.ts:17](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L17)
 
-***
+---
 
 ### FundTime?
 
@@ -46,7 +46,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:17](https://github.com/Car
 
 Defined in: [newebpay-node/src/queries/query-order.ts:20](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L20)
 
-***
+---
 
 ### MerchantID?
 
@@ -54,7 +54,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:20](https://github.com/Car
 
 Defined in: [newebpay-node/src/queries/query-order.ts:11](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L11)
 
-***
+---
 
 ### MerchantOrderNo?
 
@@ -62,7 +62,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:11](https://github.com/Car
 
 Defined in: [newebpay-node/src/queries/query-order.ts:12](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L12)
 
-***
+---
 
 ### PaymentType?
 
@@ -70,7 +70,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:12](https://github.com/Car
 
 Defined in: [newebpay-node/src/queries/query-order.ts:16](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L16)
 
-***
+---
 
 ### PayTime?
 
@@ -78,7 +78,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:16](https://github.com/Car
 
 Defined in: [newebpay-node/src/queries/query-order.ts:18](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L18)
 
-***
+---
 
 ### ShopMerchantID?
 
@@ -86,7 +86,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:18](https://github.com/Car
 
 Defined in: [newebpay-node/src/queries/query-order.ts:21](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L21)
 
-***
+---
 
 ### TradeNo?
 
@@ -94,7 +94,7 @@ Defined in: [newebpay-node/src/queries/query-order.ts:21](https://github.com/Car
 
 Defined in: [newebpay-node/src/queries/query-order.ts:13](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L13)
 
-***
+---
 
 ### TradeStatus?
 

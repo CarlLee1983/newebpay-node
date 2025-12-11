@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / AtmNotify
 
@@ -54,7 +54,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:154](https://github.c
 
 `number`
 
-***
+---
 
 ### getBankCode()
 
@@ -68,7 +68,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:162](https://github.c
 
 `string`
 
-***
+---
 
 ### getCodeNo()
 
@@ -82,7 +82,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:170](https://github.c
 
 `string`
 
-***
+---
 
 ### getData()
 
@@ -100,7 +100,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:103](https://github.c
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getData`](../interfaces/NotifyHandlerInterface.md#getdata)
 
-***
+---
 
 ### getExpireDate()
 
@@ -114,7 +114,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:178](https://github.c
 
 `string`
 
-***
+---
 
 ### getExpireTime()
 
@@ -128,7 +128,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:186](https://github.c
 
 `string`
 
-***
+---
 
 ### getMerchantOrderNo()
 
@@ -142,7 +142,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:138](https://github.c
 
 `string`
 
-***
+---
 
 ### getMessage()
 
@@ -160,7 +160,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:131](https://github.c
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getMessage`](../interfaces/NotifyHandlerInterface.md#getmessage)
 
-***
+---
 
 ### getRawData()
 
@@ -174,7 +174,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:110](https://github.c
 
 [`NotifyRawData`](../interfaces/NotifyRawData.md)
 
-***
+---
 
 ### getResult()
 
@@ -188,7 +188,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:194](https://github.c
 
 [`AtmResultData`](../interfaces/AtmResultData.md)
 
-***
+---
 
 ### getStatus()
 
@@ -206,7 +206,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:124](https://github.c
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getStatus`](../interfaces/NotifyHandlerInterface.md#getstatus)
 
-***
+---
 
 ### getTradeNo()
 
@@ -220,7 +220,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:146](https://github.c
 
 `string`
 
-***
+---
 
 ### isSuccess()
 
@@ -238,7 +238,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:117](https://github.c
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`isSuccess`](../interfaces/NotifyHandlerInterface.md#issuccess)
 
-***
+---
 
 ### isVerified()
 
@@ -252,7 +252,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:201](https://github.c
 
 `boolean`
 
-***
+---
 
 ### verify()
 
@@ -276,7 +276,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:48](https://github.co
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`verify`](../interfaces/NotifyHandlerInterface.md#verify)
 
-***
+---
 
 ### verifyOrFail()
 
@@ -296,7 +296,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:72](https://github.co
 
 `this`
 
-***
+---
 
 ### create()
 

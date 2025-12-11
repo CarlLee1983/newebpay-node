@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / AtmResultData
 
@@ -22,7 +22,7 @@ ATM 取號結果資料。
 
 Defined in: [newebpay-node/src/types/notification.ts:98](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L98)
 
-***
+---
 
 ### BankCode?
 
@@ -30,7 +30,7 @@ Defined in: [newebpay-node/src/types/notification.ts:98](https://github.com/Carl
 
 Defined in: [newebpay-node/src/types/notification.ts:99](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L99)
 
-***
+---
 
 ### CodeNo?
 
@@ -38,7 +38,7 @@ Defined in: [newebpay-node/src/types/notification.ts:99](https://github.com/Carl
 
 Defined in: [newebpay-node/src/types/notification.ts:100](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L100)
 
-***
+---
 
 ### ExpireDate?
 
@@ -46,7 +46,7 @@ Defined in: [newebpay-node/src/types/notification.ts:100](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:101](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L101)
 
-***
+---
 
 ### ExpireTime?
 
@@ -54,7 +54,7 @@ Defined in: [newebpay-node/src/types/notification.ts:101](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:102](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L102)
 
-***
+---
 
 ### MerchantID?
 
@@ -62,7 +62,7 @@ Defined in: [newebpay-node/src/types/notification.ts:102](https://github.com/Car
 
 Defined in: [newebpay-node/src/types/notification.ts:95](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L95)
 
-***
+---
 
 ### MerchantOrderNo?
 
@@ -70,7 +70,7 @@ Defined in: [newebpay-node/src/types/notification.ts:95](https://github.com/Carl
 
 Defined in: [newebpay-node/src/types/notification.ts:96](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L96)
 
-***
+---
 
 ### TradeNo?
 

@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CreditInstallment
 
@@ -68,7 +68,7 @@ Defined in: [newebpay-node/src/content.ts:46](https://github.com/CarlLee1983/new
 
 [`Content`](Content.md).[`content`](Content.md#content)
 
-***
+---
 
 ### hashIV
 
@@ -82,7 +82,7 @@ HashIV
 
 [`Content`](Content.md).[`hashIV`](Content.md#hashiv)
 
-***
+---
 
 ### hashKey
 
@@ -96,7 +96,7 @@ HashKey
 
 [`Content`](Content.md).[`hashKey`](Content.md#hashkey)
 
-***
+---
 
 ### isTest
 
@@ -110,7 +110,7 @@ Defined in: [newebpay-node/src/content.ts:41](https://github.com/CarlLee1983/new
 
 [`Content`](Content.md).[`isTest`](Content.md#istest)
 
-***
+---
 
 ### merchantId
 
@@ -124,7 +124,7 @@ Defined in: [newebpay-node/src/content.ts:66](https://github.com/CarlLee1983/new
 
 [`Content`](Content.md).[`merchantId`](Content.md#merchantid)
 
-***
+---
 
 ### requestPath
 
@@ -138,7 +138,7 @@ API 請求路徑。
 
 [`Content`](Content.md).[`requestPath`](Content.md#requestpath)
 
-***
+---
 
 ### version
 
@@ -152,11 +152,11 @@ MPG API 版本。
 
 [`Content`](Content.md).[`version`](Content.md#version)
 
-***
+---
 
-### EMAIL\_MAX\_LENGTH
+### EMAIL_MAX_LENGTH
 
-> `readonly` `static` **EMAIL\_MAX\_LENGTH**: `50` = `50`
+> `readonly` `static` **EMAIL_MAX_LENGTH**: `50` = `50`
 
 Defined in: [newebpay-node/src/content.ts:26](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L26)
 
@@ -166,11 +166,11 @@ Email 最大長度。
 
 [`Content`](Content.md).[`EMAIL_MAX_LENGTH`](Content.md#email_max_length)
 
-***
+---
 
-### ITEM\_DESC\_MAX\_LENGTH
+### ITEM_DESC_MAX_LENGTH
 
-> `readonly` `static` **ITEM\_DESC\_MAX\_LENGTH**: `50` = `50`
+> `readonly` `static` **ITEM_DESC_MAX_LENGTH**: `50` = `50`
 
 Defined in: [newebpay-node/src/content.ts:21](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L21)
 
@@ -180,11 +180,11 @@ Defined in: [newebpay-node/src/content.ts:21](https://github.com/CarlLee1983/new
 
 [`Content`](Content.md).[`ITEM_DESC_MAX_LENGTH`](Content.md#item_desc_max_length)
 
-***
+---
 
-### MERCHANT\_ORDER\_NO\_MAX\_LENGTH
+### MERCHANT_ORDER_NO_MAX_LENGTH
 
-> `readonly` `static` **MERCHANT\_ORDER\_NO\_MAX\_LENGTH**: `30` = `30`
+> `readonly` `static` **MERCHANT_ORDER_NO_MAX_LENGTH**: `30` = `30`
 
 Defined in: [newebpay-node/src/content.ts:16](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L16)
 
@@ -228,7 +228,7 @@ Defined in: [newebpay-node/src/content.ts:405](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`get`](Content.md#get)
 
-***
+---
 
 ### getAesEncoder()
 
@@ -246,7 +246,7 @@ Defined in: [newebpay-node/src/content.ts:301](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`getAesEncoder`](Content.md#getaesencoder)
 
-***
+---
 
 ### getApiUrl()
 
@@ -264,7 +264,7 @@ Defined in: [newebpay-node/src/content.ts:294](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`getApiUrl`](Content.md#getapiurl)
 
-***
+---
 
 ### getBaseUrl()
 
@@ -282,7 +282,7 @@ Defined in: [newebpay-node/src/content.ts:287](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`getBaseUrl`](Content.md#getbaseurl)
 
-***
+---
 
 ### getCheckValueEncoder()
 
@@ -300,7 +300,7 @@ Defined in: [newebpay-node/src/content.ts:311](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`getCheckValueEncoder`](Content.md#getcheckvalueencoder)
 
-***
+---
 
 ### getContent()
 
@@ -318,7 +318,7 @@ Defined in: [newebpay-node/src/content.ts:368](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`getContent`](Content.md#getcontent)
 
-***
+---
 
 ### getMerchantID()
 
@@ -336,7 +336,7 @@ Defined in: [newebpay-node/src/content.ts:115](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`getMerchantID`](Content.md#getmerchantid)
 
-***
+---
 
 ### getPayload()
 
@@ -354,7 +354,7 @@ Defined in: [newebpay-node/src/content.ts:348](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`getPayload`](Content.md#getpayload)
 
-***
+---
 
 ### getRawContent()
 
@@ -372,7 +372,7 @@ Defined in: [newebpay-node/src/content.ts:390](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`getRawContent`](Content.md#getrawcontent)
 
-***
+---
 
 ### getRequestPath()
 
@@ -390,7 +390,7 @@ Defined in: [newebpay-node/src/content.ts:280](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`getRequestPath`](Content.md#getrequestpath)
 
-***
+---
 
 ### initContent()
 
@@ -408,7 +408,7 @@ Defined in: [newebpay-node/src/operations/credit-installment.ts:18](https://gith
 
 [`Content`](Content.md).[`initContent`](Content.md#initcontent)
 
-***
+---
 
 ### isTestMode()
 
@@ -426,7 +426,7 @@ Defined in: [newebpay-node/src/content.ts:146](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`isTestMode`](Content.md#istestmode)
 
-***
+---
 
 ### set()
 
@@ -454,7 +454,7 @@ Defined in: [newebpay-node/src/content.ts:397](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`set`](Content.md#set)
 
-***
+---
 
 ### setAmt()
 
@@ -478,7 +478,7 @@ Defined in: [newebpay-node/src/content.ts:172](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setAmt`](Content.md#setamt)
 
-***
+---
 
 ### setClientBackURL()
 
@@ -502,7 +502,7 @@ Defined in: [newebpay-node/src/content.ts:237](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setClientBackURL`](Content.md#setclientbackurl)
 
-***
+---
 
 ### setCustomerURL()
 
@@ -526,7 +526,7 @@ Defined in: [newebpay-node/src/content.ts:229](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setCustomerURL`](Content.md#setcustomerurl)
 
-***
+---
 
 ### setEmail()
 
@@ -550,7 +550,7 @@ Defined in: [newebpay-node/src/content.ts:245](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setEmail`](Content.md#setemail)
 
-***
+---
 
 ### setEmailModify()
 
@@ -574,7 +574,7 @@ Defined in: [newebpay-node/src/content.ts:256](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setEmailModify`](Content.md#setemailmodify)
 
-***
+---
 
 ### setExpireDate()
 
@@ -598,7 +598,7 @@ Defined in: [newebpay-node/src/content.ts:205](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setExpireDate`](Content.md#setexpiredate)
 
-***
+---
 
 ### setHashIV()
 
@@ -622,7 +622,7 @@ Defined in: [newebpay-node/src/content.ts:130](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setHashIV`](Content.md#sethashiv)
 
-***
+---
 
 ### setHashKey()
 
@@ -646,7 +646,7 @@ Defined in: [newebpay-node/src/content.ts:122](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setHashKey`](Content.md#sethashkey)
 
-***
+---
 
 ### setInstallment()
 
@@ -668,7 +668,7 @@ Defined in: [newebpay-node/src/operations/credit-installment.ts:29](https://gith
 
 `this`
 
-***
+---
 
 ### setItemDesc()
 
@@ -692,7 +692,7 @@ Defined in: [newebpay-node/src/content.ts:183](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setItemDesc`](Content.md#setitemdesc)
 
-***
+---
 
 ### setLangType()
 
@@ -716,7 +716,7 @@ Defined in: [newebpay-node/src/content.ts:272](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setLangType`](Content.md#setlangtype)
 
-***
+---
 
 ### setMerchantID()
 
@@ -740,7 +740,7 @@ Defined in: [newebpay-node/src/content.ts:106](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setMerchantID`](Content.md#setmerchantid)
 
-***
+---
 
 ### setMerchantOrderNo()
 
@@ -764,7 +764,7 @@ Defined in: [newebpay-node/src/content.ts:153](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setMerchantOrderNo`](Content.md#setmerchantorderno)
 
-***
+---
 
 ### setNotifyURL()
 
@@ -788,7 +788,7 @@ Defined in: [newebpay-node/src/content.ts:221](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setNotifyURL`](Content.md#setnotifyurl)
 
-***
+---
 
 ### setOrderComment()
 
@@ -812,7 +812,7 @@ Defined in: [newebpay-node/src/content.ts:264](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setOrderComment`](Content.md#setordercomment)
 
-***
+---
 
 ### setReturnURL()
 
@@ -836,7 +836,7 @@ Defined in: [newebpay-node/src/content.ts:213](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setReturnURL`](Content.md#setreturnurl)
 
-***
+---
 
 ### setTestMode()
 
@@ -860,7 +860,7 @@ Defined in: [newebpay-node/src/content.ts:138](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setTestMode`](Content.md#settestmode)
 
-***
+---
 
 ### setTimeStamp()
 
@@ -884,7 +884,7 @@ Defined in: [newebpay-node/src/content.ts:164](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setTimeStamp`](Content.md#settimestamp)
 
-***
+---
 
 ### setTradeLimit()
 
@@ -908,7 +908,7 @@ Defined in: [newebpay-node/src/content.ts:194](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`setTradeLimit`](Content.md#settradelimit)
 
-***
+---
 
 ### validateBaseParams()
 
@@ -926,7 +926,7 @@ Defined in: [newebpay-node/src/content.ts:326](https://github.com/CarlLee1983/ne
 
 [`Content`](Content.md).[`validateBaseParams`](Content.md#validatebaseparams)
 
-***
+---
 
 ### validation()
 

@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / PaymentType
 
@@ -20,7 +20,7 @@ Defined in: [newebpay-node/src/types/parameters.ts:14](https://github.com/CarlLe
 
 超商條碼
 
-***
+---
 
 ### BITOPAY
 
@@ -30,7 +30,7 @@ Defined in: [newebpay-node/src/types/parameters.ts:22](https://github.com/CarlLe
 
 BitoPay
 
-***
+---
 
 ### CREDIT
 
@@ -40,7 +40,7 @@ Defined in: [newebpay-node/src/types/parameters.ts:6](https://github.com/CarlLee
 
 信用卡
 
-***
+---
 
 ### CVS
 
@@ -50,7 +50,7 @@ Defined in: [newebpay-node/src/types/parameters.ts:12](https://github.com/CarlLe
 
 超商代碼
 
-***
+---
 
 ### CVSCOM
 
@@ -60,7 +60,7 @@ Defined in: [newebpay-node/src/types/parameters.ts:28](https://github.com/CarlLe
 
 超商取貨付款
 
-***
+---
 
 ### ESUNWALLET
 
@@ -70,7 +70,7 @@ Defined in: [newebpay-node/src/types/parameters.ts:20](https://github.com/CarlLe
 
 玉山 Wallet
 
-***
+---
 
 ### FULA
 
@@ -80,7 +80,7 @@ Defined in: [newebpay-node/src/types/parameters.ts:26](https://github.com/CarlLe
 
 付啦
 
-***
+---
 
 ### LINEPAY
 
@@ -90,7 +90,7 @@ Defined in: [newebpay-node/src/types/parameters.ts:16](https://github.com/CarlLe
 
 LINE Pay
 
-***
+---
 
 ### TAIWANPAY
 
@@ -100,7 +100,7 @@ Defined in: [newebpay-node/src/types/parameters.ts:18](https://github.com/CarlLe
 
 台灣 Pay
 
-***
+---
 
 ### TWQR
 
@@ -110,7 +110,7 @@ Defined in: [newebpay-node/src/types/parameters.ts:24](https://github.com/CarlLe
 
 TWQR
 
-***
+---
 
 ### VACC
 
@@ -120,7 +120,7 @@ Defined in: [newebpay-node/src/types/parameters.ts:10](https://github.com/CarlLe
 
 ATM 轉帳
 
-***
+---
 
 ### WEBATM
 

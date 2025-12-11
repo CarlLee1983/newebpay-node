@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / LgsType
 
@@ -20,7 +20,7 @@ Defined in: [newebpay-node/src/types/parameters.ts:62](https://github.com/CarlLe
 
 全家
 
-***
+---
 
 ### HILIFEC2C
 
@@ -30,7 +30,7 @@ Defined in: [newebpay-node/src/types/parameters.ts:64](https://github.com/CarlLe
 
 萊爾富
 
-***
+---
 
 ### OKMARTC2C
 
@@ -40,7 +40,7 @@ Defined in: [newebpay-node/src/types/parameters.ts:66](https://github.com/CarlLe
 
 OK
 
-***
+---
 
 ### UNIMARTC2C
 

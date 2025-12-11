@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CreditCancel
 
@@ -52,7 +52,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:53](https://github.com/C
 
 Defined in: [newebpay-node/src/actions/credit-cancel.ts:56](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L56)
 
-***
+---
 
 ### hashKey
 
@@ -60,7 +60,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:56](https://github.com/C
 
 Defined in: [newebpay-node/src/actions/credit-cancel.ts:55](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L55)
 
-***
+---
 
 ### httpClient
 
@@ -70,7 +70,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:48](https://github.com/C
 
 HTTP 客戶端。
 
-***
+---
 
 ### isTest
 
@@ -80,7 +80,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:38](https://github.com/C
 
 是否為測試環境。
 
-***
+---
 
 ### merchantId
 
@@ -88,7 +88,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:38](https://github.com/C
 
 Defined in: [newebpay-node/src/actions/credit-cancel.ts:54](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L54)
 
-***
+---
 
 ### requestPath
 
@@ -98,7 +98,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:33](https://github.com/C
 
 API 請求路徑。
 
-***
+---
 
 ### version
 
@@ -128,7 +128,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:132](https://github.com/
 
 `Record`\<`string`, `string`\>
 
-***
+---
 
 ### cancel()
 
@@ -160,7 +160,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:99](https://github.com/C
 
 `Promise`\<[`CreditCancelResult`](../interfaces/CreditCancelResult.md)\>
 
-***
+---
 
 ### getApiUrl()
 
@@ -174,7 +174,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:92](https://github.com/C
 
 `string`
 
-***
+---
 
 ### getBaseUrl()
 
@@ -188,7 +188,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:85](https://github.com/C
 
 `string`
 
-***
+---
 
 ### parseResponse()
 
@@ -218,7 +218,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:145](https://github.com/
 
 [`CreditCancelResult`](../interfaces/CreditCancelResult.md)
 
-***
+---
 
 ### setTestMode()
 
@@ -238,7 +238,7 @@ Defined in: [newebpay-node/src/actions/credit-cancel.ts:77](https://github.com/C
 
 `this`
 
-***
+---
 
 ### create()
 

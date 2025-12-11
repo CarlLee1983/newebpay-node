@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CvscomNotify
 
@@ -54,7 +54,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:158](https://githu
 
 `number`
 
-***
+---
 
 ### getCVSCOMName()
 
@@ -68,7 +68,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:206](https://githu
 
 `string`
 
-***
+---
 
 ### getCVSCOMPhone()
 
@@ -82,7 +82,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:214](https://githu
 
 `string`
 
-***
+---
 
 ### getData()
 
@@ -100,7 +100,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:107](https://githu
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getData`](../interfaces/NotifyHandlerInterface.md#getdata)
 
-***
+---
 
 ### getLgsNo()
 
@@ -114,7 +114,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:222](https://githu
 
 `string`
 
-***
+---
 
 ### getLgsType()
 
@@ -128,7 +128,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:230](https://githu
 
 `string`
 
-***
+---
 
 ### getMerchantOrderNo()
 
@@ -142,7 +142,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:142](https://githu
 
 `string`
 
-***
+---
 
 ### getMessage()
 
@@ -160,7 +160,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:135](https://githu
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getMessage`](../interfaces/NotifyHandlerInterface.md#getmessage)
 
-***
+---
 
 ### getPaymentType()
 
@@ -174,7 +174,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:166](https://githu
 
 `string`
 
-***
+---
 
 ### getRawData()
 
@@ -188,7 +188,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:114](https://githu
 
 [`NotifyRawData`](../interfaces/NotifyRawData.md)
 
-***
+---
 
 ### getResult()
 
@@ -202,7 +202,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:238](https://githu
 
 [`CvscomResultData`](../interfaces/CvscomResultData.md)
 
-***
+---
 
 ### getStatus()
 
@@ -220,7 +220,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:128](https://githu
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getStatus`](../interfaces/NotifyHandlerInterface.md#getstatus)
 
-***
+---
 
 ### getStoreAddr()
 
@@ -234,7 +234,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:198](https://githu
 
 `string`
 
-***
+---
 
 ### getStoreCode()
 
@@ -248,7 +248,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:182](https://githu
 
 `string`
 
-***
+---
 
 ### getStoreName()
 
@@ -262,7 +262,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:190](https://githu
 
 `string`
 
-***
+---
 
 ### getStoreType()
 
@@ -276,7 +276,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:174](https://githu
 
 `string`
 
-***
+---
 
 ### getTradeNo()
 
@@ -290,7 +290,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:150](https://githu
 
 `string`
 
-***
+---
 
 ### isSuccess()
 
@@ -308,7 +308,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:121](https://githu
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`isSuccess`](../interfaces/NotifyHandlerInterface.md#issuccess)
 
-***
+---
 
 ### isVerified()
 
@@ -322,7 +322,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:245](https://githu
 
 `boolean`
 
-***
+---
 
 ### verify()
 
@@ -346,7 +346,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:52](https://github
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`verify`](../interfaces/NotifyHandlerInterface.md#verify)
 
-***
+---
 
 ### verifyOrFail()
 
@@ -366,7 +366,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:76](https://github
 
 `this`
 
-***
+---
 
 ### create()
 

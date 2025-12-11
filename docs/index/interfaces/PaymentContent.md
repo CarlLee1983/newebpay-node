@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / PaymentContent
 
@@ -18,7 +18,7 @@ Defined in: [newebpay-node/src/types/payment.ts:49](https://github.com/CarlLee19
 
 Defined in: [newebpay-node/src/types/payment.ts:50](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L50)
 
-***
+---
 
 ### TradeInfo
 
@@ -26,7 +26,7 @@ Defined in: [newebpay-node/src/types/payment.ts:50](https://github.com/CarlLee19
 
 Defined in: [newebpay-node/src/types/payment.ts:51](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L51)
 
-***
+---
 
 ### TradeSha
 
@@ -34,7 +34,7 @@ Defined in: [newebpay-node/src/types/payment.ts:51](https://github.com/CarlLee19
 
 Defined in: [newebpay-node/src/types/payment.ts:52](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L52)
 
-***
+---
 
 ### Version
 

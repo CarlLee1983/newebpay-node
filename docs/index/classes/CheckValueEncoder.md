@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CheckValueEncoder
 
@@ -67,7 +67,7 @@ Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:40](https:/
 
 大寫的 SHA256 雜湊值
 
-***
+---
 
 ### verify()
 
@@ -95,7 +95,7 @@ Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:51](https:/
 
 `boolean`
 
-***
+---
 
 ### verifyOrFail()
 
@@ -127,7 +127,7 @@ Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:63](https:/
 
 NewebPayError 當驗證失敗時
 
-***
+---
 
 ### create()
 

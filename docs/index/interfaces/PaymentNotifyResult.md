@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / PaymentNotifyResult
 
@@ -18,7 +18,7 @@ Defined in: [newebpay-node/src/types/notification.ts:46](https://github.com/Carl
 
 Defined in: [newebpay-node/src/types/notification.ts:49](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L49)
 
-***
+---
 
 ### Message
 
@@ -26,7 +26,7 @@ Defined in: [newebpay-node/src/types/notification.ts:49](https://github.com/Carl
 
 Defined in: [newebpay-node/src/types/notification.ts:48](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L48)
 
-***
+---
 
 ### Result?
 
@@ -34,7 +34,7 @@ Defined in: [newebpay-node/src/types/notification.ts:48](https://github.com/Carl
 
 Defined in: [newebpay-node/src/types/notification.ts:50](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/notification.ts#L50)
 
-***
+---
 
 ### Status
 

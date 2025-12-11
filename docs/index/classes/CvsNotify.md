@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CvsNotify
 
@@ -54,7 +54,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:154](https://github.c
 
 `number`
 
-***
+---
 
 ### getBarcode1()
 
@@ -68,7 +68,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:202](https://github.c
 
 `string`
 
-***
+---
 
 ### getBarcode2()
 
@@ -82,7 +82,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:210](https://github.c
 
 `string`
 
-***
+---
 
 ### getBarcode3()
 
@@ -96,7 +96,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:218](https://github.c
 
 `string`
 
-***
+---
 
 ### getCodeNo()
 
@@ -110,7 +110,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:170](https://github.c
 
 `string`
 
-***
+---
 
 ### getData()
 
@@ -128,7 +128,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:103](https://github.c
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getData`](../interfaces/NotifyHandlerInterface.md#getdata)
 
-***
+---
 
 ### getExpireDate()
 
@@ -142,7 +142,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:186](https://github.c
 
 `string`
 
-***
+---
 
 ### getExpireTime()
 
@@ -156,7 +156,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:194](https://github.c
 
 `string`
 
-***
+---
 
 ### getMerchantOrderNo()
 
@@ -170,7 +170,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:138](https://github.c
 
 `string`
 
-***
+---
 
 ### getMessage()
 
@@ -188,7 +188,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:131](https://github.c
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getMessage`](../interfaces/NotifyHandlerInterface.md#getmessage)
 
-***
+---
 
 ### getPaymentType()
 
@@ -202,7 +202,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:162](https://github.c
 
 `string`
 
-***
+---
 
 ### getRawData()
 
@@ -216,7 +216,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:110](https://github.c
 
 [`NotifyRawData`](../interfaces/NotifyRawData.md)
 
-***
+---
 
 ### getResult()
 
@@ -230,7 +230,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:226](https://github.c
 
 [`CvsResultData`](../interfaces/CvsResultData.md)
 
-***
+---
 
 ### getStatus()
 
@@ -248,7 +248,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:124](https://github.c
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getStatus`](../interfaces/NotifyHandlerInterface.md#getstatus)
 
-***
+---
 
 ### getStoreType()
 
@@ -262,7 +262,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:178](https://github.c
 
 `string`
 
-***
+---
 
 ### getTradeNo()
 
@@ -276,7 +276,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:146](https://github.c
 
 `string`
 
-***
+---
 
 ### isSuccess()
 
@@ -294,7 +294,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:117](https://github.c
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`isSuccess`](../interfaces/NotifyHandlerInterface.md#issuccess)
 
-***
+---
 
 ### isVerified()
 
@@ -308,7 +308,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:233](https://github.c
 
 `boolean`
 
-***
+---
 
 ### verify()
 
@@ -332,7 +332,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:48](https://github.co
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`verify`](../interfaces/NotifyHandlerInterface.md#verify)
 
-***
+---
 
 ### verifyOrFail()
 
@@ -352,7 +352,7 @@ Defined in: [newebpay-node/src/notifications/cvs-notify.ts:72](https://github.co
 
 `this`
 
-***
+---
 
 ### create()
 

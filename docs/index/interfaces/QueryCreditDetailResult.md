@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../../README.md)
 
-***
+---
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / QueryCreditDetailResult
 
@@ -22,7 +22,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:10](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:14](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L14)
 
-***
+---
 
 ### Auth?
 
@@ -30,7 +30,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:14](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:20](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L20)
 
-***
+---
 
 ### BackBalance?
 
@@ -38,7 +38,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:20](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:17](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L17)
 
-***
+---
 
 ### BackStatus?
 
@@ -46,7 +46,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:17](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:18](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L18)
 
-***
+---
 
 ### CloseAmt?
 
@@ -54,7 +54,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:18](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:15](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L15)
 
-***
+---
 
 ### CloseAmt0?
 
@@ -62,7 +62,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:15](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:22](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L22)
 
-***
+---
 
 ### CloseStatus?
 
@@ -70,7 +70,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:22](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:16](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L16)
 
-***
+---
 
 ### CloseStatus0?
 
@@ -78,7 +78,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:16](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:23](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L23)
 
-***
+---
 
 ### ECI?
 
@@ -86,7 +86,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:23](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:21](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L21)
 
-***
+---
 
 ### MerchantID?
 
@@ -94,7 +94,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:21](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:11](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L11)
 
-***
+---
 
 ### MerchantOrderNo?
 
@@ -102,7 +102,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:11](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:12](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L12)
 
-***
+---
 
 ### RespondCode?
 
@@ -110,7 +110,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:12](https://github
 
 Defined in: [newebpay-node/src/queries/query-credit-detail.ts:19](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L19)
 
-***
+---
 
 ### TradeNo?
 
