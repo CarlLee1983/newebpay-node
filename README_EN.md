@@ -2,6 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@carllee1983/newebpay.svg)](https://www.npmjs.com/package/@carllee1983/newebpay)
 [![Node.js Version](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-green)](https://nodejs.org)
+[![Bun Version](https://img.shields.io/badge/Bun-supported-blue)](https://bun.sh)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![CI](https://github.com/CarlLee1983/newebpay-node/actions/workflows/ci.yml/badge.svg)](https://github.com/CarlLee1983/newebpay-node/actions/workflows/ci.yml)
@@ -18,11 +19,13 @@ A Node.js SDK for NewebPay (藍新金流), a major payment gateway in Taiwan. Th
 - ✅ Full TypeScript type definitions
 - ✅ ESM and CommonJS dual support
 - ✅ Node.js 18/20/22 LTS support
+- ✅ Bun native support (using Bun's native fetch and crypto APIs)
 - ✅ Express, Fastify, Koa framework integration
 
 ## Requirements
 
 - Node.js 18.0.0 or higher (supports 18.x, 20.x, 22.x LTS)
+- Or Bun 1.0.0 or higher (fully compatible, uses Bun's native APIs)
 
 ## Installation
 
@@ -30,12 +33,14 @@ A Node.js SDK for NewebPay (藍新金流), a major payment gateway in Taiwan. Th
 npm install @carllee1983/newebpay
 ```
 
-Or using yarn / pnpm:
+Or using yarn / pnpm / bun:
 
 ```bash
 yarn add @carllee1983/newebpay
 # or
 pnpm add @carllee1983/newebpay
+# or
+bun add @carllee1983/newebpay
 ```
 
 ## Quick Start
@@ -538,24 +543,26 @@ npm install
 # Build
 npm run build
 
-# Run tests
-npm test
+# Run tests (using Bun)
+bun test
 
 # Run tests (watch mode)
-npm run test:watch
+bun test --watch
 
 # Test coverage
-npm run test:coverage
+bun test --coverage
 
 # Lint check
-npm run lint
+bun run lint
 
 # Format code
-npm run format
+bun run format
 
 # TypeScript type check
-npm run typecheck
+bun run typecheck
 ```
+
+> **Note**: This project uses Bun as the development base. All tests and development tools use Bun's native features. If using Node.js, ensure Node.js version is 18.0.0 or higher.
 
 ## License
 

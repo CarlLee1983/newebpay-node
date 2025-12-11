@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / QueryCreditDetail
 
 # Class: QueryCreditDetail
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:32](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L32)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:32](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L32)
 
 信用卡交易明細查詢。
 
@@ -18,7 +18,7 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:32](https://github
 
 > **new QueryCreditDetail**(`merchantId`, `hashKey`, `hashIV`, `httpClient?`): `QueryCreditDetail`
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:61](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L61)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:61](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L61)
 
 建立查詢物件。
 
@@ -50,61 +50,61 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:61](https://github
 
 > `protected` **hashIV**: `string`
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:64](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L64)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:64](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L64)
 
----
+***
 
 ### hashKey
 
 > `protected` **hashKey**: `string`
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:63](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L63)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:63](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L63)
 
----
+***
 
 ### httpClient
 
 > `protected` **httpClient**: `HttpClientInterface`
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:56](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L56)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:56](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L56)
 
 HTTP 客戶端。
 
----
+***
 
 ### isTest
 
 > `protected` **isTest**: `boolean` = `false`
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:46](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L46)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:46](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L46)
 
 是否為測試環境。
 
----
+***
 
 ### merchantId
 
 > `protected` **merchantId**: `string`
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:62](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L62)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:62](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L62)
 
----
+***
 
 ### requestPath
 
 > `protected` **requestPath**: `string` = `'/API/CreditCard/QueryTradeInfo'`
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:41](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L41)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:41](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L41)
 
 API 請求路徑。
 
----
+***
 
 ### version
 
 > `protected` **version**: `string` = `'1.1'`
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:36](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L36)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:36](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L36)
 
 API 版本。
 
@@ -114,7 +114,7 @@ API 版本。
 
 > `protected` **buildPayload**(`merchantOrderNo`, `amt`): `Record`\<`string`, `string`\>
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:122](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L122)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:122](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L122)
 
 建立請求 Payload。
 
@@ -132,13 +132,13 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:122](https://githu
 
 `Record`\<`string`, `string`\>
 
----
+***
 
 ### getApiUrl()
 
 > **getApiUrl**(): `string`
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:100](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L100)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:100](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L100)
 
 取得完整 API 網址。
 
@@ -146,13 +146,13 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:100](https://githu
 
 `string`
 
----
+***
 
 ### getBaseUrl()
 
 > **getBaseUrl**(): `string`
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:93](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L93)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:93](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L93)
 
 取得 API 基礎網址。
 
@@ -160,13 +160,13 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:93](https://github
 
 `string`
 
----
+***
 
 ### parseResponse()
 
 > `protected` **parseResponse**(`response`): [`QueryCreditDetailResult`](../interfaces/QueryCreditDetailResult.md)
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:144](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L144)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:144](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L144)
 
 解析回應。
 
@@ -190,13 +190,13 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:144](https://githu
 
 [`QueryCreditDetailResult`](../interfaces/QueryCreditDetailResult.md)
 
----
+***
 
 ### query()
 
 > **query**(`merchantOrderNo`, `amt`): `Promise`\<[`QueryCreditDetailResult`](../interfaces/QueryCreditDetailResult.md)\>
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:107](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L107)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:107](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L107)
 
 執行查詢。
 
@@ -214,13 +214,13 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:107](https://githu
 
 `Promise`\<[`QueryCreditDetailResult`](../interfaces/QueryCreditDetailResult.md)\>
 
----
+***
 
 ### setTestMode()
 
 > **setTestMode**(`isTest`): `this`
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:85](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L85)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:85](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L85)
 
 設定是否為測試環境。
 
@@ -234,13 +234,13 @@ Defined in: [newebpay-node/src/queries/query-credit-detail.ts:85](https://github
 
 `this`
 
----
+***
 
 ### create()
 
 > `static` **create**(`merchantId`, `hashKey`, `hashIV`, `httpClient?`): `QueryCreditDetail`
 
-Defined in: [newebpay-node/src/queries/query-credit-detail.ts:73](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-credit-detail.ts#L73)
+Defined in: [newebpay-node/src/queries/query-credit-detail.ts:73](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/queries/query-credit-detail.ts#L73)
 
 從設定建立查詢物件。
 

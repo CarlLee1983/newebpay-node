@@ -7,6 +7,28 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Install
+        run: bun install
+      - name: Lint
+        run: bun run lint
+      - name: Typecheck
+        run: bun run typecheck
+      - name: Test
+        run: bun test
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.NPM_TOKEN || '' }}
+
+  # 向後相容性測試：確保在 Node.js 環境中也能正常運作
+  test-node:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [18, 20, 22]
@@ -19,16 +41,10 @@ jobs:
           cache: 'npm'
       - name: Install
         run: npm ci
-      - name: Lint
-        run: npm run lint
-      - name: Typecheck
-        run: npm run build --noEmit
-      - name: Test
+      - name: Build
+        run: npm run build
+      - name: Test (Node.js compatibility)
         run: npm test
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.NPM_TOKEN || '' }}
 
   e2e-test:
     needs: test
@@ -36,12 +52,11 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/master' || github.event_name == 'pull_request'
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 20
-        uses: actions/setup-node@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 20
-          cache: 'npm'
+          bun-version: latest
       - name: Install
-        run: npm ci
+        run: bun install
       - name: Run E2E Tests
-        run: npm run test:e2e
+        run: bun run test:e2e

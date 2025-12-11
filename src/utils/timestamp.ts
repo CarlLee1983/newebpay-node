@@ -4,7 +4,7 @@
  * @returns Unix 時間戳字串
  */
 export function getTimestamp(): string {
-  return String(Math.floor(Date.now() / 1000))
+  return String(Math.floor(Date.now() / 1000));
 }
 
 /**
@@ -13,5 +13,5 @@ export function getTimestamp(): string {
  * @returns Unix 時間戳數字
  */
 export function getTimestampNumber(): number {
-  return Math.floor(Date.now() / 1000)
+  return Math.floor(Date.now() / 1000);
 }

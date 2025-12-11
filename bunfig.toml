@@ -1,0 +1,18 @@
+# Bun 配置檔案
+# 用於設定 Bun 執行環境的預設選項
+
+# 測試配置
+[test]
+# 預設測試超時時間（毫秒）
+timeout = 30000
+
+# 模組解析配置
+[install]
+# 自動安裝 peer dependencies
+peer = true
+
+# 日誌配置
+[log]
+# 日誌級別: "debug", "info", "warn", "error"
+level = "info"
+

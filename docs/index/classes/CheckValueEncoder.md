@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CheckValueEncoder
 
 # Class: CheckValueEncoder
 
-Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:10](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/infrastructure/check-value-encoder.ts#L10)
+Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:10](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/infrastructure/check-value-encoder.ts#L10)
 
 CheckValue (TradeSha) 編碼器。
 
@@ -19,7 +19,7 @@ CheckValue (TradeSha) 編碼器。
 
 > **new CheckValueEncoder**(`hashKey`, `hashIV`): `CheckValueEncoder`
 
-Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:17](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/infrastructure/check-value-encoder.ts#L17)
+Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:17](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/infrastructure/check-value-encoder.ts#L17)
 
 建立編碼器。
 
@@ -47,7 +47,7 @@ HashIV
 
 > **generate**(`tradeInfo`): `string`
 
-Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:40](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/infrastructure/check-value-encoder.ts#L40)
+Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:40](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/infrastructure/check-value-encoder.ts#L40)
 
 產生 CheckValue (TradeSha)。
 
@@ -67,13 +67,13 @@ Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:40](https:/
 
 大寫的 SHA256 雜湊值
 
----
+***
 
 ### verify()
 
 > **verify**(`tradeInfo`, `tradeSha`): `boolean`
 
-Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:51](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/infrastructure/check-value-encoder.ts#L51)
+Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:51](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/infrastructure/check-value-encoder.ts#L51)
 
 驗證 CheckValue (TradeSha)。
 
@@ -95,13 +95,13 @@ Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:51](https:/
 
 `boolean`
 
----
+***
 
 ### verifyOrFail()
 
 > **verifyOrFail**(`tradeInfo`, `tradeSha`): `void`
 
-Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:63](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/infrastructure/check-value-encoder.ts#L63)
+Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:63](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/infrastructure/check-value-encoder.ts#L63)
 
 驗證並拋出例外。
 
@@ -127,13 +127,13 @@ Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:63](https:/
 
 NewebPayError 當驗證失敗時
 
----
+***
 
 ### create()
 
 > `static` **create**(`hashKey`, `hashIV`): `CheckValueEncoder`
 
-Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:28](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/infrastructure/check-value-encoder.ts#L28)
+Defined in: [newebpay-node/src/infrastructure/check-value-encoder.ts:28](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/infrastructure/check-value-encoder.ts#L28)
 
 從設定建立編碼器。
 

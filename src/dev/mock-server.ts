@@ -4,6 +4,6 @@ export class MockNewebPayServer {
   // In real usage, this would start an express server that can be hit by the developer's app
   // and manually trigger "Send Notification" to localhost.
   start(port: number) {
-    console.log(`Mock NewebPay Server started at port ${port}`)
+    console.log(`Mock NewebPay Server started at port ${port}`);
   }
 }

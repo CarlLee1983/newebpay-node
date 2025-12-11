@@ -2,6 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@carllee1983/newebpay.svg)](https://www.npmjs.com/package/@carllee1983/newebpay)
 [![Node.js Version](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-green)](https://nodejs.org)
+[![Bun Version](https://img.shields.io/badge/Bun-supported-blue)](https://bun.sh)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![CI](https://github.com/CarlLee1983/newebpay-node/actions/workflows/ci.yml/badge.svg)](https://github.com/CarlLee1983/newebpay-node/actions/workflows/ci.yml)
@@ -18,11 +19,13 @@
 - ✅ 完整的 TypeScript 型別定義
 - ✅ ESM 和 CommonJS 雙重支援
 - ✅ Node.js 18/20/22 LTS 支援
+- ✅ Bun 原生支援（使用 Bun 原生 fetch 和 crypto API）
 - ✅ Express、Fastify、Koa 框架整合
 
 ## 系統需求
 
 - Node.js 18.0.0 或更高版本（支援 18.x、20.x、22.x LTS）
+- 或 Bun 1.0.0 或更高版本（完全相容，使用 Bun 原生 API）
 
 ## 安裝
 
@@ -30,12 +33,14 @@
 npm install @carllee1983/newebpay
 ```
 
-或使用 yarn / pnpm：
+或使用 yarn / pnpm / bun：
 
 ```bash
 yarn add @carllee1983/newebpay
 # 或
 pnpm add @carllee1983/newebpay
+# 或
+bun add @carllee1983/newebpay
 ```
 
 ## 快速開始
@@ -112,6 +117,507 @@ NEWEBPAY_HASH_IV=your_hash_iv_16_chars
 NEWEBPAY_RETURN_URL=https://your-site.com/return
 NEWEBPAY_NOTIFY_URL=https://your-site.com/notify
 NEWEBPAY_TEST_MODE=true
+```
+
+## 前端自訂表單
+
+當你需要在前端框架（React、Vue 等）中自訂表單 UI 時，可以使用 `FormBuilder` 提供的資料取得方法，無需使用 HTML 表單。
+
+### 取得表單資料
+
+`FormBuilder` 提供以下方法來取得表單資料：
+
+- `getFormData()` 或 `getData()`: 取得完整的表單資料（包含 `action`、`method`、`fields`）
+- `getFields()`: 只取得表單欄位資料
+
+```typescript
+import { CreditPayment, FormBuilder } from '@carllee1983/newebpay'
+
+const payment = new CreditPayment('特店編號', 'HashKey', 'HashIV')
+  .setTestMode(true)
+  .setMerchantOrderNo('ORDER' + Date.now())
+  .setAmt(1000)
+  .setItemDesc('測試商品')
+  .setEmail('buyer@example.com')
+  .setReturnURL('https://your-site.com/return')
+  .setNotifyURL('https://your-site.com/notify')
+
+const builder = FormBuilder.create(payment)
+
+// 取得完整表單資料
+const { action, method, fields } = builder.getFormData()
+// 或使用別名
+const { action, method, fields } = builder.getData()
+
+// 只取得欄位資料
+const fields = builder.getFields()
+
+// 返回的資料結構：
+// {
+//   action: 'https://ccore.newebpay.com/MPG/mpg_gateway',
+//   method: 'POST',
+//   fields: {
+//     MerchantID: 'MS12345678',
+//     TradeInfo: '...',
+//     TradeSha: '...',
+//     Version: '2.0'
+//   }
+// }
+```
+
+### React 整合範例
+
+#### 使用 React Hook Form
+
+```typescript
+import { useState, useEffect } from 'react'
+import { CreditPayment, FormBuilder } from '@carllee1983/newebpay'
+
+function PaymentForm() {
+  const [formData, setFormData] = useState<{
+    action: string
+    method: string
+    fields: Record<string, string>
+  } | null>(null)
+
+  useEffect(() => {
+    // 從後端 API 取得表單資料
+    fetch('/api/payment/create', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        orderId: 'ORDER' + Date.now(),
+        amount: 1000,
+        itemDesc: '測試商品',
+        email: 'buyer@example.com',
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => setFormData(data.formData))
+  }, [])
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!formData) return
+
+    // 建立動態表單並提交
+    const form = document.createElement('form')
+    form.method = formData.method
+    form.action = formData.action
+
+    Object.entries(formData.fields).forEach(([name, value]) => {
+      const input = document.createElement('input')
+      input.type = 'hidden'
+      input.name = name
+      input.value = value
+      form.appendChild(input)
+    })
+
+    document.body.appendChild(form)
+    form.submit()
+  }
+
+  if (!formData) return <div>載入中...</div>
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <button type="submit">前往付款</button>
+    </form>
+  )
+}
+```
+
+#### 使用 Fetch API 直接提交
+
+```typescript
+import { useState } from 'react'
+
+function PaymentForm() {
+  const [loading, setLoading] = useState(false)
+
+  const handlePayment = async () => {
+    setLoading(true)
+    try {
+      // 從後端取得表單資料
+      const response = await fetch('/api/payment/create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          orderId: 'ORDER' + Date.now(),
+          amount: 1000,
+          itemDesc: '測試商品',
+          email: 'buyer@example.com',
+        }),
+      })
+
+      const { formData } = await response.json()
+
+      // 建立 FormData 並提交到藍新金流
+      const formDataToSubmit = new FormData()
+      Object.entries(formData.fields).forEach(([key, value]) => {
+        formDataToSubmit.append(key, value)
+      })
+
+      // 使用 fetch 提交（注意：藍新金流需要 POST 到指定 URL）
+      const form = document.createElement('form')
+      form.method = formData.method
+      form.action = formData.action
+
+      Object.entries(formData.fields).forEach(([name, value]) => {
+        const input = document.createElement('input')
+        input.type = 'hidden'
+        input.name = name
+        input.value = value
+        form.appendChild(input)
+      })
+
+      document.body.appendChild(form)
+      form.submit()
+    } catch (error) {
+      console.error('付款失敗:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  return (
+    <button onClick={handlePayment} disabled={loading}>
+      {loading ? '處理中...' : '前往付款'}
+    </button>
+  )
+}
+```
+
+### Vue 整合範例
+
+#### 使用 Vue 3 Composition API
+
+```vue
+<template>
+  <div>
+    <button @click="handlePayment" :disabled="loading">
+      {{ loading ? '處理中...' : '前往付款' }}
+    </button>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const loading = ref(false)
+
+const handlePayment = async () => {
+  loading.value = true
+  try {
+    // 從後端 API 取得表單資料
+    const response = await fetch('/api/payment/create', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        orderId: 'ORDER' + Date.now(),
+        amount: 1000,
+        itemDesc: '測試商品',
+        email: 'buyer@example.com',
+      }),
+    })
+
+    const { formData } = await response.json()
+
+    // 建立動態表單並提交
+    const form = document.createElement('form')
+    form.method = formData.method
+    form.action = formData.action
+
+    Object.entries(formData.fields).forEach(([name, value]) => {
+      const input = document.createElement('input')
+      input.type = 'hidden'
+      input.name = name
+      input.value = value as string
+      form.appendChild(input)
+    })
+
+    document.body.appendChild(form)
+    form.submit()
+  } catch (error) {
+    console.error('付款失敗:', error)
+  } finally {
+    loading.value = false
+  }
+}
+</script>
+```
+
+#### 使用響應式表單資料
+
+```vue
+<template>
+  <form @submit.prevent="submitForm">
+    <div v-if="formData">
+      <input
+        v-for="(value, name) in formData.fields"
+        :key="name"
+        type="hidden"
+        :name="name"
+        :value="value"
+      />
+      <button type="submit">前往付款</button>
+    </div>
+    <div v-else>載入中...</div>
+  </form>
+</template>
+
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+
+interface FormData {
+  action: string
+  method: string
+  fields: Record<string, string>
+}
+
+const formData = ref<FormData | null>(null)
+
+onMounted(async () => {
+  const response = await fetch('/api/payment/create', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      orderId: 'ORDER' + Date.now(),
+      amount: 1000,
+      itemDesc: '測試商品',
+      email: 'buyer@example.com',
+    }),
+  })
+
+  const data = await response.json()
+  formData.value = data.formData
+})
+
+const submitForm = () => {
+  if (!formData.value) return
+
+  const form = document.createElement('form')
+  form.method = formData.value.method
+  form.action = formData.value.action
+
+  Object.entries(formData.value.fields).forEach(([name, value]) => {
+    const input = document.createElement('input')
+    input.type = 'hidden'
+    input.name = name
+    input.value = value
+    form.appendChild(input)
+  })
+
+  document.body.appendChild(form)
+  form.submit()
+}
+</script>
+```
+
+### 原生 JavaScript 範例
+
+#### 使用 Fetch API
+
+```javascript
+async function createPayment() {
+  try {
+    // 從後端 API 取得表單資料
+    const response = await fetch('/api/payment/create', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        orderId: 'ORDER' + Date.now(),
+        amount: 1000,
+        itemDesc: '測試商品',
+        email: 'buyer@example.com',
+      }),
+    })
+
+    const { formData } = await response.json()
+
+    // 建立動態表單並提交
+    const form = document.createElement('form')
+    form.method = formData.method
+    form.action = formData.action
+    form.style.display = 'none'
+
+    Object.entries(formData.fields).forEach(([name, value]) => {
+      const input = document.createElement('input')
+      input.type = 'hidden'
+      input.name = name
+      input.value = value
+      form.appendChild(input)
+    })
+
+    document.body.appendChild(form)
+    form.submit()
+  } catch (error) {
+    console.error('付款失敗:', error)
+  }
+}
+
+// 使用範例
+document.getElementById('pay-button').addEventListener('click', createPayment)
+```
+
+#### 使用 XMLHttpRequest
+
+```javascript
+function createPayment() {
+  const xhr = new XMLHttpRequest()
+  xhr.open('POST', '/api/payment/create', true)
+  xhr.setRequestHeader('Content-Type', 'application/json')
+
+  xhr.onload = function () {
+    if (xhr.status === 200) {
+      const { formData } = JSON.parse(xhr.responseText)
+
+      // 建立動態表單並提交
+      const form = document.createElement('form')
+      form.method = formData.method
+      form.action = formData.action
+
+      Object.entries(formData.fields).forEach(([name, value]) => {
+        const input = document.createElement('input')
+        input.type = 'hidden'
+        input.name = name
+        input.value = value
+        form.appendChild(input)
+      })
+
+      document.body.appendChild(form)
+      form.submit()
+    }
+  }
+
+  xhr.send(
+    JSON.stringify({
+      orderId: 'ORDER' + Date.now(),
+      amount: 1000,
+      itemDesc: '測試商品',
+      email: 'buyer@example.com',
+    })
+  )
+}
+```
+
+### API 端點範例
+
+#### Express
+
+```typescript
+import express from 'express'
+import { CreditPayment, FormBuilder } from '@carllee1983/newebpay'
+
+const app = express()
+app.use(express.json())
+
+app.post('/api/payment/create', (req, res) => {
+  const { orderId, amount, itemDesc, email } = req.body
+
+  const payment = new CreditPayment(
+    process.env.NEWEBPAY_MERCHANT_ID!,
+    process.env.NEWEBPAY_HASH_KEY!,
+    process.env.NEWEBPAY_HASH_IV!
+  )
+    .setTestMode(process.env.NEWEBPAY_TEST_MODE === 'true')
+    .setMerchantOrderNo(orderId)
+    .setAmt(amount)
+    .setItemDesc(itemDesc)
+    .setEmail(email)
+    .setReturnURL(process.env.NEWEBPAY_RETURN_URL!)
+    .setNotifyURL(process.env.NEWEBPAY_NOTIFY_URL!)
+
+  const formData = FormBuilder.create(payment).getFormData()
+
+  res.json({
+    success: true,
+    formData: formData,
+  })
+})
+
+app.listen(3000)
+```
+
+#### Fastify
+
+```typescript
+import Fastify from 'fastify'
+import { CreditPayment, FormBuilder } from '@carllee1983/newebpay'
+
+const fastify = Fastify()
+
+fastify.post('/api/payment/create', async (request, reply) => {
+  const { orderId, amount, itemDesc, email } = request.body as {
+    orderId: string
+    amount: number
+    itemDesc: string
+    email: string
+  }
+
+  const payment = new CreditPayment(
+    process.env.NEWEBPAY_MERCHANT_ID!,
+    process.env.NEWEBPAY_HASH_KEY!,
+    process.env.NEWEBPAY_HASH_IV!
+  )
+    .setTestMode(process.env.NEWEBPAY_TEST_MODE === 'true')
+    .setMerchantOrderNo(orderId)
+    .setAmt(amount)
+    .setItemDesc(itemDesc)
+    .setEmail(email)
+    .setReturnURL(process.env.NEWEBPAY_RETURN_URL!)
+    .setNotifyURL(process.env.NEWEBPAY_NOTIFY_URL!)
+
+  const formData = FormBuilder.create(payment).getFormData()
+
+  return {
+    success: true,
+    formData: formData,
+  }
+})
+
+fastify.listen({ port: 3000 })
+```
+
+#### Koa
+
+```typescript
+import Koa from 'koa'
+import Router from '@koa/router'
+import bodyParser from 'koa-bodyparser'
+import { CreditPayment, FormBuilder } from '@carllee1983/newebpay'
+
+const app = new Koa()
+const router = new Router()
+
+app.use(bodyParser())
+
+router.post('/api/payment/create', async (ctx) => {
+  const { orderId, amount, itemDesc, email } = ctx.request.body
+
+  const payment = new CreditPayment(
+    process.env.NEWEBPAY_MERCHANT_ID!,
+    process.env.NEWEBPAY_HASH_KEY!,
+    process.env.NEWEBPAY_HASH_IV!
+  )
+    .setTestMode(process.env.NEWEBPAY_TEST_MODE === 'true')
+    .setMerchantOrderNo(orderId)
+    .setAmt(amount)
+    .setItemDesc(itemDesc)
+    .setEmail(email)
+    .setReturnURL(process.env.NEWEBPAY_RETURN_URL!)
+    .setNotifyURL(process.env.NEWEBPAY_NOTIFY_URL!)
+
+  const formData = FormBuilder.create(payment).getFormData()
+
+  ctx.body = {
+    success: true,
+    formData: formData,
+  }
+})
+
+app.use(router.routes())
+app.listen(3000)
 ```
 
 ## 支援的支付方式
@@ -538,24 +1044,26 @@ npm install
 # 建置
 npm run build
 
-# 執行測試
-npm test
+# 執行測試（使用 Bun）
+bun test
 
 # 執行測試（監看模式）
-npm run test:watch
+bun test --watch
 
 # 測試覆蓋率
-npm run test:coverage
+bun test --coverage
 
 # Lint 檢查
-npm run lint
+bun run lint
 
 # 格式化程式碼
-npm run format
+bun run format
 
 # TypeScript 類型檢查
-npm run typecheck
+bun run typecheck
 ```
+
+> **注意**：本專案使用 Bun 作為開發基底，所有測試和開發工具都使用 Bun 原生功能。若使用 Node.js，請確保 Node.js 版本為 18.0.0 或更高版本。
 
 ## 授權
 

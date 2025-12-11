@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / BasePaymentParams
 
 # Interface: BasePaymentParams
 
-Defined in: [newebpay-node/src/types/payment.ts:59](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L59)
+Defined in: [newebpay-node/src/types/payment.ts:59](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L59)
 
 基礎支付參數。
 
@@ -16,132 +16,132 @@ Defined in: [newebpay-node/src/types/payment.ts:59](https://github.com/CarlLee19
 
 > **Amt**: `number`
 
-Defined in: [newebpay-node/src/types/payment.ts:64](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L64)
+Defined in: [newebpay-node/src/types/payment.ts:64](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L64)
 
----
+***
 
 ### ClientBackURL?
 
 > `optional` **ClientBackURL**: `string`
 
-Defined in: [newebpay-node/src/types/payment.ts:71](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L71)
+Defined in: [newebpay-node/src/types/payment.ts:71](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L71)
 
----
+***
 
 ### CustomerURL?
 
 > `optional` **CustomerURL**: `string`
 
-Defined in: [newebpay-node/src/types/payment.ts:70](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L70)
+Defined in: [newebpay-node/src/types/payment.ts:70](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L70)
 
----
+***
 
 ### Email?
 
 > `optional` **Email**: `string`
 
-Defined in: [newebpay-node/src/types/payment.ts:72](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L72)
+Defined in: [newebpay-node/src/types/payment.ts:72](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L72)
 
----
+***
 
 ### EmailModify?
 
 > `optional` **EmailModify**: `number`
 
-Defined in: [newebpay-node/src/types/payment.ts:73](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L73)
+Defined in: [newebpay-node/src/types/payment.ts:73](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L73)
 
----
+***
 
 ### ExpireDate?
 
 > `optional` **ExpireDate**: `string`
 
-Defined in: [newebpay-node/src/types/payment.ts:75](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L75)
+Defined in: [newebpay-node/src/types/payment.ts:75](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L75)
 
----
+***
 
 ### ItemDesc
 
 > **ItemDesc**: `string`
 
-Defined in: [newebpay-node/src/types/payment.ts:65](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L65)
+Defined in: [newebpay-node/src/types/payment.ts:65](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L65)
 
----
+***
 
 ### LangType
 
 > **LangType**: `string`
 
-Defined in: [newebpay-node/src/types/payment.ts:67](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L67)
+Defined in: [newebpay-node/src/types/payment.ts:67](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L67)
 
----
+***
 
 ### MerchantID
 
 > **MerchantID**: `string`
 
-Defined in: [newebpay-node/src/types/payment.ts:60](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L60)
+Defined in: [newebpay-node/src/types/payment.ts:60](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L60)
 
----
+***
 
 ### MerchantOrderNo
 
 > **MerchantOrderNo**: `string`
 
-Defined in: [newebpay-node/src/types/payment.ts:61](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L61)
+Defined in: [newebpay-node/src/types/payment.ts:61](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L61)
 
----
+***
 
 ### NotifyURL?
 
 > `optional` **NotifyURL**: `string`
 
-Defined in: [newebpay-node/src/types/payment.ts:69](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L69)
+Defined in: [newebpay-node/src/types/payment.ts:69](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L69)
 
----
+***
 
 ### OrderComment?
 
 > `optional` **OrderComment**: `string`
 
-Defined in: [newebpay-node/src/types/payment.ts:76](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L76)
+Defined in: [newebpay-node/src/types/payment.ts:76](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L76)
 
----
+***
 
 ### RespondType
 
 > **RespondType**: `string`
 
-Defined in: [newebpay-node/src/types/payment.ts:66](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L66)
+Defined in: [newebpay-node/src/types/payment.ts:66](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L66)
 
----
+***
 
 ### ReturnURL?
 
 > `optional` **ReturnURL**: `string`
 
-Defined in: [newebpay-node/src/types/payment.ts:68](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L68)
+Defined in: [newebpay-node/src/types/payment.ts:68](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L68)
 
----
+***
 
 ### TimeStamp
 
 > **TimeStamp**: `string`
 
-Defined in: [newebpay-node/src/types/payment.ts:62](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L62)
+Defined in: [newebpay-node/src/types/payment.ts:62](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L62)
 
----
+***
 
 ### TradeLimit?
 
 > `optional` **TradeLimit**: `number`
 
-Defined in: [newebpay-node/src/types/payment.ts:74](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L74)
+Defined in: [newebpay-node/src/types/payment.ts:74](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L74)
 
----
+***
 
 ### Version
 
 > **Version**: `string`
 
-Defined in: [newebpay-node/src/types/payment.ts:63](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/types/payment.ts#L63)
+Defined in: [newebpay-node/src/types/payment.ts:63](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/types/payment.ts#L63)

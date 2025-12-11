@@ -1,6 +1,6 @@
-import type { Request, Response, NextFunction } from 'express'
-import { PaymentNotify, AtmNotify, CvsNotify, CvscomNotify } from '../../index.js'
-import type { NewebPayConfig } from '../common/config.js'
+import type { NextFunction, Request, Response } from 'express';
+import { AtmNotify, CvsNotify, CvscomNotify, PaymentNotify } from '../../index.js';
+import type { NewebPayConfig } from '../common/config.js';
 
 /**
  * 擴充 Express Request 型別
@@ -8,7 +8,7 @@ import type { NewebPayConfig } from '../common/config.js'
 declare global {
   namespace Express {
     interface Request {
-      newebpayNotify?: PaymentNotify | AtmNotify | CvsNotify | CvscomNotify
+      newebpayNotify?: PaymentNotify | AtmNotify | CvsNotify | CvscomNotify;
     }
   }
 }
@@ -18,22 +18,22 @@ declare global {
  */
 export function paymentNotifyMiddleware(config: NewebPayConfig) {
   return (req: Request, res: Response, next: NextFunction): void => {
-    const notify = new PaymentNotify(config.hashKey, config.hashIV)
+    const notify = new PaymentNotify(config.hashKey, config.hashIV);
 
     if (req.body?.TradeInfo && req.body?.TradeSha) {
-      const isValid = notify.verify(req.body)
+      const isValid = notify.verify(req.body);
       if (!isValid) {
         res.status(400).json({
           error: 'TradeSha verification failed',
           code: 'CHECK_VALUE_FAILED',
-        })
-        return
+        });
+        return;
       }
     }
 
-    req.newebpayNotify = notify
-    next()
-  }
+    req.newebpayNotify = notify;
+    next();
+  };
 }
 
 /**
@@ -41,22 +41,22 @@ export function paymentNotifyMiddleware(config: NewebPayConfig) {
  */
 export function atmNotifyMiddleware(config: NewebPayConfig) {
   return (req: Request, res: Response, next: NextFunction): void => {
-    const notify = new AtmNotify(config.hashKey, config.hashIV)
+    const notify = new AtmNotify(config.hashKey, config.hashIV);
 
     if (req.body?.TradeInfo && req.body?.TradeSha) {
-      const isValid = notify.verify(req.body)
+      const isValid = notify.verify(req.body);
       if (!isValid) {
         res.status(400).json({
           error: 'TradeSha verification failed',
           code: 'CHECK_VALUE_FAILED',
-        })
-        return
+        });
+        return;
       }
     }
 
-    req.newebpayNotify = notify
-    next()
-  }
+    req.newebpayNotify = notify;
+    next();
+  };
 }
 
 /**
@@ -64,22 +64,22 @@ export function atmNotifyMiddleware(config: NewebPayConfig) {
  */
 export function cvsNotifyMiddleware(config: NewebPayConfig) {
   return (req: Request, res: Response, next: NextFunction): void => {
-    const notify = new CvsNotify(config.hashKey, config.hashIV)
+    const notify = new CvsNotify(config.hashKey, config.hashIV);
 
     if (req.body?.TradeInfo && req.body?.TradeSha) {
-      const isValid = notify.verify(req.body)
+      const isValid = notify.verify(req.body);
       if (!isValid) {
         res.status(400).json({
           error: 'TradeSha verification failed',
           code: 'CHECK_VALUE_FAILED',
-        })
-        return
+        });
+        return;
       }
     }
 
-    req.newebpayNotify = notify
-    next()
-  }
+    req.newebpayNotify = notify;
+    next();
+  };
 }
 
 /**
@@ -87,20 +87,20 @@ export function cvsNotifyMiddleware(config: NewebPayConfig) {
  */
 export function cvscomNotifyMiddleware(config: NewebPayConfig) {
   return (req: Request, res: Response, next: NextFunction): void => {
-    const notify = new CvscomNotify(config.hashKey, config.hashIV)
+    const notify = new CvscomNotify(config.hashKey, config.hashIV);
 
     if (req.body?.TradeInfo && req.body?.TradeSha) {
-      const isValid = notify.verify(req.body)
+      const isValid = notify.verify(req.body);
       if (!isValid) {
         res.status(400).json({
           error: 'TradeSha verification failed',
           code: 'CHECK_VALUE_FAILED',
-        })
-        return
+        });
+        return;
       }
     }
 
-    req.newebpayNotify = notify
-    next()
-  }
+    req.newebpayNotify = notify;
+    next();
+  };
 }

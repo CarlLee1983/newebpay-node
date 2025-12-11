@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CvscomNotify
 
 # Class: CvscomNotify
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:15](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L15)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:15](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L15)
 
 超商取貨付款通知處理器。
 
@@ -22,7 +22,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:15](https://github
 
 > **new CvscomNotify**(`hashKey`, `hashIV`): `CvscomNotify`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:37](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L37)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:37](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L37)
 
 建立通知處理器。
 
@@ -46,7 +46,7 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:37](https://github
 
 > **getAmt**(): `number`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:158](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L158)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:158](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L158)
 
 取得交易金額。
 
@@ -54,13 +54,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:158](https://githu
 
 `number`
 
----
+***
 
 ### getCVSCOMName()
 
 > **getCVSCOMName**(): `string`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:206](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L206)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:206](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L206)
 
 取得取貨人姓名。
 
@@ -68,13 +68,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:206](https://githu
 
 `string`
 
----
+***
 
 ### getCVSCOMPhone()
 
 > **getCVSCOMPhone**(): `string`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:214](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L214)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:214](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L214)
 
 取得取貨人電話。
 
@@ -82,13 +82,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:214](https://githu
 
 `string`
 
----
+***
 
 ### getData()
 
 > **getData**(): `Record`\<`string`, `unknown`\>
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:107](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L107)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:107](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L107)
 
 取得解密後的資料。
 
@@ -100,13 +100,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:107](https://githu
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getData`](../interfaces/NotifyHandlerInterface.md#getdata)
 
----
+***
 
 ### getLgsNo()
 
 > **getLgsNo**(): `string`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:222](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L222)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:222](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L222)
 
 取得物流編號。
 
@@ -114,13 +114,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:222](https://githu
 
 `string`
 
----
+***
 
 ### getLgsType()
 
 > **getLgsType**(): `string`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:230](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L230)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:230](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L230)
 
 取得物流類型。
 
@@ -128,13 +128,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:230](https://githu
 
 `string`
 
----
+***
 
 ### getMerchantOrderNo()
 
 > **getMerchantOrderNo**(): `string`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:142](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L142)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:142](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L142)
 
 取得特店訂單編號。
 
@@ -142,13 +142,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:142](https://githu
 
 `string`
 
----
+***
 
 ### getMessage()
 
 > **getMessage**(): `string`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:135](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L135)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:135](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L135)
 
 取得訊息。
 
@@ -160,13 +160,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:135](https://githu
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getMessage`](../interfaces/NotifyHandlerInterface.md#getmessage)
 
----
+***
 
 ### getPaymentType()
 
 > **getPaymentType**(): `string`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:166](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L166)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:166](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L166)
 
 取得支付方式。
 
@@ -174,13 +174,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:166](https://githu
 
 `string`
 
----
+***
 
 ### getRawData()
 
 > **getRawData**(): [`NotifyRawData`](../interfaces/NotifyRawData.md)
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:114](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L114)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:114](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L114)
 
 取得原始通知資料。
 
@@ -188,13 +188,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:114](https://githu
 
 [`NotifyRawData`](../interfaces/NotifyRawData.md)
 
----
+***
 
 ### getResult()
 
 > **getResult**(): [`CvscomResultData`](../interfaces/CvscomResultData.md)
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:238](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L238)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:238](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L238)
 
 取得交易結果物件。
 
@@ -202,13 +202,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:238](https://githu
 
 [`CvscomResultData`](../interfaces/CvscomResultData.md)
 
----
+***
 
 ### getStatus()
 
 > **getStatus**(): `string`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:128](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L128)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:128](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L128)
 
 取得狀態。
 
@@ -220,13 +220,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:128](https://githu
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getStatus`](../interfaces/NotifyHandlerInterface.md#getstatus)
 
----
+***
 
 ### getStoreAddr()
 
 > **getStoreAddr**(): `string`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:198](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L198)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:198](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L198)
 
 取得門市地址。
 
@@ -234,13 +234,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:198](https://githu
 
 `string`
 
----
+***
 
 ### getStoreCode()
 
 > **getStoreCode**(): `string`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:182](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L182)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:182](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L182)
 
 取得門市代碼。
 
@@ -248,13 +248,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:182](https://githu
 
 `string`
 
----
+***
 
 ### getStoreName()
 
 > **getStoreName**(): `string`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:190](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L190)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:190](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L190)
 
 取得門市名稱。
 
@@ -262,13 +262,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:190](https://githu
 
 `string`
 
----
+***
 
 ### getStoreType()
 
 > **getStoreType**(): `string`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:174](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L174)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:174](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L174)
 
 取得超商類型。
 
@@ -276,13 +276,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:174](https://githu
 
 `string`
 
----
+***
 
 ### getTradeNo()
 
 > **getTradeNo**(): `string`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:150](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L150)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:150](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L150)
 
 取得藍新金流交易序號。
 
@@ -290,13 +290,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:150](https://githu
 
 `string`
 
----
+***
 
 ### isSuccess()
 
 > **isSuccess**(): `boolean`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:121](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L121)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:121](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L121)
 
 是否成功。
 
@@ -308,13 +308,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:121](https://githu
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`isSuccess`](../interfaces/NotifyHandlerInterface.md#issuccess)
 
----
+***
 
 ### isVerified()
 
 > **isVerified**(): `boolean`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:245](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L245)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:245](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L245)
 
 是否已驗證。
 
@@ -322,13 +322,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:245](https://githu
 
 `boolean`
 
----
+***
 
 ### verify()
 
 > **verify**(`data`): `boolean`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:52](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L52)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:52](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L52)
 
 驗證通知資料。
 
@@ -346,13 +346,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:52](https://github
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`verify`](../interfaces/NotifyHandlerInterface.md#verify)
 
----
+***
 
 ### verifyOrFail()
 
 > **verifyOrFail**(`data`): `this`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:76](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L76)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:76](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L76)
 
 驗證並拋出例外。
 
@@ -366,13 +366,13 @@ Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:76](https://github
 
 `this`
 
----
+***
 
 ### create()
 
 > `static` **create**(`hashKey`, `hashIV`): `CvscomNotify`
 
-Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:45](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/cvscom-notify.ts#L45)
+Defined in: [newebpay-node/src/notifications/cvscom-notify.ts:45](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/cvscom-notify.ts#L45)
 
 從設定建立通知處理器。
 

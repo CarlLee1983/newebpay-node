@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / AtmNotify
 
 # Class: AtmNotify
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:11](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L11)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:15](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L15)
 
 ATM 取號通知處理器。
 
@@ -22,7 +22,7 @@ ATM 取號通知處理器。
 
 > **new AtmNotify**(`hashKey`, `hashIV`): `AtmNotify`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:33](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L33)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:37](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L37)
 
 建立通知處理器。
 
@@ -46,7 +46,7 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:33](https://github.co
 
 > **getAmt**(): `number`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:154](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L154)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:158](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L158)
 
 取得交易金額。
 
@@ -54,13 +54,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:154](https://github.c
 
 `number`
 
----
+***
 
 ### getBankCode()
 
 > **getBankCode**(): `string`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:162](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L162)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:166](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L166)
 
 取得銀行代碼。
 
@@ -68,13 +68,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:162](https://github.c
 
 `string`
 
----
+***
 
 ### getCodeNo()
 
 > **getCodeNo**(): `string`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:170](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L170)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:174](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L174)
 
 取得虛擬帳號。
 
@@ -82,13 +82,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:170](https://github.c
 
 `string`
 
----
+***
 
 ### getData()
 
 > **getData**(): `Record`\<`string`, `unknown`\>
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:103](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L103)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:107](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L107)
 
 取得解密後的資料。
 
@@ -100,13 +100,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:103](https://github.c
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getData`](../interfaces/NotifyHandlerInterface.md#getdata)
 
----
+***
 
 ### getExpireDate()
 
 > **getExpireDate**(): `string`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:178](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L178)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:182](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L182)
 
 取得繳費截止日。
 
@@ -114,13 +114,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:178](https://github.c
 
 `string`
 
----
+***
 
 ### getExpireTime()
 
 > **getExpireTime**(): `string`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:186](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L186)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:190](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L190)
 
 取得繳費截止時間。
 
@@ -128,13 +128,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:186](https://github.c
 
 `string`
 
----
+***
 
 ### getMerchantOrderNo()
 
 > **getMerchantOrderNo**(): `string`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:138](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L138)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:142](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L142)
 
 取得特店訂單編號。
 
@@ -142,13 +142,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:138](https://github.c
 
 `string`
 
----
+***
 
 ### getMessage()
 
 > **getMessage**(): `string`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:131](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L131)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:135](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L135)
 
 取得訊息。
 
@@ -160,13 +160,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:131](https://github.c
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getMessage`](../interfaces/NotifyHandlerInterface.md#getmessage)
 
----
+***
 
 ### getRawData()
 
 > **getRawData**(): [`NotifyRawData`](../interfaces/NotifyRawData.md)
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:110](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L110)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:114](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L114)
 
 取得原始通知資料。
 
@@ -174,13 +174,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:110](https://github.c
 
 [`NotifyRawData`](../interfaces/NotifyRawData.md)
 
----
+***
 
 ### getResult()
 
 > **getResult**(): [`AtmResultData`](../interfaces/AtmResultData.md)
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:194](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L194)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:198](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L198)
 
 取得交易結果物件。
 
@@ -188,13 +188,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:194](https://github.c
 
 [`AtmResultData`](../interfaces/AtmResultData.md)
 
----
+***
 
 ### getStatus()
 
 > **getStatus**(): `string`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:124](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L124)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:128](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L128)
 
 取得狀態。
 
@@ -206,13 +206,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:124](https://github.c
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getStatus`](../interfaces/NotifyHandlerInterface.md#getstatus)
 
----
+***
 
 ### getTradeNo()
 
 > **getTradeNo**(): `string`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:146](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L146)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:150](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L150)
 
 取得藍新金流交易序號。
 
@@ -220,13 +220,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:146](https://github.c
 
 `string`
 
----
+***
 
 ### isSuccess()
 
 > **isSuccess**(): `boolean`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:117](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L117)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:121](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L121)
 
 是否成功。
 
@@ -238,13 +238,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:117](https://github.c
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`isSuccess`](../interfaces/NotifyHandlerInterface.md#issuccess)
 
----
+***
 
 ### isVerified()
 
 > **isVerified**(): `boolean`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:201](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L201)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:205](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L205)
 
 是否已驗證。
 
@@ -252,13 +252,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:201](https://github.c
 
 `boolean`
 
----
+***
 
 ### verify()
 
 > **verify**(`data`): `boolean`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:48](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L48)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:52](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L52)
 
 驗證通知資料。
 
@@ -276,13 +276,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:48](https://github.co
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`verify`](../interfaces/NotifyHandlerInterface.md#verify)
 
----
+***
 
 ### verifyOrFail()
 
 > **verifyOrFail**(`data`): `this`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:72](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L72)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:76](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L76)
 
 驗證並拋出例外。
 
@@ -296,13 +296,13 @@ Defined in: [newebpay-node/src/notifications/atm-notify.ts:72](https://github.co
 
 `this`
 
----
+***
 
 ### create()
 
 > `static` **create**(`hashKey`, `hashIV`): `AtmNotify`
 
-Defined in: [newebpay-node/src/notifications/atm-notify.ts:41](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/atm-notify.ts#L41)
+Defined in: [newebpay-node/src/notifications/atm-notify.ts:45](https://github.com/CarlLee1983/newebpay-node/blob/8262249cd7c1eb3b02bfa894c5b1a26477b4b3f5/src/notifications/atm-notify.ts#L45)
 
 從設定建立通知處理器。
 

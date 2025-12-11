@@ -1,11 +1,12 @@
 **@carllee1983/newebpay**
 
----
+***
 
 # 藍新金流 Node.js SDK
 
 [![npm version](https://img.shields.io/npm/v/@carllee1983/newebpay.svg)](https://www.npmjs.com/package/@carllee1983/newebpay)
 [![Node.js Version](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-green)](https://nodejs.org)
+[![Bun Version](https://img.shields.io/badge/Bun-supported-blue)](https://bun.sh)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![CI](https://github.com/CarlLee1983/newebpay-node/actions/workflows/ci.yml/badge.svg)](https://github.com/CarlLee1983/newebpay-node/actions/workflows/ci.yml)
@@ -22,11 +23,13 @@
 - ✅ 完整的 TypeScript 型別定義
 - ✅ ESM 和 CommonJS 雙重支援
 - ✅ Node.js 18/20/22 LTS 支援
+- ✅ Bun 原生支援（使用 Bun 原生 fetch 和 crypto API）
 - ✅ Express、Fastify、Koa 框架整合
 
 ## 系統需求
 
 - Node.js 18.0.0 或更高版本（支援 18.x、20.x、22.x LTS）
+- 或 Bun 1.0.0 或更高版本（完全相容，使用 Bun 原生 API）
 
 ## 安裝
 
@@ -34,12 +37,14 @@
 npm install @carllee1983/newebpay
 ```
 
-或使用 yarn / pnpm：
+或使用 yarn / pnpm / bun：
 
 ```bash
 yarn add @carllee1983/newebpay
 # 或
 pnpm add @carllee1983/newebpay
+# 或
+bun add @carllee1983/newebpay
 ```
 
 ## 快速開始
@@ -542,24 +547,26 @@ npm install
 # 建置
 npm run build
 
-# 執行測試
-npm test
+# 執行測試（使用 Bun）
+bun test
 
 # 執行測試（監看模式）
-npm run test:watch
+bun test --watch
 
 # 測試覆蓋率
-npm run test:coverage
+bun test --coverage
 
 # Lint 檢查
-npm run lint
+bun run lint
 
 # 格式化程式碼
-npm run format
+bun run format
 
 # TypeScript 類型檢查
-npm run typecheck
+bun run typecheck
 ```
+
+> **注意**：本專案使用 Bun 作為開發基底，所有測試和開發工具都使用 Bun 原生功能。若使用 Node.js，請確保 Node.js 版本為 18.0.0 或更高版本。
 
 ## 授權
 

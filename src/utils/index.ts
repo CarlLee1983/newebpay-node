@@ -1,1 +1,1 @@
-export { getTimestamp, getTimestampNumber } from './timestamp.js'
+export { getTimestamp, getTimestampNumber } from './timestamp.js';
