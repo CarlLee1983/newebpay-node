@@ -6,7 +6,7 @@
     "useIgnoreFile": true
   },
   "files": {
-    "ignoreUnknown": false,
+    "ignoreUnknown": true,
     "ignore": [
       "dist/**",
       "node_modules/**",
@@ -14,7 +14,13 @@
       "examples/**",
       "coverage/**",
       "docs/**",
-      "*.config.*"
+      "*.config.*",
+      "*.md",
+      "*.lock",
+      "*.toml",
+      "LICENSE",
+      ".gitignore",
+      ".prettierignore"
     ]
   },
   "formatter": {
