@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / PaymentNotify
 
 # Class: PaymentNotify
 
-Defined in: [src/notifications/payment-notify.ts:15](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L15)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:15](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L15)
 
 支付完成通知處理器。
 
@@ -22,7 +22,7 @@ Defined in: [src/notifications/payment-notify.ts:15](https://github.com/CarlLee1
 
 > **new PaymentNotify**(`hashKey`, `hashIV`): `PaymentNotify`
 
-Defined in: [src/notifications/payment-notify.ts:40](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L40)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:40](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L40)
 
 建立通知處理器。
 
@@ -50,7 +50,7 @@ HashIV
 
 > **getAmt**(): `number`
 
-Defined in: [src/notifications/payment-notify.ts:182](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L182)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:175](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L175)
 
 取得交易金額。
 
@@ -58,13 +58,13 @@ Defined in: [src/notifications/payment-notify.ts:182](https://github.com/CarlLee
 
 `number`
 
----
+***
 
 ### getAuthCode()
 
 > **getAuthCode**(): `string`
 
-Defined in: [src/notifications/payment-notify.ts:222](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L222)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:215](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L215)
 
 取得授權碼（信用卡）。
 
@@ -72,13 +72,13 @@ Defined in: [src/notifications/payment-notify.ts:222](https://github.com/CarlLee
 
 `string`
 
----
+***
 
 ### getCard4No()
 
 > **getCard4No**(): `string`
 
-Defined in: [src/notifications/payment-notify.ts:230](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L230)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:223](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L223)
 
 取得卡號末四碼（信用卡）。
 
@@ -86,13 +86,13 @@ Defined in: [src/notifications/payment-notify.ts:230](https://github.com/CarlLee
 
 `string`
 
----
+***
 
 ### getCard6No()
 
 > **getCard6No**(): `string`
 
-Defined in: [src/notifications/payment-notify.ts:238](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L238)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:231](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L231)
 
 取得卡號前六碼（信用卡）。
 
@@ -100,13 +100,13 @@ Defined in: [src/notifications/payment-notify.ts:238](https://github.com/CarlLee
 
 `string`
 
----
+***
 
 ### getData()
 
 > **getData**(): `Record`\<`string`, `unknown`\>
 
-Defined in: [src/notifications/payment-notify.ts:124](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L124)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:117](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L117)
 
 取得解密後的資料。
 
@@ -118,13 +118,13 @@ Defined in: [src/notifications/payment-notify.ts:124](https://github.com/CarlLee
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getData`](../interfaces/NotifyHandlerInterface.md#getdata)
 
----
+***
 
 ### getECI()
 
 > **getECI**(): `string`
 
-Defined in: [src/notifications/payment-notify.ts:246](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L246)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:239](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L239)
 
 取得 ECI 值（3D 驗證）。
 
@@ -132,13 +132,13 @@ Defined in: [src/notifications/payment-notify.ts:246](https://github.com/CarlLee
 
 `string`
 
----
+***
 
 ### getInst()
 
 > **getInst**(): `number`
 
-Defined in: [src/notifications/payment-notify.ts:254](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L254)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:247](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L247)
 
 取得分期期數。
 
@@ -146,13 +146,13 @@ Defined in: [src/notifications/payment-notify.ts:254](https://github.com/CarlLee
 
 `number`
 
----
+***
 
 ### getInstEach()
 
 > **getInstEach**(): `number`
 
-Defined in: [src/notifications/payment-notify.ts:270](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L270)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:263](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L263)
 
 取得每期金額。
 
@@ -160,13 +160,13 @@ Defined in: [src/notifications/payment-notify.ts:270](https://github.com/CarlLee
 
 `number`
 
----
+***
 
 ### getInstFirst()
 
 > **getInstFirst**(): `number`
 
-Defined in: [src/notifications/payment-notify.ts:262](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L262)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:255](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L255)
 
 取得首期金額。
 
@@ -174,13 +174,13 @@ Defined in: [src/notifications/payment-notify.ts:262](https://github.com/CarlLee
 
 `number`
 
----
+***
 
 ### getIP()
 
 > **getIP**(): `string`
 
-Defined in: [src/notifications/payment-notify.ts:206](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L206)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:199](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L199)
 
 取得 IP 位址。
 
@@ -188,13 +188,13 @@ Defined in: [src/notifications/payment-notify.ts:206](https://github.com/CarlLee
 
 `string`
 
----
+***
 
 ### getMerchantID()
 
 > **getMerchantID**(): `string`
 
-Defined in: [src/notifications/payment-notify.ts:159](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L159)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:152](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L152)
 
 取得特店編號。
 
@@ -202,13 +202,13 @@ Defined in: [src/notifications/payment-notify.ts:159](https://github.com/CarlLee
 
 `string`
 
----
+***
 
 ### getMerchantOrderNo()
 
 > **getMerchantOrderNo**(): `string`
 
-Defined in: [src/notifications/payment-notify.ts:166](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L166)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:159](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L159)
 
 取得特店訂單編號。
 
@@ -216,13 +216,13 @@ Defined in: [src/notifications/payment-notify.ts:166](https://github.com/CarlLee
 
 `string`
 
----
+***
 
 ### getMessage()
 
 > **getMessage**(): `string`
 
-Defined in: [src/notifications/payment-notify.ts:152](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L152)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:145](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L145)
 
 取得訊息。
 
@@ -234,13 +234,13 @@ Defined in: [src/notifications/payment-notify.ts:152](https://github.com/CarlLee
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getMessage`](../interfaces/NotifyHandlerInterface.md#getmessage)
 
----
+***
 
 ### getPayBankCode()
 
 > **getPayBankCode**(): `string`
 
-Defined in: [src/notifications/payment-notify.ts:214](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L214)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:207](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L207)
 
 取得付款銀行。
 
@@ -248,13 +248,13 @@ Defined in: [src/notifications/payment-notify.ts:214](https://github.com/CarlLee
 
 `string`
 
----
+***
 
 ### getPaymentType()
 
 > **getPaymentType**(): `string`
 
-Defined in: [src/notifications/payment-notify.ts:190](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L190)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:183](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L183)
 
 取得支付方式。
 
@@ -262,13 +262,13 @@ Defined in: [src/notifications/payment-notify.ts:190](https://github.com/CarlLee
 
 `string`
 
----
+***
 
 ### getPayTime()
 
 > **getPayTime**(): `string`
 
-Defined in: [src/notifications/payment-notify.ts:198](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L198)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:191](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L191)
 
 取得交易時間。
 
@@ -276,13 +276,13 @@ Defined in: [src/notifications/payment-notify.ts:198](https://github.com/CarlLee
 
 `string`
 
----
+***
 
 ### getRawData()
 
 > **getRawData**(): [`NotifyRawData`](../interfaces/NotifyRawData.md)
 
-Defined in: [src/notifications/payment-notify.ts:131](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L131)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:124](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L124)
 
 取得原始通知資料。
 
@@ -290,13 +290,13 @@ Defined in: [src/notifications/payment-notify.ts:131](https://github.com/CarlLee
 
 [`NotifyRawData`](../interfaces/NotifyRawData.md)
 
----
+***
 
 ### getResult()
 
 > **getResult**(): [`PaymentResultData`](../interfaces/PaymentResultData.md)
 
-Defined in: [src/notifications/payment-notify.ts:278](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L278)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:271](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L271)
 
 取得交易結果物件。
 
@@ -304,13 +304,13 @@ Defined in: [src/notifications/payment-notify.ts:278](https://github.com/CarlLee
 
 [`PaymentResultData`](../interfaces/PaymentResultData.md)
 
----
+***
 
 ### getStatus()
 
 > **getStatus**(): `string`
 
-Defined in: [src/notifications/payment-notify.ts:145](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L145)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:138](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L138)
 
 取得狀態。
 
@@ -322,13 +322,13 @@ Defined in: [src/notifications/payment-notify.ts:145](https://github.com/CarlLee
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`getStatus`](../interfaces/NotifyHandlerInterface.md#getstatus)
 
----
+***
 
 ### getTradeNo()
 
 > **getTradeNo**(): `string`
 
-Defined in: [src/notifications/payment-notify.ts:174](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L174)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:167](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L167)
 
 取得藍新金流交易序號。
 
@@ -336,13 +336,13 @@ Defined in: [src/notifications/payment-notify.ts:174](https://github.com/CarlLee
 
 `string`
 
----
+***
 
 ### isSuccess()
 
 > **isSuccess**(): `boolean`
 
-Defined in: [src/notifications/payment-notify.ts:138](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L138)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:131](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L131)
 
 是否成功。
 
@@ -354,13 +354,13 @@ Defined in: [src/notifications/payment-notify.ts:138](https://github.com/CarlLee
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`isSuccess`](../interfaces/NotifyHandlerInterface.md#issuccess)
 
----
+***
 
 ### isVerified()
 
 > **isVerified**(): `boolean`
 
-Defined in: [src/notifications/payment-notify.ts:285](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L285)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:278](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L278)
 
 是否已驗證。
 
@@ -368,13 +368,13 @@ Defined in: [src/notifications/payment-notify.ts:285](https://github.com/CarlLee
 
 `boolean`
 
----
+***
 
 ### verify()
 
 > **verify**(`data`): `boolean`
 
-Defined in: [src/notifications/payment-notify.ts:55](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L55)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:55](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L55)
 
 驗證通知資料。
 
@@ -392,13 +392,13 @@ Defined in: [src/notifications/payment-notify.ts:55](https://github.com/CarlLee1
 
 [`NotifyHandlerInterface`](../interfaces/NotifyHandlerInterface.md).[`verify`](../interfaces/NotifyHandlerInterface.md#verify)
 
----
+***
 
 ### verifyOrFail()
 
 > **verifyOrFail**(`data`): `this`
 
-Defined in: [src/notifications/payment-notify.ts:90](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L90)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:85](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L85)
 
 驗證並拋出例外。
 
@@ -412,13 +412,13 @@ Defined in: [src/notifications/payment-notify.ts:90](https://github.com/CarlLee1
 
 `this`
 
----
+***
 
 ### create()
 
 > `static` **create**(`hashKey`, `hashIV`): `PaymentNotify`
 
-Defined in: [src/notifications/payment-notify.ts:48](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/notifications/payment-notify.ts#L48)
+Defined in: [newebpay-node/src/notifications/payment-notify.ts:48](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/notifications/payment-notify.ts#L48)
 
 從設定建立通知處理器。
 

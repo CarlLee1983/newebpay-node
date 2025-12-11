@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CreditCancel
 
 # Class: CreditCancel
 
-Defined in: [src/actions/credit-cancel.ts:21](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L21)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:24](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L24)
 
 信用卡取消授權。
 
@@ -16,9 +16,9 @@ Defined in: [src/actions/credit-cancel.ts:21](https://github.com/CarlLee1983/new
 
 ### Constructor
 
-> **new CreditCancel**(`merchantId`, `hashKey`, `hashIV`): `CreditCancel`
+> **new CreditCancel**(`merchantId`, `hashKey`, `hashIV`, `httpClient?`): `CreditCancel`
 
-Defined in: [src/actions/credit-cancel.ts:45](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L45)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:53](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L53)
 
 建立取消授權物件。
 
@@ -36,6 +36,10 @@ Defined in: [src/actions/credit-cancel.ts:45](https://github.com/CarlLee1983/new
 
 `string`
 
+##### httpClient?
+
+`HttpClientInterface`
+
 #### Returns
 
 `CreditCancel`
@@ -46,51 +50,61 @@ Defined in: [src/actions/credit-cancel.ts:45](https://github.com/CarlLee1983/new
 
 > `protected` **hashIV**: `string`
 
-Defined in: [src/actions/credit-cancel.ts:48](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L48)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:56](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L56)
 
----
+***
 
 ### hashKey
 
 > `protected` **hashKey**: `string`
 
-Defined in: [src/actions/credit-cancel.ts:47](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L47)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:55](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L55)
 
----
+***
+
+### httpClient
+
+> `protected` **httpClient**: `HttpClientInterface`
+
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:48](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L48)
+
+HTTP 客戶端。
+
+***
 
 ### isTest
 
 > `protected` **isTest**: `boolean` = `false`
 
-Defined in: [src/actions/credit-cancel.ts:35](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L35)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:38](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L38)
 
 是否為測試環境。
 
----
+***
 
 ### merchantId
 
 > `protected` **merchantId**: `string`
 
-Defined in: [src/actions/credit-cancel.ts:46](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L46)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:54](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L54)
 
----
+***
 
 ### requestPath
 
-> `protected` **requestPath**: `string` = `"/API/CreditCard/Cancel"`
+> `protected` **requestPath**: `string` = `'/API/CreditCard/Cancel'`
 
-Defined in: [src/actions/credit-cancel.ts:30](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L30)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:33](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L33)
 
 API 請求路徑。
 
----
+***
 
 ### version
 
-> `protected` **version**: `string` = `"1.0"`
+> `protected` **version**: `string` = `'1.0'`
 
-Defined in: [src/actions/credit-cancel.ts:25](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L25)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:28](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L28)
 
 API 版本。
 
@@ -100,7 +114,7 @@ API 版本。
 
 > `protected` **buildPayload**(`postData`): `Record`\<`string`, `string`\>
 
-Defined in: [src/actions/credit-cancel.ts:134](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L134)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:132](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L132)
 
 建立請求 Payload。
 
@@ -114,13 +128,13 @@ Defined in: [src/actions/credit-cancel.ts:134](https://github.com/CarlLee1983/ne
 
 `Record`\<`string`, `string`\>
 
----
+***
 
 ### cancel()
 
 > **cancel**(`merchantOrderNo`, `amt`, `indexType`, `tradeNo?`): `Promise`\<[`CreditCancelResult`](../interfaces/CreditCancelResult.md)\>
 
-Defined in: [src/actions/credit-cancel.ts:89](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L89)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:99](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L99)
 
 執行取消授權。
 
@@ -146,13 +160,13 @@ Defined in: [src/actions/credit-cancel.ts:89](https://github.com/CarlLee1983/new
 
 `Promise`\<[`CreditCancelResult`](../interfaces/CreditCancelResult.md)\>
 
----
+***
 
 ### getApiUrl()
 
 > **getApiUrl**(): `string`
 
-Defined in: [src/actions/credit-cancel.ts:82](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L82)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:92](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L92)
 
 取得完整 API 網址。
 
@@ -160,13 +174,13 @@ Defined in: [src/actions/credit-cancel.ts:82](https://github.com/CarlLee1983/new
 
 `string`
 
----
+***
 
 ### getBaseUrl()
 
 > **getBaseUrl**(): `string`
 
-Defined in: [src/actions/credit-cancel.ts:73](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L73)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:85](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L85)
 
 取得 API 基礎網址。
 
@@ -174,13 +188,13 @@ Defined in: [src/actions/credit-cancel.ts:73](https://github.com/CarlLee1983/new
 
 `string`
 
----
+***
 
 ### parseResponse()
 
 > `protected` **parseResponse**(`response`): [`CreditCancelResult`](../interfaces/CreditCancelResult.md)
 
-Defined in: [src/actions/credit-cancel.ts:149](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L149)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:145](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L145)
 
 解析回應。
 
@@ -204,13 +218,13 @@ Defined in: [src/actions/credit-cancel.ts:149](https://github.com/CarlLee1983/ne
 
 [`CreditCancelResult`](../interfaces/CreditCancelResult.md)
 
----
+***
 
 ### setTestMode()
 
 > **setTestMode**(`isTest`): `this`
 
-Defined in: [src/actions/credit-cancel.ts:65](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L65)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:77](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L77)
 
 設定是否為測試環境。
 
@@ -224,13 +238,13 @@ Defined in: [src/actions/credit-cancel.ts:65](https://github.com/CarlLee1983/new
 
 `this`
 
----
+***
 
 ### create()
 
-> `static` **create**(`merchantId`, `hashKey`, `hashIV`): `CreditCancel`
+> `static` **create**(`merchantId`, `hashKey`, `hashIV`, `httpClient?`): `CreditCancel`
 
-Defined in: [src/actions/credit-cancel.ts:54](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L54)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:65](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L65)
 
 從設定建立取消授權物件。
 
@@ -247,6 +261,10 @@ Defined in: [src/actions/credit-cancel.ts:54](https://github.com/CarlLee1983/new
 ##### hashIV
 
 `string`
+
+##### httpClient?
+
+`HttpClientInterface`
 
 #### Returns
 

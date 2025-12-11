@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CreditCancelResult
 
 # Interface: CreditCancelResult
 
-Defined in: [src/actions/credit-cancel.ts:8](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L8)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:11](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L11)
 
 取消授權結果。
 
@@ -20,28 +20,28 @@ Defined in: [src/actions/credit-cancel.ts:8](https://github.com/CarlLee1983/newe
 
 > `optional` **Amt**: `number`
 
-Defined in: [src/actions/credit-cancel.ts:12](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L12)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:15](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L15)
 
----
+***
 
 ### MerchantID?
 
 > `optional` **MerchantID**: `string`
 
-Defined in: [src/actions/credit-cancel.ts:9](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L9)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:12](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L12)
 
----
+***
 
 ### MerchantOrderNo?
 
 > `optional` **MerchantOrderNo**: `string`
 
-Defined in: [src/actions/credit-cancel.ts:10](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L10)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:13](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L13)
 
----
+***
 
 ### TradeNo?
 
 > `optional` **TradeNo**: `string`
 
-Defined in: [src/actions/credit-cancel.ts:11](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-cancel.ts#L11)
+Defined in: [newebpay-node/src/actions/credit-cancel.ts:14](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-cancel.ts#L14)

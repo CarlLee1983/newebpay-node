@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / EWalletRefund
 
 # Class: EWalletRefund
 
-Defined in: [src/actions/ewallet-refund.ts:26](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L26)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:29](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L29)
 
 電子錢包退款。
 
@@ -16,9 +16,9 @@ Defined in: [src/actions/ewallet-refund.ts:26](https://github.com/CarlLee1983/ne
 
 ### Constructor
 
-> **new EWalletRefund**(`merchantId`, `hashKey`, `hashIV`): `EWalletRefund`
+> **new EWalletRefund**(`merchantId`, `hashKey`, `hashIV`, `httpClient?`): `EWalletRefund`
 
-Defined in: [src/actions/ewallet-refund.ts:50](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L50)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:58](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L58)
 
 建立退款物件。
 
@@ -36,6 +36,10 @@ Defined in: [src/actions/ewallet-refund.ts:50](https://github.com/CarlLee1983/ne
 
 `string`
 
+##### httpClient?
+
+`HttpClientInterface`
+
 #### Returns
 
 `EWalletRefund`
@@ -46,51 +50,61 @@ Defined in: [src/actions/ewallet-refund.ts:50](https://github.com/CarlLee1983/ne
 
 > `protected` **hashIV**: `string`
 
-Defined in: [src/actions/ewallet-refund.ts:53](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L53)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:61](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L61)
 
----
+***
 
 ### hashKey
 
 > `protected` **hashKey**: `string`
 
-Defined in: [src/actions/ewallet-refund.ts:52](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L52)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:60](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L60)
 
----
+***
+
+### httpClient
+
+> `protected` **httpClient**: `HttpClientInterface`
+
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:53](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L53)
+
+HTTP 客戶端。
+
+***
 
 ### isTest
 
 > `protected` **isTest**: `boolean` = `false`
 
-Defined in: [src/actions/ewallet-refund.ts:40](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L40)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:43](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L43)
 
 是否為測試環境。
 
----
+***
 
 ### merchantId
 
 > `protected` **merchantId**: `string`
 
-Defined in: [src/actions/ewallet-refund.ts:51](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L51)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:59](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L59)
 
----
+***
 
 ### requestPath
 
-> `protected` **requestPath**: `string` = `"/API/EWallet/Refund"`
+> `protected` **requestPath**: `string` = `'/API/EWallet/Refund'`
 
-Defined in: [src/actions/ewallet-refund.ts:35](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L35)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:38](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L38)
 
 API 請求路徑。
 
----
+***
 
 ### version
 
-> `protected` **version**: `string` = `"1.0"`
+> `protected` **version**: `string` = `'1.0'`
 
-Defined in: [src/actions/ewallet-refund.ts:30](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L30)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:33](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L33)
 
 API 版本。
 
@@ -100,7 +114,7 @@ API 版本。
 
 > `protected` **buildPayload**(`postData`): `Record`\<`string`, `string`\>
 
-Defined in: [src/actions/ewallet-refund.ts:138](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L138)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:136](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L136)
 
 建立請求 Payload。
 
@@ -114,13 +128,13 @@ Defined in: [src/actions/ewallet-refund.ts:138](https://github.com/CarlLee1983/n
 
 `Record`\<`string`, `string`\>
 
----
+***
 
 ### getApiUrl()
 
 > **getApiUrl**(): `string`
 
-Defined in: [src/actions/ewallet-refund.ts:87](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L87)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:97](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L97)
 
 取得完整 API 網址。
 
@@ -128,13 +142,13 @@ Defined in: [src/actions/ewallet-refund.ts:87](https://github.com/CarlLee1983/ne
 
 `string`
 
----
+***
 
 ### getBaseUrl()
 
 > **getBaseUrl**(): `string`
 
-Defined in: [src/actions/ewallet-refund.ts:78](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L78)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:90](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L90)
 
 取得 API 基礎網址。
 
@@ -142,13 +156,13 @@ Defined in: [src/actions/ewallet-refund.ts:78](https://github.com/CarlLee1983/ne
 
 `string`
 
----
+***
 
 ### parseResponse()
 
 > `protected` **parseResponse**(`response`): [`EWalletRefundResult`](../interfaces/EWalletRefundResult.md)
 
-Defined in: [src/actions/ewallet-refund.ts:153](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L153)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:149](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L149)
 
 解析回應。
 
@@ -172,13 +186,13 @@ Defined in: [src/actions/ewallet-refund.ts:153](https://github.com/CarlLee1983/n
 
 [`EWalletRefundResult`](../interfaces/EWalletRefundResult.md)
 
----
+***
 
 ### refund()
 
 > **refund**(`merchantOrderNo`, `amt`, `paymentType`): `Promise`\<[`EWalletRefundResult`](../interfaces/EWalletRefundResult.md)\>
 
-Defined in: [src/actions/ewallet-refund.ts:98](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L98)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:108](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L108)
 
 執行退款。
 
@@ -206,13 +220,13 @@ Defined in: [src/actions/ewallet-refund.ts:98](https://github.com/CarlLee1983/ne
 
 `Promise`\<[`EWalletRefundResult`](../interfaces/EWalletRefundResult.md)\>
 
----
+***
 
 ### setTestMode()
 
 > **setTestMode**(`isTest`): `this`
 
-Defined in: [src/actions/ewallet-refund.ts:70](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L70)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:82](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L82)
 
 設定是否為測試環境。
 
@@ -226,13 +240,13 @@ Defined in: [src/actions/ewallet-refund.ts:70](https://github.com/CarlLee1983/ne
 
 `this`
 
----
+***
 
 ### create()
 
-> `static` **create**(`merchantId`, `hashKey`, `hashIV`): `EWalletRefund`
+> `static` **create**(`merchantId`, `hashKey`, `hashIV`, `httpClient?`): `EWalletRefund`
 
-Defined in: [src/actions/ewallet-refund.ts:59](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L59)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:70](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L70)
 
 從設定建立退款物件。
 
@@ -249,6 +263,10 @@ Defined in: [src/actions/ewallet-refund.ts:59](https://github.com/CarlLee1983/ne
 ##### hashIV
 
 `string`
+
+##### httpClient?
+
+`HttpClientInterface`
 
 #### Returns
 

@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / Aes256Encoder
 
 # Class: Aes256Encoder
 
-Defined in: [src/infrastructure/aes256-encoder.ts:9](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/infrastructure/aes256-encoder.ts#L9)
+Defined in: [newebpay-node/src/infrastructure/aes256-encoder.ts:9](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/infrastructure/aes256-encoder.ts#L9)
 
 AES-256-CBC 加解密器。
 
@@ -18,7 +18,7 @@ AES-256-CBC 加解密器。
 
 > **new Aes256Encoder**(`hashKey`, `hashIV`): `Aes256Encoder`
 
-Defined in: [src/infrastructure/aes256-encoder.ts:21](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/infrastructure/aes256-encoder.ts#L21)
+Defined in: [newebpay-node/src/infrastructure/aes256-encoder.ts:21](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/infrastructure/aes256-encoder.ts#L21)
 
 建立加解密器。
 
@@ -46,7 +46,7 @@ HashIV
 
 > **decrypt**(`tradeInfo`): `Record`\<`string`, `string`\>
 
-Defined in: [src/infrastructure/aes256-encoder.ts:70](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/infrastructure/aes256-encoder.ts#L70)
+Defined in: [newebpay-node/src/infrastructure/aes256-encoder.ts:66](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/infrastructure/aes256-encoder.ts#L66)
 
 解密資料。
 
@@ -70,13 +70,13 @@ Defined in: [src/infrastructure/aes256-encoder.ts:70](https://github.com/CarlLee
 
 NewebPayError 當解密失敗時
 
----
+***
 
 ### encrypt()
 
 > **encrypt**(`data`): `string`
 
-Defined in: [src/infrastructure/aes256-encoder.ts:44](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/infrastructure/aes256-encoder.ts#L44)
+Defined in: [newebpay-node/src/infrastructure/aes256-encoder.ts:44](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/infrastructure/aes256-encoder.ts#L44)
 
 加密資料。
 
@@ -96,13 +96,13 @@ Defined in: [src/infrastructure/aes256-encoder.ts:44](https://github.com/CarlLee
 
 加密後的十六進位字串
 
----
+***
 
 ### create()
 
 > `static` **create**(`hashKey`, `hashIV`): `Aes256Encoder`
 
-Defined in: [src/infrastructure/aes256-encoder.ts:32](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/infrastructure/aes256-encoder.ts#L32)
+Defined in: [newebpay-node/src/infrastructure/aes256-encoder.ts:32](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/infrastructure/aes256-encoder.ts#L32)
 
 從設定建立加解密器。
 

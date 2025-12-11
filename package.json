@@ -37,6 +37,7 @@
         "default": "./dist/frameworks/fastify/index.js"
       },
       "require": {
+        "types": "./dist/frameworks/fastify/index.d.ts",
         "default": "./dist/frameworks/fastify/index.js"
       }
     },
@@ -46,6 +47,7 @@
         "default": "./dist/frameworks/koa/index.js"
       },
       "require": {
+        "types": "./dist/frameworks/koa/index.d.ts",
         "default": "./dist/frameworks/koa/index.js"
       }
     },

@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../../modules.md) / [frameworks/express](../README.md) / PaymentBuilder
 
 # Class: PaymentBuilder
 
-Defined in: [src/frameworks/common/payment-builder.ts:20](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L20)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:20](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L20)
 
 支付建構器（類似 PHP 的 PaymentBuilder）
 
@@ -18,7 +18,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:20](https://github.com/Car
 
 > **new PaymentBuilder**(`config`): `PaymentBuilder`
 
-Defined in: [src/frameworks/common/payment-builder.ts:38](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L38)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:38](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L38)
 
 #### Parameters
 
@@ -36,7 +36,7 @@ Defined in: [src/frameworks/common/payment-builder.ts:38](https://github.com/Car
 
 > **allInOne**(): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:133](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L133)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:128](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L128)
 
 使用全支付方式
 
@@ -44,13 +44,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:133](https://github.com/Ca
 
 `this`
 
----
+***
 
 ### atm()
 
 > **atm**(`expireDate?`): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:84](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L84)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:79](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L79)
 
 使用 ATM 虛擬帳號
 
@@ -64,13 +64,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:84](https://github.com/Car
 
 `this`
 
----
+***
 
 ### barcode()
 
 > **barcode**(`expireDate?`): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:106](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L106)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:101](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L101)
 
 使用超商條碼繳費
 
@@ -84,13 +84,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:106](https://github.com/Ca
 
 `this`
 
----
+***
 
 ### build()
 
 > **build**(): [`PaymentInterface`](../../../index/interfaces/PaymentInterface.md)
 
-Defined in: [src/frameworks/common/payment-builder.ts:181](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L181)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:176](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L176)
 
 建立支付物件
 
@@ -98,13 +98,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:181](https://github.com/Ca
 
 [`PaymentInterface`](../../../index/interfaces/PaymentInterface.md)
 
----
+***
 
 ### creditCard()
 
 > **creditCard**(): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:59](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L59)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:54](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L54)
 
 使用信用卡一次付清
 
@@ -112,13 +112,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:59](https://github.com/Car
 
 `this`
 
----
+***
 
 ### creditInstallment()
 
 > **creditInstallment**(`periods`): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:67](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L67)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:62](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L62)
 
 使用信用卡分期
 
@@ -132,13 +132,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:67](https://github.com/Car
 
 `this`
 
----
+***
 
 ### customize()
 
 > **customize**(`callback`): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:173](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L173)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:168](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L168)
 
 自訂支付物件設定
 
@@ -152,13 +152,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:173](https://github.com/Ca
 
 `this`
 
----
+***
 
 ### cvs()
 
 > **cvs**(`expireDate?`): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:95](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L95)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:90](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L90)
 
 使用超商代碼繳費
 
@@ -172,13 +172,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:95](https://github.com/Car
 
 `this`
 
----
+***
 
 ### getParams()
 
 > **getParams**(): `object`
 
-Defined in: [src/frameworks/common/payment-builder.ts:253](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L253)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:246](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L246)
 
 取得支付參數（供前端使用）
 
@@ -198,13 +198,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:253](https://github.com/Ca
 
 > **method**: `string`
 
----
+***
 
 ### linePay()
 
 > **linePay**(): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:117](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L117)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:112](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L112)
 
 使用 LINE Pay
 
@@ -212,13 +212,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:117](https://github.com/Ca
 
 `this`
 
----
+***
 
 ### setClientBackUrl()
 
 > **setClientBackUrl**(`url`): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:165](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L165)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:160](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L160)
 
 設定返回商店網址
 
@@ -232,13 +232,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:165](https://github.com/Ca
 
 `this`
 
----
+***
 
 ### setCustomerUrl()
 
 > **setCustomerUrl**(`url`): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:157](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L157)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:152](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L152)
 
 設定取號完成返回網址
 
@@ -252,13 +252,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:157](https://github.com/Ca
 
 `this`
 
----
+***
 
 ### setNotifyUrl()
 
 > **setNotifyUrl**(`url`): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:149](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L149)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:144](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L144)
 
 設定付款結果通知網址
 
@@ -272,13 +272,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:149](https://github.com/Ca
 
 `this`
 
----
+***
 
 ### setOrder()
 
 > **setOrder**(`orderNo`, `amount`, `itemDesc`, `email`): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:43](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L43)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:43](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L43)
 
 設定基本交易資訊
 
@@ -298,19 +298,19 @@ Defined in: [src/frameworks/common/payment-builder.ts:43](https://github.com/Car
 
 ##### email
 
-`string` = `""`
+`string` = `''`
 
 #### Returns
 
 `this`
 
----
+***
 
 ### setReturnUrl()
 
 > **setReturnUrl**(`url`): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:141](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L141)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:136](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L136)
 
 設定付款完成返回網址
 
@@ -324,13 +324,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:141](https://github.com/Ca
 
 `this`
 
----
+***
 
 ### taiwanPay()
 
 > **taiwanPay**(): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:125](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L125)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:120](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L120)
 
 使用台灣 Pay
 
@@ -338,13 +338,13 @@ Defined in: [src/frameworks/common/payment-builder.ts:125](https://github.com/Ca
 
 `this`
 
----
+***
 
 ### webAtm()
 
 > **webAtm**(): `this`
 
-Defined in: [src/frameworks/common/payment-builder.ts:76](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/common/payment-builder.ts#L76)
+Defined in: [newebpay-node/src/frameworks/common/payment-builder.ts:71](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/common/payment-builder.ts#L71)
 
 使用 WebATM
 

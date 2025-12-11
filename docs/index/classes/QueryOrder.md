@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / QueryOrder
 
 # Class: QueryOrder
 
-Defined in: [src/queries/query-order.ts:27](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L27)
+Defined in: [newebpay-node/src/queries/query-order.ts:30](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L30)
 
 交易查詢。
 
@@ -16,9 +16,9 @@ Defined in: [src/queries/query-order.ts:27](https://github.com/CarlLee1983/neweb
 
 ### Constructor
 
-> **new QueryOrder**(`merchantId`, `hashKey`, `hashIV`): `QueryOrder`
+> **new QueryOrder**(`merchantId`, `hashKey`, `hashIV`, `httpClient?`): `QueryOrder`
 
-Defined in: [src/queries/query-order.ts:46](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L46)
+Defined in: [newebpay-node/src/queries/query-order.ts:51](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L51)
 
 建立查詢物件。
 
@@ -36,6 +36,10 @@ Defined in: [src/queries/query-order.ts:46](https://github.com/CarlLee1983/neweb
 
 `string`
 
+##### httpClient?
+
+`HttpClientInterface`
+
 #### Returns
 
 `QueryOrder`
@@ -46,51 +50,59 @@ Defined in: [src/queries/query-order.ts:46](https://github.com/CarlLee1983/neweb
 
 > `protected` **hashIV**: `string`
 
-Defined in: [src/queries/query-order.ts:49](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L49)
+Defined in: [newebpay-node/src/queries/query-order.ts:54](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L54)
 
----
+***
 
 ### hashKey
 
 > `protected` **hashKey**: `string`
 
-Defined in: [src/queries/query-order.ts:48](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L48)
+Defined in: [newebpay-node/src/queries/query-order.ts:53](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L53)
 
----
+***
+
+### httpClient
+
+> `protected` **httpClient**: `HttpClientInterface`
+
+Defined in: [newebpay-node/src/queries/query-order.ts:46](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L46)
+
+***
 
 ### isTest
 
 > `protected` **isTest**: `boolean` = `false`
 
-Defined in: [src/queries/query-order.ts:41](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L41)
+Defined in: [newebpay-node/src/queries/query-order.ts:44](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L44)
 
 是否為測試環境。
 
----
+***
 
 ### merchantId
 
 > `protected` **merchantId**: `string`
 
-Defined in: [src/queries/query-order.ts:47](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L47)
+Defined in: [newebpay-node/src/queries/query-order.ts:52](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L52)
 
----
+***
 
 ### requestPath
 
-> `protected` **requestPath**: `string` = `"/API/QueryTradeInfo"`
+> `protected` **requestPath**: `string` = `'/API/QueryTradeInfo'`
 
-Defined in: [src/queries/query-order.ts:36](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L36)
+Defined in: [newebpay-node/src/queries/query-order.ts:39](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L39)
 
 API 請求路徑。
 
----
+***
 
 ### version
 
-> `protected` **version**: `string` = `"1.3"`
+> `protected` **version**: `string` = `'1.3'`
 
-Defined in: [src/queries/query-order.ts:31](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L31)
+Defined in: [newebpay-node/src/queries/query-order.ts:34](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L34)
 
 API 版本。
 
@@ -100,7 +112,7 @@ API 版本。
 
 > `protected` **buildPayload**(`merchantOrderNo`, `amt`): `Record`\<`string`, `string`\>
 
-Defined in: [src/queries/query-order.ts:117](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L117)
+Defined in: [newebpay-node/src/queries/query-order.ts:113](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L113)
 
 建立請求 Payload。
 
@@ -118,13 +130,13 @@ Defined in: [src/queries/query-order.ts:117](https://github.com/CarlLee1983/newe
 
 `Record`\<`string`, `string`\>
 
----
+***
 
 ### generateCheckValue()
 
 > `protected` **generateCheckValue**(`merchantOrderNo`, `amt`): `string`
 
-Defined in: [src/queries/query-order.ts:141](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L141)
+Defined in: [newebpay-node/src/queries/query-order.ts:133](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L133)
 
 產生查詢用 CheckValue。
 
@@ -145,13 +157,13 @@ SHA256(HashIV={HashIV}&Amt={Amt}&MerchantID={MerchantID}&MerchantOrderNo={Mercha
 
 `string`
 
----
+***
 
 ### getApiUrl()
 
 > **getApiUrl**(): `string`
 
-Defined in: [src/queries/query-order.ts:83](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L83)
+Defined in: [newebpay-node/src/queries/query-order.ts:90](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L90)
 
 取得完整 API 網址。
 
@@ -159,13 +171,13 @@ Defined in: [src/queries/query-order.ts:83](https://github.com/CarlLee1983/neweb
 
 `string`
 
----
+***
 
 ### getBaseUrl()
 
 > **getBaseUrl**(): `string`
 
-Defined in: [src/queries/query-order.ts:74](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L74)
+Defined in: [newebpay-node/src/queries/query-order.ts:83](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L83)
 
 取得 API 基礎網址。
 
@@ -173,13 +185,13 @@ Defined in: [src/queries/query-order.ts:74](https://github.com/CarlLee1983/neweb
 
 `string`
 
----
+***
 
 ### parseResponse()
 
 > `protected` **parseResponse**(`response`): [`QueryOrderResult`](../interfaces/QueryOrderResult.md)
 
-Defined in: [src/queries/query-order.ts:149](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L149)
+Defined in: [newebpay-node/src/queries/query-order.ts:141](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L141)
 
 解析回應。
 
@@ -203,13 +215,13 @@ Defined in: [src/queries/query-order.ts:149](https://github.com/CarlLee1983/newe
 
 [`QueryOrderResult`](../interfaces/QueryOrderResult.md)
 
----
+***
 
 ### query()
 
 > **query**(`merchantOrderNo`, `amt`): `Promise`\<[`QueryOrderResult`](../interfaces/QueryOrderResult.md)\>
 
-Defined in: [src/queries/query-order.ts:90](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L90)
+Defined in: [newebpay-node/src/queries/query-order.ts:97](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L97)
 
 執行查詢。
 
@@ -227,13 +239,13 @@ Defined in: [src/queries/query-order.ts:90](https://github.com/CarlLee1983/neweb
 
 `Promise`\<[`QueryOrderResult`](../interfaces/QueryOrderResult.md)\>
 
----
+***
 
 ### setTestMode()
 
 > **setTestMode**(`isTest`): `this`
 
-Defined in: [src/queries/query-order.ts:66](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L66)
+Defined in: [newebpay-node/src/queries/query-order.ts:75](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L75)
 
 設定是否為測試環境。
 
@@ -247,13 +259,13 @@ Defined in: [src/queries/query-order.ts:66](https://github.com/CarlLee1983/neweb
 
 `this`
 
----
+***
 
 ### create()
 
-> `static` **create**(`merchantId`, `hashKey`, `hashIV`): `QueryOrder`
+> `static` **create**(`merchantId`, `hashKey`, `hashIV`, `httpClient?`): `QueryOrder`
 
-Defined in: [src/queries/query-order.ts:55](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/queries/query-order.ts#L55)
+Defined in: [newebpay-node/src/queries/query-order.ts:63](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/queries/query-order.ts#L63)
 
 從設定建立查詢物件。
 
@@ -270,6 +282,10 @@ Defined in: [src/queries/query-order.ts:55](https://github.com/CarlLee1983/neweb
 ##### hashIV
 
 `string`
+
+##### httpClient?
+
+`HttpClientInterface`
 
 #### Returns
 

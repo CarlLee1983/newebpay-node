@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CvscomPayment
 
 # Class: CvscomPayment
 
-Defined in: [src/operations/cvscom-payment.ts:10](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/operations/cvscom-payment.ts#L10)
+Defined in: [newebpay-node/src/operations/cvscom-payment.ts:10](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/operations/cvscom-payment.ts#L10)
 
 超商取貨付款支付。
 
@@ -22,7 +22,7 @@ Defined in: [src/operations/cvscom-payment.ts:10](https://github.com/CarlLee1983
 
 > **new CvscomPayment**(`merchantId`, `hashKey`, `hashIV`): `CvscomPayment`
 
-Defined in: [src/content.ts:64](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L64)
+Defined in: [newebpay-node/src/content.ts:65](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L65)
 
 建立 Content 實例。
 
@@ -30,19 +30,19 @@ Defined in: [src/content.ts:64](https://github.com/CarlLee1983/newebpay-node/blo
 
 ##### merchantId
 
-`string` = `""`
+`string` = `''`
 
 特店編號
 
 ##### hashKey
 
-`string` = `""`
+`string` = `''`
 
 HashKey
 
 ##### hashIV
 
-`string` = `""`
+`string` = `''`
 
 HashIV
 
@@ -60,7 +60,7 @@ HashIV
 
 > `protected` **content**: `Record`\<`string`, `unknown`\> = `{}`
 
-Defined in: [src/content.ts:45](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L45)
+Defined in: [newebpay-node/src/content.ts:46](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L46)
 
 內容資料。
 
@@ -68,13 +68,13 @@ Defined in: [src/content.ts:45](https://github.com/CarlLee1983/newebpay-node/blo
 
 [`Content`](Content.md).[`content`](Content.md#content)
 
----
+***
 
 ### hashIV
 
-> `protected` **hashIV**: `string` = `""`
+> `protected` **hashIV**: `string` = `''`
 
-Defined in: [src/content.ts:67](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L67)
+Defined in: [newebpay-node/src/content.ts:68](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L68)
 
 HashIV
 
@@ -82,13 +82,13 @@ HashIV
 
 [`Content`](Content.md).[`hashIV`](Content.md#hashiv)
 
----
+***
 
 ### hashKey
 
-> `protected` **hashKey**: `string` = `""`
+> `protected` **hashKey**: `string` = `''`
 
-Defined in: [src/content.ts:66](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L66)
+Defined in: [newebpay-node/src/content.ts:67](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L67)
 
 HashKey
 
@@ -96,13 +96,13 @@ HashKey
 
 [`Content`](Content.md).[`hashKey`](Content.md#hashkey)
 
----
+***
 
 ### isTest
 
 > `protected` **isTest**: `boolean` = `false`
 
-Defined in: [src/content.ts:40](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L40)
+Defined in: [newebpay-node/src/content.ts:41](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L41)
 
 是否為測試環境。
 
@@ -110,13 +110,13 @@ Defined in: [src/content.ts:40](https://github.com/CarlLee1983/newebpay-node/blo
 
 [`Content`](Content.md).[`isTest`](Content.md#istest)
 
----
+***
 
 ### merchantId
 
-> `protected` **merchantId**: `string` = `""`
+> `protected` **merchantId**: `string` = `''`
 
-Defined in: [src/content.ts:65](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L65)
+Defined in: [newebpay-node/src/content.ts:66](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L66)
 
 特店編號
 
@@ -124,13 +124,13 @@ Defined in: [src/content.ts:65](https://github.com/CarlLee1983/newebpay-node/blo
 
 [`Content`](Content.md).[`merchantId`](Content.md#merchantid)
 
----
+***
 
 ### requestPath
 
-> `protected` **requestPath**: `string` = `"/MPG/mpg_gateway"`
+> `protected` **requestPath**: `string` = `'/MPG/mpg_gateway'`
 
-Defined in: [src/content.ts:35](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L35)
+Defined in: [newebpay-node/src/content.ts:36](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L36)
 
 API 請求路徑。
 
@@ -138,13 +138,13 @@ API 請求路徑。
 
 [`Content`](Content.md).[`requestPath`](Content.md#requestpath)
 
----
+***
 
 ### version
 
-> `protected` **version**: `string` = `"2.0"`
+> `protected` **version**: `string` = `'2.0'`
 
-Defined in: [src/content.ts:30](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L30)
+Defined in: [newebpay-node/src/content.ts:31](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L31)
 
 MPG API 版本。
 
@@ -152,13 +152,13 @@ MPG API 版本。
 
 [`Content`](Content.md).[`version`](Content.md#version)
 
----
+***
 
-### EMAIL_MAX_LENGTH
+### EMAIL\_MAX\_LENGTH
 
-> `readonly` `static` **EMAIL_MAX_LENGTH**: `50` = `50`
+> `readonly` `static` **EMAIL\_MAX\_LENGTH**: `50` = `50`
 
-Defined in: [src/content.ts:25](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L25)
+Defined in: [newebpay-node/src/content.ts:26](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L26)
 
 Email 最大長度。
 
@@ -166,13 +166,13 @@ Email 最大長度。
 
 [`Content`](Content.md).[`EMAIL_MAX_LENGTH`](Content.md#email_max_length)
 
----
+***
 
-### ITEM_DESC_MAX_LENGTH
+### ITEM\_DESC\_MAX\_LENGTH
 
-> `readonly` `static` **ITEM_DESC_MAX_LENGTH**: `50` = `50`
+> `readonly` `static` **ITEM\_DESC\_MAX\_LENGTH**: `50` = `50`
 
-Defined in: [src/content.ts:20](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L20)
+Defined in: [newebpay-node/src/content.ts:21](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L21)
 
 商品資訊最大長度。
 
@@ -180,53 +180,53 @@ Defined in: [src/content.ts:20](https://github.com/CarlLee1983/newebpay-node/blo
 
 [`Content`](Content.md).[`ITEM_DESC_MAX_LENGTH`](Content.md#item_desc_max_length)
 
----
+***
 
-### LGS_FAMI
+### LGS\_FAMI
 
-> `readonly` `static` **LGS_FAMI**: [`FAMIC2C`](../enumerations/LgsType.md#famic2c) = `LgsType.FAMIC2C`
+> `readonly` `static` **LGS\_FAMI**: [`FAMIC2C`](../enumerations/LgsType.md#famic2c) = `LgsType.FAMIC2C`
 
-Defined in: [src/operations/cvscom-payment.ts:14](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/operations/cvscom-payment.ts#L14)
+Defined in: [newebpay-node/src/operations/cvscom-payment.ts:14](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/operations/cvscom-payment.ts#L14)
 
 全家。
 
----
+***
 
-### LGS_HILIFE
+### LGS\_HILIFE
 
-> `readonly` `static` **LGS_HILIFE**: [`HILIFEC2C`](../enumerations/LgsType.md#hilifec2c) = `LgsType.HILIFEC2C`
+> `readonly` `static` **LGS\_HILIFE**: [`HILIFEC2C`](../enumerations/LgsType.md#hilifec2c) = `LgsType.HILIFEC2C`
 
-Defined in: [src/operations/cvscom-payment.ts:19](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/operations/cvscom-payment.ts#L19)
+Defined in: [newebpay-node/src/operations/cvscom-payment.ts:19](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/operations/cvscom-payment.ts#L19)
 
 萊爾富。
 
----
+***
 
-### LGS_OK
+### LGS\_OK
 
-> `readonly` `static` **LGS_OK**: [`OKMARTC2C`](../enumerations/LgsType.md#okmartc2c) = `LgsType.OKMARTC2C`
+> `readonly` `static` **LGS\_OK**: [`OKMARTC2C`](../enumerations/LgsType.md#okmartc2c) = `LgsType.OKMARTC2C`
 
-Defined in: [src/operations/cvscom-payment.ts:24](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/operations/cvscom-payment.ts#L24)
+Defined in: [newebpay-node/src/operations/cvscom-payment.ts:24](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/operations/cvscom-payment.ts#L24)
 
 OK。
 
----
+***
 
-### LGS_UNIMART
+### LGS\_UNIMART
 
-> `readonly` `static` **LGS_UNIMART**: [`UNIMARTC2C`](../enumerations/LgsType.md#unimartc2c) = `LgsType.UNIMARTC2C`
+> `readonly` `static` **LGS\_UNIMART**: [`UNIMARTC2C`](../enumerations/LgsType.md#unimartc2c) = `LgsType.UNIMARTC2C`
 
-Defined in: [src/operations/cvscom-payment.ts:29](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/operations/cvscom-payment.ts#L29)
+Defined in: [newebpay-node/src/operations/cvscom-payment.ts:29](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/operations/cvscom-payment.ts#L29)
 
 統一。
 
----
+***
 
-### MERCHANT_ORDER_NO_MAX_LENGTH
+### MERCHANT\_ORDER\_NO\_MAX\_LENGTH
 
-> `readonly` `static` **MERCHANT_ORDER_NO_MAX_LENGTH**: `30` = `30`
+> `readonly` `static` **MERCHANT\_ORDER\_NO\_MAX\_LENGTH**: `30` = `30`
 
-Defined in: [src/content.ts:15](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L15)
+Defined in: [newebpay-node/src/content.ts:16](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L16)
 
 特店訂單編號最大長度。
 
@@ -240,7 +240,7 @@ Defined in: [src/content.ts:15](https://github.com/CarlLee1983/newebpay-node/blo
 
 > **get**\<`T`\>(`key`, `defaultValue?`): `T` \| `undefined`
 
-Defined in: [src/content.ts:395](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L395)
+Defined in: [newebpay-node/src/content.ts:405](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L405)
 
 取得內容值。
 
@@ -268,13 +268,13 @@ Defined in: [src/content.ts:395](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`get`](Content.md#get)
 
----
+***
 
 ### getAesEncoder()
 
 > **getAesEncoder**(): [`Aes256Encoder`](Aes256Encoder.md)
 
-Defined in: [src/content.ts:291](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L291)
+Defined in: [newebpay-node/src/content.ts:301](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L301)
 
 取得 AES256 編碼器。
 
@@ -286,13 +286,13 @@ Defined in: [src/content.ts:291](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`getAesEncoder`](Content.md#getaesencoder)
 
----
+***
 
 ### getApiUrl()
 
 > **getApiUrl**(): `string`
 
-Defined in: [src/content.ts:284](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L284)
+Defined in: [newebpay-node/src/content.ts:294](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L294)
 
 取得完整 API 網址。
 
@@ -304,13 +304,13 @@ Defined in: [src/content.ts:284](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`getApiUrl`](Content.md#getapiurl)
 
----
+***
 
 ### getBaseUrl()
 
 > **getBaseUrl**(): `string`
 
-Defined in: [src/content.ts:275](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L275)
+Defined in: [newebpay-node/src/content.ts:287](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L287)
 
 取得 API 基礎網址。
 
@@ -322,13 +322,13 @@ Defined in: [src/content.ts:275](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`getBaseUrl`](Content.md#getbaseurl)
 
----
+***
 
 ### getCheckValueEncoder()
 
 > **getCheckValueEncoder**(): [`CheckValueEncoder`](CheckValueEncoder.md)
 
-Defined in: [src/content.ts:301](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L301)
+Defined in: [newebpay-node/src/content.ts:311](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L311)
 
 取得 CheckValue 編碼器。
 
@@ -340,13 +340,13 @@ Defined in: [src/content.ts:301](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`getCheckValueEncoder`](Content.md#getcheckvalueencoder)
 
----
+***
 
 ### getContent()
 
 > **getContent**(): [`PaymentContent`](../interfaces/PaymentContent.md)
 
-Defined in: [src/content.ts:358](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L358)
+Defined in: [newebpay-node/src/content.ts:368](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L368)
 
 取得已加密的內容。
 
@@ -358,13 +358,13 @@ Defined in: [src/content.ts:358](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`getContent`](Content.md#getcontent)
 
----
+***
 
 ### getMerchantID()
 
 > **getMerchantID**(): `string`
 
-Defined in: [src/content.ts:100](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L100)
+Defined in: [newebpay-node/src/content.ts:115](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L115)
 
 取得特店編號。
 
@@ -376,13 +376,13 @@ Defined in: [src/content.ts:100](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`getMerchantID`](Content.md#getmerchantid)
 
----
+***
 
 ### getPayload()
 
 > **getPayload**(): `Record`\<`string`, `unknown`\>
 
-Defined in: [src/content.ts:338](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L338)
+Defined in: [newebpay-node/src/content.ts:348](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L348)
 
 取得 Payload。
 
@@ -394,13 +394,13 @@ Defined in: [src/content.ts:338](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`getPayload`](Content.md#getpayload)
 
----
+***
 
 ### getRawContent()
 
 > **getRawContent**(): `Record`\<`string`, `unknown`\>
 
-Defined in: [src/content.ts:380](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L380)
+Defined in: [newebpay-node/src/content.ts:390](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L390)
 
 取得原始內容物件。
 
@@ -412,13 +412,13 @@ Defined in: [src/content.ts:380](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`getRawContent`](Content.md#getrawcontent)
 
----
+***
 
 ### getRequestPath()
 
 > **getRequestPath**(): `string`
 
-Defined in: [src/content.ts:268](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L268)
+Defined in: [newebpay-node/src/content.ts:280](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L280)
 
 取得請求路徑。
 
@@ -430,13 +430,13 @@ Defined in: [src/content.ts:268](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`getRequestPath`](Content.md#getrequestpath)
 
----
+***
 
 ### initContent()
 
 > `protected` **initContent**(): `void`
 
-Defined in: [src/operations/cvscom-payment.ts:34](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/operations/cvscom-payment.ts#L34)
+Defined in: [newebpay-node/src/operations/cvscom-payment.ts:34](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/operations/cvscom-payment.ts#L34)
 
 初始化內容。
 
@@ -448,13 +448,13 @@ Defined in: [src/operations/cvscom-payment.ts:34](https://github.com/CarlLee1983
 
 [`Content`](Content.md).[`initContent`](Content.md#initcontent)
 
----
+***
 
 ### isTestMode()
 
 > **isTestMode**(): `boolean`
 
-Defined in: [src/content.ts:131](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L131)
+Defined in: [newebpay-node/src/content.ts:146](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L146)
 
 是否為測試環境。
 
@@ -466,13 +466,13 @@ Defined in: [src/content.ts:131](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`isTestMode`](Content.md#istestmode)
 
----
+***
 
 ### set()
 
 > **set**(`key`, `value`): `this`
 
-Defined in: [src/content.ts:387](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L387)
+Defined in: [newebpay-node/src/content.ts:397](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L397)
 
 設定自訂內容。
 
@@ -494,13 +494,13 @@ Defined in: [src/content.ts:387](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`set`](Content.md#set)
 
----
+***
 
 ### setAmt()
 
 > **setAmt**(`amount`): `this`
 
-Defined in: [src/content.ts:160](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L160)
+Defined in: [newebpay-node/src/content.ts:172](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L172)
 
 設定訂單金額。
 
@@ -518,13 +518,13 @@ Defined in: [src/content.ts:160](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setAmt`](Content.md#setamt)
 
----
+***
 
 ### setClientBackURL()
 
 > **setClientBackURL**(`url`): `this`
 
-Defined in: [src/content.ts:225](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L225)
+Defined in: [newebpay-node/src/content.ts:237](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L237)
 
 設定返回商店網址。
 
@@ -542,13 +542,13 @@ Defined in: [src/content.ts:225](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setClientBackURL`](Content.md#setclientbackurl)
 
----
+***
 
 ### setCustomerURL()
 
 > **setCustomerURL**(`url`): `this`
 
-Defined in: [src/content.ts:217](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L217)
+Defined in: [newebpay-node/src/content.ts:229](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L229)
 
 設定取號完成返回網址。
 
@@ -566,13 +566,13 @@ Defined in: [src/content.ts:217](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setCustomerURL`](Content.md#setcustomerurl)
 
----
+***
 
 ### setEmail()
 
 > **setEmail**(`email`): `this`
 
-Defined in: [src/content.ts:233](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L233)
+Defined in: [newebpay-node/src/content.ts:245](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L245)
 
 設定付款人電子信箱。
 
@@ -590,13 +590,13 @@ Defined in: [src/content.ts:233](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setEmail`](Content.md#setemail)
 
----
+***
 
 ### setEmailModify()
 
 > **setEmailModify**(`modify`): `this`
 
-Defined in: [src/content.ts:244](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L244)
+Defined in: [newebpay-node/src/content.ts:256](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L256)
 
 設定是否開啟付款人資料修改。
 
@@ -614,13 +614,13 @@ Defined in: [src/content.ts:244](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setEmailModify`](Content.md#setemailmodify)
 
----
+***
 
 ### setExpireDate()
 
 > **setExpireDate**(`expireDate`): `this`
 
-Defined in: [src/content.ts:193](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L193)
+Defined in: [newebpay-node/src/content.ts:205](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L205)
 
 設定繳費有效期限。
 
@@ -638,13 +638,13 @@ Defined in: [src/content.ts:193](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setExpireDate`](Content.md#setexpiredate)
 
----
+***
 
 ### setHashIV()
 
 > **setHashIV**(`iv`): `this`
 
-Defined in: [src/content.ts:115](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L115)
+Defined in: [newebpay-node/src/content.ts:130](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L130)
 
 設定 HashIV。
 
@@ -662,13 +662,13 @@ Defined in: [src/content.ts:115](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setHashIV`](Content.md#sethashiv)
 
----
+***
 
 ### setHashKey()
 
 > **setHashKey**(`key`): `this`
 
-Defined in: [src/content.ts:107](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L107)
+Defined in: [newebpay-node/src/content.ts:122](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L122)
 
 設定 HashKey。
 
@@ -686,13 +686,13 @@ Defined in: [src/content.ts:107](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setHashKey`](Content.md#sethashkey)
 
----
+***
 
 ### setItemDesc()
 
 > **setItemDesc**(`desc`): `this`
 
-Defined in: [src/content.ts:171](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L171)
+Defined in: [newebpay-node/src/content.ts:183](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L183)
 
 設定商品資訊。
 
@@ -710,13 +710,13 @@ Defined in: [src/content.ts:171](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setItemDesc`](Content.md#setitemdesc)
 
----
+***
 
 ### setLangType()
 
 > **setLangType**(`lang`): `this`
 
-Defined in: [src/content.ts:260](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L260)
+Defined in: [newebpay-node/src/content.ts:272](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L272)
 
 設定語系。
 
@@ -734,13 +734,13 @@ Defined in: [src/content.ts:260](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setLangType`](Content.md#setlangtype)
 
----
+***
 
 ### setLgsType()
 
 > **setLgsType**(`lgsType`): `this`
 
-Defined in: [src/operations/cvscom-payment.ts:43](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/operations/cvscom-payment.ts#L43)
+Defined in: [newebpay-node/src/operations/cvscom-payment.ts:43](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/operations/cvscom-payment.ts#L43)
 
 設定物流類型。
 
@@ -754,13 +754,13 @@ Defined in: [src/operations/cvscom-payment.ts:43](https://github.com/CarlLee1983
 
 `this`
 
----
+***
 
 ### setMerchantID()
 
 > **setMerchantID**(`id`): `this`
 
-Defined in: [src/content.ts:91](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L91)
+Defined in: [newebpay-node/src/content.ts:106](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L106)
 
 設定特店編號。
 
@@ -778,13 +778,13 @@ Defined in: [src/content.ts:91](https://github.com/CarlLee1983/newebpay-node/blo
 
 [`Content`](Content.md).[`setMerchantID`](Content.md#setmerchantid)
 
----
+***
 
 ### setMerchantOrderNo()
 
 > **setMerchantOrderNo**(`orderNo`): `this`
 
-Defined in: [src/content.ts:138](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L138)
+Defined in: [newebpay-node/src/content.ts:153](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L153)
 
 設定特店訂單編號。
 
@@ -802,13 +802,13 @@ Defined in: [src/content.ts:138](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setMerchantOrderNo`](Content.md#setmerchantorderno)
 
----
+***
 
 ### setNotifyURL()
 
 > **setNotifyURL**(`url`): `this`
 
-Defined in: [src/content.ts:209](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L209)
+Defined in: [newebpay-node/src/content.ts:221](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L221)
 
 設定支付通知網址。
 
@@ -826,13 +826,13 @@ Defined in: [src/content.ts:209](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setNotifyURL`](Content.md#setnotifyurl)
 
----
+***
 
 ### setOrderComment()
 
 > **setOrderComment**(`orderComment`): `this`
 
-Defined in: [src/content.ts:252](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L252)
+Defined in: [newebpay-node/src/content.ts:264](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L264)
 
 設定商店備註。
 
@@ -850,13 +850,13 @@ Defined in: [src/content.ts:252](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setOrderComment`](Content.md#setordercomment)
 
----
+***
 
 ### setReceiverName()
 
 > **setReceiverName**(`name`): `this`
 
-Defined in: [src/operations/cvscom-payment.ts:51](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/operations/cvscom-payment.ts#L51)
+Defined in: [newebpay-node/src/operations/cvscom-payment.ts:51](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/operations/cvscom-payment.ts#L51)
 
 設定取貨人姓名。
 
@@ -870,13 +870,13 @@ Defined in: [src/operations/cvscom-payment.ts:51](https://github.com/CarlLee1983
 
 `this`
 
----
+***
 
 ### setReceiverPhone()
 
 > **setReceiverPhone**(`phone`): `this`
 
-Defined in: [src/operations/cvscom-payment.ts:62](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/operations/cvscom-payment.ts#L62)
+Defined in: [newebpay-node/src/operations/cvscom-payment.ts:62](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/operations/cvscom-payment.ts#L62)
 
 設定取貨人電話。
 
@@ -890,13 +890,13 @@ Defined in: [src/operations/cvscom-payment.ts:62](https://github.com/CarlLee1983
 
 `this`
 
----
+***
 
 ### setReturnURL()
 
 > **setReturnURL**(`url`): `this`
 
-Defined in: [src/content.ts:201](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L201)
+Defined in: [newebpay-node/src/content.ts:213](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L213)
 
 設定支付完成返回網址。
 
@@ -914,13 +914,13 @@ Defined in: [src/content.ts:201](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setReturnURL`](Content.md#setreturnurl)
 
----
+***
 
 ### setTestMode()
 
 > **setTestMode**(`isTest`): `this`
 
-Defined in: [src/content.ts:123](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L123)
+Defined in: [newebpay-node/src/content.ts:138](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L138)
 
 設定是否為測試環境。
 
@@ -938,13 +938,13 @@ Defined in: [src/content.ts:123](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setTestMode`](Content.md#settestmode)
 
----
+***
 
 ### setTimeStamp()
 
 > **setTimeStamp**(`timestamp`): `this`
 
-Defined in: [src/content.ts:152](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L152)
+Defined in: [newebpay-node/src/content.ts:164](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L164)
 
 設定時間戳記。
 
@@ -962,13 +962,13 @@ Defined in: [src/content.ts:152](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setTimeStamp`](Content.md#settimestamp)
 
----
+***
 
 ### setTradeLimit()
 
 > **setTradeLimit**(`seconds`): `this`
 
-Defined in: [src/content.ts:182](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L182)
+Defined in: [newebpay-node/src/content.ts:194](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L194)
 
 設定交易限制秒數。
 
@@ -986,13 +986,13 @@ Defined in: [src/content.ts:182](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`setTradeLimit`](Content.md#settradelimit)
 
----
+***
 
 ### validateBaseParams()
 
 > `protected` **validateBaseParams**(): `void`
 
-Defined in: [src/content.ts:316](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/content.ts#L316)
+Defined in: [newebpay-node/src/content.ts:326](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/content.ts#L326)
 
 驗證基礎參數。
 
@@ -1004,13 +1004,13 @@ Defined in: [src/content.ts:316](https://github.com/CarlLee1983/newebpay-node/bl
 
 [`Content`](Content.md).[`validateBaseParams`](Content.md#validatebaseparams)
 
----
+***
 
 ### validation()
 
 > `protected` **validation**(): `void`
 
-Defined in: [src/operations/cvscom-payment.ts:73](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/operations/cvscom-payment.ts#L73)
+Defined in: [newebpay-node/src/operations/cvscom-payment.ts:73](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/operations/cvscom-payment.ts#L73)
 
 驗證內容資料。
 

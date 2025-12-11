@@ -1,6 +1,6 @@
 [**@carllee1983/newebpay**](../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../modules.md) / index
 
@@ -73,3 +73,8 @@
 ## Type Aliases
 
 - [EWalletType](type-aliases/EWalletType.md)
+
+## Functions
+
+- [getTimestamp](functions/getTimestamp.md)
+- [getTimestampNumber](functions/getTimestampNumber.md)

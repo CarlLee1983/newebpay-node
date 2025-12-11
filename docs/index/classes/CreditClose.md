@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CreditClose
 
 # Class: CreditClose
 
-Defined in: [src/actions/credit-close.ts:22](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L22)
+Defined in: [newebpay-node/src/actions/credit-close.ts:25](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L25)
 
 信用卡請退款。
 
@@ -16,9 +16,9 @@ Defined in: [src/actions/credit-close.ts:22](https://github.com/CarlLee1983/newe
 
 ### Constructor
 
-> **new CreditClose**(`merchantId`, `hashKey`, `hashIV`): `CreditClose`
+> **new CreditClose**(`merchantId`, `hashKey`, `hashIV`, `httpClient?`): `CreditClose`
 
-Defined in: [src/actions/credit-close.ts:56](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L56)
+Defined in: [newebpay-node/src/actions/credit-close.ts:64](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L64)
 
 建立請退款物件。
 
@@ -36,6 +36,10 @@ Defined in: [src/actions/credit-close.ts:56](https://github.com/CarlLee1983/newe
 
 `string`
 
+##### httpClient?
+
+`HttpClientInterface`
+
 #### Returns
 
 `CreditClose`
@@ -46,71 +50,81 @@ Defined in: [src/actions/credit-close.ts:56](https://github.com/CarlLee1983/newe
 
 > `protected` **hashIV**: `string`
 
-Defined in: [src/actions/credit-close.ts:59](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L59)
+Defined in: [newebpay-node/src/actions/credit-close.ts:67](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L67)
 
----
+***
 
 ### hashKey
 
 > `protected` **hashKey**: `string`
 
-Defined in: [src/actions/credit-close.ts:58](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L58)
+Defined in: [newebpay-node/src/actions/credit-close.ts:66](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L66)
 
----
+***
+
+### httpClient
+
+> `protected` **httpClient**: `HttpClientInterface`
+
+Defined in: [newebpay-node/src/actions/credit-close.ts:59](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L59)
+
+HTTP 客戶端。
+
+***
 
 ### isTest
 
 > `protected` **isTest**: `boolean` = `false`
 
-Defined in: [src/actions/credit-close.ts:46](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L46)
+Defined in: [newebpay-node/src/actions/credit-close.ts:49](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L49)
 
 是否為測試環境。
 
----
+***
 
 ### merchantId
 
 > `protected` **merchantId**: `string`
 
-Defined in: [src/actions/credit-close.ts:57](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L57)
+Defined in: [newebpay-node/src/actions/credit-close.ts:65](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L65)
 
----
+***
 
 ### requestPath
 
-> `protected` **requestPath**: `string` = `"/API/CreditCard/Close"`
+> `protected` **requestPath**: `string` = `'/API/CreditCard/Close'`
 
-Defined in: [src/actions/credit-close.ts:41](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L41)
+Defined in: [newebpay-node/src/actions/credit-close.ts:44](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L44)
 
 API 請求路徑。
 
----
+***
 
 ### version
 
-> `protected` **version**: `string` = `"1.1"`
+> `protected` **version**: `string` = `'1.1'`
 
-Defined in: [src/actions/credit-close.ts:36](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L36)
+Defined in: [newebpay-node/src/actions/credit-close.ts:39](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L39)
 
 API 版本。
 
----
+***
 
-### CLOSE_TYPE_PAY
+### CLOSE\_TYPE\_PAY
 
-> `readonly` `static` **CLOSE_TYPE_PAY**: [`PAY`](../enumerations/CloseType.md#pay) = `CloseType.PAY`
+> `readonly` `static` **CLOSE\_TYPE\_PAY**: [`PAY`](../enumerations/CloseType.md#pay) = `CloseType.PAY`
 
-Defined in: [src/actions/credit-close.ts:26](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L26)
+Defined in: [newebpay-node/src/actions/credit-close.ts:29](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L29)
 
 請款類型：請款。
 
----
+***
 
-### CLOSE_TYPE_REFUND
+### CLOSE\_TYPE\_REFUND
 
-> `readonly` `static` **CLOSE_TYPE_REFUND**: [`REFUND`](../enumerations/CloseType.md#refund) = `CloseType.REFUND`
+> `readonly` `static` **CLOSE\_TYPE\_REFUND**: [`REFUND`](../enumerations/CloseType.md#refund) = `CloseType.REFUND`
 
-Defined in: [src/actions/credit-close.ts:31](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L31)
+Defined in: [newebpay-node/src/actions/credit-close.ts:34](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L34)
 
 請款類型：退款。
 
@@ -120,7 +134,7 @@ Defined in: [src/actions/credit-close.ts:31](https://github.com/CarlLee1983/newe
 
 > `protected` **buildPayload**(`postData`): `Record`\<`string`, `string`\>
 
-Defined in: [src/actions/credit-close.ts:208](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L208)
+Defined in: [newebpay-node/src/actions/credit-close.ts:187](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L187)
 
 建立請求 Payload。
 
@@ -134,13 +148,13 @@ Defined in: [src/actions/credit-close.ts:208](https://github.com/CarlLee1983/new
 
 `Record`\<`string`, `string`\>
 
----
+***
 
 ### cancelClose()
 
 > **cancelClose**(`merchantOrderNo`, `amt`, `closeType`, `indexType`, `tradeNo?`): `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
-Defined in: [src/actions/credit-close.ts:136](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L136)
+Defined in: [newebpay-node/src/actions/credit-close.ts:134](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L134)
 
 取消請退款。
 
@@ -170,13 +184,13 @@ Defined in: [src/actions/credit-close.ts:136](https://github.com/CarlLee1983/new
 
 `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
----
+***
 
 ### execute()
 
 > `protected` **execute**(`merchantOrderNo`, `amt`, `closeType`, `indexType`, `tradeNo?`, `cancel?`): `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
-Defined in: [src/actions/credit-close.ts:156](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L156)
+Defined in: [newebpay-node/src/actions/credit-close.ts:147](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L147)
 
 執行請退款操作。
 
@@ -210,13 +224,13 @@ Defined in: [src/actions/credit-close.ts:156](https://github.com/CarlLee1983/new
 
 `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
----
+***
 
 ### getApiUrl()
 
 > **getApiUrl**(): `string`
 
-Defined in: [src/actions/credit-close.ts:93](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L93)
+Defined in: [newebpay-node/src/actions/credit-close.ts:103](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L103)
 
 取得完整 API 網址。
 
@@ -224,13 +238,13 @@ Defined in: [src/actions/credit-close.ts:93](https://github.com/CarlLee1983/newe
 
 `string`
 
----
+***
 
 ### getBaseUrl()
 
 > **getBaseUrl**(): `string`
 
-Defined in: [src/actions/credit-close.ts:84](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L84)
+Defined in: [newebpay-node/src/actions/credit-close.ts:96](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L96)
 
 取得 API 基礎網址。
 
@@ -238,13 +252,13 @@ Defined in: [src/actions/credit-close.ts:84](https://github.com/CarlLee1983/newe
 
 `string`
 
----
+***
 
 ### parseResponse()
 
 > `protected` **parseResponse**(`response`): [`CreditCloseResult`](../interfaces/CreditCloseResult.md)
 
-Defined in: [src/actions/credit-close.ts:223](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L223)
+Defined in: [newebpay-node/src/actions/credit-close.ts:200](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L200)
 
 解析回應。
 
@@ -268,13 +282,13 @@ Defined in: [src/actions/credit-close.ts:223](https://github.com/CarlLee1983/new
 
 [`CreditCloseResult`](../interfaces/CreditCloseResult.md)
 
----
+***
 
 ### pay()
 
 > **pay**(`merchantOrderNo`, `amt`, `indexType`, `tradeNo?`): `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
-Defined in: [src/actions/credit-close.ts:100](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L100)
+Defined in: [newebpay-node/src/actions/credit-close.ts:110](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L110)
 
 執行請款。
 
@@ -300,13 +314,13 @@ Defined in: [src/actions/credit-close.ts:100](https://github.com/CarlLee1983/new
 
 `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
----
+***
 
 ### refund()
 
 > **refund**(`merchantOrderNo`, `amt`, `indexType`, `tradeNo?`): `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
-Defined in: [src/actions/credit-close.ts:118](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L118)
+Defined in: [newebpay-node/src/actions/credit-close.ts:122](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L122)
 
 執行退款。
 
@@ -332,13 +346,13 @@ Defined in: [src/actions/credit-close.ts:118](https://github.com/CarlLee1983/new
 
 `Promise`\<[`CreditCloseResult`](../interfaces/CreditCloseResult.md)\>
 
----
+***
 
 ### setTestMode()
 
 > **setTestMode**(`isTest`): `this`
 
-Defined in: [src/actions/credit-close.ts:76](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L76)
+Defined in: [newebpay-node/src/actions/credit-close.ts:88](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L88)
 
 設定是否為測試環境。
 
@@ -352,13 +366,13 @@ Defined in: [src/actions/credit-close.ts:76](https://github.com/CarlLee1983/newe
 
 `this`
 
----
+***
 
 ### create()
 
-> `static` **create**(`merchantId`, `hashKey`, `hashIV`): `CreditClose`
+> `static` **create**(`merchantId`, `hashKey`, `hashIV`, `httpClient?`): `CreditClose`
 
-Defined in: [src/actions/credit-close.ts:65](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L65)
+Defined in: [newebpay-node/src/actions/credit-close.ts:76](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L76)
 
 從設定建立請退款物件。
 
@@ -375,6 +389,10 @@ Defined in: [src/actions/credit-close.ts:65](https://github.com/CarlLee1983/newe
 ##### hashIV
 
 `string`
+
+##### httpClient?
+
+`HttpClientInterface`
 
 #### Returns
 

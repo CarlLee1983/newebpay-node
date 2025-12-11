@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / FormBuilder
 
 # Class: FormBuilder
 
-Defined in: [src/form-builder.ts:28](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/form-builder.ts#L28)
+Defined in: [newebpay-node/src/form-builder.ts:28](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/form-builder.ts#L28)
 
 HTML 表單產生器。
 
@@ -18,7 +18,7 @@ HTML 表單產生器。
 
 > **new FormBuilder**(`payment`, `options`): `FormBuilder`
 
-Defined in: [src/form-builder.ts:38](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/form-builder.ts#L38)
+Defined in: [newebpay-node/src/form-builder.ts:38](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/form-builder.ts#L38)
 
 建立表單產生器。
 
@@ -46,7 +46,7 @@ Defined in: [src/form-builder.ts:38](https://github.com/CarlLee1983/newebpay-nod
 
 > **build**(): `string`
 
-Defined in: [src/form-builder.ts:87](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/form-builder.ts#L87)
+Defined in: [newebpay-node/src/form-builder.ts:84](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/form-builder.ts#L84)
 
 產生 HTML 表單。
 
@@ -54,13 +54,13 @@ Defined in: [src/form-builder.ts:87](https://github.com/CarlLee1983/newebpay-nod
 
 `string`
 
----
+***
 
 ### getFormData()
 
 > **getFormData**(): `object`
 
-Defined in: [src/form-builder.ts:116](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/form-builder.ts#L116)
+Defined in: [newebpay-node/src/form-builder.ts:113](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/form-builder.ts#L113)
 
 取得表單資料（不含 HTML）。
 
@@ -80,13 +80,13 @@ Defined in: [src/form-builder.ts:116](https://github.com/CarlLee1983/newebpay-no
 
 > **method**: `string`
 
----
+***
 
 ### setAutoSubmit()
 
 > **setAutoSubmit**(`autoSubmit`): `this`
 
-Defined in: [src/form-builder.ts:63](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/form-builder.ts#L63)
+Defined in: [newebpay-node/src/form-builder.ts:60](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/form-builder.ts#L60)
 
 設定是否自動送出。
 
@@ -100,13 +100,13 @@ Defined in: [src/form-builder.ts:63](https://github.com/CarlLee1983/newebpay-nod
 
 `this`
 
----
+***
 
 ### setFormId()
 
 > **setFormId**(`formId`): `this`
 
-Defined in: [src/form-builder.ts:71](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/form-builder.ts#L71)
+Defined in: [newebpay-node/src/form-builder.ts:68](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/form-builder.ts#L68)
 
 設定表單 ID。
 
@@ -120,13 +120,13 @@ Defined in: [src/form-builder.ts:71](https://github.com/CarlLee1983/newebpay-nod
 
 `this`
 
----
+***
 
 ### setSubmitButtonText()
 
 > **setSubmitButtonText**(`text`): `this`
 
-Defined in: [src/form-builder.ts:79](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/form-builder.ts#L79)
+Defined in: [newebpay-node/src/form-builder.ts:76](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/form-builder.ts#L76)
 
 設定送出按鈕文字。
 
@@ -140,13 +140,13 @@ Defined in: [src/form-builder.ts:79](https://github.com/CarlLee1983/newebpay-nod
 
 `this`
 
----
+***
 
 ### create()
 
 > `static` **create**(`payment`, `options?`): `FormBuilder`
 
-Defined in: [src/form-builder.ts:53](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/form-builder.ts#L53)
+Defined in: [newebpay-node/src/form-builder.ts:53](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/form-builder.ts#L53)
 
 從支付操作物件建立表單產生器。
 

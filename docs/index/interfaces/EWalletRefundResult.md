@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / EWalletRefundResult
 
 # Interface: EWalletRefundResult
 
-Defined in: [src/actions/ewallet-refund.ts:7](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L7)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:10](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L10)
 
 電子錢包退款結果。
 
@@ -20,36 +20,36 @@ Defined in: [src/actions/ewallet-refund.ts:7](https://github.com/CarlLee1983/new
 
 > `optional` **Amt**: `number`
 
-Defined in: [src/actions/ewallet-refund.ts:11](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L11)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:14](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L14)
 
----
+***
 
 ### MerchantID?
 
 > `optional` **MerchantID**: `string`
 
-Defined in: [src/actions/ewallet-refund.ts:8](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L8)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:11](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L11)
 
----
+***
 
 ### MerchantOrderNo?
 
 > `optional` **MerchantOrderNo**: `string`
 
-Defined in: [src/actions/ewallet-refund.ts:9](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L9)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:12](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L12)
 
----
+***
 
 ### RefundAmt?
 
 > `optional` **RefundAmt**: `number`
 
-Defined in: [src/actions/ewallet-refund.ts:12](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L12)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:15](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L15)
 
----
+***
 
 ### TradeNo?
 
 > `optional` **TradeNo**: `string`
 
-Defined in: [src/actions/ewallet-refund.ts:10](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/ewallet-refund.ts#L10)
+Defined in: [newebpay-node/src/actions/ewallet-refund.ts:13](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/ewallet-refund.ts#L13)

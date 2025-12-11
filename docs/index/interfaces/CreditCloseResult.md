@@ -1,12 +1,12 @@
 [**@carllee1983/newebpay**](../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../modules.md) / [index](../README.md) / CreditCloseResult
 
 # Interface: CreditCloseResult
 
-Defined in: [src/actions/credit-close.ts:8](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L8)
+Defined in: [newebpay-node/src/actions/credit-close.ts:11](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L11)
 
 請退款結果。
 
@@ -20,36 +20,36 @@ Defined in: [src/actions/credit-close.ts:8](https://github.com/CarlLee1983/neweb
 
 > `optional` **Amt**: `number`
 
-Defined in: [src/actions/credit-close.ts:12](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L12)
+Defined in: [newebpay-node/src/actions/credit-close.ts:15](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L15)
 
----
+***
 
 ### CloseType?
 
 > `optional` **CloseType**: `number`
 
-Defined in: [src/actions/credit-close.ts:13](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L13)
+Defined in: [newebpay-node/src/actions/credit-close.ts:16](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L16)
 
----
+***
 
 ### MerchantID?
 
 > `optional` **MerchantID**: `string`
 
-Defined in: [src/actions/credit-close.ts:9](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L9)
+Defined in: [newebpay-node/src/actions/credit-close.ts:12](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L12)
 
----
+***
 
 ### MerchantOrderNo?
 
 > `optional` **MerchantOrderNo**: `string`
 
-Defined in: [src/actions/credit-close.ts:10](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L10)
+Defined in: [newebpay-node/src/actions/credit-close.ts:13](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L13)
 
----
+***
 
 ### TradeNo?
 
 > `optional` **TradeNo**: `string`
 
-Defined in: [src/actions/credit-close.ts:11](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/actions/credit-close.ts#L11)
+Defined in: [newebpay-node/src/actions/credit-close.ts:14](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/actions/credit-close.ts#L14)

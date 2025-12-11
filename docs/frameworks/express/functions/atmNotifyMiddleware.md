@@ -1,14 +1,14 @@
 [**@carllee1983/newebpay**](../../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../../modules.md) / [frameworks/express](../README.md) / atmNotifyMiddleware
 
 # Function: atmNotifyMiddleware()
 
-> **atmNotifyMiddleware**(`config`): (`req`, `_res`, `next`) => `void`
+> **atmNotifyMiddleware**(`config`): (`req`, `res`, `next`) => `void`
 
-Defined in: [src/frameworks/express/middleware.ts:40](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/express/middleware.ts#L40)
+Defined in: [newebpay-node/src/frameworks/express/middleware.ts:42](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/express/middleware.ts#L42)
 
 ATM 取號通知 Middleware
 
@@ -20,7 +20,7 @@ ATM 取號通知 Middleware
 
 ## Returns
 
-> (`req`, `_res`, `next`): `void`
+> (`req`, `res`, `next`): `void`
 
 ### Parameters
 
@@ -28,7 +28,7 @@ ATM 取號通知 Middleware
 
 `Request`
 
-#### \_res
+#### res
 
 `Response`
 

@@ -1,14 +1,14 @@
 [**@carllee1983/newebpay**](../../../README.md)
 
----
+***
 
 [@carllee1983/newebpay](../../../modules.md) / [frameworks/express](../README.md) / paymentNotifyMiddleware
 
 # Function: paymentNotifyMiddleware()
 
-> **paymentNotifyMiddleware**(`config`): (`req`, `_res`, `next`) => `void`
+> **paymentNotifyMiddleware**(`config`): (`req`, `res`, `next`) => `void`
 
-Defined in: [src/frameworks/express/middleware.ts:24](https://github.com/CarlLee1983/newebpay-node/blob/d8e55b9e8bd24262d946550a460a91116911fa5b/src/frameworks/express/middleware.ts#L24)
+Defined in: [newebpay-node/src/frameworks/express/middleware.ts:19](https://github.com/CarlLee1983/newebpay-node/blob/d39220fc0a7fc584a6f4d3ff97844a32d96e5850/src/frameworks/express/middleware.ts#L19)
 
 支付完成通知 Middleware
 
@@ -20,7 +20,7 @@ Defined in: [src/frameworks/express/middleware.ts:24](https://github.com/CarlLee
 
 ## Returns
 
-> (`req`, `_res`, `next`): `void`
+> (`req`, `res`, `next`): `void`
 
 ### Parameters
 
@@ -28,7 +28,7 @@ Defined in: [src/frameworks/express/middleware.ts:24](https://github.com/CarlLee
 
 `Request`
 
-#### \_res
+#### res
 
 `Response`
 
